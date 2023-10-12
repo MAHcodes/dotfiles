@@ -1,0 +1,10 @@
+{
+  "float": [
+    {
+      "class": "floating",
+      "floating": "true"
+    }
+  ],
+  "skiptaskbarhidden": [],
+  "log_on_focus": false
+}

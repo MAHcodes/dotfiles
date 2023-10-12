@@ -1,0 +1,17 @@
+#!/bin/bash
+
+function send_notification() {
+	brightness=$(light)
+	dunstify -u low -r 9995 -h int:value:"$brightness" -i "brightness-$1" "Brightness: $brightness%" -i ~/.local/share/icons/material/fluorescent.svg
+}
+
+case $1 in
+up)
+	light -A 5
+	send_notification $1
+	;;
+down)
+	light -U 5
+	send_notification $1
+	;;
+esac

@@ -1,0 +1,41 @@
+super + {backslash,w,t,g,m,n,u,s}
+  kitty --class floating -o background_opacity=1 -e {_,bandwhich,btop,ranger,pulsemixer,ncmpcpp,calcurse,weather}
+
+super + {o,e}
+  rofi -show {drun,emoji}
+
+super + {r,c}
+  {redshift-toggle,connection}
+
+super + shift + {r,c,a,b,y,x,s}
+  {rofi-beats,eyedropper,date-notify,battery-notify,keylight,xkill,socials}
+
+super + {plus,minus}
+  lightness {up,down}
+
+super + ctrl + m
+  miccontrol toggle
+
+super + alt + {k,j,m}
+  volume {up,down,toggle}
+
+super + alt + {0-9}
+  mpc -q seek {0-9}0%
+
+super + shift + {p,period,comma,l,h}
+  mpc {toggle,next,prev,seek +1%,seek -1%}
+
+super + a ; {f,b,e}
+	{thunar,firefox,evolution}
+
+super + shift + Caps_Lock
+  shutdown -h now
+
+super + {_, shift + } Print
+  {screenshot window, screenshot screen}
+
+Print
+  screenshot select
+
+super + Caps_Lock
+  slock

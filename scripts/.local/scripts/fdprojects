@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+fd . ~/projects ~/repos ~/work --min-depth=1 --max-depth=1 --type=d

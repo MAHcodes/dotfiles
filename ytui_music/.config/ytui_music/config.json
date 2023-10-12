@@ -1,0 +1,102 @@
+{
+  "ShortcutKeys": {
+    "toggle_play": "p",
+    "next": ">",
+    "prev": "<",
+    "start_search": "/",
+    "download": "d",
+    "quit": "c",
+    "forward": "f",
+    "backward": "b",
+    "suffle": "s",
+    "repeat": "r",
+    "view": "v",
+    "favourates_add": "a",
+    "favourates_remove": "u",
+    "vol_increase": "=",
+    "vol_decrease": "-"
+  },
+  "Colors": {
+    "border_idle": [
+      94,
+      129,
+      172
+    ],
+    "border_highlight": [
+      236,
+      239,
+      244
+    ],
+    "list_idle": [
+      129,
+      161,
+      193
+    ],
+    "list_hilight": [
+      236,
+      239,
+      244
+    ],
+    "sidebar_list": [
+      143,
+      188,
+      187
+    ],
+    "block_title": [
+      235,
+      203,
+      139
+    ],
+    "gauge_fill": [
+      216,
+      222,
+      233
+    ],
+    "color_primary": [
+      163,
+      190,
+      140
+    ],
+    "color_secondary": [
+      143,
+      188,
+      187
+    ],
+    "status_text": [
+      180,
+      142,
+      173
+    ]
+  },
+  "Servers": {
+    "list": [
+      "https://ytprivate.com/api/v1",
+      "https://vid.puffyan.us/api/v1",
+      "https://invidious.snopyta.org/api/v1",
+      "https://ytb.trom.tf/api/v1",
+      "https://invidious.namazso.eu/api/v1",
+      "https://invidious.hub.ne.kr/api/v1"
+    ]
+  },
+  "Constants": {
+    "item_per_list": 10,
+    "server_time_out": 30000,
+    "refresh_rate": 900,
+    "seek_forward_secs": 10,
+    "seek_backward_secs": 10,
+    "region": "NP",
+    "search_by_type": [
+      "music:",
+      "playlist:",
+      "artist:"
+    ],
+  "volume_step": 5
+  },
+  "MpvOptions": {
+    "config_path": "/home/mhmdali102/.config/ytui_music"
+  },
+  "Downloads": {
+    "path": "~/Music",
+    "format": "mp3"
+  }
+}

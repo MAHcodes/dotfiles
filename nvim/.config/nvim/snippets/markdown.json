@@ -1,0 +1,24 @@
+{
+  "Payroll Issue Report": {
+    "prefix": "issue",
+    "body": [
+      "ISSUE #${1:IssueNumber} (${2:ENDPOINT} [STATUS_CODE = ${3:Status Code Number}])",
+      "",
+      " ~ @Payroll",
+      "",
+      "**Endpoint:**",
+      "${4:Endpoint URI}",
+      "",
+      "**The Request:**",
+      "```json",
+      "$5",
+      "```",
+      "",
+      "**The Response:**",
+      "```json",
+      "$6",
+      "```"
+    ],
+    "description": "Payroll Issue Report"
+  }
+}

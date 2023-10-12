@@ -1,0 +1,7 @@
+set window-title-basename "true"
+set selection-clipboard "clipboard"
+
+include catppuccin-mocha
+#
+set adjust-open width
+set recolor true

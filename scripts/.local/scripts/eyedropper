@@ -1,0 +1,7 @@
+#!/bin/sh
+
+clr=$(gpick -pso)
+echo $clr | tr -d '\n'| xsel -ib
+if [ $clr ]; then
+  notify-send "$clr" "Copied to clipboard" -i ~/.local/share/icons/material/colorize.svg
+fi

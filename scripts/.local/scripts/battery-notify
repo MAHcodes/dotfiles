@@ -1,0 +1,17 @@
+#!/bin/sh
+
+battery="/sys/class/power_supply/BAT0"
+capacity=$(cat $battery/capacity)
+status=$(cat $battery/status)
+material="~/.local/share/icons/material"
+URGENCY="${1:-normal}"
+
+if [ $status = "Discharging"  ]; then
+  icon="battery.svg"
+elif [ $status = "Charging" ]; then
+  icon="battery-charging.svg"
+else
+  icon="battery-alert.svg"
+fi
+
+dunstify -r 9992  -u $URGENCY "$capacity%" "$status" -i $material/$icon

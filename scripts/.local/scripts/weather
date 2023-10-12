@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "$(date)"
+curl wttr.in/Nabatieh,Lebanon\?2q && $SHELL

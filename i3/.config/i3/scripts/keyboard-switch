@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+KBD=$(/usr/bin/xkblayout print '%s')
+echo $KBD

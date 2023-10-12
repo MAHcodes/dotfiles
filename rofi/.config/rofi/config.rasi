@@ -1,0 +1,15 @@
+configuration {
+    font: "JetBrainsMono Nerd Font Mono 10";
+    icon-theme: "Papirus-Dark";
+    scroll-method: 1;
+    modi: "window,run,ssh,emoji,combi,drun,filebrowser,keys";
+
+    display-ssh:    "";
+    display-run:    "";
+    display-drun:   "";
+    display-window: "";
+    display-combi:  "";
+    show-icons:     true;
+}
+
+@theme "~/.config/rofi/catppuccin.rasi"

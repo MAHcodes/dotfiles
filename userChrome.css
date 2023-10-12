@@ -1,0 +1,211 @@
+/*** Option 3 - No icon - show close-button when cursor is over the tab ***/
+
+.tab-icon-stack:hover ~ .tab-close-button,
+.tab-close-button:hover,
+.tabbrowser-tab:not([image]):hover .tab-close-button {
+  visibility: visible;
+  z-index: 1;
+}
+.tabbrowser-tab:not([image]):hover .tab-close-button {
+  margin-inline-end: 0 !important;
+}
+
+/* This exists only for compatibility reasons with some other styles */
+#navigator-toolbox {
+  --uc-hide-window-control-space: 0;
+}
+
+.tabbrowser-tab:first-child {
+  counter-reset: nth-tab 0;
+} /* Change to -1 for 0-indexing */
+.tab-text::before {
+  content: " [" counter(nth-tab) "] ";
+  counter-increment: nth-tab;
+}
+
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/autohide_main_toolbar.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* This style hides the main toolbar and shows it when the cursor is over the tabs toolbar as well as whenever the focus is inside nav-bar, such as when urlbar is focused. */
+
+:root {
+  --uc-navbar-transform: -40px;
+}
+:root[uidensity="compact"] {
+  --uc-navbar-transform: -34px;
+}
+
+:root[sessionrestored]
+  :where(#nav-bar, #PersonalToolbar, #tab-notification-deck) {
+  transform: translateY(var(--uc-navbar-transform));
+}
+
+:root:is([customizing], [chromehidden*="toolbar"])
+  :where(#nav-bar, #PersonalToolbar, #tab-notification-deck) {
+  transform: none !important;
+  opacity: 1 !important;
+}
+
+#nav-bar:not([customizing]) {
+  opacity: 0;
+  transition: transform 400ms ease 0ms, opacity 400ms ease 0ms !important;
+  position: relative;
+  z-index: 2;
+}
+#TabsToolbar {
+  position: relative;
+  z-index: 3;
+}
+
+/* Show when toolbox is focused, like when urlbar has received focus */
+#navigator-toolbox:focus-within > .browser-toolbar {
+  transform: translateY(0);
+  opacity: 1;
+  transition-duration: 500ms, 200ms !important;
+  transition-delay: 0s !important;
+}
+/* Show when toolbox is hovered */
+#titlebar:hover ~ .browser-toolbar,
+#nav-bar:hover,
+#nav-bar:hover + #PersonalToolbar {
+  transform: translateY(0);
+  opacity: 1;
+  transition-duration: 500ms, 200ms !important;
+  transition-delay: 0s !important;
+}
+
+/* Bookmarks toolbar needs so extra rules */
+#PersonalToolbar {
+  transition: transform 400ms ease 0s !important;
+  position: relative;
+  z-index: 1;
+}
+
+/* Move up the content view */
+:root[sessionrestored]:not([inFullscreen]) > body > #browser {
+  margin-top: var(--uc-navbar-transform);
+}
+
+/*Remove empty box before tab*/
+.titlebar-spacer[type="pre-tabs"],
+.titlebar-spacer[type="post-tabs"] {
+  width: 3px !important;
+}
+
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/loading_indicator_bouncing_line.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* Shows a left-right bouncing line at the top of the content area during navigation */
+
+@keyframes statusline-anim{from{background-position-x: left}to{background-position-x: right}}
+#statuspanel[type="status"]::after{
+  position: fixed;
+  display: block;
+  height: 4px;
+  width: 100vw;
+  top: 4px;
+  left:0;
+  content: "";
+  pointer-events: none;
+  background-size: 20%;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to left,transparent, currentColor,transparent);
+  animation: statusline-anim 400ms alternate infinite ease-in-out;
+}
+
+@media (min-width: 1000px){ #statuspanel[type="status"]::after{ animation-duration: 460ms } }
+@media (min-width: 1400px){ #statuspanel[type="status"]::after{ animation-duration: 520ms } }
+@media (min-width: 1700px){ #statuspanel[type="status"]::after{ background-size: 15%; animation-duration: 550ms } }
+@media (min-width: 2200px){ #statuspanel[type="status"]::after{ animation-duration: 600ms } }
+.browserContainer{ transform: translate(0) }
+
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/round_ui_items.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* Make bunch of things in the main UI round */
+
+:root{ --toolbarbutton-border-radius: 12px !important }
+#urlbar-input-container > box:hover,
+#urlbar-input-container > box[open],
+#main-menubar >  menu,
+.titlebar-button:hover,
+#scrollbutton-up,
+#scrollbutton-down,
+.tab-close-button,
+.close-icon > image,
+#page-action-buttons > :hover,
+.panel-arrowcontent,
+.urlbarView-row-inner,
+.search-one-offs button,
+.subviewbutton-back,
+.toolbaritem-combined-buttons > toolbarbutton,
+#PopupSearchAutoComplete,
+.tab-background,
+.panel-arrow,
+menupopup{ border-radius: 12px !important }
+
+.panel-arrowcontent{ margin-inline-end: 0 !important; }
+
+menupopup{ -moz-appearance: none !important; overflow: -moz-hidden-unscrollable !important; }
+
+.tabbrowser-tab[selected]::after,
+.tabbrowser-tab[beforeselected-visible]::after{ border-color: transparent !important; }
+
+#nav-bar{ margin-top: -1px }
+#nav-bar:focus-within { box-shadow: none !important; margin-top: 3px }
+.tab-line{ display: none }
+
+.tab-background[selected]{
+  border-top-width: 2px !important;
+  border-top-color: var(--lwt-tab-line-color) !important;
+}
+.tabbrowser-tab[selected]{ z-index: auto !important; }
+
+.urlbar-icon,
+toolbar toolbarbutton:not(#back-button):not(.bookmark-item):not(.titlebar-button) > .toolbarbutton-icon{  border-radius: 0px !important; clip-path: circle() }
+
+menugroup:hover > menuitem{ clip-path: circle() }
+
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/tab_line_loading_indicator.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* Hide the normal loading indicator (just show tab-icon instead) and make the top tab-line bounce left-to-right */
+
+@keyframes tab-loading-line-anim{from{background-position-x: 12px}to{background-position-x: calc(100% - 12px)}}
+.tabbrowser-tab[busy] > .tab-stack >  .tab-background::before,
+.tab-background[selected]::before{
+  content: "";
+  display: -moz-box;
+  height: 3px;
+  background-color:transparent;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: background-size 80ms linear;
+}
+
+.tabbrowser-tab[busy] > .tab-stack > .tab-background::before{
+  background-size: 10%;
+  background-image: linear-gradient(currentColor,currentColor);
+  opacity: .95;
+  animation: tab-loading-line-anim 400ms alternate infinite ease-in-out;
+}
+/* .tab-throbber{ display: none } */
+/* .tab-icon-image[src]{ display: -moz-box } */
+
+/* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/toggle_tabs_toolbar_with_alt.css made available under Mozilla Public License v. 2.0
+See the above repository for updates as well as full license text. */
+
+/* Show tabs toolbar with Alt-key. Menubar must be disabled for this to work */
+
+#titlebar { -moz-appearance: none !important; }
+:root[tabsintitlebar][sizemode="maximized"]{ padding-top: 8px !important; }
+#titlebar:not(:hover) > #toolbar-menubar[autohide="true"][inactive] + #TabsToolbar { visibility: collapse }
+
+/* Behavior 1 - Alt-key toggles menubar as normal */
+#titlebar:hover > #toolbar-menubar[autohide="true"]{ height: calc(var(--tab-min-height) + var(--space-above-tabbar) - var(--tabs-navbar-shadow-size)) !important; }
+
+/* Behavior 2 - Alt-key only shows tabs toolbar */
+/* To show window controls, hit Alt again while cursor is over tabs toolbar */
+
+#toolbar-menubar[autohide]:not([inactive]),
+#toolbar-menubar[autohide="true"]:not([inactive]) + #TabsToolbar > .titlebar-buttonbox-container{ visibility: collapse !important }

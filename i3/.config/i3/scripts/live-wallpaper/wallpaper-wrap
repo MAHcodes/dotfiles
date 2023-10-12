@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+killall -9 xwinwrap
+
+wp=$(cat $HOME/.config/i3/scripts/live-wallpaper/wallpaper-save)
+
+xwinwrap -g 1920x1080+0+0 -un -fdt -ni -b -nf -ov -- $HOME/.config/i3/scripts/live-wallpaper/wallpaper-live WID $wp

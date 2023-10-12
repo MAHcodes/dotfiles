@@ -1,0 +1,16 @@
+set ratios 1:2:3
+# options
+set number
+set relativenumber
+set drawbox
+set icons
+set ignorecase
+
+# keybindings
+map A rename
+map r push A<a-b><a-b><a-f>
+map I push A<c-a>
+map B bulkrename
+
+set previewer ~/.config/lf/previewer
+set cleaner ~/.config/lf/cleaner

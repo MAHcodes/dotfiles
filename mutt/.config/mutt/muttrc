@@ -1,0 +1,12 @@
+set folder = "imaps://mhmdali102@bk.ru@imap.mail.ru:993"
+set smtp_url = "smtp://mhmdali102@bk.ru@smtp.mail.ru:465"
+set from = "mhmdali102@bk.ru"
+set realname = "Mhmd Ali Hsen"
+set spoolfile = "+INBOX"
+set record = "+Sent"
+set trash = "+Trash"
+set postponed = "+Drafts"
+
+mailboxes =INBOX =Sent =Trash =Drafts =Junk =Other
+
+source colors.muttrc

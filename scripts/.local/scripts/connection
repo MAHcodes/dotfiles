@@ -1,0 +1,9 @@
+#!/bin/bash
+
+MATERIAL=$HOME/.local/share/icons/material
+
+dunstify -r 2529 "Checking..." -t 0 -i $MATERIAL/signal.svg
+
+ping -c 1 google.com &>/dev/null &&
+	dunstify -r 2529 "Connected" -i $MATERIAL/wifi-ok.svg ||
+	dunstify -r 2529 "No Internet Connection" -i $MATERIAL/wifi-bad.svg

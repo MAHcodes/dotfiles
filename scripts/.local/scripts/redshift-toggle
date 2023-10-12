@@ -1,0 +1,12 @@
+#!/bin/bash
+
+MATERIAL=$HOME/.local/share/icons/material
+
+if pgrep -x "redshift" > /dev/null
+then
+  dunstify -r 9291 "Day mode" -i $MATERIAL/light-mode.svg
+  pkill redshift
+else
+  dunstify -r 9291 "Night mode" -i $MATERIAL/bedtime.svg
+  redshift &
+fi

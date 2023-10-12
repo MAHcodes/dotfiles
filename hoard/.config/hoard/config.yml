@@ -1,0 +1,24 @@
+---
+version: 1.0.1
+default_namespace: all
+config_home_path: /home/mhmdali102/.config/hoard
+trove_path: /home/mhmdali102/.config/hoard/trove.yml
+query_prefix: "  > "
+primary_color:
+  - 183
+  - 189
+  - 248
+secondary_color:
+  - 198
+  - 160
+  - 246
+tertiary_color:
+  - 36
+  - 39
+  - 58
+command_color:
+  - 240
+  - 198
+  - 198
+parameter_token: "#"
+read_from_current_directory: true

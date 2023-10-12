@@ -1,0 +1,26 @@
+#!/bin/bash
+
+MATERIAL=~/.local/share/icons/material
+
+case $1 in
+  up)
+    pulsemixer --change-volume +5
+    VOLUME=$(pulsemixer --get-volume | awk '{print $1}')
+    dunstify -r 2592 -u low -h int:value:"$VOLUME" "Master: $VOLUME%" -i $MATERIAL/volume-up.svg
+    ;;
+  down)
+    pulsemixer --change-volume -5
+    VOLUME=$(pulsemixer --get-volume | awk '{print $1}')
+    dunstify -r 2592 -u low -h int:value:"$VOLUME" "Master: $VOLUME%" -i $MATERIAL/volume-down.svg
+    ;;
+  toggle)
+    pulsemixer --toggle-mute
+    case $(pulsemixer --get-mute) in
+      0)
+        dunstify -r 2592 -u low "Master: Unmuted" -i $MATERIAL/volume-up.svg
+        ;;
+      1)
+        dunstify -r 2592 -u low "Master: Muted" -i $MATERIAL/volume-off.svg
+        ;;
+    esac
+esac

@@ -1,0 +1,15 @@
+#!/bin/sh
+
+MATERIAL=~/.local/share/icons/material
+
+socialslist="LinkedIn https://www.linkedin.com/in/mah-codes-66b0671b7/
+GitHub https://github.com/MAHcodes
+Gmail mahdotcodes@gmail.com
+Twitter https://twitter.com/MAHcodes
+Portfolio https://mah.codes"
+
+social=$(echo "$socialslist" | awk -F " " '{print $1}' | rofi -dmenu -i -p "Select social: ")
+
+echo "$socialslist" | grep -i "$social" | awk -F " " '{print $2}' | tr -d '\n'| xsel -ib
+
+notify-send "$social" "Copied to clipboard" -i $MATERIAL/link.svg

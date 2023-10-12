@@ -1,0 +1,3 @@
+#!/bin/sh
+
+dunstify -r 5999 "$(date '+%H:%M')" "$(date '+%a %d %b %Y')" -i ~/.local/share/icons/material/schedule.svg

@@ -1,0 +1,29 @@
+#!/bin/sh
+
+DATE=$(date +%Y-%m-%d-%H-%M-%S)
+FILE=$DATE-screenshot.png
+OUTPUT=$HOME/Pictures/screenshots/
+MATERIAL=$HOME/.local/share/icons/material
+
+[ -d $OUTPUT ] || mkdir -p $OUTPUT
+
+case "$1" in
+  "select")
+    scrot --select --line mode=edge $OUTPUT/$FILE
+    TYPE=Selection
+    ICON=aspect-ratio.svg
+    ;;
+  "window")
+    scrot --focused --border $OUTPUT/$FILE
+    TYPE=Window
+    ICON=web-asset.svg
+    ;;
+  "screen")
+    scrot "$OUTPUT/$FILE" || exit
+    TYPE=Screen
+    ICON=fit-screen.svg
+    ;;
+esac
+
+dunstify -r 2012 "$TYPE copied to clipboard" "Saved to ~/Pictures/screenshots" -i $MATERIAL/$ICON
+xclip -selection clipboard -t image/png -i $OUTPUT/$FILE

@@ -1,0 +1,48 @@
+[user]
+  email = mhmdali102@bk.ru
+  name = mahcodes
+
+[diff]
+  tool = vimdiff
+[merge]
+  tool = vimdiff
+[mergetool "vimdiff"]
+  path = nvim
+
+[core]
+  pager = delta
+  trustctime = false
+
+[interactive]
+  diffFilter = delta --color-only
+
+[include]
+  path = ~/.config/git/themes.gitconfig
+
+[delta]
+  features = mellow-barbet
+  navigate = true  # use n and N to move between diff sections
+  side-by-side = true
+  line-numbers = true
+
+[merge]
+  conflictstyle = diff3
+
+[diff]
+  colorMoved = default
+
+[filter "lfs"]
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+[lfs]
+  cachecredentials = true
+
+[http]
+  connecttimeout = 9999
+[init]
+  defaultBranch = master
+
+[alias]
+yolo = !git add -A && git commit -am \"`curl -sL http://whatthecommit.com/index.txt`\"
