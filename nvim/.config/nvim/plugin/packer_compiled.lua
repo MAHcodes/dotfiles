@@ -495,6 +495,11 @@ _G.packer_plugins = {
     path = "/home/mhmdali102/.local/share/nvim/site/pack/packer/start/rainbow-delimiters.nvim",
     url = "https://github.com/HiPhish/rainbow-delimiters.nvim"
   },
+  ["roll.nvim"] = {
+    loaded = true,
+    path = "/home/mhmdali102/.local/share/nvim/site/pack/packer/start/roll.nvim",
+    url = "https://github.com/MAHcodes/roll.nvim"
+  },
   ["rose-pine"] = {
     loaded = true,
     path = "/home/mhmdali102/.local/share/nvim/site/pack/packer/start/rose-pine",
@@ -585,11 +590,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mhmdali102/.local/share/nvim/site/pack/packer/start/which-key.nvim",
     url = "https://github.com/folke/which-key.nvim"
-  },
-  ["yolo.nvim"] = {
-    loaded = true,
-    path = "/home/mhmdali102/.local/share/nvim/site/pack/packer/start/yolo.nvim",
-    url = "https://github.com/MAHcodes/yolo.nvim"
   },
   ["zen-mode.nvim"] = {
     loaded = true,

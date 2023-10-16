@@ -1,5 +1,0 @@
-#!/bin/bash
-
-mpc clear
-mpc add "$@"
-mpc play
