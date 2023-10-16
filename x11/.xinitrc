@@ -5,6 +5,7 @@ userresources=$HOME/.Xresources
 [ -d "$HOME/.local/bin" ] && PATH="$HOME/.local/bin:$PATH"
 [ -d "$HOME/Applications" ] && PATH="$HOME/Applications:$PATH"
 [ -d "$HOME/.cargo/bin" ] && PATH="$HOME/.cargo/bin:$PATH"
+[ -d "$HOME/.local/scripts" ] && PATH="$HOME/.local/scripts:$PATH"
 
 # exports
 export LS_COLORS="$(vivid generate catppuccin-mocha)"
