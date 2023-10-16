@@ -74,6 +74,10 @@ end
 
 nvim_tree.setup {
   on_attach = on_attach,
+  live_filter = {
+    prefix = "[FILTER]: ",
+    always_show_folders = false,
+  },
   renderer = {
     highlight_git = true,
     indent_markers = {

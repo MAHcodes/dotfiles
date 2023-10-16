@@ -156,6 +156,9 @@ telescope.setup {
     },
     live_grep = {
       theme = "ivy",
+      layout_config = {
+        height = 50,
+      },
     },
   },
   extensions = {

@@ -123,7 +123,7 @@ return packer.startup(function(use)
   use { "decaycs/decay.nvim", as = "decay" }
   use { "bluz71/vim-nightfly-colors", as = "nightfly" }
   use { "bluz71/vim-moonfly-colors", as = "moonfly" }
-  use { "MAHcodes/yolo.nvim", requires = "RRethy/nvim-base16" }
+  use { "MAHcodes/roll.nvim", requires = "RRethy/nvim-base16" }
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp"
