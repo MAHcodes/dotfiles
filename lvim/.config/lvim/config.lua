@@ -147,7 +147,6 @@ lvim.lsp.installer.setup.ensure_installed = {
 -- Additional Plugins
 lvim.plugins = {
   { "catppuccin/nvim", name = "catppuccin" },
-  { "MAHcodes/roll.nvim", dependencies = "RRethy/nvim-base16" },
 }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)

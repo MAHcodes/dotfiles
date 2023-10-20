@@ -14,8 +14,7 @@ xset +fp $HOME/.fonts
 
 xset r rate 210 40
 numlockx on
-setxkbmap -layout 'us,ara' -variant dvorak,qwerty -option 'grp:alt_space_toggle'
-# setxkbmap -layout 'us,us' -variant dvorak,altgr-intl -option 'grp:alt_space_toggle'
+setxkbmap -layout us,ara -variant dvorak,digits -option grp:alt_space_toggle caps:swapescape
 
 feh --bg-fill $HOME/Pictures/wallpaper.png &
 # dbus-launch dunst --config ~/.config/dunst/dunstrc &

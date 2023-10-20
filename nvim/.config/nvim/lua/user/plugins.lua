@@ -123,7 +123,17 @@ return packer.startup(function(use)
   use { "decaycs/decay.nvim", as = "decay" }
   use { "bluz71/vim-nightfly-colors", as = "nightfly" }
   use { "bluz71/vim-moonfly-colors", as = "moonfly" }
-  use { "MAHcodes/roll.nvim", requires = "RRethy/nvim-base16" }
+  use "luisiacc/the-matrix.nvim"
+  use "rafamadriz/neon"
+  use "nyoom-engineering/oxocarbon.nvim"
+  use "ishan9299/nvim-solarized-lua"
+  use "kdheepak/monochrome.nvim"
+  use "kvrohit/rasmus.nvim"
+  use "Mofiqul/adwaita.nvim"
+  use "kvrohit/mellow.nvim"
+  use "Yazeed1s/oh-lucy.nvim"
+  use "maxmx03/fluoromachine.nvim"
+  use "xero/miasma.nvim"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp"
@@ -137,6 +147,8 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-calc"
   -- use "jcha0713/cmp-tw2css"
   use "chrisgrieser/cmp-nerdfont"
+  use "roobert/tailwindcss-colorizer-cmp.nvim"
+
 
   -- snippets
   use "L3MON4D3/LuaSnip"

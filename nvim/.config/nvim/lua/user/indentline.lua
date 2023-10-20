@@ -5,13 +5,13 @@ end
 
 -- rainbow-delimiters.nvim integration
 local highlight = {
-  "RainbowRed",
-  "RainbowYellow",
-  "RainbowBlue",
-  "RainbowOrange",
-  "RainbowGreen",
-  "RainbowViolet",
-  "RainbowCyan",
+  'RainbowDelimiterRed',
+  'RainbowDelimiterYellow',
+  'RainbowDelimiterBlue',
+  'RainbowDelimiterOrange',
+  'RainbowDelimiterGreen',
+  'RainbowDelimiterViolet',
+  'RainbowDelimiterCyan',
 }
 
 local hooks = require "ibl.hooks"
