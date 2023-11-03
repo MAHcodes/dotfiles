@@ -30,10 +30,3 @@ plug "zap-zsh/zap-prompt"
 # autocomplete
 fpath+=~/.config/zsh/completions
 autoload -Uz compinit && compinit
-
-# bun completions
-[ -s "/home/mhmdali102/.bun/_bun" ] && source "/home/mhmdali102/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"

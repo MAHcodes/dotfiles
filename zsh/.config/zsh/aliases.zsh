@@ -34,6 +34,8 @@ alias nu="sudo nala upgrade"
 alias slmake="rm -rf config.h; sudo make clean install; make clean"
 alias nvd="__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia"
 alias mochify="lutgen apply -p catppuccin-mocha"
+alias ip_wlp0s20f3="ip -brief addr | awk '/wlp0s20f3/{print \$3}'"
+alias twtui="taskwarrior-tui"
 
 # exit
 alias :q="exit"

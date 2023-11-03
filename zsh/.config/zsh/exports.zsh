@@ -25,7 +25,6 @@ export MANPAGER='nvim +Man!'
 # export go path
 export GOPATH="$HOME/go"
 export GOROOT="$HOME/.go"
-
 [ -d "$HOME/go/bin" ] && PATH="$HOME/go/bin:$PATH"]
 
 # pnpm
@@ -46,3 +45,10 @@ export FZF_DEFAULT_OPTS=" \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#b4befe,hl+:#f38ba8 \
 --bind 'ctrl-d:change-prompt( )+reload(fd . --type d)' \
 --bind 'ctrl-f:change-prompt( )+reload(fd . --type f)'"
+
+# bun completions
+[ -s "/home/mhmdali102/.bun/_bun" ] && source "/home/mhmdali102/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

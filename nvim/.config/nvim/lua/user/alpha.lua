@@ -4,16 +4,19 @@ if not status_ok then
 end
 
 local banner = [[
-
-
-   ▄   ▄███▄   ████▄     ▄   ▄█ █▀▄▀█ 
-    █  █▀   ▀  █   █      █  ██ █ █ █ 
-██   █ ██▄▄    █   █ █     █ ██ █ ▄ █ 
-█ █  █ █▄   ▄▀ ▀████  █    █ ▐█ █   █ 
-█  █ █ ▀███▀           █  █   ▐    █  
-█   ██                  █▐        ▀   
-
-
+        .          .
+      ';;,.        ::'
+    ,:::;,,        :ccc,
+   ,::c::,,,,.     :cccc,
+   ,cccc:;;;;;.    cllll,
+   ,cccc;.;;;;;,   cllll;
+   :cccc; .;;;;;;. coooo;
+   ;llll;   ,:::::'loooo;
+   ;llll:    ':::::loooo:
+   :oooo:     .::::llodd:
+   .;ooo:       ;cclooo:.
+     .;oc        'coo;.
+       .'         .,.
 ]]
 
 
@@ -95,13 +98,13 @@ local buttons = {
   type = "group",
   val = {
     button("t", "  TODO", ":e ~/notes/TODO/index.md<CR>"),
-    button("f", "  Find file", ":Telescope find_files<CR>"),
+    button("f", "󰈞  Find file", ":Telescope find_files<CR>"),
     button("e", "  New file", ":ene <BAR> startinsert<CR>"),
     button("p", "  Find project", ":Telescope projects theme=dropdown <CR>"),
     button("s", "󱝩  Find Session", ":Telescope persisted theme=dropdown<CR>"),
     button("l", "  Load Session", ":SessionLoad<CR>"),
-    button("r", "  Recently used files", ":Telescope oldfiles<CR>"),
-    button("F", "  Find text", ":Telescope live_grep<CR>"),
+    button("r", "󰄉  Recently used files", ":Telescope oldfiles<CR>"),
+    button("F", "󰊄  Find text", ":Telescope live_grep<CR>"),
     button("c", "  Configuration", ":e $MYVIMRC<CR>"),
     button("u", "  Update", ":PackerSync<CR>"),
     button("q", "  Quit", ":qa<CR>"),

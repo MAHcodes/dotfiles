@@ -9,6 +9,8 @@ vim.g.catppuccin_flavour = "mocha"
 catppuccin.setup({
   custom_highlights = function(colors)
     return {
+      Comment = { style = { "italic" } },
+
       -- alpha
       ["@alpha.title"] = { fg = colors.yellow, style = { "bold" } },
       ["@alpha.text"] = { fg = colors.blue },
@@ -20,7 +22,7 @@ catppuccin.setup({
       NoiceCmdlinePopupBorder = { fg = colors.blue },
       NoiceVirtualText = { fg = colors.yellow },
       NoiceLspProgressSuccess = { fg = colors.green },
-      NoiceLspProgressSpinner= { fg = colors.yellow },
+      NoiceLspProgressSpinner = { fg = colors.yellow },
 
       -- glance
       GlancePreviewNormal = { bg = colors.mantle },

@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/home/mhmdali102/.cache/nvim/packer_hererocks/2.1.1696795921/share/lua/5.1/?.lua;/home/mhmdali102/.cache/nvim/packer_hererocks/2.1.1696795921/share/lua/5.1/?/init.lua;/home/mhmdali102/.cache/nvim/packer_hererocks/2.1.1696795921/lib/luarocks/rocks-5.1/?.lua;/home/mhmdali102/.cache/nvim/packer_hererocks/2.1.1696795921/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/home/mhmdali102/.cache/nvim/packer_hererocks/2.1.1696795921/lib/lua/5.1/?.so"
+local package_path_str = "/home/mhmdali102/.cache/nvim/packer_hererocks/2.1.1692716794/share/lua/5.1/?.lua;/home/mhmdali102/.cache/nvim/packer_hererocks/2.1.1692716794/share/lua/5.1/?/init.lua;/home/mhmdali102/.cache/nvim/packer_hererocks/2.1.1692716794/lib/luarocks/rocks-5.1/?.lua;/home/mhmdali102/.cache/nvim/packer_hererocks/2.1.1692716794/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/mhmdali102/.cache/nvim/packer_hererocks/2.1.1692716794/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -320,11 +320,6 @@ _G.packer_plugins = {
     path = "/home/mhmdali102/.local/share/nvim/site/pack/packer/start/mellow.nvim",
     url = "https://github.com/kvrohit/mellow.nvim"
   },
-  ["miasma.nvim"] = {
-    loaded = true,
-    path = "/home/mhmdali102/.local/share/nvim/site/pack/packer/start/miasma.nvim",
-    url = "https://github.com/xero/miasma.nvim"
-  },
   ["mkdir.nvim"] = {
     loaded = true,
     path = "/home/mhmdali102/.local/share/nvim/site/pack/packer/start/mkdir.nvim",
@@ -529,11 +524,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mhmdali102/.local/share/nvim/site/pack/packer/start/project.nvim",
     url = "https://github.com/ahmedkhalf/project.nvim"
-  },
-  ["rainbow-delimiters.nvim"] = {
-    loaded = true,
-    path = "/home/mhmdali102/.local/share/nvim/site/pack/packer/start/rainbow-delimiters.nvim",
-    url = "https://github.com/HiPhish/rainbow-delimiters.nvim"
   },
   ["rasmus.nvim"] = {
     loaded = true,

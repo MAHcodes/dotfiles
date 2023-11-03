@@ -29,6 +29,12 @@ create_autocmd('FileType', 'gitcommit', function()
   vim.cmd('setlocal spell')
 end)
 
+-- fix mdx highlight
+create_autocmd({ "BufEnter" }, "*.mdx", function()
+  vim.cmd('set ft=jsx')
+end
+)
+
 -- _markdown
 create_autocmd('FileType', 'markdown', function()
   vim.cmd('setlocal wrap')
@@ -38,11 +44,6 @@ end)
 -- _auto_resize
 create_autocmd('VimResized', '*', function()
   vim.cmd('tabdo wincmd =')
-end)
-
--- _tmux
-create_autocmd('BufRead,BufNewFile', '*.tmux', function()
-  vim.cmd('set filetype=tmux')
 end)
 
 vim.api.nvim_create_autocmd({ "VimEnter" }, {

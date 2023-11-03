@@ -133,7 +133,6 @@ return packer.startup(function(use)
   use "kvrohit/mellow.nvim"
   use "Yazeed1s/oh-lucy.nvim"
   use "maxmx03/fluoromachine.nvim"
-  use "xero/miasma.nvim"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp"
@@ -193,7 +192,7 @@ return packer.startup(function(use)
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
   use "nvim-treesitter/nvim-treesitter-textobjects"
-  use "HiPhish/rainbow-delimiters.nvim"
+  -- use "HiPhish/rainbow-delimiters.nvim"
 
   -- Git
   use "lewis6991/gitsigns.nvim"
