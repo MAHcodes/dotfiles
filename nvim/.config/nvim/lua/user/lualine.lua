@@ -68,11 +68,18 @@ local progress = {
   end,
 }
 
-local macro = {
+local recording = {
   function()
     return vim.fn.reg_recording()
   end,
   icon = "󰑊",
+}
+
+local recorded = {
+  function()
+    return vim.fn.reg_recorded()
+  end,
+  icon = "󰐊",
 }
 
 local filename = {
@@ -111,7 +118,8 @@ lualine.setup({
     lualine_a = {
       "fileformat",
       mode,
-      macro,
+      recording,
+      recorded,
       filename,
       "filesize"
     },
