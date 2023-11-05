@@ -11,7 +11,7 @@ local diagnostics = {
   "diagnostics",
   sources = { "nvim_diagnostic" },
   sections = { "error", "warn", "hint", "info" },
-  symbols = { error = " ", warn = "  ", hint = " 󰌶 ", info = "  " },
+  symbols = { error = " ", warn = "  ", hint = "  ", info = "  " },
   colored = true,
   update_in_insert = false,
   always_visible = false,
@@ -20,7 +20,7 @@ local diagnostics = {
 local diff = {
   "diff",
   colored = true,
-  symbols = { added = " ", modified = " ", removed = " " }, -- changes diff symbols
+  symbols = { added = " ", modified = "󱗜 ", removed = " " }, -- 󱗜 
   cond = hide_in_width,
 }
 
@@ -68,6 +68,13 @@ local progress = {
   end,
 }
 
+local macro = {
+  function()
+    return vim.fn.reg_recording()
+  end,
+  icon = "󰑊",
+}
+
 local filename = {
   'filename',
   file_status = true,     -- Displays file status (readonly status, modified status)
@@ -104,6 +111,7 @@ lualine.setup({
     lualine_a = {
       "fileformat",
       mode,
+      macro,
       filename,
       "filesize"
     },

@@ -46,9 +46,6 @@ export FZF_DEFAULT_OPTS=" \
 --bind 'ctrl-d:change-prompt( )+reload(fd . --type d)' \
 --bind 'ctrl-f:change-prompt( )+reload(fd . --type f)'"
 
-# bun completions
-[ -s "/home/mhmdali102/.bun/_bun" ] && source "/home/mhmdali102/.bun/_bun"
-
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"

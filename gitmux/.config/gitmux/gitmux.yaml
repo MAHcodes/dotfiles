@@ -10,12 +10,12 @@ tmux:
     ahead: " "
     # 'behind count' when local and remote branch diverged.
     behind: " "
-    # count of files in the staging area.
+    # count of fires in the staging area.
     staged: " "
     # count of files in conflicts.
     conflict: "󰕚 "
     # count of modified files.
-    modified: " "
+    modified: "󱗜 "
     # count of untracked files.
     untracked: " "
     # count of stash entries.
