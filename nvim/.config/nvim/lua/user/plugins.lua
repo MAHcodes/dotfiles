@@ -110,7 +110,7 @@ return packer.startup(function(use)
   use "rebelot/kanagawa.nvim"
   use "titanzero/zephyrium"
   use "EdenEast/nightfox.nvim"
-  use "catppuccin/nvim"
+  use { "catppuccin/nvim", as = "catppuccin" }
   use({ "projekt0n/github-nvim-theme", tag = 'v0.0.7' })
   use "Mofiqul/vscode.nvim"
   use "ray-x/starry.nvim"
@@ -133,6 +133,9 @@ return packer.startup(function(use)
   use "kvrohit/mellow.nvim"
   use "Yazeed1s/oh-lucy.nvim"
   use "maxmx03/fluoromachine.nvim"
+  use "ramojus/mellifluous.nvim"
+  use "Shatur/neovim-ayu"
+  use "Matsuuu/pinkmare"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp"

@@ -1,19 +1,23 @@
 font:
   normal:
-    family: "FantasqueSansM Nerd Font Mono"
+    # family: "FantasqueSansM Nerd Font Mono"
+    family: "MAHfont"
     style: "Regular"
   bold:
-    family: "FantasqueSansM Nerd Font Mono"
+    # family: "FantasqueSansM Nerd Font Mono"
+    family: "Monaspace Argon"
     style: "Bold"
   italic:
-    family: "FantasqueSansM Nerd Font Mono"
+    # family: "FantasqueSansM Nerd Font Mono"
+    family: "Monaspace Radon"
     style: "Italic"
   bold_italic:
-    family: "FantasqueSansM Nerd Font Mono"
+    # family: "FantasqueSansM Nerd Font Mono"
+    family: "Monaspace Radon"
     style: "Bold Italic"
 
   # Point size
-  size: 12
+  size: 11
 
   offset:
     x: 0
@@ -27,6 +31,9 @@ window:
   padding:
     x: 0
     y: 0
+
+env:
+  TERM: xterm-256color
 
 scrolling:
   # Maximum number of lines in the scrollback buffer.

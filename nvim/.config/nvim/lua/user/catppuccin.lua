@@ -3,14 +3,40 @@ if not status_ok then
   return
 end
 
--- configure catppuccin flavour: latte, frappe, macchiato, mocha
-vim.g.catppuccin_flavour = "mocha"
-
 catppuccin.setup({
+  flavour = "mocha",
+  background = {
+    light = "latte",
+    dark = "mocha",
+  },
+  transparent_background = false,
+  show_end_of_buffer = false,
+  term_colors = false,
+  dim_inactive = {
+    enabled = true,
+    shade = "dark",
+    percentage = 0.1,
+  },
+  no_italic = false,
+  no_bold = false,
+  no_underline = false,
+  styles = {
+    comments = { "italic" },
+    conditionals = { "italic" },
+    loops = {},
+    functions = {},
+    keywords = {},
+    strings = {},
+    variables = {},
+    numbers = {},
+    booleans = {},
+    properties = {},
+    types = {},
+    operators = {},
+  },
+  color_overrides = {},
   custom_highlights = function(colors)
     return {
-      Comment = { style = { "italic" } },
-
       -- alpha
       ["@alpha.title"] = { fg = colors.yellow, style = { "bold" } },
       ["@alpha.text"] = { fg = colors.blue },

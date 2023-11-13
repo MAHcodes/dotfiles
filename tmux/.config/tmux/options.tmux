@@ -1,5 +1,6 @@
 # fix colors
-set-option -sa terminal-overrides ",xterm*:Tc"
+set -g default-terminal "tmux-256color"
+set -ag terminal-overrides ",xterm-256color:RGB"
 
 # disable bullshit options
 set -g mouse off

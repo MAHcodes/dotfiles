@@ -110,6 +110,11 @@ _G.packer_plugins = {
     path = "/home/mhmdali102/.local/share/nvim/site/pack/packer/start/bigfile.nvim",
     url = "https://github.com/LunarVim/bigfile.nvim"
   },
+  catppuccin = {
+    loaded = true,
+    path = "/home/mhmdali102/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["chartoggle.nvim"] = {
     loaded = true,
     path = "/home/mhmdali102/.local/share/nvim/site/pack/packer/start/chartoggle.nvim",
@@ -315,6 +320,11 @@ _G.packer_plugins = {
     path = "/home/mhmdali102/.local/share/nvim/site/pack/packer/start/material.nvim",
     url = "https://github.com/marko-cerovac/material.nvim"
   },
+  ["mellifluous.nvim"] = {
+    loaded = true,
+    path = "/home/mhmdali102/.local/share/nvim/site/pack/packer/start/mellifluous.nvim",
+    url = "https://github.com/ramojus/mellifluous.nvim"
+  },
   ["mellow.nvim"] = {
     loaded = true,
     path = "/home/mhmdali102/.local/share/nvim/site/pack/packer/start/mellow.nvim",
@@ -350,6 +360,11 @@ _G.packer_plugins = {
     path = "/home/mhmdali102/.local/share/nvim/site/pack/packer/start/neon",
     url = "https://github.com/rafamadriz/neon"
   },
+  ["neovim-ayu"] = {
+    loaded = true,
+    path = "/home/mhmdali102/.local/share/nvim/site/pack/packer/start/neovim-ayu",
+    url = "https://github.com/Shatur/neovim-ayu"
+  },
   nightfly = {
     loaded = true,
     path = "/home/mhmdali102/.local/share/nvim/site/pack/packer/start/nightfly",
@@ -384,11 +399,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mhmdali102/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
     url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
-  },
-  nvim = {
-    loaded = true,
-    path = "/home/mhmdali102/.local/share/nvim/site/pack/packer/start/nvim",
-    url = "https://github.com/catppuccin/nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -509,6 +519,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mhmdali102/.local/share/nvim/site/pack/packer/start/persisted.nvim",
     url = "https://github.com/olimorris/persisted.nvim"
+  },
+  pinkmare = {
+    loaded = true,
+    path = "/home/mhmdali102/.local/share/nvim/site/pack/packer/start/pinkmare",
+    url = "https://github.com/Matsuuu/pinkmare"
   },
   ["plenary.nvim"] = {
     loaded = true,
@@ -644,14 +659,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: typescript.nvim
-time([[Config for typescript.nvim]], true)
-try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15typescript\frequire\0", "config", "typescript.nvim")
-time([[Config for typescript.nvim]], false)
 -- Config for: auto-hlsearch.nvim
 time([[Config for auto-hlsearch.nvim]], true)
 try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\18auto-hlsearch\frequire\0", "config", "auto-hlsearch.nvim")
 time([[Config for auto-hlsearch.nvim]], false)
+-- Config for: typescript.nvim
+time([[Config for typescript.nvim]], true)
+try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15typescript\frequire\0", "config", "typescript.nvim")
+time([[Config for typescript.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
