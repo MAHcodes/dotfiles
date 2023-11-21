@@ -18,11 +18,11 @@ font:
     style: "Bold Italic"
 
   # Point size
-  size: 11
+  size: 10
 
   offset:
     x: 0
-    y: 0
+    y: 2
   glyph_offset:
     x: 0
     y: 0

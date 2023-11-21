@@ -10,8 +10,8 @@ if not vim.loop.fs_stat(lazypath) then
   })
 end
 vim.opt.rtp:prepend(lazypath)
-vim.opt.confirm = true
 
+vim.opt.confirm = true
 vim.g.mapleader = " "
 
 require("lazy").setup("plugins", {

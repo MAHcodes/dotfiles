@@ -10,11 +10,6 @@ vim.g.edge_style = "neon"
 -- configure material: darker, lighter, oceanic, palenight, deep ocean
 vim.g.material_style = "deep ocean"
 
-vim.cmd [[
-try
-  colorscheme catppuccin
-catch /^Vim\%((\a\+)\)\=:E185/
-  colorscheme default
-  set background=dark
-endtry
-]]
+local colorscheme = "catppuccin-mocha"
+
+vim.cmd("colorscheme " .. colorscheme)
