@@ -5,13 +5,23 @@ end
 
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
 local formatting = null_ls.builtins.formatting
+local actions = null_ls.builtins.code_actions
+local diagnostics = null_ls.builtins.diagnostics
+local hover = null_ls.builtins.hover
 
 null_ls.setup {
   debug = false,
   sources = {
-    formatting.prettier,
+    -- formatting.prettier,
     formatting.prettierd,
+    -- formatting.biome,
+    -- formatting.eslint_d,
     formatting.shfmt,
     formatting.black,
+    -- actions.eslint,
+    actions.eslint_d,
+    actions.gitsigns,
+    diagnostics.gitlint,
+    hover.dictionary,
   },
 }
