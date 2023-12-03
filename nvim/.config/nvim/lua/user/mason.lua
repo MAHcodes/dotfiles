@@ -7,8 +7,9 @@ local servers = {
   "jsonls",
   "pyright",
   "lua_ls",
-  "tsserver",
+  -- "tsserver",
   "eslint",
+  "biome",
   "tailwindcss",
   "marksman",
   "bashls",
@@ -58,10 +59,10 @@ for _, server in pairs(servers) do
     opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
   end
 
-  if server == "tsserver" then
-    local tsserver_opts = require "user.lsp.settings.tsserver"
-    opts = vim.tbl_deep_extend("force", tsserver_opts, opts)
-  end
+  -- if server == "tsserver" then
+  --   local tsserver_opts = require "user.lsp.settings.tsserver"
+  --   opts = vim.tbl_deep_extend("force", tsserver_opts, opts)
+  -- end
 
   if server == "pyright" then
     local pyright_opts = require "user.lsp.settings.pyright"
@@ -76,6 +77,12 @@ for _, server in pairs(servers) do
   if server == "astro" then
     local astro_opts = require "user.lsp.settings.astro"
     opts = vim.tbl_deep_extend("force", astro_opts, opts)
+  end
+
+  if server == "tailwindcss" then
+    print("tailwindcss")
+    local tailwindcss_opts = require "user.lsp.settings.tailwindcss"
+    opts = vim.tbl_deep_extend("force", tailwindcss_opts, opts)
   end
 
   lspconfig[server].setup(opts)

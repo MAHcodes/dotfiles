@@ -35,20 +35,6 @@ configs.setup {
       return status_ok and big_file_detected
     end,
   },
-  context_commentstring = {
-    enable = true,
-    enable_autocmd = false,
-    config = {
-      -- Languages that have a single comment style
-      typescript = "// %s",
-      css = "/* %s */",
-      scss = "/* %s */",
-      html = "<!-- %s -->",
-      svelte = "<!-- %s -->",
-      vue = "<!-- %s -->",
-      json = "",
-    },
-  },
   indent = { enable = true, disable = { "yaml", "python" } },
   autotag = { enable = false },
   textobjects = {
@@ -113,7 +99,23 @@ configs.setup {
   },
   rainbow = {
     enable = true,
-    extended_mode = false,    -- Highlight also non-parentheses delimiters, boolean or table: lang -> boolean
-    max_file_lines = 1000,   -- Do not enable for files with more than 1000 lines, int
+    extended_mode = false, -- Highlight also non-parentheses delimiters, boolean or table: lang -> boolean
+    max_file_lines = 1000, -- Do not enable for files with more than 1000 lines, int
   },
 }
+
+local commentstring_ok, commentstring = pcall(require, "ts_context_commentstring")
+if not commentstring_ok then
+  return
+end
+
+commentstring.setup({
+  enable_autocmd = false,
+})
+
+local autotag_ok, autotag = pcall(require, "nvim-ts-autotag")
+if not autotag_ok then
+  return
+end
+
+autotag.setup()

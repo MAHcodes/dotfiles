@@ -159,20 +159,14 @@ return packer.startup(function(use)
   -- LSP
   use "neovim/nvim-lspconfig"
   use "tamago324/nlsp-settings.nvim"
-  use "jose-elias-alvarez/null-ls.nvim"
+  use "nvimtools/none-ls.nvim"
   use "simrat39/symbols-outline.nvim"
   use "rmagatti/goto-preview"
   use "VidocqH/lsp-lens.nvim"
 
   -- typescript
   use "dmmulroy/tsc.nvim"
-  use {
-    "jose-elias-alvarez/typescript.nvim",
-    commit = "ab2e4b9e8287d36f6f715684d18dd1414ed7c2cc",
-    config = function()
-      require("typescript").setup()
-    end
-  }
+  use "yioneko/nvim-vtsls"
 
   -- Dap
   use "mfussenegger/nvim-dap"
@@ -195,6 +189,7 @@ return packer.startup(function(use)
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
   use "nvim-treesitter/nvim-treesitter-textobjects"
+  use "windwp/nvim-ts-autotag"
   -- use "HiPhish/rainbow-delimiters.nvim"
 
   -- Git

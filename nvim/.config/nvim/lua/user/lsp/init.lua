@@ -4,6 +4,7 @@ if not status_ok then
 end
 
 require("user.lsp.handlers").setup()
+require "user.lsp.vtsls"
 require "user.lsp.null-ls"
 require "user.lsp.symbols-outline"
 require "user.lsp.lens"
