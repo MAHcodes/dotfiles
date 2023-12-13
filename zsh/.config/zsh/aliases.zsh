@@ -22,10 +22,6 @@ alias gP="git push"
 alias ytmp4="mpv --ytdl --ytdl-format='bestvideo[height=480]+bestaudio' --tls-verify"
 alias ytmp3="mpv --ytdl --ytdl-format='bestaudio' --tls-verify --no-video"
 
-# docker
-alias docker="sudo docker"
-alias docker-compose="sudo docker-compose"
-
 # sys
 alias uu="sudo apt update && sudo apt upgrade -y"
 alias nu="sudo nala upgrade"

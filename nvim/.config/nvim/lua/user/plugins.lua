@@ -78,6 +78,7 @@ return packer.startup(function(use)
   use "johmsalas/text-case.nvim"
   use "folke/neodev.nvim"
   use "axelvc/template-string.nvim"
+  use "stevearc/oil.nvim"
 
   -- TODO: checkout
   -- use "pwntester/octo.nvim"

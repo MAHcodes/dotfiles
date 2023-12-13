@@ -114,7 +114,7 @@ noice.setup({
       },
 
       format_done = {
-        { " ✔ ", hl_group = "NoiceLspProgressSuccess" },
+        { " ✔  ", hl_group = "NoiceLspProgressSuccess" },
         { "{data.progress.title} ", hl_group = "NoiceLspProgressTitle" },
         { "{data.progress.client} ", hl_group = "NoiceLspProgressClient" },
       },
