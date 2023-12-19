@@ -7,7 +7,6 @@ end
 local formatting = null_ls.builtins.formatting
 local actions = null_ls.builtins.code_actions
 local diagnostics = null_ls.builtins.diagnostics
-local hover = null_ls.builtins.hover
 
 null_ls.setup {
   debug = false,
@@ -20,8 +19,6 @@ null_ls.setup {
     formatting.black,
     -- actions.eslint,
     actions.eslint_d,
-    actions.gitsigns,
     diagnostics.gitlint,
-    hover.dictionary,
   },
 }

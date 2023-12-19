@@ -9,7 +9,7 @@ local servers = {
   "lua_ls",
   -- "tsserver",
   "eslint",
-  "biome",
+  -- "biome",
   "tailwindcss",
   "marksman",
   "bashls",
@@ -79,9 +79,19 @@ for _, server in pairs(servers) do
     opts = vim.tbl_deep_extend("force", astro_opts, opts)
   end
 
+  if server == "gopls" then
+    local gopls_opts = require "user.lsp.settings.gopls"
+    opts = vim.tbl_deep_extend("force", gopls_opts, opts)
+  end
+
   if server == "tailwindcss" then
     local tailwindcss_opts = require "user.lsp.settings.tailwindcss"
     opts = vim.tbl_deep_extend("force", tailwindcss_opts, opts)
+  end
+
+  if server == "cssls" then
+    local cssls_opts = require "user.lsp.settings.cssls"
+    opts = vim.tbl_deep_extend("force", cssls_opts, opts)
   end
 
   lspconfig[server].setup(opts)

@@ -1,28 +1,28 @@
 font:
   normal:
-    # family: "FantasqueSansM Nerd Font Mono"
+    family: "FantasqueSansM Nerd Font Mono"
     # family: "Monaspace Argon"
-    family: "MAHFont"
+    # family: "MAHFont"
     style: "Regular"
   bold:
-    # family: "FantasqueSansM Nerd Font Mono"
-    family: "MAHFont"
+    family: "FantasqueSansM Nerd Font Mono"
+    # family: "MAHFont"
     style: "Bold"
   italic:
-    # family: "FantasqueSansM Nerd Font Mono"
-    family: "Monaspace Radon"
+    family: "FantasqueSansM Nerd Font Mono"
+    # family: "Monaspace Radon"
     style: "Italic"
   bold_italic:
-    # family: "FantasqueSansM Nerd Font Mono"
-    family: "Monaspace Radon"
+    family: "FantasqueSansM Nerd Font Mono"
+    # family: "Monaspace Radon"
     style: "Bold Italic"
 
   # Point size
-  size: 10
+  size: 12
 
   offset:
     x: 0
-    y: 2
+    y: 0
   glyph_offset:
     x: 0
     y: 0

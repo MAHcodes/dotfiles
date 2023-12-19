@@ -23,8 +23,8 @@ plug "MenkeTechnologies/zsh-expand"
 plug "zap-zsh/magic-enter"
 
 # prompts
-# plug "zap-zsh/zap-prompt"
-plug "MAHcodes/distro-prompt"
+plug "zap-zsh/zap-prompt"
+# plug "MAHcodes/distro-prompt"
 # plug "romkatv/powerlevel10k"
 
 # autocomplete
