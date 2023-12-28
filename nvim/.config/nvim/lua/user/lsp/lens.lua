@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 lens.setup({
-  enable = true,
+  enable = false,
   include_declaration = false, -- Reference include declaration
   sections = {                 -- Enable / Disable specific request
     definition = true,
