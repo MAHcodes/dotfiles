@@ -65,7 +65,6 @@ return packer.startup(function(use)
   use "aserowy/tmux.nvim"
   use "is0n/fm-nvim"
   use "petertriho/nvim-scrollbar"
-  use "NeogitOrg/neogit"
   use "folke/noice.nvim"
   use "MunifTanjim/nui.nvim"
   use "rcarriga/nvim-notify"
@@ -73,7 +72,6 @@ return packer.startup(function(use)
   use "kevinhwang91/nvim-bqf"
   use "olimorris/persisted.nvim"
   use "dnlhc/glance.nvim"
-  use "ruifm/gitlinker.nvim"
   use "LunarVim/bigfile.nvim"
   use "johmsalas/text-case.nvim"
   use "folke/neodev.nvim"
@@ -84,17 +82,30 @@ return packer.startup(function(use)
   -- use "pwntester/octo.nvim"
   -- use "ThePrimeagen/git-worktree.nvim"
 
-  use({
+  use {
+    "kevinhwang91/nvim-ufo",
+    requires = {
+      "kevinhwang91/promise-async",
+      "luukvbaal/statuscol.nvim",
+    },
+  }
+  use {
     "asiryk/auto-hlsearch.nvim",
     tag = "1.0.0",
     config = function()
       require("auto-hlsearch").setup()
-    end
-  })
-  use({
+    end,
+  }
+  use {
     "utilyre/barbecue.nvim",
-    requires = { "SmiteshP/nvim-navic" }
-  })
+    requires = { "SmiteshP/nvim-navic" },
+  }
+  use {
+    "b0o/schemastore.nvim",
+    config = function()
+      require("auto-hlsearch").setup()
+    end,
+  }
 
   -- Colorschemes
   use "lunarvim/colorschemes"
@@ -112,7 +123,7 @@ return packer.startup(function(use)
   use "titanzero/zephyrium"
   use "EdenEast/nightfox.nvim"
   use { "catppuccin/nvim", as = "catppuccin" }
-  use({ "projekt0n/github-nvim-theme", tag = 'v0.0.7' })
+  use { "projekt0n/github-nvim-theme", tag = "v0.0.7" }
   use "Mofiqul/vscode.nvim"
   use "ray-x/starry.nvim"
   use { "rose-pine/neovim", as = "rose-pine" }
@@ -151,7 +162,7 @@ return packer.startup(function(use)
   -- use "jcha0713/cmp-tw2css"
   use "chrisgrieser/cmp-nerdfont"
   use "roobert/tailwindcss-colorizer-cmp.nvim"
-
+  use "rasulomaroff/cmp-bufname"
 
   -- snippets
   use "L3MON4D3/LuaSnip"
@@ -180,8 +191,10 @@ return packer.startup(function(use)
   use "williamboman/mason-lspconfig.nvim"
 
   use "nvim-telescope/telescope.nvim"
-  use { "nvim-telescope/telescope-fzf-native.nvim", run =
-  "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build" }
+  use {
+    "nvim-telescope/telescope-fzf-native.nvim",
+    run = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+  }
 
   -- Treesitter
   use {
@@ -196,6 +209,8 @@ return packer.startup(function(use)
   -- Git
   use "lewis6991/gitsigns.nvim"
   use "2kabhishek/co-author.nvim"
+  use "ruifm/gitlinker.nvim"
+  use "NeogitOrg/neogit"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

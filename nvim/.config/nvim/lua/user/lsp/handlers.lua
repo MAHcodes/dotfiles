@@ -13,9 +13,7 @@ M.setup = function()
   end
 
   local config = {
-    virtual_text = {
-      prefix= "▎",
-    },
+    virtual_text = false,
     signs = {
       active = signs,
     },
@@ -40,6 +38,8 @@ M.setup = function()
   vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
     border = "rounded",
   })
+
+  require("lspconfig.ui.windows").default_options.border = "rounded"
 end
 
 local function lsp_highlight_document(client)
@@ -76,6 +76,13 @@ M.on_attach = function(client, bufnr)
   if client.server_capabilities["documentSymbolProvider"] then
     require("nvim-navic").attach(client, bufnr)
   end
+  -- if client.supports_method "textDocument/foldingRange" then
+  --   require("user.ufo")
+  -- end
+  -- if client.supports_method "textDocument/inlayHint" then
+  --   vim.lsp.inlay_hint.enable(bufnr, true)
+  -- end
+
   lsp_highlight_document(client)
   lsp_keymaps(bufnr)
 end

@@ -123,6 +123,7 @@ cmp.setup {
         emoji = "[Emoji]",
         nerdfont = "[NF]",
         calc = "[Calc]",
+        bufname = "[BUFNAME]",
       })[entry.source.name]
 
       -- return vim_item
@@ -131,9 +132,10 @@ cmp.setup {
   },
   sources = {
     { name = "nvim_lsp" },
+    { name = "bufname" },
+    { name = "buffer" },
     { name = "luasnip" },
     { name = "nvim_lua" },
-    { name = "buffer" },
     { name = "async_path" },
     { name = "calc" },
     { name = "emoji" },

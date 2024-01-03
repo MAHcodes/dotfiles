@@ -64,6 +64,21 @@ vim.api.nvim_create_autocmd("VimEnter", {
   end
 })
 
+-- fix luasnip tab weird behavior
+vim.api.nvim_create_autocmd({ "CursorHold" }, {
+  callback = function()
+    local status_ok, luasnip = pcall(require, "luasnip")
+    if not status_ok then
+      return
+    end
+    if luasnip.expand_or_jumpable() then
+      -- ask maintainer for option to make this silent
+      -- luasnip.unlink_current()
+      vim.cmd [[silent! lua require("luasnip").unlink_current()]]
+    end
+  end,
+})
+
 -- Autoformat
 -- augroup _lsp
 --   autocmd!

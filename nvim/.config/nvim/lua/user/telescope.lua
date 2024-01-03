@@ -136,7 +136,7 @@ telescope.setup {
       hidden = true,
       no_ignore = false,
       layout_config = {
-        height = 50,
+        height = vim.fn.winheight(0),
       }
     },
     lsp_document_symbols = {
@@ -148,6 +148,10 @@ telescope.setup {
     current_buffer_fuzzy_find = {
       theme = "dropdown",
     },
+    buffers = {
+      theme = "dropdown",
+      previewer = false,
+    },
     projects = {
       theme = "dropdown",
     },
@@ -157,7 +161,7 @@ telescope.setup {
     live_grep = {
       theme = "ivy",
       layout_config = {
-        height = 50,
+        height = vim.fn.winheight(0),
       },
     },
   },
