@@ -76,14 +76,22 @@ ufo.setup {
   preview = {
     win_config = {
       border = { "", "─", "", "", "", "─", "", "" },
-      winhighlight = "Normal:Folded",
+      winhighlight = "Normal:Normal",
       winblend = 0,
+      maxheight = 20,
     },
     mappings = {
-      scrollU = "<C-k>",
-      scrollD = "<C-j>",
-      jumpTop = "[",
-      jumpBot = "]",
+      scrollB = "<C-b>",
+      scrollF = "<C-f>",
+      scrollU = "<C-u>",
+      scrollD = "<C-d>",
+      scrollE = "<C-E>",
+      scrollY = "<C-Y>",
+      jumpTop = "gg",
+      jumpBot = "G",
+      close = "q",
+      switch = "<Tab>",
+      trace = "<CR>",
     },
   },
 }

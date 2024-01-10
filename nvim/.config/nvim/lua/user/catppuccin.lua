@@ -37,12 +37,12 @@ catppuccin.setup({
   color_overrides = {},
   custom_highlights = function(colors)
     return {
-      Folded = { bg = colors.base },
+      Folded = { bg = colors.surface0 },
       -- alpha
       ["@alpha.title"] = { fg = colors.yellow, style = { "bold" } },
       ["@alpha.text"] = { fg = colors.blue },
       ["@alpha.shortcut"] = { fg = colors.red, style = { "italic" } },
-      ["@alpha.header"] = { fg = colors.lavender },
+      ["@alpha.header"] = { fg = colors.green },
       ["@alpha.footer"] = { fg = colors.peach, style = { "bold" } },
 
       -- cmp
