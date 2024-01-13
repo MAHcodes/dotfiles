@@ -1,0 +1,48 @@
+import = [
+  "~/.config/alacritty/catppuccin-mocha.toml"
+  # "~/.config/alacritty/catppuccin-latte.toml"
+]
+
+live_config_reload = true
+
+[env]
+TERM=xterm-256color
+
+[window]
+dimensions={ column = 0, lines = 0 }
+position="None"
+padding={ x = 0, y = 0 }
+decorations="None"
+opacity=1.0
+blur=false
+startup_mode="Fullscreen"
+resize_increments=true
+
+[scrolling]
+history=10000
+multiplier=10
+
+[font]
+normal = { family = "FantasqueSansM Nerd Font Mono", style "Regular" }
+bold = { family = "FantasqueSansM Nerd Font Mono", style "Bold" }
+italic = { family = "FantasqueSansM Nerd Font Mono", style "Italic" }
+bold_italic = { family = "FantasqueSansM Nerd Font Mono", style "Bold Italic" }
+size=12.0
+offset={x=0, y=0}
+glyph_offset={x=0,y=0}
+
+[cursor]
+shape="Block"
+blinking="Off"
+
+[terminal]
+osc52="CopyPaste"
+
+[mouse]
+hide_when_typing=true
+
+[colors]
+draw_bold_text_with_bright_colors=true
+
+[selection]
+save_to_clipboard=true
