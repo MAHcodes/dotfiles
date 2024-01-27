@@ -4,5 +4,5 @@ if not status_ok then
 end
 
 diffview.setup({
-  enhanced_diff_hl = true,
+  enhanced_diff_hl = false,
 })

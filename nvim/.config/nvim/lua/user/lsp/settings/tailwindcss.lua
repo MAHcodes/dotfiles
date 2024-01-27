@@ -9,18 +9,6 @@ return {
   settings = {
     tailwindCSS = {
       classAttributes = { "class", "className", "class:list", "classList", "ngClass", ".*Styles", ".*Classes" },
-      experimental = {
-        classRegex = {
-          "tw`([^`]*)",
-          -- this is for intelissense on className : ...
-          "className\\s*:\\s*['\"`]([^'\"`]*)['\"`]",
-          -- this is for btnClasses = "..."
-          -- or btnClasses = { danger : "..."}
-          "Classes \\=([^;]*);", "'([^']*)'",
-          "Classes \\=([^;]*);", "\"([^\"]*)\"",
-          "Classes \\=([^;]*);", "\\`([^\\`]*)\\`"
-        }
-      },
       lint = {
         cssConflict = "warning",
         invalidApply = "error",

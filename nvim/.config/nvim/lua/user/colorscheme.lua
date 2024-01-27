@@ -10,6 +10,6 @@ vim.g.edge_style = "neon"
 -- configure material: darker, lighter, oceanic, palenight, deep ocean
 vim.g.material_style = "deep ocean"
 
-local colorscheme = "catppuccin-mocha"
+local colorscheme = "catppuccin"
 
 vim.cmd("colorscheme " .. colorscheme)

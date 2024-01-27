@@ -174,9 +174,6 @@ return packer.startup(function(use)
   use "simrat39/symbols-outline.nvim"
   use "rmagatti/goto-preview"
   use "VidocqH/lsp-lens.nvim"
-
-  -- typescript
-  use "dmmulroy/tsc.nvim"
   use "yioneko/nvim-vtsls"
 
   -- Dap

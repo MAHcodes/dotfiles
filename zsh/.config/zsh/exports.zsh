@@ -6,7 +6,7 @@ SAVEHIST=1000000
 export EDITOR="nvim"
 export VISUAL="nvim"
 export READER="zathura"
-export TERMINAL="kitty"
+export TERMINAL="wezterm"
 export BROWSER="brave-browser"
 export VIDEO="mpv"
 export IMAGE="sxiv"
@@ -37,7 +37,7 @@ esac
 # vivid generate catppuccin-mocha theme
 export LS_COLORS="$(vivid generate catppuccin-mocha)"
 
-# fzf catppuccin_mocha
+# fzf
 export FZF_DEFAULT_OPTS=" \
 --border=rounded --margin=0,1 --padding=0 --info=inline --prompt=' ' --ansi --no-mouse --reverse \
 --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \

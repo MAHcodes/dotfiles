@@ -7,7 +7,7 @@ alias rm='rm -iv'
 alias cat="bat"
 
 # neovim
-alias nvim="NVIM_APPNAME=nvim command nvim"
+alias n="nvim"
 alias mvim="NVIM_APPNAME=mvim command nvim"
 
 # git
@@ -36,6 +36,3 @@ alias ntfy="curl ntfy.sh/mahcodes -d"
 
 # exit
 alias :q="exit"
-
-# shortcuts
-alias n="nvim"
