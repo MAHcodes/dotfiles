@@ -1,4 +1,9 @@
 #!/bin/zsh
 
 source ~/.zshrc
-tmux
+
+if tmux has-session 2>/dev/null; then
+  tmux attach
+else
+  tmux new-session -s $USER -c ~
+fi

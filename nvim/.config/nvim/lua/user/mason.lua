@@ -11,6 +11,7 @@ local servers = {
   "vtsls",
   "eslint",
   -- "biome",
+  "svelte",
   "tailwindcss",
   "marksman",
   "bashls",

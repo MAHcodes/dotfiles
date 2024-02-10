@@ -28,6 +28,8 @@ return {
 	cursor_blink_rate = 0,
 	window_decorations = "NONE",
 
+  check_for_updates = false,
+
 	color_schemes = {
 		["Custom"] = custom,
 	},
