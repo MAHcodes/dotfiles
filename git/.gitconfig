@@ -1,6 +1,7 @@
 [user]
   email = mhmdali102@bk.ru
   name = mahcodes
+	signingkey = /home/mhmdali102/.ssh/id_ed25519.pub
 
 [diff]
   tool = vimdiff
@@ -47,3 +48,5 @@
 
 [alias]
 yolo = !git add -A && git commit -am \"`curl -sL http://whatthecommit.com/index.txt`\"
+[gpg]
+	format = ssh

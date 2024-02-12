@@ -10,7 +10,7 @@ null_ls.setup {
   debug = false,
   sources = {
     -- formatting.prettier,
-    -- formatting.prettierd,
+    formatting.prettierd,
     -- formatting.biome,
     formatting.eslint_d.with {
       filetypes = {
