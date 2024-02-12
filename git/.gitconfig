@@ -46,7 +46,10 @@
 [init]
   defaultBranch = master
 
-[alias]
-yolo = !git add -A && git commit -am \"`curl -sL http://whatthecommit.com/index.txt`\"
 [gpg]
 	format = ssh
+[commit]
+	gpgsign = true
+
+[alias]
+yolo = !git add -A && git commit -am \"`curl -sL http://whatthecommit.com/index.txt`\"
