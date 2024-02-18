@@ -38,8 +38,8 @@ local options = {
   spell = true,
   confirm = true,
   spelllang = { 'en_us' },
-  background = "dark",
   listchars = { trail = "·", eol = "$", extends = ">", precedes = "<", tab = "→ ", nbsp = "␣" },
+  fillchars = { diff = " " },
 }
 
 vim.opt.shortmess:append "cos"
