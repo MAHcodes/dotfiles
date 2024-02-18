@@ -1,6 +1,6 @@
 return {
 	"hrsh7th/nvim-cmp",
-  lazy = true,
+	lazy = true,
 	event = "InsertEnter",
 	dependencies = {
 		{
@@ -21,7 +21,7 @@ return {
 		},
 		{
 			"L3MON4D3/LuaSnip",
-      lazy = true
+			lazy = true,
 		},
 		{
 			"hrsh7th/cmp-nvim-lsp",
@@ -55,7 +55,7 @@ return {
 	config = function()
 		local cmp = require("cmp")
 		local luasnip = require("luasnip")
-    local icons = require("user.icons")
+		local icons = require("user.icons")
 
 		cmp.setup({
 			snippet = {
@@ -105,10 +105,11 @@ return {
 				end, { "i", "s" }),
 			},
 			formatting = {
-				fields = { "kind", "abbr", "menu" },
+				fields = { "abbr", "menu", "kind" },
 				format = function(entry, vim_item)
 					-- vim_item.kind = string.format("%s", icons.kind[vim_item.kind])
-					vim_item.kind = string.format('%s %s', icons.kind[vim_item.kind], vim_item.kind)
+					vim_item.kind = string.format("%s %s", icons.kind[vim_item.kind], vim_item.kind)
+
 					vim_item.menu = ({
 						nvim_lsp = "[LSP]",
 						luasnip = "[Snippet]",
@@ -145,7 +146,9 @@ return {
 				documentation = cmp.config.window.bordered(),
 			},
 			view = {
-				entries = "cmp",
+				entries = {
+					name = "custom",
+				},
 			},
 			experimental = {
 				ghost_text = true,
