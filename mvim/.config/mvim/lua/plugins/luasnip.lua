@@ -1,9 +1,10 @@
 return {
 	"L3MON4D3/LuaSnip",
-  event = "InsertEnter",
+	lazy = true,
+	event = "InsertEnter",
 	dependencies = {
 		"rafamadriz/friendly-snippets",
-    lazy = true,
+		lazy = true,
 	},
 	config = function()
 		local ls = require("luasnip")

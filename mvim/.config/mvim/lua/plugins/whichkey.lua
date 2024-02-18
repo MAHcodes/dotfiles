@@ -1,6 +1,5 @@
 return {
 	"folke/which-key.nvim",
-	event = "VeryLazy",
 	init = function()
 		vim.o.timeout = true
 		vim.o.timeoutlen = 1000
@@ -77,18 +76,6 @@ return {
 				"Find files",
 			},
 			["F"] = { "<cmd>Telescope live_grep<cr>", "Find Text" },
-			h = {
-				name = "Harpoon",
-				u = { "<cmd>lua require('harpoon.ui').toggle_quick_menu()<cr>", "Harpoon UI" },
-				a = { "<cmd>lua require('harpoon.mark').add_file()<cr>", "Add file" },
-				n = { "<cmd>lua require('harpoon.ui').nav_next()<cr>", "Next file" },
-				p = { "<cmd>lua require('harpoon.ui').nav_prev()<cr>", "Prev file" },
-				["1"] = { "<cmd>lua require('harpoon.ui').nav_file(1)<CR>", "Nav to file 1" },
-				["2"] = { "<cmd>lua require('harpoon.ui').nav_file(2)<CR>", "Nav to file 2" },
-				["3"] = { "<cmd>lua require('harpoon.ui').nav_file(3)<CR>", "Nav to file 3" },
-				["4"] = { "<cmd>lua require('harpoon.ui').nav_file(4)<CR>", "Nav to file 4" },
-				["5"] = { "<cmd>lua require('harpoon.ui').nav_file(5)<CR>", "Nav to file 5" },
-			},
 			D = {
 				name = "DiffView",
 				o = { "<cmd>DiffviewOpen<CR>", "Open" },
@@ -107,7 +94,6 @@ return {
 			},
 			g = {
 				name = "Git",
-				a = { "<cmd>GitCoAuthors<CR>", "CoAuthors" },
 				g = { "<cmd>Neogit<CR>", "Neogit" },
 				n = { "<cmd>Gitsigns next_hunk<cr>", "Next Hunk" },
 				p = { "<cmd>Gitsigns prev_hunk<cr>", "Prev Hunk" },

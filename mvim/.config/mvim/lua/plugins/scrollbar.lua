@@ -1,5 +1,7 @@
 return {
 	"petertriho/nvim-scrollbar",
+  lazy = true,
+  event = "VeryLazy",
 	dependencies = {
 		"catppuccin/nvim",
 		lazy = true,

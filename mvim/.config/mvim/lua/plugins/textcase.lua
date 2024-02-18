@@ -1,5 +1,6 @@
 return {
 	"johmsalas/text-case.nvim",
+  lazy = true,
 	event = "VeryLazy",
 	config = function()
 		require("textcase").setup()

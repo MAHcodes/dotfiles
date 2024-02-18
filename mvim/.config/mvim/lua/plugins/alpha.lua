@@ -1,5 +1,6 @@
 return {
 	"goolord/alpha-nvim",
+  lazy = true,
 	event = "VimEnter",
 	opts = function()
 		local banner = [[
@@ -61,6 +62,7 @@ return {
 				button("p", "  Find project", ":Telescope projects theme=dropdown <CR>"),
 				button("s", "󱝩  Find Session", ":Telescope persisted theme=dropdown<CR>"),
 				button("l", "  Load Session", ":SessionLoad<CR>"),
+				button("z", "󰒲  Lazy", ":Lazy<CR>"),
 				button("r", "󰄉  Recently used files", ":Telescope oldfiles<CR>"),
 				button("F", "󰊄  Find text", ":Telescope live_grep<CR>"),
 				button("c", "  Configuration", ":e $MYVIMRC<CR>"),
@@ -81,7 +83,7 @@ return {
 
 		local version = {
 			type = "text",
-			val = "v" .. get_nvim_version(),
+			val = " v" .. get_nvim_version(),
 			opts = {
 				hl = "@alpha.header",
 				position = "center",
@@ -116,7 +118,7 @@ return {
 				local ms = (math.floor(lazy.startuptime * 100 + 0.5) / 100)
 				local footer = {
 					type = "text",
-					val = " Neovim loaded " .. lazy.count .. " plugins in " .. ms .. "ms",
+					val = "󱐋 Neovim loaded " .. lazy.count .. " plugins in " .. ms .. "ms",
 					opts = {
 						hl = "@alpha.footer",
 						position = "center",

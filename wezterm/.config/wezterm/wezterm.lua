@@ -15,8 +15,8 @@ return {
 
 	font = wezterm.font("FantasqueSansM Nerd Font Mono"),
 	automatically_reload_config = true,
-	font_size = 12.0,
-	line_height = 1.02,
+	font_size = 13.0,
+	line_height = 1.0,
 
 	window_padding = {
 		left = 0,
