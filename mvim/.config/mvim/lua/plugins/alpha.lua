@@ -66,7 +66,7 @@ return {
 				button("r", "󰄉  Recently used files", ":Telescope oldfiles<CR>"),
 				button("F", "󰊄  Find text", ":Telescope live_grep<CR>"),
 				button("c", "  Configuration", ":e $MYVIMRC<CR>"),
-				button("u", "  Update", ":PackerSync<CR>"),
+				button("u", "  Update", ":Lazy update<CR>"),
 				button("q", "  Quit", ":qa<CR>"),
 			},
 			opts = {

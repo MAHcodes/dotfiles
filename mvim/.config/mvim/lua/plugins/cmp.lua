@@ -105,22 +105,29 @@ return {
 				end, { "i", "s" }),
 			},
 			formatting = {
-				fields = { "abbr", "menu", "kind" },
+				fields = { "kind", "abbr", "menu" },
 				format = function(entry, vim_item)
 					-- vim_item.kind = string.format("%s", icons.kind[vim_item.kind])
-					vim_item.kind = string.format("%s %s", icons.kind[vim_item.kind], vim_item.kind)
+					-- vim_item.kind = string.format("%s %s", icons.kind[vim_item.kind], vim_item.kind)
+					local kind = vim_item.kind
 
-					vim_item.menu = ({
-						nvim_lsp = "[LSP]",
-						luasnip = "[Snippet]",
-						nvim_lua = "[LUA_LSP]",
-						buffer = "[Buffer]",
-						path = "[Path]",
-						emoji = "[Emoji]",
-						nerdfont = "[NF]",
-						calc = "[Calc]",
-						bufname = "[BUFNAME]",
-					})[entry.source.name]
+          if kind == "Color" then
+            vim_item.kind = "  "
+          else
+            vim_item.kind = (" " .. icons.kind[kind] .. " ") or " ? "
+          end
+
+					vim_item.menu = "[" .. ({
+						nvim_lsp = "󰚥",
+						luasnip = "",
+						nvim_lua = "󰢱",
+						buffer = "",
+						path = "",
+						emoji = "󰱫",
+						nerdfont = "󰊪",
+						calc = "󰃬",
+						bufname = "󰈬",
+					})[entry.source.name] .. " " .. kind  .. "]"
 
 					-- return vim_item
 					return require("tailwindcss-colorizer-cmp").formatter(entry, vim_item)

@@ -74,7 +74,11 @@ return {
 			nowait = true,
 		},
 	},
-	config = function()
+  opts = {
+    border = "rounded",
+    width = 30,
+  },
+	config = function(_, opts)
 		local harpoon = require("harpoon")
 
 		harpoon:setup()
@@ -108,11 +112,11 @@ return {
 		end, {})
 
 		vim.api.nvim_create_user_command("HarpoonToggleUI", function()
-			harpoon.ui:toggle_quick_menu(harpoon:list())
+			harpoon.ui:toggle_quick_menu(harpoon:list(), opts)
 		end, {})
 
-		vim.api.nvim_create_user_command("HarpoonSelect", function(opts)
-			harpoon:list():select(tonumber(opts.args))
+		vim.api.nvim_create_user_command("HarpoonSelect", function(cmd_opts)
+			harpoon:list():select(tonumber(cmd_opts.args))
 		end, { nargs = 1 })
 
 		vim.api.nvim_create_user_command("HarpoonPrev", function()
