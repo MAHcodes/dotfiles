@@ -1,7 +1,6 @@
 return {
 	"kevinhwang91/nvim-bqf",
 	name = "bqt",
-  lazy = true,
   event = "VeryLazy",
 	opts = {
 		auto_enable = true,

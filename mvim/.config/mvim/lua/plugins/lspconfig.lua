@@ -2,6 +2,8 @@ local M = {
 	"neovim/nvim-lspconfig",
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
+    "yioneko/nvim-vtsls",
+    "b0o/schemastore.nvim",
 		{
 			"SmiteshP/nvim-navic",
 			lazy = true,
@@ -9,12 +11,6 @@ local M = {
 		{
 			"RRethy/vim-illuminate",
 			lazy = true,
-		},
-    {
-      "yioneko/nvim-vtsls"
-    },
-		{
-			"b0o/schemastore.nvim",
 		},
 	},
 }

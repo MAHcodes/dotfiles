@@ -1,6 +1,5 @@
 return {
 	"NvChad/nvim-colorizer.lua",
-  lazy = true,
   event = { "BufReadPost", "BufNewFile" },
 	opts = {
 		filetypes = { "css", "scss", "html", "javascript", "javascriptreact", "typescript", "typescriptreact", "astro" },

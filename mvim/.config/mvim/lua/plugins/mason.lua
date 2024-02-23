@@ -1,15 +1,9 @@
 return {
 	"williamboman/mason.nvim",
-	lazy = true,
+  event = "VeryLazy",
 	dependencies = {
-		{
-			"williamboman/mason-lspconfig.nvim",
-			lazy = true,
-		},
-		{
-			"neovim/nvim-lspconfig",
-			lazy = true,
-		},
+		"williamboman/mason-lspconfig.nvim",
+		"neovim/nvim-lspconfig",
 	},
 	config = function()
 		local servers = {

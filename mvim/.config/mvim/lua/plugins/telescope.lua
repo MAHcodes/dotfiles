@@ -1,11 +1,8 @@
 return {
 	"nvim-telescope/telescope.nvim",
-  lazy = true,
+	event = "VeryLazy",
 	dependencies = {
-		{
-			"nvim-lua/plenary.nvim",
-			lazy = true,
-		},
+		"nvim-lua/plenary.nvim",
 		{
 			"nvim-telescope/telescope-fzf-native.nvim",
 			build = "make",
@@ -141,7 +138,7 @@ return {
 			pickers = {
 				find_files = {
 					theme = "ivy",
-					previewer = false,
+					previewer = true,
 					hidden = true,
 					no_ignore = false,
 					layout_config = {

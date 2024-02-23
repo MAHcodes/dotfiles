@@ -1,6 +1,6 @@
 return {
 	"kyazdani42/nvim-web-devicons",
-  lazy = true,
+  event = "VeryLazy",
 	opts = {
 		override = {
 			zsh = {

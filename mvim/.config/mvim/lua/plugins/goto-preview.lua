@@ -5,7 +5,6 @@ local opts = {
 
 return {
 	"rmagatti/goto-preview",
-	lazy = true,
 	keys = {
 		{ "gp", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>", opts },
 		{ "gP", "<cmd>lua require('goto-preview').close_all_win()<CR>", opts },

@@ -3,54 +3,18 @@ return {
 	lazy = true,
 	event = "InsertEnter",
 	dependencies = {
-		{
-			"hrsh7th/cmp-buffer",
-			event = "InsertEnter",
-		},
-		{
-			"FelipeLema/cmp-async-path",
-			event = "InsertEnter",
-		},
-		{
-			"hrsh7th/cmp-cmdline",
-			event = "InsertEnter",
-		},
-		{
-			"saadparwaiz1/cmp_luasnip",
-			event = "InsertEnter",
-		},
-		{
-			"L3MON4D3/LuaSnip",
-			lazy = true,
-		},
-		{
-			"hrsh7th/cmp-nvim-lsp",
-			event = "InsertEnter",
-		},
-		{
-			"hrsh7th/cmp-nvim-lua",
-			event = "InsertEnter",
-		},
-		{
-			"hrsh7th/cmp-emoji",
-			event = "InsertEnter",
-		},
-		{
-			"hrsh7th/cmp-calc",
-			event = "InsertEnter",
-		},
-		{
-			"chrisgrieser/cmp-nerdfont",
-			event = "InsertEnter",
-		},
-		{
-			"roobert/tailwindcss-colorizer-cmp.nvim",
-			event = "InsertEnter",
-		},
-		{
-			"rasulomaroff/cmp-bufname",
-			event = "InsertEnter",
-		},
+		"hrsh7th/cmp-buffer",
+		"FelipeLema/cmp-async-path",
+		"hrsh7th/cmp-cmdline",
+		"saadparwaiz1/cmp_luasnip",
+		"L3MON4D3/LuaSnip",
+		"hrsh7th/cmp-nvim-lsp",
+		"hrsh7th/cmp-nvim-lua",
+		"hrsh7th/cmp-emoji",
+		"hrsh7th/cmp-calc",
+		"chrisgrieser/cmp-nerdfont",
+		"roobert/tailwindcss-colorizer-cmp.nvim",
+		"rasulomaroff/cmp-bufname",
 	},
 	config = function()
 		local cmp = require("cmp")
@@ -111,23 +75,27 @@ return {
 					-- vim_item.kind = string.format("%s %s", icons.kind[vim_item.kind], vim_item.kind)
 					local kind = vim_item.kind
 
-          if kind == "Color" then
-            vim_item.kind = "  "
-          else
-            vim_item.kind = (" " .. icons.kind[kind] .. " ") or " ? "
-          end
+					if kind == "Color" then
+						vim_item.kind = "  "
+					else
+						vim_item.kind = (" " .. icons.kind[kind] .. " ") or " ? "
+					end
 
-					vim_item.menu = "[" .. ({
-						nvim_lsp = "󰚥",
-						luasnip = "",
-						nvim_lua = "󰢱",
-						buffer = "",
-						path = "",
-						emoji = "󰱫",
-						nerdfont = "󰊪",
-						calc = "󰃬",
-						bufname = "󰈬",
-					})[entry.source.name] .. " " .. kind  .. "]"
+					vim_item.menu = "["
+						.. ({
+							nvim_lsp = "󰚥",
+							luasnip = "",
+							nvim_lua = "󰢱",
+							buffer = "",
+							path = "",
+							emoji = "󰱫",
+							nerdfont = "󰊪",
+							calc = "󰃬",
+							bufname = "󰈬",
+						})[entry.source.name]
+						.. " "
+						.. kind
+						.. "]"
 
 					-- return vim_item
 					return require("tailwindcss-colorizer-cmp").formatter(entry, vim_item)

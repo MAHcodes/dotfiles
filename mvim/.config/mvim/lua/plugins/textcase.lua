@@ -1,7 +1,12 @@
 return {
 	"johmsalas/text-case.nvim",
-  lazy = true,
 	event = "VeryLazy",
+	dependencies = {
+		{
+			"folke/which-key.nvim",
+			lazy = true,
+		},
+	},
 	config = function()
 		require("textcase").setup()
 		local wk = require("which-key")

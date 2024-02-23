@@ -1,6 +1,5 @@
 return {
 	"goolord/alpha-nvim",
-  lazy = true,
 	event = "VimEnter",
 	opts = function()
 		local banner = [[

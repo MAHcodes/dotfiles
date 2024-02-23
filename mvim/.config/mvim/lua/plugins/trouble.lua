@@ -1,10 +1,9 @@
 return {
 	"folke/trouble.nvim",
-  lazy = true,
-  event = "VeryLazy",
+	cmd = { "Trouble", "TroubleToggle", "TroubleRefresh" },
 	dependencies = {
 		"nvim-tree/nvim-web-devicons",
 		lazy = true,
 	},
-  config = true,
+	config = true,
 }
