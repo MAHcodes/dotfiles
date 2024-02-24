@@ -1,6 +1,6 @@
 return {
 	"nvim-tree/nvim-tree.lua",
-	event = "VeryLazy",
+	event = "BufEnter",
 	dependencies = {
 		"kyazdani42/nvim-web-devicons",
 		lazy = true,
@@ -117,8 +117,8 @@ return {
 					},
 				},
 			},
-			disable_netrw = true,
-			hijack_netrw = true,
+			disable_netrw = false,
+			hijack_netrw = false,
 			open_on_tab = true,
 			hijack_cursor = false,
 			hijack_directories = {

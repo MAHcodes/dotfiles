@@ -1,6 +1,6 @@
 return {
 	"numToStr/Comment.nvim",
-  event = "VeryLazy",
+	event = { "BufRead", "BufWinEnter", "BufNewFile" },
 	opts = {
 		pre_hook = function(...)
 			local loaded, ts_comment = pcall(require, "ts_context_commentstring.integrations.comment_nvim")

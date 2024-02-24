@@ -1,5 +1,15 @@
 return {
 	"olimorris/persisted.nvim",
+	cmd = {
+		"SessionToggle",
+		"SessionStart",
+		"SessionStop",
+		"SessionSave",
+		"SessionLoad",
+		"SessionLoadLast",
+		"SessionLoadFromFile",
+		"SessionDelete",
+	},
 	dependencies = {
 		"nvim-telescope/telescope.nvim",
 		lazy = true,

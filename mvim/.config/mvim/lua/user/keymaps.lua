@@ -5,7 +5,6 @@ local opts = { noremap = true, silent = true }
 local keymap = vim.api.nvim_set_keymap
 
 --Remap space as leader key
-keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -22,7 +21,7 @@ vim.g.maplocalleader = " "
 -- keymap("n", "<M-l>", ":tabm +1<CR>", opts)
 
 -- tmux-like keymaps
-keymap("n", "<Leader>\"", ":split<CR>", opts)
+keymap("n", '<Leader>"', ":split<CR>", opts)
 keymap("n", "<Leader>%", ":vsplit<CR>", opts)
 
 -- Stay in indent mode
@@ -30,7 +29,7 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- preserve paste over
-keymap("x", "<Leader>p", "\"_dP", opts)
+keymap("x", "<Leader>p", '"_dP', opts)
 
 -- Other
 -- keep cursor centered

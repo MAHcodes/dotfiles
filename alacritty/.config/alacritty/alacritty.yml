@@ -4,21 +4,16 @@ import:
 
 font:
   normal:
-    family: "FantasqueSansM Nerd Font Mono"
-    # family: "Monaspace Argon"
-    # family: "MAHFont"
+    family: "MAHFont"
     style: "Regular"
   bold:
-    family: "FantasqueSansM Nerd Font Mono"
-    # family: "MAHFont"
+    family: "MAHFont"
     style: "Bold"
   italic:
-    family: "FantasqueSansM Nerd Font Mono"
-    # family: "Monaspace Radon"
+    family: "MAHFont"
     style: "Italic"
   bold_italic:
-    family: "FantasqueSansM Nerd Font Mono"
-    # family: "Monaspace Radon"
+    family: "MAHFont"
     style: "Bold Italic"
 
   # Point size

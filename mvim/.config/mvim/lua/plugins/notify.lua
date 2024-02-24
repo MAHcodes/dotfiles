@@ -1,7 +1,7 @@
 return {
 	"rcarriga/nvim-notify",
-  event = "VeryLazy",
-	dependencies = {
+  lazy = true,
+  dependencies = {
 		"nvim-telescope/telescope.nvim",
 		lazy = true,
 	},

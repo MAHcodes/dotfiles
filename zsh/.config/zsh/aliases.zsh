@@ -9,6 +9,7 @@ alias cat="bat"
 # neovim
 alias n="nvim"
 alias mvim="NVIM_APPNAME=mvim command nvim"
+alias kvim="NVIM_APPNAME=kvim command nvim"
 
 # git
 alias gs="git status"

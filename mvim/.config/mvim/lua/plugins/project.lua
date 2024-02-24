@@ -1,6 +1,6 @@
 return {
 	"ahmedkhalf/project.nvim",
-	event = "VeryLazy",
+	event = "VimEnter",
 	opts = {
 		active = true,
 		detection_methods = { "pattern" },
