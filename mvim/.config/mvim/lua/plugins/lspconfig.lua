@@ -35,14 +35,13 @@ local function lsp_keymaps(bufnr)
 	map("gn", vim.lsp.buf.rename, "Rename")
 	map("ga", vim.lsp.buf.code_action, "Code Action")
 
-	local tb = require "telescope.builtin"
-	map("gd", tb.lsp_definitions, "Goto Definition")
-	map("gr", tb.references, "Goto References")
-	map("gi", tb.implementation, "Goto Implementation")
-	map("gy", tb.lsp_type_definitions, "Goto Type Definition")
-	map("gs", tb.lsp_document_symbols, "Goto Document Symbols")
-	map("gS", tb.lsp_dynamic_workspace_symbols, "Goto Workspace Symbols")
-	map("go", tb.diagnostics, "Goto Diagnostics")
+	map("gd", require("telescope.builtin").lsp_definitions, "Goto Definition")
+	map("gr", require("telescope.builtin").lsp_references, "Goto References")
+	map("gi", require("telescope.builtin").lsp_implementations, "Goto Implementations")
+	map("gy", require("telescope.builtin").lsp_type_definitions, "Goto Type Definition")
+	map("gs", require("telescope.builtin").lsp_document_symbols, "Goto Document Symbols")
+	map("gS", require("telescope.builtin").lsp_dynamic_workspace_symbols, "Goto Workspace Symbols")
+	map("go", require("telescope.builtin").diagnostics, "Goto Diagnostics")
 end
 
 local function lsp_highlight_document(client)
