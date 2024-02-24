@@ -2,8 +2,12 @@ local M = {
 	"neovim/nvim-lspconfig",
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
-    "yioneko/nvim-vtsls",
-    "b0o/schemastore.nvim",
+		"yioneko/nvim-vtsls",
+		"b0o/schemastore.nvim",
+		{
+			"nvim-telescope/telescope.nvim",
+			lazy = true,
+		},
 		{
 			"SmiteshP/nvim-navic",
 			lazy = true,
@@ -16,25 +20,34 @@ local M = {
 }
 
 local function lsp_keymaps(bufnr)
-	local opts = { noremap = true, silent = true }
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-	-- vim.api.nvim_buf_set_keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-	-- vim.api.nvim_buf_set_keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-	-- vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gh", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-	-- vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", "<cmd>lua vim.lsp.buf.references()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "ga", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
-	vim.cmd([[ command! Format execute 'lua vim.lsp.buf.format { async = true }' ]])
+	local map = function(keys, func, desc)
+		vim.keymap.set("n", keys, func, { buffer = bufnr, desc = "LSP: " .. desc })
+	end
+
+	map("[d", vim.diagnostic.goto_prev, "Goto Prev Diagnostic")
+	map("]d", vim.diagnostic.goto_next, "Goto Next Diagnostic")
+	map("gl", vim.diagnostic.open_float, "Goto Diagnostic Floating Window")
+	map("gq", vim.diagnostic.setloclist, "GoTo diagnostic Quickfix list")
+
+	map("gD", vim.lsp.buf.declaration, "Goto Declaration")
+	map("gK", vim.lsp.buf.hover, "Goto Hover Documentation")
+	map("gh", vim.lsp.buf.signature_help, "Goto Signature Documentation")
+	map("gn", vim.lsp.buf.rename, "Rename")
+	map("ga", vim.lsp.buf.code_action, "Code Action")
+
+	local tb = require "telescope.builtin"
+	map("gd", tb.lsp_definitions, "Goto Definition")
+	map("gr", tb.references, "Goto References")
+	map("gi", tb.implementation, "Goto Implementation")
+	map("gy", tb.lsp_type_definitions, "Goto Type Definition")
+	map("gs", tb.lsp_document_symbols, "Goto Document Symbols")
+	map("gS", tb.lsp_dynamic_workspace_symbols, "Goto Workspace Symbols")
+	map("go", tb.diagnostics, "Goto Diagnostics")
 end
 
 local function lsp_highlight_document(client)
 	if client.server_capabilities.document_highlight then
-		local illuminate = require("illuminate")
+		local illuminate = require "illuminate"
 		illuminate.on_attach(client)
 	end
 end

@@ -10,7 +10,7 @@ return {
 			normal_line = "S",
 			normal_cur_line = "SS",
 			visual = "s",
-			visual_line = "gS",
+			visual_line = "<Nop>",
 			delete = "sd",
 			change = "sc",
 		},
