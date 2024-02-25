@@ -248,7 +248,7 @@ return {
 		status = {},
 		format = {
 			spinner = {
-				name = "dots12",
+				name = "moon",
 				hl_group = nil,
 			},
 		},

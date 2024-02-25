@@ -6,28 +6,24 @@ return {
 		lazy = true,
 	},
 	config = function()
-		local ls = require("luasnip")
+		local ls = require "luasnip"
 		require("luasnip.loaders.from_vscode").lazy_load()
+		local map = vim.keymap.set
 
-		-- Shorten function name
-		local keymap = vim.keymap.set
-
-		local opts = { noremap = true, silent = true }
-
-		keymap({ "i" }, "<C-K>", function()
+		map({ "i" }, "<C-k>", function()
 			ls.expand()
-		end, opts)
-		keymap({ "i", "s" }, "<C-n>", function()
+		end)
+		map({ "i", "s" }, "<C-l>", function()
 			ls.jump(1)
-		end, opts)
-		keymap({ "i", "s" }, "<C-p>", function()
+		end)
+		map({ "i", "s" }, "<C-h>", function()
 			ls.jump(-1)
-		end, opts)
+		end)
 
-		keymap({ "i", "s" }, "<C-E>", function()
+		map({ "i", "s" }, "<C-o>", function()
 			if ls.choice_active() then
 				ls.change_choice(1)
 			end
-		end, opts)
+		end)
 	end,
 }
