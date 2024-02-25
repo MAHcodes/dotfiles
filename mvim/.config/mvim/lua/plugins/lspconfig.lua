@@ -30,18 +30,29 @@ local function lsp_keymaps(bufnr)
 	map("gq", vim.diagnostic.setloclist, "GoTo diagnostic Quickfix list")
 
 	map("gD", vim.lsp.buf.declaration, "Goto Declaration")
-	map("gK", vim.lsp.buf.hover, "Goto Hover Documentation")
+	-- map("K", vim.lsp.buf.hover, "Goto Hover Documentation")
 	map("gh", vim.lsp.buf.signature_help, "Goto Signature Documentation")
 	map("gn", vim.lsp.buf.rename, "Rename")
 	map("ga", vim.lsp.buf.code_action, "Code Action")
 
-	map("gd", require("telescope.builtin").lsp_definitions, "Goto Definition")
-	map("gr", require("telescope.builtin").lsp_references, "Goto References")
-	map("gi", require("telescope.builtin").lsp_implementations, "Goto Implementations")
-	map("gy", require("telescope.builtin").lsp_type_definitions, "Goto Type Definition")
-	map("gs", require("telescope.builtin").lsp_document_symbols, "Goto Document Symbols")
-	map("gS", require("telescope.builtin").lsp_dynamic_workspace_symbols, "Goto Workspace Symbols")
-	map("go", require("telescope.builtin").diagnostics, "Goto Diagnostics")
+	local function ivy(func)
+		return function()
+			func(require("telescope.themes").get_ivy {
+				layout_config = {
+					height = vim.o.lines,
+				},
+			})
+		end
+	end
+
+	local tb = require "telescope.builtin"
+	map("gd", ivy(tb.lsp_definitions), "Goto Definition")
+	map("gr", ivy(tb.lsp_references), "Goto References")
+	map("gi", ivy(tb.lsp_implementations), "Goto Implementations")
+	map("gy", ivy(tb.lsp_type_definitions), "Goto Type Definition")
+	map("gs", ivy(tb.lsp_document_symbols), "Goto Document Symbols")
+	map("gS", ivy(tb.lsp_dynamic_workspace_symbols), "Goto Workspace Symbols")
+	map("go", ivy(tb.diagnostics), "Goto Diagnostics")
 end
 
 local function lsp_highlight_document(client)

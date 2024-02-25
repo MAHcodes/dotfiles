@@ -142,7 +142,7 @@ return {
 					hidden = true,
 					no_ignore = false,
 					layout_config = {
-						height = vim.fn.winheight(0),
+						height = vim.o.lines,
 					},
 				},
 				lsp_document_symbols = {
@@ -167,7 +167,7 @@ return {
 				live_grep = {
 					theme = "ivy",
 					layout_config = {
-						height = vim.fn.winheight(0),
+						height = vim.o.lines,
 					},
 				},
 			},

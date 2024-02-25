@@ -5,7 +5,7 @@ return {
 		{
 			"luukvbaal/statuscol.nvim",
 			opts = function()
-				local builtin = require("statuscol.builtin")
+				local builtin = require "statuscol.builtin"
 				return {
 					setopt = true,
 					relculright = true,
@@ -94,9 +94,16 @@ return {
 		vim.o.foldlevel = 99
 		vim.o.foldlevelstart = 99
 		vim.o.foldenable = true
-		vim.o.fillchars = [[eob: ,fold: ,foldopen:,foldsep: ,foldclose:,diff: ]]
+		vim.opt.fillchars = {
+			eob = " ",
+			fold = " ",
+			foldopen = "",
+			foldsep = " ",
+			foldclose = "",
+			diff = " ",
+		}
 
-		local ufo = require("ufo")
+		local ufo = require "ufo"
 		ufo.setup(opts)
 
 		local function peekOrHover()
