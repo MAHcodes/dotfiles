@@ -12,7 +12,7 @@ create_autocmd("FileType", "qf,help,man,lspinfo", function()
 end)
 
 create_autocmd("TextYankPost", "*", function()
-	require("vim.highlight").on_yank { higroup = "Search", timeout = 20 }
+	return vim.highlight.on_yank { timeout = 100 }
 end)
 
 create_autocmd("BufWinEnter", "*", function()

@@ -2,27 +2,27 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-local keymap = vim.keymap.set
-
--- tmux-like keymaps
-keymap("n", '<Leader>"', ":split<CR>", { desc = "Split Window Horizantally", silent = true })
-keymap("n", "<Leader>%", ":vsplit<CR>", { desc = "Split Window Vertically", silent = true })
+local map = vim.keymap.set
 
 -- stay in indent mode
-keymap("v", "<", "<gv")
-keymap("v", ">", ">gv")
-
--- preserve paste over
-keymap("x", "<Leader>p", '"_dP', { desc = "Preserve Paste Over" })
+map("v", "<", "<gv")
+map("v", ">", ">gv")
 
 -- keep cursor centered
-keymap("n", "n", "nzz")
-keymap("n", "N", "Nzz")
-keymap("n", "*", "*zz")
-keymap("n", "#", "#zz")
-keymap("n", "g*", "g*zz")
-keymap("n", "g#", "g#zz")
-keymap("n", "J", "mzJ`z")
+map("n", "n", "nzz")
+map("n", "N", "Nzz")
+map("n", "*", "*zz")
+map("n", "#", "#zz")
+map("n", "g*", "g*zz")
+map("n", "g#", "g#zz")
+map("n", "J", "mzJ`z")
 
 -- prevent registry overwrite
-keymap("x", "p", [["_dP]])
+map("x", "p", [["_dP]])
+
+map("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+map("x", "<Leader>p", '"_dP', { desc = "Preserve Paste Over" })
+
+-- tmux-like keymaps
+map("n", '<Leader>"', ":split<CR>", { desc = "Split Window Horizantally", silent = true })
+map("n", "<Leader>%", ":vsplit<CR>", { desc = "Split Window Vertically", silent = true })

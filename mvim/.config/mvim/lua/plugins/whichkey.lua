@@ -135,7 +135,6 @@ return {
 					"<cmd>Telescope lsp_workspace_diagnostics<cr>",
 					"Workspace Diagnostics",
 				},
-				f = { "<cmd>lua vim.lsp.buf.format{async = true }<cr>", "Format" },
 				i = { "<cmd>LspInfo<cr>", "Info" },
 				h = { "<cmd>lua vim.lsp.inlay_hint(0, nil)<cr>", "Inlay Hint" },
 				M = { "<cmd>Mason<cr>", "Mason" },
