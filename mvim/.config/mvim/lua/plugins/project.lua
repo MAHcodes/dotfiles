@@ -8,8 +8,11 @@ return {
 		patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json", "lazy-lock.json" },
 		show_hidden = true,
 	},
+	keys = {
+		{ "<leader>sp", "<cmd>Telescope projects<cr>", desc = "Search Projects" },
+	},
 	config = function(_, opts)
 		require("project_nvim").setup(opts)
-		require("telescope").load_extension("projects")
+		require("telescope").load_extension "projects"
 	end,
 }

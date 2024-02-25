@@ -35,24 +35,15 @@ local function lsp_keymaps(bufnr)
 	map("gn", vim.lsp.buf.rename, "Rename")
 	map("ga", vim.lsp.buf.code_action, "Code Action")
 
-	local function ivy(func)
-		return function()
-			func(require("telescope.themes").get_ivy {
-				layout_config = {
-					height = vim.o.lines,
-				},
-			})
-		end
-	end
+  local tb = require "telescope.builtin"
+	local theme = require("plugins.telescope").theme
 
-	local tb = require "telescope.builtin"
-	map("gd", ivy(tb.lsp_definitions), "Goto Definition")
-	map("gr", ivy(tb.lsp_references), "Goto References")
-	map("gi", ivy(tb.lsp_implementations), "Goto Implementations")
-	map("gy", ivy(tb.lsp_type_definitions), "Goto Type Definition")
-	map("gs", ivy(tb.lsp_document_symbols), "Goto Document Symbols")
-	map("gS", ivy(tb.lsp_dynamic_workspace_symbols), "Goto Workspace Symbols")
-	map("go", ivy(tb.diagnostics), "Goto Diagnostics")
+	map("gd", theme(tb.lsp_definitions), "Goto Definition")
+	map("gr", theme(tb.lsp_references), "Goto References")
+	map("gi", theme(tb.lsp_implementations), "Goto Implementations")
+	map("gy", theme(tb.lsp_type_definitions), "Goto Type Definition")
+	map("gs", theme(tb.lsp_document_symbols), "Goto Document Symbols")
+	map("gS", theme(tb.lsp_dynamic_workspace_symbols), "Goto Workspace Symbols")
 end
 
 local function lsp_highlight_document(client)
