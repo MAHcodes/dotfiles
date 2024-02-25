@@ -1,9 +1,9 @@
 return {
 	"folke/which-key.nvim",
-  event = "VeryLazy",
+	event = "VeryLazy",
 	init = function()
 		vim.o.timeout = true
-		vim.o.timeoutlen = 500
+		vim.o.timeoutlen = 1000
 	end,
 	opts = {
 		plugins = {
@@ -69,14 +69,7 @@ return {
 
 		local mappings = {
 			["A"] = { "<cmd>Alpha<cr>", "Alpha" },
-			["b"] = { "<cmd>lua require('telescope.builtin').buffers()<cr>", "Buffers" },
-			["L"] = { "<cmd>Lf<cr>", "Lf" },
 			["C"] = { "<cmd>:w|%bd|e#<CR>", "Clean Buffers" },
-			["f"] = {
-				"<cmd>lua require('telescope.builtin').find_files()<cr>",
-				"Find files",
-			},
-			["F"] = { "<cmd>Telescope live_grep<cr>", "Find Text" },
 			D = {
 				name = "DiffView",
 				o = { "<cmd>DiffviewOpen<CR>", "Open" },
@@ -124,36 +117,6 @@ return {
 					"Diff",
 				},
 			},
-			l = {
-				name = "LSP",
-				a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
-				d = {
-					"<cmd>Telescope lsp_document_diagnostics<cr>",
-					"Document Diagnostics",
-				},
-				w = {
-					"<cmd>Telescope lsp_workspace_diagnostics<cr>",
-					"Workspace Diagnostics",
-				},
-				i = { "<cmd>LspInfo<cr>", "Info" },
-				h = { "<cmd>lua vim.lsp.inlay_hint(0, nil)<cr>", "Inlay Hint" },
-				M = { "<cmd>Mason<cr>", "Mason" },
-				j = {
-					"<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
-					"Next Diagnostic",
-				},
-				k = {
-					"<cmd>lua vim.lsp.diagnostic.goto_prev()<cr>",
-					"Prev Diagnostic",
-				},
-				l = { "<cmd>lua vim.lsp.codelens.run()<cr>", "CodeLens Action" },
-				q = { "<cmd>lua vim.lsp.diagnostic.set_loclist()<cr>", "Quickfix" },
-				s = { "<cmd>Telescope lsp_document_symbols<cr>", "Document Symbols" },
-				S = {
-					"<cmd>Telescope lsp_dynamic_workspace_symbols<cr>",
-					"Workspace Symbols",
-				},
-			},
 			S = {
 				name = "Session",
 				u = { "<cmd>!tmux neww tmux-sessionizer<cr>", "New Tmux" },
@@ -191,7 +154,7 @@ return {
 			},
 		}
 
-		local wk = require("which-key")
+		local wk = require "which-key"
 
 		wk.setup(opts)
 		wk.register(mappings, nopts)

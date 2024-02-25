@@ -1,5 +1,11 @@
 return {
 	"ahmedkhalf/project.nvim",
+	dependencies = {
+		{
+			"nvim-telescope/telescope.nvim",
+			lazy = true,
+		},
+	},
 	event = "VimEnter",
 	opts = {
 		active = true,
@@ -7,9 +13,6 @@ return {
 		exclude_dirs = { "*/node_modules/*" },
 		patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json", "lazy-lock.json" },
 		show_hidden = true,
-	},
-	keys = {
-		{ "<leader>sp", "<cmd>Telescope projects<cr>", desc = "Search Projects" },
 	},
 	config = function(_, opts)
 		require("project_nvim").setup(opts)

@@ -3,6 +3,14 @@ local M = {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		{
+			"ahmedkhalf/project.nvim",
+			lazy = true,
+		},
+		{
+			"rcarriga/nvim-notify",
+			lazy = true,
+		},
+		{
 			"nvim-telescope/telescope-fzf-native.nvim",
 			build = "make",
 			cond = function()
@@ -26,6 +34,7 @@ M.theme = function(func)
 end
 
 M.keys = function()
+	local t = require "telescope"
 	local tb = require "telescope.builtin"
 	return {
 		{ "<leader>sh", M.theme(tb.help_tags), desc = "Search Help" },
@@ -36,12 +45,15 @@ M.keys = function()
 		{ "<leader>sf", M.theme(tb.find_files), desc = "Search Files" },
 		{ "<leader>sa", M.theme(tb.builtin), desc = "Search All" },
 		{ "<leader>sw", M.theme(tb.grep_string), desc = "Search Word" },
+		{ "<leader>sm", M.theme(tb.man_pages), desc = "Search Man Pges" },
 		{ "<leader>sl", M.theme(tb.live_grep), desc = "Search Grep" },
 		{ "<leader>sd", M.theme(tb.diagnostics), desc = "Search Diagnostics" },
 		{ "<leader>sr", M.theme(tb.resume), desc = "Search Resume" },
 		{ "<leader>so", M.theme(tb.oldfiles), desc = "Search Oldfiles" },
 		{ "<leader>sb", M.theme(tb.buffers), desc = "Search Buffers" },
 		{ "<leader>/", M.theme(tb.current_buffer_fuzzy_find), desc = "Search" },
+		{ "<leader>sp", M.theme(t.extensions.projects.projects), desc = "Search projects" },
+		{ "<leader>sn", M.theme(t.extensions.notify.notify), desc = "Search Notifications" },
 	}
 end
 
