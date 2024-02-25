@@ -28,13 +28,13 @@ create_autocmd("VimResized", "*", function()
 	vim.cmd "tabdo wincmd ="
 end)
 
-create_autocmd("VimEnter", "*", function()
-	local mocha = require("catppuccin.palettes").get_palette "mocha"
-	vim.api.nvim_set_hl(0, "ICursor", { bg = mocha.green })
-	vim.api.nvim_set_hl(0, "VCursor", { bg = mocha.mauve })
-	vim.api.nvim_set_hl(0, "RCursor", { bg = mocha.red })
-	vim.api.nvim_set_hl(0, "NoiceCursor", { bg = mocha.peach })
-	vim.opt.guicursor = "n:block,ci:block-NoiceCursor,v:block-VCursor,i-ci-ve:block-ICursor,r-cr-o:block-RCursor"
+create_autocmd({ "VimEnter", "ColorScheme" }, "*", function()
+	vim.api.nvim_set_hl(0, "NCursor", { link = "lualine_a_normal" })
+	vim.api.nvim_set_hl(0, "ICursor", { link = "lualine_a_insert" })
+	vim.api.nvim_set_hl(0, "VCursor", { link = "lualine_a_visual" })
+	vim.api.nvim_set_hl(0, "RCursor", { link = "lualine_a_replace" })
+	vim.api.nvim_set_hl(0, "NoiceCursor", { link = "lualine_a_command" })
+	vim.opt.guicursor = "n:block-NCursor,ci:block-NoiceCursor,v:block-VCursor,i-ve:block-ICursor,r-cr-o:block-RCursor"
 end)
 
 -- fix luasnip tab weird behavior

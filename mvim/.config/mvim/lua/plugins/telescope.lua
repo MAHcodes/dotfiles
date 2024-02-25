@@ -1,11 +1,9 @@
 local M = {
 	"nvim-telescope/telescope.nvim",
+	cmd = "Telescope",
+	lazy = true,
 	dependencies = {
 		"nvim-lua/plenary.nvim",
-		{
-			"ahmedkhalf/project.nvim",
-			lazy = true,
-		},
 		{
 			"rcarriga/nvim-notify",
 			lazy = true,
@@ -17,6 +15,19 @@ local M = {
 				return vim.fn.executable "make" == 1
 			end,
 			lazy = true,
+		},
+		{
+			"ahmedkhalf/project.nvim",
+			opts = {
+				active = true,
+				detection_methods = { "pattern" },
+				exclude_dirs = { "*/node_modules/*" },
+				patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json", "lazy-lock.json" },
+				show_hidden = true,
+			},
+			config = function(_, opts)
+				require("project_nvim").setup(opts)
+			end,
 		},
 	},
 }
@@ -85,6 +96,7 @@ M.opts = {
 M.config = function(_, opts)
 	require("telescope").setup(opts)
 	pcall(require("telescope").load_extension, "fzf")
+	pcall(require("telescope").load_extension, "projects")
 end
 
 return M
