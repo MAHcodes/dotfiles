@@ -1,6 +1,5 @@
 return {
 	"goolord/alpha-nvim",
-	event = "VimEnter",
 	dependencies = {
 		{
 			"nvim-telescope/telescope.nvim",
