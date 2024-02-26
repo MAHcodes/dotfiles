@@ -63,7 +63,8 @@ M.keys = function()
 		{ "<leader>so", M.theme(tb.oldfiles), desc = "Search Oldfiles" },
 		{ "<leader>sb", M.theme(tb.buffers), desc = "Search Buffers" },
 		{ "<leader>/", M.theme(tb.current_buffer_fuzzy_find), desc = "Search" },
-		{ "<leader>sp", M.theme(t.extensions.projects.projects), desc = "Search projects" },
+		{ "<leader>ss", M.theme(t.extensions.persisted.persisted), desc = "Search Sessions" },
+		{ "<leader>sp", M.theme(t.extensions.projects.projects), desc = "Search Projects" },
 		{ "<leader>sn", M.theme(t.extensions.notify.notify), desc = "Search Notifications" },
 	}
 end

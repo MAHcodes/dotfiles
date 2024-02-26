@@ -72,9 +72,11 @@ Kickstart Guide:
 
    NOTE: Look for lines like this
 
-    Throughout the file. These are for you, the reader to help understand what is happening.
+    Throughout the file. These are for you, the reader, to help understand what is happening.
     Feel free to delete them once you know what you're doing, but they should serve as a guide
     for when you are first encountering a few different constructs in your nvim config.
+
+If you experience any errors while trying to install kickstart, run `:checkhealth` for more info
 
 I hope you enjoy your Neovim journey,
 - TJ
@@ -97,10 +99,10 @@ vim.g.maplocalleader = ' '
 vim.opt.number = true
 -- You can also add relative line numbers, for help with jumping.
 --  Experiment for yourself to see if you like it!
-vim.opt.relativenumber = true
+-- vim.opt.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
-vim.opt.mouse = ''
+vim.opt.mouse = 'a'
 
 -- Don't show the mode, since it's already in status line
 vim.opt.showmode = false
@@ -182,10 +184,14 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- [[ Basic Autocommands ]]
+--  See :help lua-guide-autocommands
+
 -- Highlight when yanking (copying) text
 --  Try it with `yap` in normal mode
 --  See `:help vim.highlight.on_yank()`
 vim.api.nvim_create_autocmd('TextYankPost', {
+  desc = 'Highlight when yanking (copying) text',
   group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
   callback = function()
     vim.highlight.on_yank()
@@ -230,26 +236,19 @@ require('lazy').setup({
   { 'numToStr/Comment.nvim', opts = {} },
 
   -- Here is a more advanced example where we pass configuration
-  -- options to `conform.nvim`. This is equivalent to:
-  --    require('conform').setup({ ... })
+  -- options to `gitsigns.nvim`. This is equivalent to the following lua:
+  --    require('gitsigns').setup({ ... })
   --
-  -- See `:help conform` to understand what the configuration keys do
-  { -- Autoformat
-    'stevearc/conform.nvim',
+  -- See `:help gitsigns` to understand what the configuration keys do
+  { -- Adds git related signs to the gutter, as well as utilities for managing changes
+    'lewis6991/gitsigns.nvim',
     opts = {
-      notify_on_error = false,
-      format_on_save = {
-        timeout_ms = 500,
-        lsp_fallback = true,
-      },
-      formatters_by_ft = {
-        lua = { 'stylua' },
-        -- Conform can also run multiple formatters sequentially
-        -- python = { "isort", "black" },
-        --
-        -- You can use a sub-list to tell conform to run *until* a formatter
-        -- is found.
-        -- javascript = { { "prettierd", "prettier" } },
+      signs = {
+        add = { text = '+' },
+        change = { text = '~' },
+        delete = { text = '_' },
+        topdelete = { text = '‾' },
+        changedelete = { text = '~' },
       },
     },
   },
@@ -395,9 +394,7 @@ require('lazy').setup({
 
       -- Shortcut for searching your neovim configuration files
       vim.keymap.set('n', '<leader>sn', function()
-        builtin.find_files {
-          cwd = vim.fn.stdpath 'config',
-        }
+        builtin.find_files { cwd = vim.fn.stdpath 'config' }
       end, { desc = '[S]earch [N]eovim files' })
     end,
   },
@@ -488,16 +485,11 @@ require('lazy').setup({
 
           -- Execute a code action, usually your cursor needs to be on top of an error
           -- or a suggestion from your LSP for this to activate.
-          map('<leader>ca', function()
-            vim.lsp.buf.code_action { context = { only = { 'quickfix', 'refactor', 'source' } } }
-          end, '[C]ode [A]ction')
+          map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
 
           -- Opens a popup that displays documentation about the word under your cursor
           --  See `:help K` for why this keymap
           map('K', vim.lsp.buf.hover, 'Hover Documentation')
-
-          -- Show the signature of the function you're currently completing.
-          map('<C-k>', vim.lsp.buf.signature_help, 'Signature Documentation')
 
           -- WARN: This is not Goto Definition, this is Goto Declaration.
           --  For example, in C this would take you to the header
@@ -508,15 +500,18 @@ require('lazy').setup({
           --    See `:help CursorHold` for information about when this is executed
           --
           -- When you move your cursor, the highlights will be cleared (the second autocommand).
-          vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
-            buffer = event.buf,
-            callback = vim.lsp.buf.document_highlight,
-          })
+          local client = vim.lsp.get_client_by_id(event.data.client_id)
+          if client and client.server_capabilities.documentHighlightProvider then
+            vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
+              buffer = event.buf,
+              callback = vim.lsp.buf.document_highlight,
+            })
 
-          vim.api.nvim_create_autocmd({ 'CursorMoved', 'CursorMovedI' }, {
-            buffer = event.buf,
-            callback = vim.lsp.buf.clear_references,
-          })
+            vim.api.nvim_create_autocmd({ 'CursorMoved', 'CursorMovedI' }, {
+              buffer = event.buf,
+              callback = vim.lsp.buf.clear_references,
+            })
+          end
         end,
       })
 
@@ -543,12 +538,12 @@ require('lazy').setup({
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
-        -- If you use something like typescript, where the tooling is as bad as the language,
-        -- then you might need to install and configure something like this:
+        -- Some languages (like typescript) have entire language plugins that can be useful:
         --    https://github.com/pmizio/typescript-tools.nvim
         --
-        -- If you only have simple needs for typescript, then you can probably just use tsserver
+        -- But for many setups, the LSP (`tsserver`) will work just fine
         -- tsserver = {},
+        --
 
         lua_ls = {
           -- cmd = {...},
@@ -575,13 +570,6 @@ require('lazy').setup({
         },
       }
 
-      -- You can add other tools here that you want Mason to install
-      -- for you, so that they are available from within Neovim.
-      local ensure_installed = vim.tbl_keys(servers or {})
-      vim.list_extend(ensure_installed, {
-        'stylua', -- Used to format lua code
-      })
-
       -- Ensure the servers and tools above are installed
       --  To check the current status of installed tools and/or manually install
       --  other tools, you can run
@@ -589,7 +577,15 @@ require('lazy').setup({
       --
       --  You can press `g?` for help in this menu
       require('mason').setup()
+
+      -- You can add other tools here that you want Mason to install
+      -- for you, so that they are available from within Neovim.
+      local ensure_installed = vim.tbl_keys(servers or {})
+      vim.list_extend(ensure_installed, {
+        'stylua', -- Used to format lua code
+      })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
+
       require('mason-lspconfig').setup {
         handlers = {
           function(server_name)
@@ -609,6 +605,26 @@ require('lazy').setup({
     end,
   },
 
+  { -- Autoformat
+    'stevearc/conform.nvim',
+    opts = {
+      notify_on_error = false,
+      format_on_save = {
+        timeout_ms = 500,
+        lsp_fallback = true,
+      },
+      formatters_by_ft = {
+        lua = { 'stylua' },
+        -- Conform can also run multiple formatters sequentially
+        -- python = { "isort", "black" },
+        --
+        -- You can use a sub-list to tell conform to run *until* a formatter
+        -- is found.
+        -- javascript = { { "prettierd", "prettier" } },
+      },
+    },
+  },
+
   { -- Autocompletion
     'hrsh7th/nvim-cmp',
     event = 'InsertEnter',
@@ -620,7 +636,7 @@ require('lazy').setup({
           -- Build Step is needed for regex support in snippets
           -- This step is not supported in many windows environments
           -- Remove the below condition to re-enable on windows
-          if vim.fn.has 'win32' == 1 then
+          if vim.fn.has 'win32' == 1 or vim.fn.executable 'make' == 0 then
             return
           end
           return 'make install_jsregexp'
@@ -702,20 +718,6 @@ require('lazy').setup({
     end,
   },
 
-  { -- Adds git related signs to the gutter, as well as utilities for managing changes
-    'lewis6991/gitsigns.nvim',
-    opts = {
-      -- See `:help gitsigns.txt`
-      signs = {
-        add = { text = '+' },
-        change = { text = '~' },
-        delete = { text = '_' },
-        topdelete = { text = '‾' },
-        changedelete = { text = '~' },
-      },
-    },
-  },
-
   { -- You can easily change to a different colorscheme.
     -- Change the name of the colorscheme plugin below, and then
     -- change the command in the config to whatever the name of that colorscheme is
@@ -772,8 +774,8 @@ require('lazy').setup({
 
       ---@diagnostic disable-next-line: missing-fields
       require('nvim-treesitter.configs').setup {
-        ensure_installed = { 'c', 'lua', 'vim', 'vimdoc' },
-        -- Autoinstall languages that are not installed. Defaults to false (but you can change for yourself!)
+        ensure_installed = { 'bash', 'c', 'html', 'lua', 'markdown', 'vim', 'vimdoc' },
+        -- Autoinstall languages that are not installed
         auto_install = true,
         highlight = { enable = true },
         indent = { enable = true },
@@ -792,18 +794,19 @@ require('lazy').setup({
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
   -- put them in the right spots if you want.
 
-  -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional plugins for kickstart
-  --       These are some example plugins that I've included in the kickstart repository.
-  --       Uncomment any of the lines below to enable them.
+  -- NOTE: Next step on your Neovim journey: Add/Configure additional plugins for kickstart
+  --
+  --  Here are some example plugins that I've included in the kickstart repository.
+  --  Uncomment any of the lines below to enable them (you will need to restart nvim).
+  --
   -- require 'kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
-  --    You can use this folder to prevent any conflicts with this init.lua if you're interested in keeping
-  --    up-to-date with whatever is in the kickstart repo.
-  --    Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
+  --    This is the easiest way to modularize your config.
   --
-  --    For additional information see: https://github.com/folke/lazy.nvim#-structuring-your-plugins
+  --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
+  --    For additional information see: :help lazy.nvim-lazy.nvim-structuring-your-plugins
   -- { import = 'custom.plugins' },
 }, {})
 

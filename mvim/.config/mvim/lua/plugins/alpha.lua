@@ -1,6 +1,12 @@
 return {
 	"goolord/alpha-nvim",
 	event = "VimEnter",
+	dependencies = {
+		{
+			"nvim-telescope/telescope.nvim",
+			lazy = true,
+		},
+	},
 	opts = function()
 		local banner = [[
       .          .
@@ -52,18 +58,22 @@ return {
 			}
 		end
 
+		local t = require "telescope"
+    local tb = require "telescope.builtin"
+		local theme = require("plugins.telescope").theme
+
 		local buttons = {
 			type = "group",
 			val = {
 				button("t", "  TODO", ":e ~/notes/TODO/index.md<CR>"),
-				button("f", "󰈞  Find file", ":Telescope find_files<CR>"),
+				button("f", "󰈞  Find file", theme(tb.find_files)),
 				button("e", "  New file", ":ene <BAR> startinsert<CR>"),
-				button("p", "  Find project", ":Telescope projects<CR>"),
-				button("s", "󱝩  Find Session", ":Telescope persisted<CR>"),
-				button("l", "  Load Session", ":SessionLoad<CR>"),
+				button("p", "  Find project", theme(t.extensions.projects.projects)),
+				button("s", "󱝩  Find Session", theme(t.extensions.persisted.persisted)),
+        button("L", "  Load Session", ":SessionLoad<CR>"),
 				button("z", "󰒲  Lazy", ":Lazy<CR>"),
-				button("r", "󰄉  Recently used files", ":Telescope oldfiles<CR>"),
-				button("F", "󰊄  Find text", ":Telescope live_grep<CR>"),
+				button("o", "󰄉  Recently used files", theme(tb.oldfiles)),
+				button("l", "󰊄  Find text", theme(tb.live_grep)),
 				button("c", "  Configuration", ":e $MYVIMRC<CR>"),
 				button("u", "  Update", ":Lazy update<CR>"),
 				button("q", "  Quit", ":qa<CR>"),
