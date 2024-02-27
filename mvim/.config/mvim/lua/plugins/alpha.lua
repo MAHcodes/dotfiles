@@ -1,10 +1,7 @@
 return {
 	"goolord/alpha-nvim",
 	dependencies = {
-		{
-			"nvim-telescope/telescope.nvim",
-			lazy = true,
-		},
+		"nvim-telescope/telescope.nvim",
 	},
 	opts = function()
 		local banner = [[
@@ -58,7 +55,7 @@ return {
 		end
 
 		local t = require "telescope"
-    local tb = require "telescope.builtin"
+		local tb = require "telescope.builtin"
 		local theme = require("plugins.telescope").theme
 
 		local buttons = {
@@ -69,7 +66,7 @@ return {
 				button("e", "  New file", ":ene <BAR> startinsert<CR>"),
 				button("p", "  Find project", theme(t.extensions.projects.projects)),
 				button("s", "󱝩  Find Session", theme(t.extensions.persisted.persisted)),
-        button("L", "  Load Session", ":SessionLoad<CR>"),
+				button("L", "  Load Session", ":SessionLoad<CR>"),
 				button("z", "󰒲  Lazy", ":Lazy<CR>"),
 				button("o", "󰄉  Recently used files", theme(tb.oldfiles)),
 				button("l", "󰊄  Find text", theme(tb.live_grep)),
@@ -91,7 +88,7 @@ return {
 
 		local version = {
 			type = "text",
-			val = " v" .. get_nvim_version(),
+			val = " v" .. get_nvim_version(),
 			opts = {
 				hl = "@alpha.header",
 				position = "center",

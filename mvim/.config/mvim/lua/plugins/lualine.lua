@@ -1,15 +1,9 @@
 return {
 	"nvim-lualine/lualine.nvim",
-  event = "VimEnter",
+	event = "VimEnter",
 	dependencies = {
-		{
-			"nvim-tree/nvim-web-devicons",
-			lazy = true,
-		},
-		{
-			"folke/noice.nvim",
-			lazy = true,
-		},
+		"nvim-tree/nvim-web-devicons",
+		"folke/noice.nvim",
 	},
 	opts = function()
 		local hide_in_width = function()
@@ -40,7 +34,7 @@ return {
 			end,
 		}
 
-		local noice = require("noice")
+		local noice = require "noice"
 
 		local command = {
 			noice.api.status.command.get,
@@ -90,7 +84,7 @@ return {
 		local filename = {
 			"filename",
 			file_status = true, -- Displays file status (readonly status, modified status)
-			newfile_status = false, -- Display new file status (new file means no write after created)
+			newfile_status = true, -- Display new file status (new file means no write after created)
 			path = 0, -- 0: Just the filename
 			-- 1: Relative path
 			-- 2: Absolute path
@@ -109,12 +103,19 @@ return {
 			return "ﲖ " .. vim.api.nvim_buf_get_option(0, "shiftwidth") .. ""
 		end
 
+		local datetime = {
+			"datetime",
+			style = "%H:%M",
+      icon = "%=󱑁",
+			color = "lualine_c_inactive",
+		}
+
 		return {
 			options = {
 				icons_enabled = true,
 				theme = "auto",
-				component_separators = { left = "│", right = "│" },
-				section_separators = { left = "", right = "" },
+				component_separators = { left = "╲", right = "╱" },
+				section_separators = { left = "", right = "" },
 				disabled_filetypes = {
 					"dashboard",
 					"NvimTree",
@@ -136,10 +137,13 @@ return {
 					"filesize",
 				},
 				lualine_b = { branch },
-				lualine_c = { diff },
+				lualine_c = { diff, datetime },
 				lualine_x = { diagnostics },
 				lualine_y = { command, filetype, spaces, "encoding" },
-				lualine_z = { location, progress },
+				lualine_z = {
+					location,
+					progress,
+				},
 			},
 			inactive_sections = {
 				lualine_a = { "filename" },

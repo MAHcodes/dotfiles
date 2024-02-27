@@ -3,7 +3,6 @@ return {
   event = "VeryLazy",
 	dependencies = {
 		"nvim-telescope/telescope.nvim",
-		lazy = true,
 	},
 	opts = {
 		stages = "fade_in_slide_out",

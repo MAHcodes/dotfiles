@@ -12,7 +12,6 @@ return {
 	},
 	dependencies = {
 		"nvim-telescope/telescope.nvim",
-		lazy = true,
 	},
 	opts = {
 		should_autosave = function()

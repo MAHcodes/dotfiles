@@ -78,14 +78,6 @@ return {
 				f = { "<cmd>DiffviewFocusFiles<CR>", "Focus Files Panel" },
 				r = { "<cmd>DiffviewRefresh<CR>", "Refresh" },
 			},
-			p = {
-				name = "Packer",
-				c = { "<cmd>PackerCompile<cr>", "Compile" },
-				i = { "<cmd>PackerInstall<cr>", "Install" },
-				s = { "<cmd>PackerSync<cr>", "Sync" },
-				S = { "<cmd>PackerStatus<cr>", "Status" },
-				u = { "<cmd>PackerUpdate<cr>", "Update" },
-			},
 			g = {
 				name = "Git",
 				g = { "<cmd>Neogit<CR>", "Neogit" },
@@ -116,18 +108,6 @@ return {
 					"<cmd>Gitsigns diffthis HEAD<cr>",
 					"Diff",
 				},
-			},
-			S = {
-				name = "Session",
-				u = { "<cmd>!tmux neww tmux-sessionizer<cr>", "New Tmux" },
-				l = { "<cmd>SessionLoad<cr>", "Load" },
-				w = { "<cmd>SessionSave<cr>", "Save" },
-				p = { "<cmd>SessionStop<cr>", "Stop" },
-				s = { "<cmd>SessionStart<cr>", "Start" },
-				d = { "<cmd>SessionDelete<cr>", "Delete" },
-				t = { "<cmd>SessionToggle<cr>", "Toggle" },
-				a = { "<cmd>SessionLoadLast<cr>", "Load Last" },
-				f = { "<cmd>SessionLoadFromFile<cr>", "Load From File" },
 			},
 		}
 

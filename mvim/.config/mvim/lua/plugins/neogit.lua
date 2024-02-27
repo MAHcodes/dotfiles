@@ -1,19 +1,10 @@
 return {
 	"NeogitOrg/neogit",
-  cmd = "Neogit",
+	cmd = "Neogit",
 	dependencies = {
-		{
-			"nvim-lua/plenary.nvim",
-			lazy = true,
-		},
-		{
-			"sindrets/diffview.nvim",
-			lazy = true,
-		},
-		{
-			"nvim-telescope/telescope.nvim",
-			lazy = true,
-		},
+		"nvim-lua/plenary.nvim",
+		"sindrets/diffview.nvim",
+		"nvim-telescope/telescope.nvim",
 	},
 	config = true,
 }

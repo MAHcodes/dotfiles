@@ -45,11 +45,7 @@ return {
 				format = function(entry, vim_item)
 					local kind = vim_item.kind
 
-					if kind == "Color" then
-						vim_item.kind = "  "
-					else
-						vim_item.kind = (" " .. icons.kind[kind] .. " ") or " ? "
-					end
+          vim_item.kind = (" " .. icons.kind[kind] or "?" .. " ")
 
 					vim_item.menu = "["
 						.. ({

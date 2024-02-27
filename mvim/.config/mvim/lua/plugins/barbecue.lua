@@ -2,16 +2,10 @@ return {
 	"utilyre/barbecue.nvim",
 	event = { "BufRead", "BufWinEnter", "BufNewFile" },
 	requires = {
-		{
-			"SmiteshP/nvim-navic",
-			lazy = true,
-		},
-		{
-			"nvim-tree/nvim-web-devicons",
-			lazy = true,
-		},
+		"SmiteshP/nvim-navic",
+		"nvim-tree/nvim-web-devicons",
 	},
 	opts = {
-		exclude_filetypes = { "gitcommit", "toggleterm" },
+		exclude_filetypes = { "gitcommit" },
 	},
 }
