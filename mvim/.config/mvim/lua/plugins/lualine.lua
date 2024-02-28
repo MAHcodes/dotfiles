@@ -30,7 +30,7 @@ return {
 		local mode = {
 			"mode",
 			fmt = function(str)
-				return "[" .. str:sub(0, 1) .. "]"
+				return "" .. str:sub(0, 1) .. ""
 			end,
 		}
 
@@ -83,19 +83,15 @@ return {
 
 		local filename = {
 			"filename",
-			file_status = true, -- Displays file status (readonly status, modified status)
-			newfile_status = true, -- Display new file status (new file means no write after created)
-			path = 0, -- 0: Just the filename
-			-- 1: Relative path
-			-- 2: Absolute path
-			-- 3: Absolute path, with tilde as the home directory
-			shorting_target = 40, -- Shortens path to leave 40 spaces in the window
-			-- for other components. (terrible name, any suggestions?)
+			file_status = true,
+			newfile_status = true,
+			path = 0,
+			shorting_target = 40,
 			symbols = {
-				modified = "[+]", -- Text to show when the file is modified.
-				readonly = "[-]", -- Text to show when the file is non-modifiable or readonly.
-				unnamed = "[No Name]", -- Text to show for unnamed buffers.
-				newfile = "[New]", -- Text to show for new created file before first writting
+				modified = "",
+				readonly = "",
+				unnamed = "[No Name]",
+				newfile = "[New]",
 			},
 		}
 
@@ -106,7 +102,7 @@ return {
 		local datetime = {
 			"datetime",
 			style = "%H:%M",
-      icon = "%=󱑁",
+			icon = "%=󱑁",
 			color = "lualine_c_inactive",
 		}
 
@@ -117,7 +113,6 @@ return {
 				component_separators = { left = "╲", right = "╱" },
 				section_separators = { left = "", right = "" },
 				disabled_filetypes = {
-					"dashboard",
 					"NvimTree",
 					"DressingInput",
 					"Outline",
@@ -129,6 +124,11 @@ return {
 			},
 			sections = {
 				lualine_a = {
+					{
+						function()
+							return ""
+						end,
+					},
 					"fileformat",
 					mode,
 					recording,

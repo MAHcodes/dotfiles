@@ -26,4 +26,3 @@ map("x", "<Leader>p", '"_dP', { desc = "Preserve Paste Over" })
 -- tmux-like keymaps
 map("n", '<Leader>"', ":split<CR>", { desc = "Split Window Horizantally", silent = true })
 map("n", "<Leader>%", ":vsplit<CR>", { desc = "Split Window Vertically", silent = true })
-map("n", "<Leader>u", "<cmd>!tmux neww tmux-sessionizer<cr>", { desc = "New Tmux" })
