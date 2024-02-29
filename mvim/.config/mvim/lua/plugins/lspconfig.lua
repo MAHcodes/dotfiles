@@ -146,48 +146,101 @@ return {
 			max_concurrent_installers = 4,
 		}
 
-		local lsp_servers = {
-			"cssls",
-			"cssmodules_ls",
-			"emmet_ls",
-			"eslint",
-			"html",
-			"jsonls",
-			"pyright",
-			"lua_ls",
-			"vtsls",
-			"eslint",
-			"svelte",
-			"tailwindcss",
-			"marksman",
-			"bashls",
-			"gopls",
-			"astro",
-			"dockerls",
-			"docker_compose_language_service",
-			"yamlls",
+		local servers = {
+			eslint = {},
+			html = {},
+			pyright = {},
+			cssmodules_ls = {},
+			svelte = {},
+			tailwindcss = {},
+			marksman = {},
+			bashls = {},
+			gopls = {},
+			astro = {},
+			dockerls = {},
+			docker_compose_language_service = {},
+			cssls = {
+				settings = {
+					css = {
+						validate = true,
+						lint = {
+							unknownAtRules = "ignore",
+						},
+					},
+				},
+			},
+			emmet_ls = {
+				filetypes = { "html", "css", "typescriptreact", "javascriptreact", "php", "sass", "scss" },
+			},
+			jsonls = {
+				settings = {
+					json = {
+						schemas = require("schemastore").json.schemas(),
+						validate = { enable = true },
+					},
+				},
+			},
+			yamlls = {
+				settings = {
+					yaml = {
+						schemaStore = {
+							-- You must disable built-in schemaStore support if you want to use
+							-- this plugin and its advanced options like `ignore`.
+							enable = false,
+							-- Avoid TypeError: Cannot read properties of undefined (reading 'length')
+							url = "",
+						},
+						schemas = require("schemastore").yaml.schemas(),
+					},
+				},
+			},
+			lua_ls = {
+				settings = {
+					Lua = {
+						runtime = { version = "LuaJIT" },
+						workspace = {
+							checkThirdParty = false,
+							library = {
+								"${3rd}/luv/library",
+								unpack(vim.api.nvim_get_runtime_file("", true)),
+							},
+							telemetry = {
+								enable = false,
+							},
+						},
+					},
+				},
+			},
+			vtsls = {
+				settings = {
+					typescript = {
+						inlayHints = {
+							parameterNames = { enabled = "literals" },
+							parameterTypes = { enabled = true },
+							variableTypes = { enabled = true },
+							propertyDeclarationTypes = { enabled = true },
+							functionLikeReturnTypes = { enabled = true },
+							enumMemberValues = { enabled = true },
+						},
+					},
+				},
+			},
 		}
 
-		local tools = {
+		vim.list_extend(vim.tbl_keys(servers), {
 			"stylua",
 			"shfmt",
-		}
+		})
 
-		local ensure_installed = vim.list_extend(lsp_servers, tools)
-
-		require("mason-tool-installer").setup { ensure_installed = ensure_installed }
+		require("mason-tool-installer").setup { ensure_installed = servers }
 
 		require("mason-lspconfig").setup {
 			handlers = {
 				function(server_name)
-					local _, server = pcall(require, string.format("user.lspsettings.%s", server_name))
+					local server = servers[server_name] or {}
+					server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
 
-					require("lspconfig")[server_name].setup {
-						cmd = server.cmd,
-						settings = server.settings,
-						filetypes = server.filetypes,
-						capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {}),
-					}
+					require("lspconfig")[server_name].setup(server)
 				end,
 			},
 		}

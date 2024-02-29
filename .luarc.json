@@ -10,6 +10,7 @@
     "diagnostics.disable": [
         "redundant-parameter",
         "undefined-field",
-        "different-requires"
+        "different-requires",
+        "deprecated"
     ]
 }
