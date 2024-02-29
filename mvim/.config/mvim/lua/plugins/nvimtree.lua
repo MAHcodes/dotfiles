@@ -1,10 +1,8 @@
 return {
 	"nvim-tree/nvim-tree.lua",
 	event = "BufEnter",
-  enabled = false,
 	dependencies = {
 		"kyazdani42/nvim-web-devicons",
-		lazy = true,
 	},
 	init = function()
 		vim.api.nvim_set_keymap("n", "<Leader>e", "<cmd>NvimTreeToggle<cr>", { noremap = true, silent = true })

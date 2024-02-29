@@ -48,6 +48,8 @@ return {
 				CmpItemMenu = { fg = colors.blue },
 				CmpItemAbbrMatch = { fg = colors.blue, style = { "bold" } },
 				CmpItemAbbrMatchFuzzy = { link = "CmpItemAbbrMatch" },
+
+				NormalFloat = { bg = colors.base },
 				PmenuThumb = { bg = colors.blue },
 
 				-- noice

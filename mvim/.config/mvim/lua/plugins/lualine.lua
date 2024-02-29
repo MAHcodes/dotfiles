@@ -6,10 +6,6 @@ return {
 		"folke/noice.nvim",
 	},
 	opts = function()
-		local hide_in_width = function()
-			return vim.fn.winwidth(0) > 100
-		end
-
 		local diagnostics = {
 			"diagnostics",
 			sources = { "nvim_diagnostic" },
@@ -24,13 +20,12 @@ return {
 			"diff",
 			colored = true,
 			symbols = { added = " ", modified = "󱗜 ", removed = " " }, -- 󱗜 
-			cond = hide_in_width,
 		}
 
 		local mode = {
 			"mode",
 			fmt = function(str)
-				return "" .. str:sub(0, 1) .. ""
+				return "" .. str:sub(0, 1) .. ""
 			end,
 		}
 
@@ -45,8 +40,15 @@ return {
 		local filetype = {
 			"filetype",
 			icons_enabled = true,
-			colored = true,
+			colored = false,
 			icon = nil,
+		}
+
+		local buftype = {
+			function()
+				return vim.opt.buftype._value
+			end,
+			icon = "",
 		}
 
 		local branch = {
@@ -57,7 +59,7 @@ return {
 
 		local location = {
 			"location",
-			padding = 0,
+			icon = "",
 		}
 
 		local progress = {
@@ -65,6 +67,7 @@ return {
 			fmt = function()
 				return "%P/%L"
 			end,
+			icon = "󰛾",
 		}
 
 		local recording = {
@@ -88,8 +91,8 @@ return {
 			path = 0,
 			shorting_target = 40,
 			symbols = {
-				modified = "",
-				readonly = "",
+				modified = "[+]",
+				readonly = "[-]",
 				unnamed = "[No Name]",
 				newfile = "[New]",
 			},
@@ -98,6 +101,14 @@ return {
 		local spaces = function()
 			return "ﲖ " .. vim.api.nvim_buf_get_option(0, "shiftwidth") .. ""
 		end
+
+		local searchcount = {
+			"searchcount",
+			icon = "",
+			fmt = function(s)
+				return string.sub(s, 2, -2)
+			end,
+		}
 
 		local datetime = {
 			"datetime",
@@ -129,7 +140,6 @@ return {
 							return ""
 						end,
 					},
-					"fileformat",
 					mode,
 					recording,
 					recorded,
@@ -139,17 +149,17 @@ return {
 				lualine_b = { branch },
 				lualine_c = { diff, datetime },
 				lualine_x = { diagnostics },
-				lualine_y = { command, filetype, spaces, "encoding" },
+				lualine_y = { command, searchcount, "fileformat", buftype, filetype, spaces, "encoding" },
 				lualine_z = {
 					location,
 					progress,
 				},
 			},
 			inactive_sections = {
-				lualine_a = { "filename" },
+				lualine_a = {},
 				lualine_b = {},
 				lualine_c = {},
-				lualine_x = { "location" },
+				lualine_x = {},
 				lualine_y = {},
 				lualine_z = {},
 			},
