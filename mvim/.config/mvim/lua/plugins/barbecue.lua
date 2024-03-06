@@ -7,5 +7,11 @@ return {
 	},
 	opts = {
 		exclude_filetypes = { "gitcommit" },
+		show_modified = true,
+		symbols = {
+			modified = "●",
+			ellipsis = "…",
+			separator = "",
+		},
 	},
 }

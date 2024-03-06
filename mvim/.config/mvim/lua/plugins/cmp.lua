@@ -53,7 +53,7 @@ return {
 							luasnip = "",
 							nvim_lua = "󰢱",
 							buffer = "",
-							path = "",
+							async_path = "",
 							emoji = "󰱫",
 							nerdfont = "󰊪",
 							calc = "󰃬",
@@ -80,7 +80,7 @@ return {
 			},
 			confirm_opts = {
 				behavior = cmp.ConfirmBehavior.Replace,
-				select = false,
+				select = true,
 			},
 			window = {
 				completion = cmp.config.window.bordered(),

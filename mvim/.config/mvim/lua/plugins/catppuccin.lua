@@ -36,7 +36,11 @@ return {
 		color_overrides = {},
 		custom_highlights = function(colors)
 			return {
+				-- nvim
+				NormalFloat = { bg = colors.base },
+				PmenuThumb = { bg = colors.blue },
 				Folded = { bg = colors.surface0 },
+
 				-- alpha
 				["@alpha.title"] = { fg = colors.yellow, style = { "bold" } },
 				["@alpha.text"] = { fg = colors.blue },
@@ -49,8 +53,11 @@ return {
 				CmpItemAbbrMatch = { fg = colors.blue, style = { "bold" } },
 				CmpItemAbbrMatchFuzzy = { link = "CmpItemAbbrMatch" },
 
-				NormalFloat = { bg = colors.base },
-				PmenuThumb = { bg = colors.blue },
+				-- delimited
+				DelimitedError = { link = "DiagnosticVirtualTextError" },
+				DelimitedWarn = { link = "DiagnosticVirtualTextWarn" },
+				DelimitedHint = { link = "DiagnosticVirtualTextHint" },
+				DelimitedInfo = { link = "DiagnosticVirtualTextInfo" },
 
 				-- noice
 				NoiceCmdlinePopupBorder = { fg = colors.blue },
@@ -145,6 +152,6 @@ return {
 	},
 	config = function(_, opts)
 		require("catppuccin").setup(opts)
-		vim.cmd.colorscheme("catppuccin")
+		vim.cmd.colorscheme "catppuccin"
 	end,
 }

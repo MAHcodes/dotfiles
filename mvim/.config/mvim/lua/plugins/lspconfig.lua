@@ -92,7 +92,7 @@ return {
 
 			map("gd", theme(tb.lsp_definitions), "Goto Definition")
 			map("gr", theme(tb.lsp_references), "Goto References")
-			map("gi", theme(tb.lsp_implementations), "Goto Implementations")
+			map("gI", theme(tb.lsp_implementations), "Goto Implementations")
 			map("gy", theme(tb.lsp_type_definitions), "Goto Type Definition")
 			map("gs", theme(tb.lsp_document_symbols), "Goto Document Symbols")
 			map("gS", theme(tb.lsp_dynamic_workspace_symbols), "Goto Workspace Symbols")
@@ -130,8 +130,11 @@ return {
 			end,
 		})
 
-		local capabilities = vim.lsp.protocol.make_client_capabilities()
-		capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
+		local capabilities = vim.tbl_deep_extend(
+			"force",
+			vim.lsp.protocol.make_client_capabilities(),
+			require("cmp_nvim_lsp").default_capabilities()
+		)
 
 		require("mason").setup {
 			ui = {

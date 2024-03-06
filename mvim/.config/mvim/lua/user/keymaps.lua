@@ -26,3 +26,10 @@ map("x", "<Leader>p", '"_dP', { desc = "Preserve Paste Over" })
 -- tmux-like keymaps
 map("n", '<Leader>"', ":split<CR>", { desc = "Split Window Horizantally", silent = true })
 map("n", "<Leader>%", ":vsplit<CR>", { desc = "Split Window Vertically", silent = true })
+
+-- remove default commands
+map("i", "<C-p>", "<NOP>")
+map("i", "<C-n>", "<NOP>")
+
+-- git
+map("n", "<leader>gy", "<cmd>r!curl -s https://whatthecommit.com/index.txt<cr>", { desc = "Git Yolo" })

@@ -2,6 +2,53 @@ return {
 	"lewis6991/gitsigns.nvim",
 	event = { "BufRead", "BufWinEnter", "BufNewFile" },
 	cmd = "Gitsigns",
+	keys = {
+		{
+			"<leader>gp",
+			"<cmd>Gitsigns prev_hunk<cr>",
+			"Prev Hunk",
+		},
+		{
+			"<leader>gn",
+			"<cmd>Gitsigns next_hunk<cr>",
+			desc = "Next Hunk",
+		},
+		{
+			"<leader>gl",
+			"<cmd>Gitsigns blame_line<cr>",
+			desc = "Blame Line",
+		},
+		{
+			"<leader>gv",
+			"<cmd>Gitsigns preview_hunk<cr>",
+			desc = "Preview Hunk",
+		},
+		{
+			"<leader>gr",
+			"<cmd>Gitsigns reset_hunk<cr>",
+			desc = "Reset Hunk",
+		},
+		{
+			"<leader>gR",
+			"<cmd>Gitsigns reset_buffer<cr>",
+			desc = "Reset Buffer",
+		},
+		{
+			"<leader>gs",
+			"<cmd>Gitsigns stage_hunk<cr>",
+			desc = "Stage Hunk",
+		},
+		{
+			"<leader>gS",
+			"<cmd>Gitsigns stage_buffer<cr>",
+			desc = "Stage Buffer",
+		},
+		{
+			"<leader>gu",
+			"<cmd>Gitsigns undo_stage_hunk<cr>",
+			desc = "Undo Stage Hunk",
+		},
+	},
 	opts = {
 		signs = {
 			add = { hl = "GitSignsAdd", text = "▎", numhl = "GitSignsAddNr", linehl = "GitSignsAddLn" },
