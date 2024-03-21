@@ -1,6 +1,6 @@
 return {
 	"kyazdani42/nvim-web-devicons",
-  event = "VeryLazy",
+	event = "VeryLazy",
 	opts = {
 		override = {
 			zsh = {
@@ -26,12 +26,16 @@ return {
 				color = "#81e043",
 				name = "Log",
 			},
+			["gleam"] = {
+				icon = "󰦥",
+				color = "#ffaff3",
+				name = "Gleam",
+			},
 		},
 	},
 	config = function(_, opts)
-		local nvim_web_devicons = require("nvim-web-devicons")
+		local nvim_web_devicons = require "nvim-web-devicons"
 		nvim_web_devicons.setup(opts)
-
 		local icons = {
 			astro = {
 				icon = "󱓞",
@@ -39,7 +43,6 @@ return {
 				name = "Astro",
 			},
 		}
-
 		nvim_web_devicons.set_icon(icons)
 	end,
 }

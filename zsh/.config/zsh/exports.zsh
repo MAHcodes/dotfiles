@@ -22,6 +22,9 @@ export MANPAGER='mvim +Man!'
 # export deno path
 [ -d  "$HOME/.deno/bin" ] && PATH="$HOME/.deno/bin:$PATH"]
 
+# export mise shims path
+[ -d  "$HOME/.local/share/mise/shims" ] && PATH="$HOME/.local/share/mise/shims:$PATH"]
+
 # pnpm
 export PNPM_HOME="/home/mhmdali102/.local/share/pnpm"
 case ":$PATH:" in

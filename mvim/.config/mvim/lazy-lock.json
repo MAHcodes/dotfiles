@@ -55,7 +55,7 @@
   "monochrome.nvim": { "branch": "main", "commit": "2de78d9688ea4a177bcd9be554ab9192337d35ff" },
   "moonfly": { "branch": "master", "commit": "7f89ca0d2396718078780c802fa18738533a43f1" },
   "neodev.nvim": { "branch": "main", "commit": "84e0290f5600e8b89c0dfcafc864f45496a53400" },
-  "neogit": { "branch": "master", "commit": "55eb562bf4ef7d2c370291e3185421c3333999ee" },
+  "neogit": { "branch": "master", "commit": "bf2a353108b9046e907fc112701f6d876b50e465" },
   "neon": { "branch": "main", "commit": "7765aaa7d1cd3804176140644640766e4411c766" },
   "neovim-ayu": { "branch": "master", "commit": "0a9804db5c08dba63be9774a57e4214fd0473ce1" },
   "nightfly": { "branch": "master", "commit": "e61adcb7bfadc0526572aa98ff83d513de421be7" },

@@ -230,12 +230,12 @@ return {
 			},
 		}
 
-		vim.list_extend(vim.tbl_keys(servers), {
+		local ensure_installed = vim.list_extend(vim.tbl_keys(servers), {
 			"stylua",
 			"shfmt",
 		})
 
-		require("mason-tool-installer").setup { ensure_installed = servers }
+		require("mason-tool-installer").setup { ensure_installed = ensure_installed }
 
 		require("mason-lspconfig").setup {
 			handlers = {
