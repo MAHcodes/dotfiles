@@ -4,5 +4,5 @@ set selection-clipboard "clipboard"
 include catppuccin-mocha
 #
 set adjust-open width
-set recolor false
+set recolor true
 set guioptions ""

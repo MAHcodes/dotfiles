@@ -1,5 +1,6 @@
 return {
 	"stevearc/conform.nvim",
+	enabled = true,
 	event = { "BufWritePre" },
 	cmd = { "ConformInfo" },
 	keys = {
@@ -16,10 +17,10 @@ return {
 		formatters_by_ft = {
 			lua = { "stylua" },
 			python = { "black" },
-			javascript = { { "prettierd", "prettier" } },
-			typescript = { { "prettierd", "prettier" } },
-			javascriptreact = { { "prettierd", "prettier" } },
-			typescriptreact = { { "prettierd", "prettier" } },
+			javascript = { { "biome", "prettierd", "prettier" } },
+			typescript = { { "biome", "prettierd", "prettier" } },
+			javascriptreact = { { "biome", "prettierd", "prettier" } },
+			typescriptreact = { { "biome", "prettierd", "prettier" } },
 			vue = { { "prettierd", "prettier" } },
 			css = { { "prettierd", "prettier" } },
 			scss = { { "prettierd", "prettier" } },

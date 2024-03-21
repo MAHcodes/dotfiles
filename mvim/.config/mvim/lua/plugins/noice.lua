@@ -5,7 +5,6 @@ return {
 		"MunifTanjim/nui.nvim",
 		{
 			"rcarriga/nvim-notify",
-			lazy = true,
 		},
 	},
 	opts = {
