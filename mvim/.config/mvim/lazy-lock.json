@@ -21,6 +21,7 @@
   "cmp_luasnip": { "branch": "master", "commit": "05a9ab28b53f71d1aece421ef32fee2cb857a843" },
   "co-author.nvim": { "branch": "main", "commit": "62fbb6d6a58339c968bcea92d0f097f4ea1efaa5" },
   "color-picker.nvim": { "branch": "master", "commit": "06cb5f853535dea529a523e9a0e8884cdf9eba4d" },
+  "colorbuddy.nvim": { "branch": "master", "commit": "9e96ccd88f4510d0a54ce1d5c11119eac9fb217e" },
   "colorschemes": { "branch": "master", "commit": "e29f32990d6e2c7c3a4763326194fbd847b49dac" },
   "conform.nvim": { "branch": "master", "commit": "bf109f061fc3cd75394b7823923187ae045cbf22" },
   "darcula": { "branch": "master", "commit": "faf8dbab27bee0f27e4f1c3ca7e9695af9b1242b" },

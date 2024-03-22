@@ -9,7 +9,6 @@ local servers = {
   "lua_ls",
   -- "tsserver",
   "vtsls",
-  "eslint",
   -- "biome",
   "svelte",
   "tailwindcss",
