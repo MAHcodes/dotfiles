@@ -3,8 +3,8 @@ HISTSIZE=1000000
 SAVEHIST=1000000
 
 # Default Apps
-export EDITOR="mvim"
-export VISUAL="mvim"
+export EDITOR="nvim"
+export VISUAL="nvim"
 export READER="zathura"
 export TERMINAL="wezterm"
 export BROWSER="brave-browser"
@@ -14,7 +14,7 @@ export COLORTERM="truecolor"
 export OPENER="xdg-open"
 export PAGER="less"
 # export WM="dwm"
-export MANPAGER='mvim +Man!'
+export MANPAGER='nvim +Man!'
 
 # export fnm path
 [ -d "$HOME/.local/share/fnm" ] && PATH="$HOME/.local/share/fnm:$PATH"

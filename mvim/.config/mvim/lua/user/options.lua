@@ -42,11 +42,11 @@ local options = {
 	listchars = {
 		trail = "·",
 		eol = "$",
-		extends = "",
-		precedes = "",
+		extends = "",
+		precedes = "",
 		nbsp = "␣",
-		tab = " ",
-		leadmultispace = " ",
+		tab = " ",
+		leadmultispace = " ",
 	},
 	fillchars = { diff = " " },
 }

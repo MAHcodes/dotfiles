@@ -41,33 +41,6 @@ return {
 				border = "rounded",
 				source = "always",
 				header = "",
-				prefix = function(diagnostic, i, total)
-					local function get_i()
-						if total > 1 then
-							return " " .. i .. ")"
-						end
-						return ""
-					end
-
-					local get_lnum_range = function()
-						if diagnostic.lnum ~= diagnostic.end_lnum then
-							return diagnostic.lnum + 1 .. ":" .. diagnostic.end_lnum + 1
-						end
-						return diagnostic.lnum + 1
-					end
-
-					local get_col_range = function()
-						if diagnostic.col ~= diagnostic.end_col then
-							return diagnostic.col .. ":" .. diagnostic.end_col
-						end
-						return diagnostic.col
-					end
-
-					local sign = signs[diagnostic.severity].text
-					local hl = signs[diagnostic.severity].name
-
-					return string.format("%s%s [%s,%s] ", sign, get_i(), get_lnum_range(), get_col_range()), hl
-				end,
 			},
 		}
 
