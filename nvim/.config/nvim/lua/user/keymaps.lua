@@ -1,39 +1,35 @@
-local opts = { noremap = true, silent = true }
-
-local keymap = vim.api.nvim_set_keymap
-
--- Remap space as leader key
-keymap("", "<Space>", "<Nop>", opts)
+-- remap space as leader key
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- tmux-like keymaps
-keymap("n", "<Leader>\"", ":split<CR>", opts)
-keymap("n", "<Leader>%", ":vsplit<CR>", opts)
+local map = vim.keymap.set
 
--- Stay in indent mode
-keymap("v", "<", "<gv", opts)
-keymap("v", ">", ">gv", opts)
+-- stay in indent mode
+map("v", "<", "<gv")
+map("v", ">", ">gv")
 
--- preserve paste over
-keymap("x", "<Leader>p", "\"_dP", opts)
-
--- Other
 -- keep cursor centered
-keymap("n", "n", "nzz", opts)
-keymap("n", "N", "Nzz", opts)
-keymap("n", "*", "*zz", opts)
-keymap("n", "#", "#zz", opts)
-keymap("n", "g*", "g*zz", opts)
-keymap("n", "g#", "g#zz", opts)
-keymap("n", "<C-d>", "<C-d>zz", opts)
-keymap("n", "<C-u>", "<C-u>zz", opts)
-keymap("n", "<C-f>", "<C-f>zz", opts)
-keymap("n", "<C-b>", "<C-b>zz", opts)
-keymap("n", "J", "mzJ`z", opts)
+map("n", "n", "nzz")
+map("n", "N", "Nzz")
+map("n", "*", "*zz")
+map("n", "#", "#zz")
+map("n", "g*", "g*zz")
+map("n", "g#", "g#zz")
+map("n", "J", "mzJ`z")
 
 -- prevent registry overwrite
-keymap("x", "p", [["_dP]], opts)
+map("x", "p", [["_dP]])
 
--- toggle wrap
-keymap("n", "<A-z>", ":set wrap!<CR>", opts)
+map("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
+map("x", "<Leader>p", '"_dP', { desc = "Preserve Paste Over" })
+
+-- tmux-like keymaps
+map("n", '<Leader>"', ":split<CR>", { desc = "Split Window Horizantally", silent = true })
+map("n", "<Leader>%", ":vsplit<CR>", { desc = "Split Window Vertically", silent = true })
+
+-- remove default commands
+map("i", "<C-p>", "<NOP>")
+map("i", "<C-n>", "<NOP>")
+
+-- git
+map("n", "<leader>gy", "<cmd>r!curl -s https://whatthecommit.com/index.txt<cr>", { desc = "Git Yolo" })

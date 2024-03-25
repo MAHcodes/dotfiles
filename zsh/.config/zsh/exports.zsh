@@ -25,6 +25,9 @@ export MANPAGER='nvim +Man!'
 # export mise shims path
 [ -d  "$HOME/.local/share/mise/shims" ] && PATH="$HOME/.local/share/mise/shims:$PATH"]
 
+# export luarocks path
+[ -d  "$HOME/.luarocks/bin" ] && PATH="$HOME/.luarocks/bin:$PATH"]
+
 # pnpm
 export PNPM_HOME="/home/mhmdali102/.local/share/pnpm"
 case ":$PATH:" in
