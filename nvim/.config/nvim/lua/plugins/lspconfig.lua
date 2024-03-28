@@ -125,10 +125,24 @@ return {
 		local servers = {
 			eslint = {},
 			html = {},
+			jqls = {},
 			pyright = {},
 			cssmodules_ls = {},
 			svelte = {},
-			tailwindcss = {},
+			tailwindcss = {
+				filetypes = {
+					"gleam",
+				},
+				settings = {
+					tailwindCSS = {
+						experimental = {
+							classRegex = {
+								'\\bclass[\\s(<|]+"([^"]*)"',
+							},
+						},
+					},
+				},
+			},
 			marksman = {},
 			bashls = {},
 			gopls = {},
@@ -206,6 +220,11 @@ return {
 		local ensure_installed = vim.list_extend(vim.tbl_keys(servers), {
 			"stylua",
 			"shfmt",
+			"biome",
+			"prettier",
+			"prettierd",
+			"eslint_d",
+			"jq",
 		})
 
 		require("mason-tool-installer").setup { ensure_installed = ensure_installed }

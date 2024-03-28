@@ -2,7 +2,7 @@ return {
 	"NvChad/nvim-colorizer.lua",
   event = { "BufReadPost", "BufNewFile" },
 	opts = {
-		filetypes = { "css", "scss", "html", "javascript", "javascriptreact", "typescript", "typescriptreact", "astro" },
+		filetypes = { "css", "scss", "html", "javascript", "javascriptreact", "typescript", "typescriptreact", "astro", "gleam" },
 		user_default_options = {
 			RRGGBBAA = true,
 			rgb_fn = true,

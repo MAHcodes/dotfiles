@@ -28,6 +28,9 @@ export MANPAGER='nvim +Man!'
 # export luarocks path
 [ -d  "$HOME/.luarocks/bin" ] && PATH="$HOME/.luarocks/bin:$PATH"]
 
+# atuin
+eval "$(atuin init zsh)"
+
 # pnpm
 export PNPM_HOME="/home/mhmdali102/.local/share/pnpm"
 case ":$PATH:" in

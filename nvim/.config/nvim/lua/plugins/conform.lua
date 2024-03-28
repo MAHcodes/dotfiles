@@ -27,7 +27,7 @@ return {
 			less = { { "prettierd", "prettier" } },
 			html = { { "prettierd", "prettier" } },
 			json = { { "prettierd", "prettier" } },
-			jsonc = { { "prettierd", "prettier" } },
+			jsonc = { { "biome", "prettierd", "prettier" } },
 			yaml = { { "prettierd", "prettier" } },
 			markdown = { { "prettierd", "prettier" } },
 			["markdown.mdx"] = { { "prettierd", "prettier" } },
