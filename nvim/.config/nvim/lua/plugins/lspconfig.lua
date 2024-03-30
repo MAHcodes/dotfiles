@@ -69,6 +69,11 @@ return {
 			map("gy", theme(tb.lsp_type_definitions), "Goto Type Definition")
 			map("gs", theme(tb.lsp_document_symbols), "Goto Document Symbols")
 			map("gS", theme(tb.lsp_dynamic_workspace_symbols), "Goto Workspace Symbols")
+			map("gw", function()
+				vim.notify(vim.inspect(vim.lsp.buf.list_workspace_folders()), vim.log.levels.INFO, {
+					title = "Workspace Folders",
+				})
+			end, "List Workspace Folders")
 		end
 
 		local function highlight_document(client, bufnr)
@@ -122,7 +127,7 @@ return {
 			max_concurrent_installers = 4,
 		}
 
-		local servers = {
+		local mason_servers = {
 			eslint = {},
 			html = {},
 			jqls = {},
@@ -132,6 +137,15 @@ return {
 			tailwindcss = {
 				filetypes = {
 					"gleam",
+					"astro",
+					"html",
+					"css",
+					"javascript",
+					"javascriptreact",
+					"typescript",
+					"typescriptreact",
+					"svelte",
+					"templ",
 				},
 				settings = {
 					tailwindCSS = {
@@ -174,10 +188,7 @@ return {
 				settings = {
 					yaml = {
 						schemaStore = {
-							-- You must disable built-in schemaStore support if you want to use
-							-- this plugin and its advanced options like `ignore`.
 							enable = false,
-							-- Avoid TypeError: Cannot read properties of undefined (reading 'length')
 							url = "",
 						},
 						schemas = require("schemastore").yaml.schemas(),
@@ -217,7 +228,7 @@ return {
 			},
 		}
 
-		local ensure_installed = vim.list_extend(vim.tbl_keys(servers), {
+		local other_servers = {
 			"stylua",
 			"shfmt",
 			"biome",
@@ -225,17 +236,45 @@ return {
 			"prettierd",
 			"eslint_d",
 			"jq",
-		})
+		}
+
+		local lspconfig = require "lspconfig"
+		local configs = require "lspconfig.configs"
+
+		local custom_servers = {
+			gleam = {
+				cmd = { "gleam", "lsp" },
+				-- cmd = { "glas", "--stdio" },
+				autostart = true,
+				filetypes = { "gleam" },
+				root_dir = lspconfig.util.root_pattern("gleam.toml", ".git"),
+			},
+		}
+
+		for server_name, server_config in pairs(custom_servers) do
+			if not configs[server_name] then
+				configs[server_name] = {
+					default_config = server_config,
+				}
+
+				server_config.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server_config.capabilities or {})
+				lspconfig[server_name].setup(server_config)
+			end
+		end
+
+		local ensure_installed = vim.list_extend(vim.tbl_keys(mason_servers), other_servers)
 
 		require("mason-tool-installer").setup { ensure_installed = ensure_installed }
 
 		require("mason-lspconfig").setup {
+			automatic_installation = true,
+
 			handlers = {
 				function(server_name)
-					local server = servers[server_name] or {}
+					local server = mason_servers[server_name] or {}
 					server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
 
-					require("lspconfig")[server_name].setup(server)
+					lspconfig[server_name].setup(server)
 				end,
 			},
 		}
