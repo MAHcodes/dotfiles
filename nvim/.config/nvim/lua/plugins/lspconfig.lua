@@ -108,12 +108,6 @@ return {
 			end,
 		})
 
-		local capabilities = vim.tbl_deep_extend(
-			"force",
-			vim.lsp.protocol.make_client_capabilities(),
-			require("cmp_nvim_lsp").default_capabilities()
-		)
-
 		require("mason").setup {
 			ui = {
 				border = "rounded",
@@ -238,13 +232,23 @@ return {
 			"jq",
 		}
 
+		local capabilities = vim.tbl_deep_extend(
+			"force",
+			vim.lsp.protocol.make_client_capabilities(),
+			require("cmp_nvim_lsp").default_capabilities()
+		)
+
+		local function extend_server_capabilities(server)
+			return vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
+		end
+
 		local lspconfig = require "lspconfig"
 		local configs = require "lspconfig.configs"
 
 		local custom_servers = {
 			gleam = {
-				cmd = { "gleam", "lsp" },
-				-- cmd = { "glas", "--stdio" },
+				-- cmd = { "gleam", "lsp" },
+				cmd = { "glas", "--stdio" },
 				autostart = true,
 				filetypes = { "gleam" },
 				root_dir = lspconfig.util.root_pattern("gleam.toml", ".git"),
@@ -256,25 +260,21 @@ return {
 				configs[server_name] = {
 					default_config = server_config,
 				}
-
-				server_config.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server_config.capabilities or {})
+				server_config.capabilities = extend_server_capabilities(server_config)
 				lspconfig[server_name].setup(server_config)
 			end
 		end
 
 		local ensure_installed = vim.list_extend(vim.tbl_keys(mason_servers), other_servers)
-
 		require("mason-tool-installer").setup { ensure_installed = ensure_installed }
 
 		require("mason-lspconfig").setup {
 			automatic_installation = true,
-
 			handlers = {
 				function(server_name)
-					local server = mason_servers[server_name] or {}
-					server.capabilities = vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
-
-					lspconfig[server_name].setup(server)
+					local server_config = mason_servers[server_name] or {}
+					server_config.capabilities = extend_server_capabilities(server_config)
+					lspconfig[server_name].setup(server_config)
 				end,
 			},
 		}
