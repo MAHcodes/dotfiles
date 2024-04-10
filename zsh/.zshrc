@@ -8,7 +8,7 @@ plug "$HOME/.config/zsh/functions.zsh"
 
 # plugins
 plug "zap-zsh/supercharge"
-plug "zsh-users/zsh-completions"
+# plug "zsh-users/zsh-completions"
 plug "zsh-users/zsh-autosuggestions"
 plug "zsh-users/zsh-syntax-highlighting"
 plug "zap-zsh/fzf"
@@ -30,6 +30,3 @@ plug "zap-zsh/zap-prompt"
 # autocomplete
 fpath+=~/.config/zsh/completions
 autoload -Uz compinit && compinit
-
-# bun completions
-[ -s "/home/mhmdali102/.bun/_bun" ] && source "/home/mhmdali102/.bun/_bun"

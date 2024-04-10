@@ -1,5 +1,5 @@
 return {
 	"folke/neodev.nvim",
-  event = "VeryLazy",
-  config = true,
+	ft = { "lua" },
+	config = true,
 }

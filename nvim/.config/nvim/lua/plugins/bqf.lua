@@ -1,7 +1,7 @@
 return {
 	"kevinhwang91/nvim-bqf",
 	name = "bqt",
-  event = "VeryLazy",
+  event = "UIEnter",
 	opts = {
 		auto_enable = true,
 		auto_resize_height = true,

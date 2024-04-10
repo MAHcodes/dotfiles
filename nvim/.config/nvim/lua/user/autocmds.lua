@@ -6,9 +6,9 @@ local function create_autocmd(event, pattern, callback)
 	})
 end
 
-create_autocmd("FileType", { "qf", "help", "notify" }, function()
-	vim.keymap.set("n", "q", "<cmd>close<CR>")
-end)
+-- create_autocmd("FileType", { "qf", "help", "notify" }, function()
+-- 	vim.keymap.set("n", "q", "<cmd>close<CR>")
+-- end)
 
 create_autocmd("TextYankPost", "*", function()
 	return vim.highlight.on_yank { timeout = 100 }

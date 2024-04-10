@@ -35,7 +35,7 @@ local options = {
 	wrap = false,
 	scrolloff = 8,
 	sidescrolloff = 8,
-	spell = true,
+	spell = false,
 	confirm = true,
 	spelllang = { "en_us" },
 	list = true,
@@ -46,7 +46,6 @@ local options = {
 		precedes = "",
 		nbsp = "␣",
 		tab = " ",
-		leadmultispace = " ",
 	},
 	fillchars = { diff = " " },
 }

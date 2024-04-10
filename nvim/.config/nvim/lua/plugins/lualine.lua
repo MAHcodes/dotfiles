@@ -22,13 +22,6 @@ return {
 			symbols = { added = " ", modified = "󱗜 ", removed = " " }, -- 󱗜 
 		}
 
-		local mode = {
-			"mode",
-			fmt = function(str)
-				return "" .. str:sub(0, 1) .. ""
-			end,
-		}
-
 		local noice = require "noice"
 
 		local command = {
@@ -140,7 +133,7 @@ return {
 							return ""
 						end,
 					},
-					mode,
+					"mode",
 					recording,
 					recorded,
 					filename,

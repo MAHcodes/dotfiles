@@ -1,10 +1,14 @@
 return {
-  "sindrets/diffview.nvim",
-  event = "VeryLazy",
-  dependencies = {
-    "kyazdani42/nvim-web-devicons",
-  },
-  opts = {
-    enhanced_diff_hl = false,
-  },
+	"sindrets/diffview.nvim",
+	cmd = {
+		"DiffviewOpen",
+		"DiffviewFileHistory",
+		"DiffviewLog",
+	},
+	dependencies = {
+		"kyazdani42/nvim-web-devicons",
+	},
+	opts = {
+		enhanced_diff_hl = false,
+	},
 }

@@ -22,7 +22,7 @@ local M = {
 				active = true,
 				detection_methods = { "pattern" },
 				exclude_dirs = { "*/node_modules/*" },
-				patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json", "lazy-lock.json", "gleam.toml" },
+				patterns = { ".git", "Makefile", "package.json", "gleam.toml", "go.mod" },
 				show_hidden = true,
 			},
 			config = function(_, opts)

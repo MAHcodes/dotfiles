@@ -28,6 +28,10 @@ export MANPAGER='nvim +Man!'
 # export luarocks path
 [ -d  "$HOME/.luarocks/bin" ] && PATH="$HOME/.luarocks/bin:$PATH"]
 
+# completions
+# [ -s "$HOME/.config/zsh/completions/_bun" ] && source "$HOME/.config/zsh/completions/_bun"
+# [ -s "$HOME/.config/zsh/completions/_when" ] && source "$HOME/.config/zsh/completions/_when"
+
 # atuin
 # eval "$(atuin init zsh)"
 
@@ -49,7 +53,3 @@ export FZF_DEFAULT_OPTS=" \
 --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#b4befe,hl+:#f38ba8 \
 --bind 'ctrl-d:change-prompt( )+reload(fd . --type d)' \
 --bind 'ctrl-f:change-prompt( )+reload(fd . --type f)'"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
