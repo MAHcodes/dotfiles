@@ -7,7 +7,7 @@ return {
 		variant = "main",
 		dark_variant = "main",
 		dim_inactive_windows = true,
-		extend_background_behind_borders = false,
+		extend_background_behind_borders = true,
 		groups = {
 			border = "muted",
 			link = "iris",

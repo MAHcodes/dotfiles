@@ -90,41 +90,33 @@ return {
 		}
 	end,
 	config = function(_, opts)
-		vim.api.nvim_create_autocmd("LspAttach", {
-			group = vim.api.nvim_create_augroup("lsp-attach", { clear = true }),
-			callback = function(args)
-				local client = vim.lsp.get_client_by_id(args.data.client_id)
-				if client.supports_method "textDocument/foldingRange" then
-					vim.o.foldcolumn = "1"
-					vim.o.foldlevel = 99
-					vim.o.foldlevelstart = 99
-					vim.o.foldenable = true
-					vim.opt.fillchars = {
-						eob = " ",
-						fold = " ",
-						foldopen = "",
-						foldsep = " ",
-						foldclose = "",
-						diff = " ",
-					}
+		vim.o.foldcolumn = "1"
+		vim.o.foldlevel = 99
+		vim.o.foldlevelstart = 99
+		vim.o.foldenable = true
+		vim.opt.fillchars = {
+			eob = " ",
+			fold = " ",
+			foldopen = "",
+			foldsep = " ",
+			foldclose = "",
+			diff = " ",
+		}
 
-					local ufo = require "ufo"
-					ufo.setup(opts)
+		local ufo = require "ufo"
+		ufo.setup(opts)
 
-					local function peekOrHover()
-						local winid = ufo.peekFoldedLinesUnderCursor()
-						if not winid then
-							vim.lsp.buf.hover()
-						end
-					end
+		local function peekOrHover()
+			local winid = ufo.peekFoldedLinesUnderCursor()
+			if not winid then
+				vim.lsp.buf.hover()
+			end
+		end
 
-					vim.keymap.set("n", "zR", ufo.openAllFolds, { desc = "Open All Folds" })
-					vim.keymap.set("n", "zM", ufo.closeAllFolds, { desc = "Close All Folds" })
-					vim.keymap.set("n", "zr", ufo.openFoldsExceptKinds, { desc = "Open Folds Except Kinds" })
-					vim.keymap.set("n", "zm", ufo.closeFoldsWith, { desc = "Close Folds With" })
-					vim.keymap.set("n", "K", peekOrHover, { desc = "Peek Or Hover" })
-				end
-			end,
-		})
+		vim.keymap.set("n", "zR", ufo.openAllFolds, { desc = "Open All Folds" })
+		vim.keymap.set("n", "zM", ufo.closeAllFolds, { desc = "Close All Folds" })
+		vim.keymap.set("n", "zr", ufo.openFoldsExceptKinds, { desc = "Open Folds Except Kinds" })
+		vim.keymap.set("n", "zm", ufo.closeFoldsWith, { desc = "Close Folds With" })
+		vim.keymap.set("n", "K", peekOrHover, { desc = "Peek Or Hover" })
 	end,
 }

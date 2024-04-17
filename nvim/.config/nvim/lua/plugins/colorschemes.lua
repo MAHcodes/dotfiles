@@ -110,7 +110,7 @@ return {
 		lazy = true,
 	},
 	{
-		"ChristianChiarulli/onedark.nvim",
+		"navarasu/onedark.nvim",
 		lazy = true,
 	},
 	{
@@ -161,4 +161,16 @@ return {
 		"Matsuuu/pinkmare",
 		lazy = true,
 	},
+	{
+		"eldritch-theme/eldritch.nvim",
+		lazy = true,
+	},
+	{
+		"ribru17/bamboo.nvim",
+		lazy = true,
+	},
+  {
+    "xero/miasma.nvim",
+    lazy = true,
+  },
 }

@@ -1,7 +1,7 @@
 set window-title-basename "true"
 set selection-clipboard "clipboard"
 
-include catppuccin-mocha
+include rose-pine
 #
 set adjust-open width
 set recolor true
