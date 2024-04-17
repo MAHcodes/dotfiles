@@ -94,11 +94,6 @@ return {
 		lazy = true,
 	},
 	{
-		"rose-pine/neovim",
-		name = "rose-pine",
-		lazy = true,
-	},
-	{
 		"marko-cerovac/material.nvim",
 		lazy = true,
 	},

@@ -1,37 +1,49 @@
-local wezterm = require("wezterm")
+local wezterm = require 'wezterm'
 
-local custom = wezterm.color.get_builtin_schemes()["Catppuccin Mocha"]
-custom.cursor_bg = "#89B4FA"
-custom.cursor_fg = "#1E1E2E"
+local custom = wezterm.color.get_builtin_schemes()['rose-pine']
+custom.cursor_bg = '#EBBCBA'
+custom.cursor_fg = '#191724'
 
-wezterm.on("gui-startup", function(cmd)
-	local _, _, window = wezterm.mux.spawn_window(cmd or {})
-	window:gui_window():toggle_fullscreen()
+wezterm.on('gui-startup', function(cmd)
+  local _, _, window = wezterm.mux.spawn_window(cmd or {})
+  window:gui_window():toggle_fullscreen()
 end)
 
 return {
-	enable_tab_bar = false,
-	allow_square_glyphs_to_overflow_width = "Never",
-
-	font = wezterm.font("FantasqueSansM Nerd Font Mono"),
-	automatically_reload_config = true,
-	font_size = 12.0,
-	line_height = 1.0,
-
-	window_padding = {
-		left = 0,
-		right = 0,
-		top = 0,
-		bottom = 0,
-	},
-
-	cursor_blink_rate = 0,
-	window_decorations = "NONE",
-
+  enable_tab_bar = false,
+  allow_square_glyphs_to_overflow_width = 'Never',
+  font = wezterm.font_with_fallback {
+    {
+      family = 'MonaspiceNe Nerd Font',
+      harfbuzz_features = { 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig' },
+    },
+    {
+      family = 'FantasqueSansM Nerd Font Mono',
+    },
+  },
+  font_rules = {
+    {
+      intensity = 'Normal',
+      italic = true,
+      font = wezterm.font {
+        family = 'MonaspiceRn Nerd Font',
+      },
+    },
+  },
+  automatically_reload_config = true,
+  font_size = 12.0,
+  line_height = 1.0,
+  window_padding = {
+    left = 0,
+    right = 0,
+    top = 0,
+    bottom = 0,
+  },
+  cursor_blink_rate = 0,
+  window_decorations = 'NONE',
   check_for_updates = false,
-
-	color_schemes = {
-		["Custom"] = custom,
-	},
-	color_scheme = "Custom",
+  color_schemes = {
+    ['custom'] = custom,
+  },
+  color_scheme = 'custom',
 }

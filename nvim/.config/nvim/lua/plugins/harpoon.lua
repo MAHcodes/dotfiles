@@ -20,14 +20,14 @@ return {
 		},
 		{
 			"<leader>ha",
-			"<cmd>HarpoonAppend<CR>",
-			desc = "Harpoon Append File",
+			"<cmd>HarpoonAdd<CR>",
+			desc = "Harpoon Add File",
 			nowait = true,
 		},
 		{
 			"<leader>hu",
 			"<cmd>HarpoonToggleUI<CR>",
-			desc = "Harpoon Append File",
+			desc = "Harpoon Add File",
 			nowait = true,
 		},
 		{
@@ -106,8 +106,8 @@ return {
 			toggle_telescope(harpoon:list())
 		end, {})
 
-		vim.api.nvim_create_user_command("HarpoonAppend", function()
-			harpoon:list():append()
+		vim.api.nvim_create_user_command("HarpoonAdd", function()
+			harpoon:list():add()
 		end, {})
 
 		vim.api.nvim_create_user_command("HarpoonToggleUI", function()

@@ -5,11 +5,11 @@ return {
 	cmd = { "ConformInfo" },
 	keys = {
 		{
+			mode = { "n", "v" },
 			"<leader>lf",
 			function()
 				require("conform").format { async = true, lsp_fallback = true }
 			end,
-			mode = "",
 			desc = "Format buffer",
 		},
 	},
@@ -22,7 +22,7 @@ return {
 			javascriptreact = { { "biome", "prettierd", "prettier" } },
 			typescriptreact = { { "biome", "prettierd", "prettier" } },
 			vue = { { "prettierd", "prettier" } },
-			css = { { "prettierd", "prettier" } },
+			css = { { "biome", "prettierd", "prettier" } },
 			scss = { { "prettierd", "prettier" } },
 			less = { { "prettierd", "prettier" } },
 			html = { { "prettierd", "prettier" } },

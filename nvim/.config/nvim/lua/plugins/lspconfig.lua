@@ -1,6 +1,6 @@
 return {
 	"neovim/nvim-lspconfig",
-  event = "UIEnter",
+	event = "UIEnter",
 	dependencies = {
 		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
@@ -147,6 +147,10 @@ return {
 						experimental = {
 							classRegex = {
 								'\\bclass[\\s(<|]+"([^"]*)"',
+								[[class= "([^"]*)]],
+								[[class: "([^"]*)]],
+								'~H""".*class="([^"]*)".*"""',
+								'~F""".*class="([^"]*)".*"""',
 							},
 						},
 					},
@@ -248,8 +252,8 @@ return {
 
 		local custom_servers = {
 			gleam = {
-				-- cmd = { "gleam", "lsp" },
-				cmd = { "glas", "--stdio" },
+				cmd = { "gleam", "lsp" },
+				-- cmd = { "glas", "--stdio" },
 				autostart = true,
 				filetypes = { "gleam" },
 				root_dir = lspconfig.util.root_pattern("gleam.toml", ".git"),

@@ -84,7 +84,7 @@ return {
 				highlight_git = true,
 				indent_markers = {
 					enable = true,
-					inline_arrows = true,
+					inline_arrows = false,
 					icons = {
 						corner = "╰",
 						edge = "│",
@@ -107,6 +107,8 @@ return {
 							ignored = "◌",
 						},
 						folder = {
+              arrow_closed = "",
+              arrow_open = "",
 							default = "",
 							open = "",
 							empty = "",
@@ -115,8 +117,19 @@ return {
 						},
 					},
 					git_placement = "after",
+					modified_placement = "after",
 					diagnostics_placement = "before",
 					bookmarks_placement = "before",
+					padding = " ",
+					show = {
+						file = true,
+						folder = true,
+						folder_arrow = true,
+						git = true,
+						modified = true,
+						diagnostics = true,
+						bookmarks = true,
+					},
 				},
 			},
 			disable_netrw = false,
@@ -155,6 +168,11 @@ return {
 				ignore = false,
 				timeout = 500,
 			},
+      modified = {
+        enable = true,
+        show_on_dirs = true,
+        show_on_open_dirs = true,
+      },
 			view = {
 				width = {
 					min = vim.o.columns,

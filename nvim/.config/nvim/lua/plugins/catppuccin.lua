@@ -2,7 +2,7 @@ return {
 	"catppuccin/nvim",
 	name = "catppuccin",
 	priority = 1000,
-  -- lazy = true,
+  lazy = true,
 	opts = {
 		flavour = "mocha",
 		background = {
@@ -54,43 +54,12 @@ return {
 				CmpItemAbbrMatch = { fg = colors.blue, style = { "bold" } },
 				CmpItemAbbrMatchFuzzy = { link = "CmpItemAbbrMatch" },
 
-				-- delimited
-				DelimitedError = { link = "DiagnosticVirtualTextError" },
-				DelimitedWarn = { link = "DiagnosticVirtualTextWarn" },
-				DelimitedHint = { link = "DiagnosticVirtualTextHint" },
-				DelimitedInfo = { link = "DiagnosticVirtualTextInfo" },
-
 				-- noice
 				NoiceCmdlinePopupBorder = { fg = colors.blue },
 				NoiceVirtualText = { fg = colors.yellow },
 				NoiceLspProgressSuccess = { fg = colors.green },
 				NoiceLspProgressSpinner = { fg = colors.yellow },
 				NoicePopupmenuSelected = { fg = colors.surface0, bg = colors.blue, style = { "bold" } },
-
-				-- glance
-				GlancePreviewNormal = { bg = colors.mantle },
-				GlancePreviewMatch = { bg = colors.surface1 },
-				GlancePreviewBorderBottom = { bg = colors.mantle, fg = colors.blue },
-				GlancePreviewLineNr = { bg = colors.mantle },
-				GlancePreviewCursorLine = { bg = colors.mantle },
-				GlancePreviewEndOfBuffer = { bg = colors.mantle },
-				GlancePreviewSignColumn = { bg = colors.mantle },
-
-				GlanceWinBarTitle = { bg = colors.surface0 },
-				GlanceWinBarFilename = { bg = colors.surface0, fg = colors.blue, style = { "bold" } },
-				GlanceWinBarFilepath = { bg = colors.surface0, fg = colors.lavender },
-
-				GlanceListNormal = { bg = colors.base },
-				GlanceListFilename = { fg = colors.blue, style = { "bold" } },
-				GlanceListCount = { fg = colors.blue, style = { "bold" } },
-				GlanceListCursorLine = { bg = colors.base },
-				GlanceListMatch = { bg = colors.surface1 },
-				GlanceListEndOfBuffer = { bg = colors.base },
-				GlanceListBorderBottom = { bg = colors.mantle, fg = colors.blue },
-
-				GlanceFoldIcon = { fg = colors.blue },
-				GlanceIndent = { fg = colors.surface0 },
-				GlanceBorderTop = { bg = colors.mantle, fg = colors.blue },
 			}
 		end,
 		integrations = {

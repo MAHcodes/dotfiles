@@ -8,7 +8,7 @@ plug "$HOME/.config/zsh/functions.zsh"
 
 # plugins
 plug "zap-zsh/supercharge"
-# plug "zsh-users/zsh-completions"
+plug "zsh-users/zsh-completions"
 plug "zsh-users/zsh-autosuggestions"
 plug "zsh-users/zsh-syntax-highlighting"
 plug "zap-zsh/fzf"

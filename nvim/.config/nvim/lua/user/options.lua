@@ -45,7 +45,7 @@ local options = {
 		extends = "",
 		precedes = "",
 		nbsp = "␣",
-		tab = " ",
+		tab = "» ",
 	},
 	fillchars = { diff = " " },
 }

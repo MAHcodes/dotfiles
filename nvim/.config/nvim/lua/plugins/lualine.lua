@@ -61,6 +61,7 @@ return {
 				return "%P/%L"
 			end,
 			icon = "󰛾",
+			separator = { right = "" },
 		}
 
 		local recording = {
@@ -92,7 +93,7 @@ return {
 		}
 
 		local spaces = function()
-			return "ﲖ " .. vim.api.nvim_buf_get_option(0, "shiftwidth") .. ""
+			return "󰞘 " .. vim.api.nvim_buf_get_option(0, "shiftwidth") .. ""
 		end
 
 		local searchcount = {
@@ -130,8 +131,9 @@ return {
 				lualine_a = {
 					{
 						function()
-							return ""
+							return " "
 						end,
+						separator = { left = "" },
 					},
 					"mode",
 					recording,
