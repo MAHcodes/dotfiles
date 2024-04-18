@@ -9,6 +9,7 @@ return {
 		"b0o/schemastore.nvim",
 		"nvim-telescope/telescope.nvim",
 		"SmiteshP/nvim-navic",
+		"kevinhwang91/nvim-ufo",
 	},
 	config = function()
 		vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
@@ -240,7 +241,15 @@ return {
 		local capabilities = vim.tbl_deep_extend(
 			"force",
 			vim.lsp.protocol.make_client_capabilities(),
-			require("cmp_nvim_lsp").default_capabilities()
+			require("cmp_nvim_lsp").default_capabilities(),
+			{
+				textDocument = {
+					foldingRange = {
+						dynamicRegistration = false,
+						lineFoldingOnly = true,
+					},
+				},
+			}
 		)
 
 		local function extend_server_capabilities(server)
