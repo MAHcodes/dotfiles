@@ -1,7 +1,7 @@
 ncmpcpp_directory=~/.config/ncmpcpp
 message_delay_time=1
-now_playing_prefix=$(red)██ 
-now_playing_suffix=$(red) ██
+now_playing_prefix=$(red)█ 
+now_playing_suffix=$(red) █
 display_bitrate=yes
 display_remaining_time=no
 mouse_support=no

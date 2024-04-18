@@ -61,7 +61,6 @@ return {
 				return "%P/%L"
 			end,
 			icon = "󰛾",
-			separator = { right = "" },
 		}
 
 		local recording = {
@@ -115,8 +114,8 @@ return {
 			options = {
 				icons_enabled = true,
 				theme = "auto",
-				component_separators = { left = "╲", right = "╱" },
-				section_separators = { left = "", right = "" },
+				component_separators = { left = "│", right = "│" },
+				section_separators = { left = "", right = "" },
 				disabled_filetypes = {
 					"NvimTree",
 					"DressingInput",
@@ -131,9 +130,8 @@ return {
 				lualine_a = {
 					{
 						function()
-							return " "
+							return ""
 						end,
-						separator = { left = "" },
 					},
 					"mode",
 					recording,

@@ -4,9 +4,9 @@ set -g @plugin "catppuccin/tmux"
 set -g @catppuccin_flavour "rose"
 
 # catppuccin config
-set -g @catppuccin_window_left_separator "█"
-set -g @catppuccin_window_right_separator "█"
-set -g @catppuccin_window_middle_separator " ╱ "
+set -g @catppuccin_window_left_separator "█"
+set -g @catppuccin_window_right_separator "█"
+set -g @catppuccin_window_middle_separator " │ "
 set -g @catppuccin_window_number_position "left"
 
 set -g @catppuccin_window_status_enable "yes"
@@ -26,8 +26,8 @@ set -g @catppuccin_window_default_text "#W"
 set -g @catppuccin_window_current_text "#{b:pane_current_path}"
 set -g @catppuccin_window_current_format_directory_text "#{b:pane_current_path}"
 
-set -g @catppuccin_status_left_separator "  █"
-set -g @catppuccin_status_right_separator "█"
+set -g @catppuccin_status_left_separator " █"
+set -g @catppuccin_status_right_separator "█"
 set -g @catppuccin_status_right_separator_inverse "yes"
 set -g @catppuccin_status_connect_separator "yes"
 set -g @catppuccin_status_fill "icon"
