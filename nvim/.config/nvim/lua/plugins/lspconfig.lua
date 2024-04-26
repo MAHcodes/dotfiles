@@ -147,7 +147,7 @@ return {
 					tailwindCSS = {
 						experimental = {
 							classRegex = {
-								'\\bclass[\\s(<|]+"([^"]*)"',
+								'"([^"]*)"',
 								[[class= "([^"]*)]],
 								[[class: "([^"]*)]],
 								'~H""".*class="([^"]*)".*"""',
@@ -236,6 +236,8 @@ return {
 			"prettierd",
 			"eslint_d",
 			"jq",
+			"rustywind",
+			"xmlformatter",
 		}
 
 		local capabilities = vim.tbl_deep_extend(

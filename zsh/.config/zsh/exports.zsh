@@ -35,6 +35,9 @@ export MANPAGER='nvim +Man!'
 # atuin
 # eval "$(atuin init zsh)"
 
+# ruby
+eval "$(rbenv init -)"
+
 # pnpm
 export PNPM_HOME="/home/mhmdali102/.local/share/pnpm"
 case ":$PATH:" in
@@ -48,10 +51,8 @@ export LS_COLORS="$(vivid generate rose-pine)"
 # fzf
 export FZF_DEFAULT_OPTS=" \
 --border=none --margin=0 --padding=0 --info=inline --prompt=' ' --ansi --no-mouse --reverse \
-	--color=fg:#908caa,bg:#191724,hl:#ebbcba \
-	--color=fg+:#e0def4,bg+:#26233a,hl+:#ebbcba \
-	--color=border:#403d52,header:#31748f,gutter:#191724 \
-	--color=spinner:#f6c177,info:#9ccfd8 \
-	--color=pointer:#c4a7e7,marker:#eb6f92,prompt:#908caa \
+  --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
+  --color=fg:#cdd6f4,header:#f38ba8,info:#b4befe,pointer:#f5e0dc \
+  --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#b4befe,hl+:#f38ba8 \
 --bind 'ctrl-d:change-prompt( )+reload(fd . --type d)' \
 --bind 'ctrl-f:change-prompt( )+reload(fd . --type f)'"

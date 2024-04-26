@@ -1,8 +1,8 @@
 local wezterm = require 'wezterm'
 
-local custom = wezterm.color.get_builtin_schemes()['rose-pine']
-custom.cursor_bg = '#EBBCBA'
-custom.cursor_fg = '#191724'
+local custom = wezterm.color.get_builtin_schemes()["Catppuccin Mocha"]
+custom.cursor_bg = "#89B4FA"
+custom.cursor_fg = "#1E1E2E"
 
 wezterm.on('gui-startup', function(cmd)
   local _, _, window = wezterm.mux.spawn_window(cmd or {})

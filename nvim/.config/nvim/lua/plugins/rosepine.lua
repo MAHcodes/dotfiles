@@ -2,7 +2,7 @@ return {
 	"rose-pine/neovim",
 	name = "rose-pine",
 	priority = 1000,
-	lazy = false,
+	lazy = true,
 	opts = {
 		variant = "main",
 		dark_variant = "main",
@@ -41,9 +41,6 @@ return {
 		highlight_groups = {
 			-- nvim
 			Comment = { italic = true },
-			NormalFloat = { bg = "base" },
-			Float = { bg = "base" },
-			FloatBorder = { bg = "base" },
 			PmenuThumb = { bg = "rose" },
 			Folded = { bg = "surface" },
 			TelescopeBorder = { bg = "base" },

@@ -1,7 +1,7 @@
 # catppuccin plugin
 set -g @plugin "catppuccin/tmux"
 
-set -g @catppuccin_flavour "rose"
+set -g @catppuccin_flavour "mocha"
 
 # catppuccin config
 set -g @catppuccin_window_left_separator "█"
@@ -34,5 +34,5 @@ set -g @catppuccin_status_fill "icon"
 set -g @catppuccin_status_modules_right "session gitmux"
 
 set -g @catppuccin_gitmux_icon " "
-set -g @catppuccin_gitmux_color "pink"
+set -g @catppuccin_gitmux_color "blue"
 set -g @catppuccin_gitmux_text '#(gitmux -cfg $HOME/.config/gitmux/gitmux.yaml "#{pane_current_path}")'

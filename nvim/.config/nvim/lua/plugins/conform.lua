@@ -14,6 +14,12 @@ return {
 		},
 	},
 	opts = {
+		format = {
+			timeout_ms = 3000,
+			async = false,
+			quiet = false,
+			lsp_fallback = true,
+		},
 		formatters_by_ft = {
 			lua = { "stylua" },
 			python = { "black" },
@@ -22,7 +28,7 @@ return {
 			javascriptreact = { { "biome", "prettierd", "prettier" } },
 			typescriptreact = { { "biome", "prettierd", "prettier" } },
 			vue = { { "prettierd", "prettier" } },
-			css = { { "biome", "prettierd", "prettier" } },
+			css = { { "prettierd", "prettier" } },
 			scss = { { "prettierd", "prettier" } },
 			less = { { "prettierd", "prettier" } },
 			html = { { "prettierd", "prettier" } },
@@ -36,4 +42,7 @@ return {
 			sh = { "shfmt" },
 		},
 	},
+	init = function()
+		vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
+	end,
 }
