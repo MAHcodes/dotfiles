@@ -28,6 +28,9 @@ export MANPAGER='nvim +Man!'
 # export luarocks path
 [ -d  "$HOME/.luarocks/bin" ] && PATH="$HOME/.luarocks/bin:$PATH"]
 
+# export nvim-bob path
+[ -d  "$HOME/.local/share/bob/nvim-bin" ] && PATH="$HOME/.local/share/bob/nvim-bin:$PATH"]
+
 # completions
 # [ -s "$HOME/.config/zsh/completions/_bun" ] && source "$HOME/.config/zsh/completions/_bun"
 # [ -s "$HOME/.config/zsh/completions/_when" ] && source "$HOME/.config/zsh/completions/_when"
@@ -46,7 +49,7 @@ case ":$PATH:" in
 esac
 
 # vivid generate theme
-export LS_COLORS="$(vivid generate rose-pine)"
+export LS_COLORS="$(vivid generate catppuccin-mocha)"
 
 # fzf
 export FZF_DEFAULT_OPTS=" \

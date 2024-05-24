@@ -12,10 +12,6 @@ return {
 			end,
 		},
 		{ "nvim-treesitter/nvim-treesitter-textobjects" },
-		{
-			"windwp/nvim-ts-autotag",
-			config = true,
-		},
 	},
 	opts = {
 		on_config_done = nil,
@@ -39,7 +35,6 @@ return {
 			end,
 		},
 		indent = { enable = true, disable = { "yaml", "python" } },
-		autotag = { enable = true },
 		textobjects = {
 			select = {
 				enable = true,

@@ -1,6 +1,21 @@
 return {
 	"kyazdani42/nvim-web-devicons",
 	event = "VeryLazy",
+	dependencies = {
+		{
+			"catppuccin/nvim",
+		},
+		{
+			"rachartier/tiny-devicons-auto-colors.nvim",
+			config = function()
+				local theme_colors = require("catppuccin.palettes").get_palette "mocha"
+
+				require("tiny-devicons-auto-colors").setup {
+					colors = theme_colors,
+				}
+			end,
+		},
+	},
 	opts = {
 		override = {
 			zsh = {

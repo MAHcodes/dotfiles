@@ -45,7 +45,7 @@ return {
 				format = function(entry, vim_item)
 					local kind = vim_item.kind
 
-          vim_item.kind = (" " .. icons.kind[kind] or "?" .. " ")
+					vim_item.kind = (" " .. icons.kind[kind] or "?" .. " ")
 
 					vim_item.menu = "["
 						.. ({

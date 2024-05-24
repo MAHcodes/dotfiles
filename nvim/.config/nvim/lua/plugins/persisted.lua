@@ -1,5 +1,6 @@
 return {
 	"olimorris/persisted.nvim",
+  enabled = false,
 	cmd = {
 		"SessionToggle",
 		"SessionStart",
@@ -24,6 +25,6 @@ return {
 	config = function(_, opts)
 		require("persisted").setup(opts)
 
-		require("telescope").load_extension("persisted")
+		require("telescope").load_extension "persisted"
 	end,
 }

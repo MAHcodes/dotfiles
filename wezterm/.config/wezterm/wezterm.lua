@@ -1,8 +1,8 @@
 local wezterm = require 'wezterm'
 
-local custom = wezterm.color.get_builtin_schemes()["Catppuccin Mocha"]
-custom.cursor_bg = "#89B4FA"
-custom.cursor_fg = "#1E1E2E"
+local custom = wezterm.color.get_builtin_schemes()['Catppuccin Mocha']
+custom.cursor_bg = '#89B4FA'
+custom.cursor_fg = '#1E1E2E'
 
 wezterm.on('gui-startup', function(cmd)
   local _, _, window = wezterm.mux.spawn_window(cmd or {})
@@ -12,10 +12,14 @@ end)
 return {
   enable_tab_bar = false,
   allow_square_glyphs_to_overflow_width = 'Never',
+  notification_handling = 'NeverShow',
   font = wezterm.font_with_fallback {
     {
       family = 'MonaspiceNe Nerd Font',
       harfbuzz_features = { 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig' },
+    },
+    {
+      family = 'GeistMono NF',
     },
     {
       family = 'FantasqueSansM Nerd Font Mono',

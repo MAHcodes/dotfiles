@@ -65,7 +65,7 @@ return {
 				button("f", "󰈞  Find file", theme(tb.find_files)),
 				button("e", "  New file", ":ene <BAR> startinsert<CR>"),
 				button("p", "  Find project", theme(t.extensions.projects.projects)),
-				button("s", "󱝩  Find Session", theme(t.extensions.persisted.persisted)),
+				-- button("s", "󱝩  Find Session", theme(t.extensions.persisted.persisted)),
 				button("L", "  Load Session", ":SessionLoad<CR>"),
 				button("z", "󰒲  Lazy", ":Lazy<CR>"),
 				button("o", "󰄉  Recently used files", theme(tb.oldfiles)),

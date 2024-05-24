@@ -42,8 +42,8 @@ local options = {
 	listchars = {
 		trail = "·",
 		eol = "$",
-		extends = "",
-		precedes = "",
+		extends = "",
+		precedes = "",
 		nbsp = "␣",
 		tab = "» ",
 	},
@@ -51,6 +51,7 @@ local options = {
 }
 
 -- vim.opt.shortmess:append "cos"
+vim.opt.formatoptions:remove "cro"
 
 for k, v in pairs(options) do
 	vim.opt[k] = v
