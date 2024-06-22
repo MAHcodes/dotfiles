@@ -19,6 +19,6 @@ require("lazy").setup("plugins", {
 		border = "rounded",
 	},
 	install = {
-		colorscheme = { "catppuccin", "rose-pine", "default" },
+		colorscheme = { "decayce", "catppuccin", "rose-pine", "default" },
 	},
 })

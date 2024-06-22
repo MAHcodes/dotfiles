@@ -1,7 +1,7 @@
 return {
 	"2kabhishek/co-author.nvim",
-  cmd = "CoAuthors",
+  cmd = "CoAuthor",
 	keys = {
-		{ "<leader>ga", "<cmd>CoAuthors<CR>", desc = "CoAuthors", nowait = true },
+		{ "<leader>ga", "<cmd>CoAuthor<CR>", desc = "CoAuthors", nowait = true },
 	},
 }

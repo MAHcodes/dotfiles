@@ -50,4 +50,5 @@ return {
     ['custom'] = custom,
   },
   color_scheme = 'custom',
+  bidi_enabled = true,
 }

@@ -91,9 +91,6 @@ return {
 					name = "custom",
 				},
 			},
-			experimental = {
-				ghost_text = true,
-			},
 		}
 	end,
 }

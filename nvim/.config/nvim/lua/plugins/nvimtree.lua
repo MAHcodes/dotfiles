@@ -9,6 +9,7 @@ return {
 	end,
 	opts = function()
 		local api = require "nvim-tree.api"
+
 		local on_attach = function(bufnr)
 			local opts = function(desc)
 				return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
@@ -107,8 +108,8 @@ return {
 							ignored = "◌",
 						},
 						folder = {
-              arrow_closed = "",
-              arrow_open = "",
+							arrow_closed = "",
+							arrow_open = "",
 							default = "",
 							open = "",
 							empty = "",
@@ -161,27 +162,23 @@ return {
 			},
 			filters = {
 				dotfiles = false,
-				custom = { "node_modules", "\\.cache", ".git" },
 			},
 			git = {
 				enable = true,
 				ignore = false,
 				timeout = 500,
 			},
-      modified = {
-        enable = true,
-        show_on_dirs = true,
-        show_on_open_dirs = true,
-      },
+			modified = {
+				enable = true,
+				show_on_dirs = true,
+				show_on_open_dirs = true,
+			},
 			view = {
-				width = {
-					min = vim.o.columns,
-					max = -1,
-				},
+				width = 50,
 				side = "left",
 				float = {
-					enable = true,
-					quit_on_focus_loss = false,
+					enable = false,
+					quit_on_focus_loss = true,
 					open_win_config = {
 						relative = "editor",
 						border = "none",
@@ -193,7 +190,7 @@ return {
 				},
 				number = true,
 				relativenumber = true,
-				signcolumn = "no",
+				signcolumn = "yes",
 			},
 			trash = {
 				cmd = "trash",

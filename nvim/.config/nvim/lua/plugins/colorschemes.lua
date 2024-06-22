@@ -48,11 +48,6 @@ return {
 		lazy = true,
 	},
 	{
-		"decaycs/decay.nvim",
-		name = "decay",
-		lazy = true,
-	},
-	{
 		"bluz71/vim-nightfly-colors",
 		name = "nightfly",
 		lazy = true,
@@ -169,8 +164,8 @@ return {
 		"ribru17/bamboo.nvim",
 		lazy = true,
 	},
-  {
-    "xero/miasma.nvim",
-    lazy = true,
-  },
+	{
+		"xero/miasma.nvim",
+		lazy = true,
+	},
 }

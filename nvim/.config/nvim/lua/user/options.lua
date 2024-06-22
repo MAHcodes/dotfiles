@@ -39,6 +39,7 @@ local options = {
 	confirm = true,
 	spelllang = { "en_us" },
 	list = true,
+  termbidi = true,
 	listchars = {
 		trail = "·",
 		eol = "$",

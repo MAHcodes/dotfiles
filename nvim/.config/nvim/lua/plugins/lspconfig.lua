@@ -125,6 +125,7 @@ return {
 
 		local mason_servers = {
 			eslint = {},
+			djlint = {},
 			html = {},
 			jqls = {},
 			pyright = {},

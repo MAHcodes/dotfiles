@@ -30,6 +30,7 @@ map("n", "<Leader>%", ":vsplit<CR>", { desc = "Split Window Vertically", silent 
 -- remove default commands
 map("i", "<C-p>", "<NOP>")
 map("i", "<C-n>", "<NOP>")
+map("n", "<C-z>", "<NOP>")
 
 -- git
 map("n", "<leader>gy", "<cmd>r!curl -s https://whatthecommit.com/index.txt<cr>", { desc = "Git Yolo" })
