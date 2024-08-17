@@ -44,3 +44,7 @@ if [ -d "$HOME/.cargo/env" ] ; then
 fi
 
 mpd &
+
+if ! pgrep -x "when" >/dev/null; then
+    when alarm &
+fi

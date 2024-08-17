@@ -4,12 +4,14 @@ local custom = wezterm.color.get_builtin_schemes()['Catppuccin Mocha']
 custom.cursor_bg = '#89B4FA'
 custom.cursor_fg = '#1E1E2E'
 
-wezterm.on('gui-startup', function(cmd)
+--[[ wezterm.on('gui-startup', function(cmd)
   local _, _, window = wezterm.mux.spawn_window(cmd or {})
   window:gui_window():toggle_fullscreen()
-end)
+end) ]]
 
 return {
+  initial_rows = 30,
+  initial_cols = 100,
   enable_tab_bar = false,
   allow_square_glyphs_to_overflow_width = 'Never',
   notification_handling = 'NeverShow',
@@ -23,6 +25,9 @@ return {
     },
     {
       family = 'FantasqueSansM Nerd Font Mono',
+    },
+    {
+      family = 'DejaVu Sans Mono',
     },
   },
   font_rules = {
