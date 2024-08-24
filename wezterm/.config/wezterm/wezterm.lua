@@ -21,13 +21,13 @@ return {
       harfbuzz_features = { 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig' },
     },
     {
-      family = 'GeistMono NF',
+      family = 'DejaVu Sans Mono',
     },
+    --[[ {
+      family = 'GeistMono NF',
+    }, ]]
     {
       family = 'FantasqueSansM Nerd Font Mono',
-    },
-    {
-      family = 'DejaVu Sans Mono',
     },
   },
   font_rules = {

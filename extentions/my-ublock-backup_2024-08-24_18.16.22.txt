@@ -1,0 +1,37 @@
+{
+  "timeStamp": 1724512582503,
+  "version": "1.59.0",
+  "userSettings": {
+    "importedLists": []
+  },
+  "selectedFilterLists": [
+    "user-filters",
+    "assets.json",
+    "public_suffix_list.dat",
+    "ublock-badlists",
+    "ublock-filters",
+    "ublock-badware",
+    "ublock-privacy",
+    "ublock-unbreak",
+    "ublock-quick-fixes",
+    "easylist",
+    "easyprivacy",
+    "urlhaus-1",
+    "plowe-0"
+  ],
+  "hiddenSettings": {},
+  "whitelist": [
+    "about-scheme",
+    "chrome-extension-scheme",
+    "chrome-scheme",
+    "edge-scheme",
+    "moz-extension-scheme",
+    "opera-scheme",
+    "vivaldi-scheme",
+    "wyciwyg-scheme"
+  ],
+  "dynamicFilteringString": "behind-the-scene * * noop\nbehind-the-scene * inline-script noop\nbehind-the-scene * 1p-script noop\nbehind-the-scene * 3p-script noop\nbehind-the-scene * 3p-frame noop\nbehind-the-scene * image noop\nbehind-the-scene * 3p noop",
+  "urlFilteringString": "",
+  "hostnameSwitchesString": "no-large-media: behind-the-scene false\nno-strict-blocking: ut7wy.scoredconnect.com true",
+  "userFilters": "! Title: Hide YouTube Shorts\n! Description: Hide all traces of YouTube shorts videos on YouTube\n! Version: 1.9.0\n! Last modified: 2024-02-17 11:55\n! Expires: 2 weeks (update frequency)\n! Homepage: https://github.com/gijsdev/ublock-hide-yt-shorts\n! License: https://github.com/gijsdev/ublock-hide-yt-shorts/blob/master/LICENSE.md\n\n! Remove empty spaces in grid\nwww.youtube.com##ytd-rich-grid-row,#contents.ytd-rich-grid-row:style(display: contents !important)\n\n! Hide all videos containing the phrase \"#shorts\"\nwww.youtube.com##ytd-grid-video-renderer:has(#video-title:has-text(/(^| )#Shorts?( |$)/i))\nwww.youtube.com##ytd-rich-item-renderer:has(#video-title:has-text(/(^| )#Shorts?( |$)/i))\n\n! Hide all videos with the shorts indicator on the thumbnail\nwww.youtube.com##ytd-grid-video-renderer:has([overlay-style=\"SHORTS\"])\nwww.youtube.com##ytd-rich-item-renderer:has([overlay-style=\"SHORTS\"])\nwww.youtube.com##ytd-video-renderer:has([overlay-style=\"SHORTS\"])\nwww.youtube.com##ytd-item-section-renderer.ytd-section-list-renderer[page-subtype=\"subscriptions\"]:has(ytd-video-renderer:has([overlay-style=\"SHORTS\"]))\n\n! Hide shorts button in sidebar\nwww.youtube.com##ytd-guide-entry-renderer:has(yt-formatted-string:has-text(/^Shorts$/i))\n! Tablet resolution\nwww.youtube.com##ytd-mini-guide-entry-renderer:has(.title:has-text(/^Shorts$/i))\n\n! Hide shorts section on homepage\nwww.youtube.com##ytd-rich-section-renderer:has(#title:has-text(/(^| )Shorts( |$)/i))\nwww.youtube.com##ytd-reel-shelf-renderer:has(.ytd-reel-shelf-renderer:has-text(/(^| )Shorts( |$)/i))\n\n! Hide shorts tab on channel pages`\n! Old style\nwww.youtube.com##tp-yt-paper-tab:has(.tp-yt-paper-tab:has-text(Shorts))\n! New style (2023-10)\nwww.youtube.com##yt-tab-shape:has-text(/^Shorts$/)\n\n! Hide short remixes in video descriptions\nwww.youtube.com##ytd-reel-shelf-renderer.ytd-structured-description-content-renderer:has-text(/^Shorts remixing this video$/i)\n\n! Hide shorts category on homepage and search pages\nwww.youtube.com##yt-chip-cloud-chip-renderer:has(yt-formatted-string:has-text(/^Shorts$/i))\n\n!!! MOBILE !!!\n\n! Hide all videos in home feed containing the phrase \"#shorts\"\nwww.youtube.com##ytm-rich-item-renderer:has(#video-title:has-text(/(^| )#Shorts?( |$)/i))\n\n! Hide all videos in subscription feed containing the phrase \"#shorts\"\nm.youtube.com##ytm-item-section-renderer:has(#video-title:has-text(/(^| )#Shorts?( |$)/i))\n\n! Hide shorts button in the bottom navigation bar\nm.youtube.com##ytm-pivot-bar-item-renderer:has(.pivot-shorts)\n\n! Hide all videos with the shorts indicator on the thumbnail\nm.youtube.com##ytm-video-with-context-renderer:has([data-style=\"SHORTS\"])\n\n! Hide shorts sections\nm.youtube.com##ytm-rich-section-renderer:has(.reel-shelf-title-wrapper .yt-core-attributed-string:has-text(/(^| )Shorts( |$)/i))\nm.youtube.com##ytm-reel-shelf-renderer.item:has(.reel-shelf-title-wrapper .yt-core-attributed-string:has-text(/(^| )Shorts( |$)/i))\n\n! Hide shorts tab on channel pages\n! Old style\nm.youtube.com##.single-column-browse-results-tabs>a:has-text(Shorts)\n! New style (2023-10)\nm.youtube.com##yt-tab-shape:has-text(/^Shorts$/)\n\n! Hide short remixes in video descriptions\nm.youtube.com##ytm-reel-shelf-renderer:has(.reel-shelf-title-wrapper .yt-core-attributed-string:has-text(/^Shorts remixing this video$/i))\n\n! Hide shorts category on homepage\nm.youtube.com##ytm-chip-cloud-chip-renderer:has(.yt-core-attributed-string:has-text(/^Shorts$/i))\n\n! 18 Jul 2024 https://www.google.com\n||encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDgiCchvuopBBdQgM56lONShFrYbYygSCEtg&s$image"
+}
