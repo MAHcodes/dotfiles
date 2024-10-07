@@ -175,7 +175,7 @@ return {
 				},
 			},
 			emmet_ls = {
-				filetypes = { "html", "css", "typescriptreact", "javascriptreact", "php", "sass", "scss" },
+				filetypes = { "html", "css", "typescriptreact", "javascriptreact", "php", "sass", "scss", "gleam" },
 			},
 			jsonls = {
 				settings = {

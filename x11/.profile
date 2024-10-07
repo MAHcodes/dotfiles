@@ -45,6 +45,6 @@ fi
 
 mpd &
 
-if ! pgrep -x "when" >/dev/null; then
-    when alarm &
-fi
+# if ! pgrep -x "when" >/dev/null; then
+#     when alarm &
+# fi
