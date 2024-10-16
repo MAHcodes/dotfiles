@@ -1,5 +1,9 @@
 return {
 	{
+		"sam4llis/nvim-tundra",
+		lazy = true,
+	},
+	{
 		"lunarvim/colorschemes",
 		lazy = true,
 	},

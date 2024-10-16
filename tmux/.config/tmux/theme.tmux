@@ -1,5 +1,5 @@
 # catppuccin plugin
-set -g @plugin "catppuccin/tmux"
+set -g @plugin "MAHcodes/tmux"
 
 set -g @catppuccin_flavour "mocha"
 
