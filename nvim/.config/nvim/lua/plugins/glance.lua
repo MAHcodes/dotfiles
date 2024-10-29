@@ -1,6 +1,6 @@
 return {
 	"dnlhc/glance.nvim",
-  enabled = false,
+	enabled = false,
 	keys = {
 		{
 			"gd",
@@ -65,7 +65,7 @@ return {
 					["o"] = actions.jump,
 					["l"] = actions.open_fold,
 					["h"] = actions.close_fold,
-					["<TAB>"] = actions.enter_win("preview"),
+					["<TAB>"] = actions.enter_win "preview",
 					["q"] = actions.close,
 					["<Esc>"] = actions.close,
 					["<C-q>"] = actions.quickfix,
@@ -74,7 +74,7 @@ return {
 					["q"] = actions.close,
 					["n"] = actions.next_location,
 					["p"] = actions.previous_location,
-					["<TAB>"] = actions.enter_win("list"),
+					["<TAB>"] = actions.enter_win "list",
 				},
 			},
 			hooks = {},

@@ -8,6 +8,6 @@ return {
 				return 20
 			end,
 		},
-    symbol = "│",
+		symbol = "│",
 	},
 }

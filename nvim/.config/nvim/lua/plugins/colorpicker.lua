@@ -1,9 +1,9 @@
 return {
 	"ziontee113/color-picker.nvim",
-  keys = {
-    { "<A-c>", "<cmd>PickColor<cr>", mode = "n", desc = "Pick Color" },
-    { "<A-c>", "<cmd>PickColorInsert<cr>", mode = "i", desc = "Pick Color" },
-  },
+	keys = {
+		{ "<A-c>", "<cmd>PickColor<cr>", mode = "n", desc = "Pick Color" },
+		{ "<A-c>", "<cmd>PickColorInsert<cr>", mode = "i", desc = "Pick Color" },
+	},
 	opts = {
 		["icons"] = { "ﱢ", "" },
 		["border"] = "rounded",

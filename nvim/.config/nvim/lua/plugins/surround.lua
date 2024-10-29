@@ -1,7 +1,7 @@
 return {
 	"kylechui/nvim-surround",
 	event = "InsertEnter",
-  keys = {"s"},
+	keys = { "s" },
 	opts = {
 		keymaps = {
 			insert = "<C-g>s",

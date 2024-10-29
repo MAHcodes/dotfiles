@@ -54,7 +54,7 @@ return {
 			}
 		end
 
-		local t = require "telescope"
+		-- local t = require "telescope"
 		local tb = require "telescope.builtin"
 		local theme = require("plugins.telescope").theme
 
@@ -64,7 +64,7 @@ return {
 				button("t", "  TODO", ":e ~/notes/TODO/index.md<CR>"),
 				button("f", "󰈞  Find file", theme(tb.find_files)),
 				button("e", "  New file", ":ene <BAR> startinsert<CR>"),
-				button("p", "  Find project", theme(t.extensions.projects.projects)),
+				-- button("p", "  Find project", theme(t.extensions.projects.projects)),
 				-- button("s", "󱝩  Find Session", theme(t.extensions.persisted.persisted)),
 				button("L", "  Load Session", ":SessionLoad<CR>"),
 				button("z", "󰒲  Lazy", ":Lazy<CR>"),
@@ -72,6 +72,7 @@ return {
 				button("l", "󰊄  Find text", theme(tb.live_grep)),
 				button("c", "  Configuration", ":e $MYVIMRC<CR>"),
 				button("u", "  Update", ":Lazy update<CR>"),
+				button("h", "󰘥  Help", theme(tb.help_tags)),
 				button("q", "  Quit", ":qa<CR>"),
 			},
 			opts = {

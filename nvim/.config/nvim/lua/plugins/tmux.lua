@@ -1,5 +1,5 @@
 return {
 	"aserowy/tmux.nvim",
-  event = "UIEnter",
+	event = "UIEnter",
 	config = true,
 }

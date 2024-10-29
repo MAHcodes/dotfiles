@@ -1,18 +1,24 @@
 return {
 	"NvChad/nvim-colorizer.lua",
-  event = { "BufReadPost", "BufNewFile" },
+	event = { "BufReadPost", "BufNewFile" },
 	opts = {
-		filetypes = { "css", "scss", "html", "javascript", "javascriptreact", "typescript", "typescriptreact", "astro", "gleam" },
+		filetypes = { "*" },
 		user_default_options = {
+			RGB = true,
+			RRGGBB = true,
+			names = true,
 			RRGGBBAA = true,
+			AARRGGBB = false,
 			rgb_fn = true,
 			hsl_fn = true,
 			css = true,
 			css_fn = true,
-			mode = "background", -- Set the display mode.
+			mode = "virtualtext", -- background | foreground | virtualtext
 			tailwind = true,
 			sass = { enable = true, parsers = { "css" } }, -- Enable sass colors
 			virtualtext = "■",
+			virtualtext_inline = true,
+			always_update = false,
 		},
 		buftypes = {},
 	},
