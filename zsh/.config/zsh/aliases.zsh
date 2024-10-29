@@ -22,6 +22,9 @@ alias gP="git push"
 alias ytmp4="mpv --ytdl --ytdl-format='bestvideo[height=480]+bestaudio' --tls-verify"
 alias ytmp3="mpv --ytdl --ytdl-format='bestaudio' --tls-verify --no-video"
 
+# yt-dlp
+alias dlpmp3="yt-dlp -f bestaudio -x --audio-format mp3 --embed-thumbnail --add-metadata -o '%(title)s.mp3' --"
+
 # sys
 alias uu="sudo apt update && sudo apt upgrade -y"
 alias nu="sudo nala upgrade"
@@ -32,7 +35,6 @@ alias nvd="__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia"
 alias mochify="lutgen apply -p catppuccin-mocha"
 alias ip_wlp0s20f3="ip -brief addr | awk '/wlp0s20f3/{print \$3}'"
 alias twtui="taskwarrior-tui"
-alias ntfy="curl ntfy.sh/mahcodes -d"
 
 # exit
 alias :q="exit"
