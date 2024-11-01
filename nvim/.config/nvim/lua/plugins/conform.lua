@@ -14,10 +14,7 @@ return {
 		},
 	},
 	opts = {
-		format_on_save = {
-			lsp_format = "fallback",
-			timeout_ms = 500,
-		},
+		format_on_save = false,
 		lsp_format = "prefer",
 		stop_after_first = true,
 		formatters_by_ft = {

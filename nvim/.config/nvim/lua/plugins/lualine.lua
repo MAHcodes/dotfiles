@@ -105,8 +105,8 @@ return {
 
 		local datetime = {
 			"datetime",
-			style = "%H:%M",
-			icon = "%=󱑁",
+			style = "%=%H:%M",
+			-- icon = "%=󱑁",
 			color = "lualine_c_inactive",
 		}
 
