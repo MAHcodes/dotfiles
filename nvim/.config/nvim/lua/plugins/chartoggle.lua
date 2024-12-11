@@ -1,8 +1,12 @@
 return {
-	"saifulapm/chartoggle.nvim",
-  keys = "<leader>",
+	"saifulapm/commasemi.nvim",
+	keys = {
+		{ "<localleader>,", desc = "Toggle comma" },
+		{ "<localleader>;", desc = "Toggle semicolon" },
+	},
 	opts = {
 		leader = "<localleader>",
-		keys = { ",", ";", "." },
+		keymaps = true,
+		commands = false,
 	},
 }

@@ -63,14 +63,13 @@ return {
 			map("ga", vim.lsp.buf.code_action, "Code Action")
 
 			local tb = require "telescope.builtin"
-			local theme = require("plugins.telescope").theme
 
-			map("gd", theme(tb.lsp_definitions), "Goto Definition")
-			map("gr", theme(tb.lsp_references), "Goto References")
-			map("gI", theme(tb.lsp_implementations), "Goto Implementations")
-			map("gy", theme(tb.lsp_type_definitions), "Goto Type Definition")
-			map("gs", theme(tb.lsp_document_symbols), "Goto Document Symbols")
-			map("gS", theme(tb.lsp_dynamic_workspace_symbols), "Goto Workspace Symbols")
+			map("gd", tb.lsp_definitions, "Goto Definition")
+			map("gr", tb.lsp_references, "Goto References")
+			map("gI", tb.lsp_implementations, "Goto Implementations")
+			map("gy", tb.lsp_type_definitions, "Goto Type Definition")
+			map("gs", tb.lsp_document_symbols, "Goto Document Symbols")
+			map("gS", tb.lsp_dynamic_workspace_symbols, "Goto Workspace Symbols")
 			map("gw", function()
 				vim.notify(vim.inspect(vim.lsp.buf.list_workspace_folders()), vim.log.levels.INFO, {
 					title = "Workspace Folders",

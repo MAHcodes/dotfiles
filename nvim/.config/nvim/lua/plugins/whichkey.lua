@@ -18,6 +18,6 @@ return {
 			spacing = 4,
 		},
 		show_help = false,
-		show_keys = false,
+		show_keys = true,
 	},
 }

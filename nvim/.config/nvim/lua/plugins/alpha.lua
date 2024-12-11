@@ -2,6 +2,7 @@ return {
 	"goolord/alpha-nvim",
 	dependencies = {
 		"nvim-telescope/telescope.nvim",
+		"olimorris/persisted.nvim",
 	},
 	opts = function()
 		local banner = [[
@@ -54,25 +55,24 @@ return {
 			}
 		end
 
-		-- local t = require "telescope"
+		local t = require "telescope"
 		local tb = require "telescope.builtin"
-		local theme = require("plugins.telescope").theme
 
 		local buttons = {
 			type = "group",
 			val = {
 				button("t", "  TODO", ":e ~/notes/TODO/index.md<CR>"),
-				button("f", "󰈞  Find file", theme(tb.find_files)),
+				button("f", "󰈞  Find file", tb.find_files),
 				button("e", "  New file", ":ene <BAR> startinsert<CR>"),
-				-- button("p", "  Find project", theme(t.extensions.projects.projects)),
-				-- button("s", "󱝩  Find Session", theme(t.extensions.persisted.persisted)),
+				button("p", "  Find project", t.extensions.projects.projects),
+				button("s", "󱝩  Find Session", t.extensions.persisted.persisted),
 				button("L", "  Load Session", ":SessionLoad<CR>"),
 				button("z", "󰒲  Lazy", ":Lazy<CR>"),
-				button("o", "󰄉  Recently used files", theme(tb.oldfiles)),
-				button("l", "󰊄  Find text", theme(tb.live_grep)),
+				button("o", "󰄉  Recently used files", tb.oldfiles),
+				button("l", "󰊄  Find text", tb.live_grep),
 				button("c", "  Configuration", ":e $MYVIMRC<CR>"),
 				button("u", "  Update", ":Lazy update<CR>"),
-				button("h", "󰘥  Help", theme(tb.help_tags)),
+				button("h", "󰘥  Help", tb.help_tags),
 				button("q", "  Quit", ":qa<CR>"),
 			},
 			opts = {
@@ -120,11 +120,11 @@ return {
 		vim.api.nvim_create_autocmd("User", {
 			pattern = "LazyVimStarted",
 			callback = function()
-				local lazy = require("lazy").stats()
-				local ms = (math.floor(lazy.startuptime * 100 + 0.5) / 100)
+				local stats = require("lazy").stats()
+				local ms = (math.floor(stats.startuptime * 100 + 0.5) / 100)
 				local footer = {
 					type = "text",
-					val = "󱐋 Neovim loaded " .. lazy.count .. " plugins in " .. ms .. "ms",
+					val = "󱐋 Neovim loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms .. "ms",
 					opts = {
 						hl = "@alpha.footer",
 						position = "center",

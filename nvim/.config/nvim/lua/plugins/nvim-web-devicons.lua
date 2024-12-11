@@ -3,10 +3,10 @@ return {
 	event = "VeryLazy",
 	dependencies = {
 		{
-			"catppuccin/nvim",
-		},
-		{
 			"rachartier/tiny-devicons-auto-colors.nvim",
+			dependencies = {
+				"catppuccin/nvim",
+			},
 			config = function()
 				local theme_colors = require("catppuccin.palettes").get_palette "mocha"
 

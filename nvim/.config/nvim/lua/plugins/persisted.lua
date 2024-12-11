@@ -1,6 +1,6 @@
 return {
 	"olimorris/persisted.nvim",
-  enabled = false,
+	enabled = true,
 	cmd = {
 		"SessionToggle",
 		"SessionStart",

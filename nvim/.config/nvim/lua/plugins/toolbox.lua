@@ -4,7 +4,9 @@ return {
 	keys = {
 		{
 			"<leader>st",
-			"<CMD>lua require('toolbox').show_picker()<CR>",
+			function()
+				require("toolbox").show_picker()
+			end,
 			desc = "Search Toolbox",
 		},
 	},
