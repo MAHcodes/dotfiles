@@ -28,11 +28,11 @@ create_autocmd("VimResized", "*", function()
 	vim.cmd "tabdo wincmd ="
 end)
 
---[[ create_autocmd({ "VimEnter", "ColorScheme" }, "*", function()
+create_autocmd({ "VimEnter", "ColorScheme" }, "*", function()
 	vim.api.nvim_set_hl(0, "NCursor", { link = "lualine_a_normal" })
 	vim.api.nvim_set_hl(0, "ICursor", { link = "lualine_a_insert" })
 	vim.api.nvim_set_hl(0, "VCursor", { link = "lualine_a_visual" })
 	vim.api.nvim_set_hl(0, "RCursor", { link = "lualine_a_replace" })
 	vim.api.nvim_set_hl(0, "NoiceCursor", { link = "lualine_a_command" })
 	vim.opt.guicursor = "n:block-NCursor,ci:block-NoiceCursor,v:block-VCursor,i-ve:block-ICursor,r-cr-o:block-RCursor"
-end) ]]
+end)

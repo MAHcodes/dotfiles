@@ -30,6 +30,7 @@ map("n", "<Leader>%", ":vsplit<CR>", { desc = "Split Window Vertically", silent 
 -- remove default commands
 map("i", "<C-p>", "<NOP>")
 map("i", "<C-n>", "<NOP>")
+map("i", "<C-x>", "<NOP>")
 map("n", "<C-z>", "<NOP>")
 
 -- git

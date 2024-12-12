@@ -1,17 +1,25 @@
 return {
 	"folke/todo-comments.nvim",
 	event = "VeryLazy",
-	dependencies = { "nvim-lua/plenary.nvim", lazy = true },
-	config = function()
+	dependencies = {
+		"nvim-lua/plenary.nvim",
+	},
+	opts = {
+		highlight = {
+			pattern = [[.*<(KEYWORDS)\s*:?]],
+		},
+		search = {
+			pattern = [[\b(KEYWORDS):?]],
+		},
+	},
+	config = function(_, opts)
 		local todocomments = require "todo-comments"
-		todocomments.setup()
+		local map = vim.keymap.set
 
-		vim.keymap.set("n", "]t", function()
-			todocomments.jump_next()
-		end, { desc = "Next todo comment" })
+		map("n", "]t", todocomments.jump_next, { desc = "Next todo comment" })
+		map("n", "[t", todocomments.jump_prev, { desc = "Previous todo comment" })
+		map("n", "<leader>st", "<cmd>TodoTelescope<CR>", { desc = "Search Todo" })
 
-		vim.keymap.set("n", "[t", function()
-			todocomments.jump_prev()
-		end, { desc = "Previous todo comment" })
+		todocomments.setup(opts)
 	end,
 }

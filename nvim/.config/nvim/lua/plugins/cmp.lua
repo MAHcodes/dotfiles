@@ -41,27 +41,25 @@ return {
 				["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
 			},
 			formatting = {
-				fields = { "kind", "abbr", "menu" },
+				fields = { "abbr", "kind", "menu" },
 				format = function(entry, vim_item)
 					local kind = vim_item.kind
 
-					vim_item.kind = (" " .. icons.kind[kind] or "?" .. " ")
+					vim_item.kind = (" " .. icons.kind[kind] .. kind or "?" .. " ")
 
-					vim_item.menu = "["
-						.. ({
-							nvim_lsp = "󰚥",
-							luasnip = "",
-							nvim_lua = "󰢱",
-							buffer = "",
-							async_path = "",
-							emoji = "󰱫",
-							nerdfont = "󰊪",
-							calc = "󰃬",
-							bufname = "󰈬",
-						})[entry.source.name]
-						.. " "
-						.. kind
-						.. "]"
+					local menu = {
+						nvim_lsp = { title = "LSP", icon = "󰚥" },
+						luasnip = { title = "Snip", icon = "" },
+						nvim_lua = { title = "Lua", icon = "󰢱" },
+						buffer = { title = "Buf", icon = "" },
+						bufname = { title = "Buf", icon = "󰈬" },
+						async_path = { title = "Path", icon = "" },
+						emoji = { title = "Emo", icon = "󰱫" },
+						nerdfont = { title = "NF", icon = "󰊪" },
+						calc = { title = "Calc", icon = "󰃬" },
+					}
+
+					vim_item.menu = menu[entry.source.name].icon .. " " .. menu[entry.source.name].title
 
 					-- return vim_item
 					return require("tailwindcss-colorizer-cmp").formatter(entry, vim_item)

@@ -17,9 +17,13 @@ local M = {
 
 M.cmd = "Telescope"
 
+local icons = require "user.icons"
+
 M.theme_opts = require("telescope.themes").get_ivy {
-	prompt_prefix = "  ",
-	selection_caret = " ",
+	prompt_prefix = icons.ui.Telescope .. " ",
+	selection_caret = icons.ui.Forward .. " ",
+	entry_prefix = "  ",
+	multi_icon = icons.ui.TriangleShortArrowRight .. " ",
 	path_display = {
 		"filename_first",
 		"truncate",
@@ -31,7 +35,6 @@ M.theme_opts = require("telescope.themes").get_ivy {
 	layout_config = {
 		prompt_position = "top",
 		height = vim.o.lines,
-		width = vim.o.columns,
 	},
 }
 
@@ -53,16 +56,7 @@ M.keys = function()
 		{ "<leader>sB", tb.git_branches, desc = "Search Git Branches" },
 		{ "<leader>sC", tb.git_commits, desc = "Search Git Commits" },
 		{ "<leader>sk", tb.keymaps, desc = "Search Keymaps" },
-		{
-			"<leader>sf",
-			function()
-				tb.find_files {
-					hidden = true,
-					no_ignore = false,
-				}
-			end,
-			desc = "Search Files",
-		},
+		{ "<leader>sf", tb.find_files, desc = "Search Files" },
 		{ "<leader>sa", tb.builtin, desc = "Search All" },
 		{ "<leader>sw", tb.grep_string, desc = "Search Word" },
 		{ "<leader>sm", tb.man_pages, desc = "Search Man Pges" },
@@ -78,11 +72,20 @@ end
 
 M.opts = {
 	defaults = M.theme_opts,
+	pickers = {
+		find_files = {
+			hidden = true,
+			no_ignore = false,
+		},
+	},
+	extensions = {
+		fzf = {},
+	},
 }
 
 M.config = function(_, opts)
 	require("telescope").setup(opts)
-	pcall(require("telescope").load_extension, "fzf")
+	require("telescope").load_extension "fzf"
 end
 
 return M

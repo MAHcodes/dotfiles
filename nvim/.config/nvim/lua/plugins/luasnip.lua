@@ -3,7 +3,6 @@ return {
 	event = "InsertEnter",
 	dependencies = {
 		"rafamadriz/friendly-snippets",
-		lazy = true,
 	},
 	config = function()
 		local ls = require "luasnip"

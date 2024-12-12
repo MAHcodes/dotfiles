@@ -1,5 +1,5 @@
 return {
 	"asiryk/auto-hlsearch.nvim",
-  keys = { "/", "?", "*", "#", "n", "N" },
+	keys = { "/", "?", "*", "#", "n", "N" },
 	config = true,
 }

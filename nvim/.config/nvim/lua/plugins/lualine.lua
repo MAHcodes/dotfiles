@@ -19,7 +19,7 @@ return {
 		local diff = {
 			"diff",
 			colored = true,
-			symbols = { added = " ", modified = "󱗜 ", removed = " " }, -- 󱗜 
+			symbols = { added = " ", modified = "󱗜 ", removed = " " },
 		}
 
 		local noice = require "noice"

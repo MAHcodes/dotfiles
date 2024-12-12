@@ -3,7 +3,7 @@ return {
 	lazy = true,
 	keys = {
 		{
-			"<leader>st",
+			"<leader>sx",
 			function()
 				require("toolbox").show_picker()
 			end,

@@ -15,6 +15,7 @@ return {
   enable_tab_bar = false,
   allow_square_glyphs_to_overflow_width = 'Never',
   notification_handling = 'NeverShow',
+  warn_about_missing_glyphs = false,
   font = wezterm.font_with_fallback {
     {
       family = 'MonaspiceNe Nerd Font',

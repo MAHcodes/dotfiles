@@ -4,9 +4,13 @@ return {
 		"kyazdani42/nvim-web-devicons",
 	},
 	cmd = { "NvimTreeToggle", "NvimTreeOpen" },
-	init = function()
-		vim.api.nvim_set_keymap("n", "<Leader>e", "<cmd>NvimTreeToggle<cr>", { noremap = true, silent = true })
-	end,
+	keys = {
+		{
+			"<leader>e",
+			"<cmd>NvimTreeToggle<cr>",
+			desc = "Toggle NvimTree",
+		},
+	},
 	opts = function()
 		local api = require "nvim-tree.api"
 

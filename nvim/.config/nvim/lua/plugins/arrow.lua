@@ -1,6 +1,6 @@
 return {
 	"otavioschwanck/arrow.nvim",
-  enabled = false,
+	enabled = false,
 	opts = {
 		always_show_path = false,
 		hide_handbook = true,

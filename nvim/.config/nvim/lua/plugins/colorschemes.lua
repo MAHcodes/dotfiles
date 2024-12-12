@@ -141,10 +141,6 @@ return {
 		lazy = true,
 	},
 	{
-		"Yazeed1s/oh-lucy.nvim",
-		lazy = true,
-	},
-	{
 		"maxmx03/fluoromachine.nvim",
 		lazy = true,
 	},

@@ -4,81 +4,27 @@ return {
 	dependencies = {
 		{
 			"nvim-lua/plenary.nvim",
-			lazy = true,
-		},
-		{
 			"nvim-telescope/telescope.nvim",
-			lazy = true,
 		},
 	},
 	keys = {
-		{
-			"<leader>ht",
-			"<cmd>HarpoonTelescope<CR>",
-			desc = "Harpoon Telescope Toggle",
-			nowait = true,
-		},
-		{
-			"<leader>ha",
-			"<cmd>HarpoonAdd<CR>",
-			desc = "Harpoon Add File",
-			nowait = true,
-		},
-		{
-			"<leader>hu",
-			"<cmd>HarpoonToggleUI<CR>",
-			desc = "Harpoon Add File",
-			nowait = true,
-		},
-		{
-			"<leader>h1",
-			"<cmd>HarpoonSelect 1<CR>",
-			desc = "Harpoon Select 1",
-			nowait = true,
-		},
-		{
-			"<leader>h2",
-			"<cmd>HarpoonSelect 2<CR>",
-			desc = "Harpoon Select 2",
-			nowait = true,
-		},
-		{
-			"<leader>h3",
-			"<cmd>HarpoonSelect 3<CR>",
-			desc = "Harpoon Select 3",
-			nowait = true,
-		},
-		{
-			"<leader>h4",
-			"<cmd>HarpoonSelect 4<CR>",
-			desc = "Harpoon Select 4",
-			nowait = true,
-		},
-		{
-			"<leader>h5",
-			"<cmd>HarpoonSelect 5<CR>",
-			desc = "Harpoon Select 5",
-			nowait = true,
-		},
-		{
-			"<leader>hp",
-			"<cmd>HarpoonPrev<CR>",
-			desc = "Harpoon Prev",
-			nowait = true,
-		},
-		{
-			"<leader>hn",
-			"<cmd>HarpoonNext<CR>",
-			desc = "Harpoon Next",
-			nowait = true,
-		},
+		{ "<leader>ht", "<cmd>HarpoonTelescope<CR>", desc = "Telescope Toggle" },
+		{ "<leader>ha", "<cmd>HarpoonAdd<CR>", desc = "Add File" },
+		{ "<leader>hu", "<cmd>HarpoonToggleUI<CR>", desc = "Toggle UI" },
+		{ "<leader>hp", "<cmd>HarpoonPrev<CR>", desc = "Prev" },
+		{ "<leader>hn", "<cmd>HarpoonNext<CR>", desc = "Next" },
+		{ "<leader>h1", "<cmd>HarpoonSelect 1<CR>", desc = "Select 1" },
+		{ "<leader>h2", "<cmd>HarpoonSelect 2<CR>", desc = "Select 2" },
+		{ "<leader>h3", "<cmd>HarpoonSelect 3<CR>", desc = "Select 3" },
+		{ "<leader>h4", "<cmd>HarpoonSelect 4<CR>", desc = "Select 4" },
+		{ "<leader>h5", "<cmd>HarpoonSelect 5<CR>", desc = "Select 5" },
 	},
-  opts = {
-    border = "rounded",
-    width = 30,
-  },
+	opts = {
+		border = "rounded",
+		width = 30,
+	},
 	config = function(_, opts)
-		local harpoon = require("harpoon")
+		local harpoon = require "harpoon"
 
 		harpoon:setup()
 
@@ -93,11 +39,11 @@ return {
 			require("telescope.pickers")
 				.new({}, {
 					prompt_title = "Harpoon",
-					finder = require("telescope.finders").new_table({
+					finder = require("telescope.finders").new_table {
 						results = file_paths,
-					}),
-					previewer = conf.file_previewer({}),
-					sorter = conf.generic_sorter({}),
+					},
+					previewer = conf.file_previewer {},
+					sorter = conf.generic_sorter {},
 				})
 				:find()
 		end

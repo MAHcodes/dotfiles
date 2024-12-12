@@ -1,7 +1,7 @@
 return {
 	"gmr458/cold.nvim",
 	lazy = true,
-	-- priority = 1000,
+	priority = 1000,
 	config = function()
 		vim.api.nvim_create_autocmd("ColorScheme", {
 			pattern = "cold",
@@ -18,6 +18,6 @@ return {
 			end,
 		})
 
-		-- vim.cmd.colorscheme "cold"
+		vim.cmd.colorscheme "cold"
 	end,
 }
