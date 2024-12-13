@@ -41,6 +41,18 @@ return {
 		Value = " ",
 		Variable = "󰀫 ",
 	},
+	menu = {
+		Help = "󰘥",
+		Calc = "󰃬",
+		Glass = "",
+		Smiley = "",
+		File = "",
+		Word = "",
+		FilePath = "",
+		Lua = "",
+		Scissors = "",
+		Plug = "",
+	},
 	git = {
 		LineAdded = "",
 		LineModified = "",

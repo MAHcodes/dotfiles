@@ -42,6 +42,9 @@ return {
 				PmenuThumb = { bg = colors.blue },
 				Folded = { bg = colors.surface0 },
 
+				-- nvim-tree
+				NvimTreeNormal = { link = "Nvimtree" },
+
 				-- alpha
 				["@alpha.title"] = { fg = colors.yellow, style = { "bold" } },
 				["@alpha.text"] = { fg = colors.blue },

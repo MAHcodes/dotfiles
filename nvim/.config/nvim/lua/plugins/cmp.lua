@@ -12,6 +12,7 @@ return {
 		"hrsh7th/cmp-nvim-lua",
 		"hrsh7th/cmp-emoji",
 		"hrsh7th/cmp-calc",
+		"hrsh7th/cmp-nvim-lsp-signature-help",
 		"chrisgrieser/cmp-nerdfont",
 		"roobert/tailwindcss-colorizer-cmp.nvim",
 		"rasulomaroff/cmp-bufname",
@@ -41,31 +42,33 @@ return {
 				["<C-f>"] = cmp.mapping(cmp.mapping.scroll_docs(1), { "i", "c" }),
 			},
 			formatting = {
-				fields = { "abbr", "kind", "menu" },
+				fields = { "menu", "abbr", "kind" },
 				format = function(entry, vim_item)
 					local kind = vim_item.kind
 
-					vim_item.kind = (" " .. icons.kind[kind] .. kind or "?" .. " ")
+					vim_item.kind = (" " .. icons.kind[kind] .. kind or icons.diagnostics.BoldQuestion .. " ")
 
 					local menu = {
-						nvim_lsp = { title = "LSP", icon = "󰚥" },
-						luasnip = { title = "Snip", icon = "" },
-						nvim_lua = { title = "Lua", icon = "󰢱" },
-						buffer = { title = "Buf", icon = "" },
-						bufname = { title = "Buf", icon = "󰈬" },
-						async_path = { title = "Path", icon = "" },
-						emoji = { title = "Emo", icon = "󰱫" },
-						nerdfont = { title = "NF", icon = "󰊪" },
-						calc = { title = "Calc", icon = "󰃬" },
+						nvim_lsp = { title = "LSP", icon = icons.menu.Plug },
+						luasnip = { title = "Snip", icon = icons.menu.Scissors },
+						nvim_lua = { title = "Lua", icon = icons.menu.Lua },
+						buffer = { title = "Buf", icon = icons.menu.File },
+						bufname = { title = "Buf", icon = icons.menu.Word },
+						async_path = { title = "Path", icon = icons.menu.FilePath },
+						emoji = { title = "Emo", icon = icons.menu.Smiley },
+						nerdfont = { title = "NF", icon = icons.menu.Glass },
+						calc = { title = "Calc", icon = icons.menu.Calc },
+						nvim_lsp_signature_help = { title = "Sig", icon = icons.menu.Help },
 					}
 
-					vim_item.menu = menu[entry.source.name].icon .. " " .. menu[entry.source.name].title
+					vim_item.menu = menu[entry.source.name].icon .. " " .. icons.ui.LineMiddle
 
 					-- return vim_item
 					return require("tailwindcss-colorizer-cmp").formatter(entry, vim_item)
 				end,
 			},
 			sources = {
+				{ name = "nvim_lsp_signature_help" },
 				{ name = "nvim_lsp" },
 				{ name = "bufname" },
 				{ name = "buffer" },

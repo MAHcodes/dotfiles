@@ -1,6 +1,6 @@
 return {
 	"neovim/nvim-lspconfig",
-	event = "UIEnter",
+	event = "VeryLazy",
 	dependencies = {
 		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
