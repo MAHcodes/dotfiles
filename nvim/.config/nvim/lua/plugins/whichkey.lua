@@ -15,7 +15,7 @@ return {
 				min = 4,
 				max = vim.o.lines,
 			},
-			padding = { 2, 2 },
+			padding = { 1, 2 },
 			zindex = 1000,
 			wo = {
 				winblend = 0,

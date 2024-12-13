@@ -45,8 +45,7 @@ return {
 				fields = { "menu", "abbr", "kind" },
 				format = function(entry, vim_item)
 					local kind = vim_item.kind
-
-					vim_item.kind = (" " .. icons.kind[kind] .. kind or icons.diagnostics.BoldQuestion .. " ")
+					vim_item.kind = string.format(" %s %s", icons.kind[kind], kind)
 
 					local menu = {
 						nvim_lsp = { title = "LSP", icon = icons.menu.Plug },
@@ -61,7 +60,7 @@ return {
 						nvim_lsp_signature_help = { title = "Sig", icon = icons.menu.Help },
 					}
 
-					vim_item.menu = menu[entry.source.name].icon .. " " .. icons.ui.LineMiddle
+					vim_item.menu = string.format("%s %s", menu[entry.source.name].icon, icons.ui.LineMiddle)
 
 					-- return vim_item
 					return require("tailwindcss-colorizer-cmp").formatter(entry, vim_item)
@@ -89,7 +88,10 @@ return {
 			},
 			view = {
 				entries = {
-					name = "custom",
+					entries = {
+						name = "custom",
+						selection_order = "near_cursor",
+					},
 				},
 			},
 		}

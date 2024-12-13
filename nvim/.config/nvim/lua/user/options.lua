@@ -40,6 +40,8 @@ local options = {
 	spelllang = { "en_us" },
 	list = true,
 	termbidi = true,
+	textwidth = 65,
+	ai = true,
 	listchars = {
 		trail = "·",
 		eol = "$",
@@ -52,7 +54,6 @@ local options = {
 }
 
 -- vim.opt.shortmess:append "cos"
-vim.opt.formatoptions:remove "cro"
 
 for k, v in pairs(options) do
 	vim.opt[k] = v
