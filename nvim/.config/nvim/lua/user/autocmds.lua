@@ -9,6 +9,7 @@ end
 create_autocmd("FileType", "*", function()
 	vim.opt.fo:append { "r", "c" }
 	vim.opt.fo:remove "o"
+	vim.opt.fo:remove "t"
 end)
 
 create_autocmd("FileType", { "qf", "help", "notify" }, function()

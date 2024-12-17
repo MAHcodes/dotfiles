@@ -38,13 +38,12 @@ return {
 	},
 	config = function(_, opts)
 		local wk = require "which-key"
-		local icons = require "user.icons"
-		wk.add { "<leader>s", group = "Search" }
-		wk.add { "<leader>h", group = "Harpoon", icon = icons.misc.ArrowProjectile }
+		wk.add(require("plugins.lspconfig").whichkey)
+		wk.add(require("plugins.harpoon").whichkey)
 		wk.add { "<leader>l", group = "LSP" }
-		wk.add { "<leader>r", group = "Rest" }
+		wk.add(require("plugins.rest").whichkey)
 		wk.add { "<leader>g", group = "Git" }
-		wk.add { "<leader>d", group = "Dap" }
+		wk.add(require("plugins.dap").whichkey)
 
 		wk.setup(opts)
 	end,

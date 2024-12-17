@@ -5,6 +5,7 @@ M.branch = "harpoon2"
 M.dependencies = {
 	"nvim-lua/plenary.nvim",
 	"nvim-telescope/telescope.nvim",
+	"letieu/harpoon-lualine",
 }
 
 -- basic telescope configuration
@@ -74,5 +75,19 @@ M.config = function()
 	local harpoon = require "harpoon"
 	harpoon:setup()
 end
+
+local icons = require "user.icons"
+
+M.whichkey = { "<leader>h", group = "Harpoon", icon = icons.misc.ArrowProjectile }
+
+M.lualine = {
+	"harpoon2",
+	icon = icons.misc.ArrowProjectile,
+	indicators = { "1", "2", "3", "4", "5" },
+	active_indicators = { "[1]", "[2]", "[3]", "[4]", "[5]" },
+	_separator = " ",
+	no_harpoon = "",
+	color_active = nil,
+}
 
 return M

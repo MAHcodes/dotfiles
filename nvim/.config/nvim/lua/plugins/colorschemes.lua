@@ -1,5 +1,9 @@
 return {
 	{
+		"Vallen217/eidolon.nvim",
+		lazy = true,
+	},
+	{
 		"sam4llis/nvim-tundra",
 		lazy = true,
 	},
