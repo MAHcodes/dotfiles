@@ -121,6 +121,8 @@ M.opts = function()
 		end,
 	}
 
+  local icons = require("user.icons")
+
 	local lspstatus = {
 		"lsp-status",
 		show_count = true,
@@ -128,18 +130,15 @@ M.opts = function()
 		disabled_filetypes = {},
 		colors = {
 			active = {
-				fg = utils.extract_color_from_hllist("fg", { "lualine_c_diff_added_normal" }, "#a6e3a1"),
-			},
-			inactive = {
-				fg = utils.extract_color_from_hllist("fg", { "lualine_c_diff_removed_normal" }, "#f38ba8"),
+				fg = utils.extract_color_from_hllist("fg", { "lualine_a_inactive" }, "#89b4fa"),
 			},
 			count = {
-				fg = utils.extract_color_from_hllist("fg", { "lualine_c_normal" }, "#cdd6f4"),
+				fg = utils.extract_color_from_hllist("fg", { "lualine_a_inactive" }, "#89b4fa"),
 			},
 		},
 		icons = {
-			active = "",
-			inactive = " ",
+			active = icons.menu.Plug,
+			inactive = "",
 		},
 	}
 
