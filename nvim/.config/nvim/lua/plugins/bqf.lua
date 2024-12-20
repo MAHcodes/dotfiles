@@ -1,7 +1,7 @@
 return {
 	"kevinhwang91/nvim-bqf",
 	name = "bqf",
-	event = "VeryLazy",
+  ft = "qf",
 	opts = {
 		auto_enable = true,
 		auto_resize_height = true,

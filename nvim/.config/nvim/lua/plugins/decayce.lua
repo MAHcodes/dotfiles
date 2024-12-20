@@ -15,11 +15,10 @@ return {
 				NonText = { fg = colors.comments },
 
 				-- alpha
-				["@alpha.title"] = { fg = colors.yellow, bold = true },
-				["@alpha.text"] = { fg = colors.blue },
-				["@alpha.shortcut"] = { fg = colors.red, italic = true },
-				["@alpha.header"] = { fg = colors.green },
-				["@alpha.footer"] = { fg = colors.magenta, bold = true },
+				["AlphaButtons"] = { fg = colors.blue },
+				["AlphaShortcut"] = { fg = colors.red, italic = true },
+				["AlphaHeader"] = { fg = colors.green },
+				["AlphaFooter"] = { fg = colors.magenta, bold = true },
 			},
 		}
 	end,

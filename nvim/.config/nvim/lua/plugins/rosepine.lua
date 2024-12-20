@@ -46,11 +46,10 @@ return {
 			TelescopeBorder = { bg = "base" },
 
 			-- alpha
-			["@alpha.title"] = { fg = "gold", bold = true },
-			["@alpha.text"] = { fg = "foam" },
-			["@alpha.shortcut"] = { fg = "love", italic = true },
-			["@alpha.header"] = { fg = "iris" },
-			["@alpha.footer"] = { fg = "gold", bold = true },
+			["AlphaButtons"] = { fg = "foam" },
+			["AlphaShortcut"] = { fg = "love", italic = true },
+			["AlphaHeader"] = { fg = "iris" },
+			["AlphaFooter"] = { fg = "gold", bold = true },
 
 			-- cmp
 			CmpItemMenu = { fg = "rose" },

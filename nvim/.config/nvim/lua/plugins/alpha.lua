@@ -1,5 +1,6 @@
 local M = {
 	"goolord/alpha-nvim",
+	event = "VimEnter",
 	dependencies = {
 		"nvim-telescope/telescope.nvim",
 		"olimorris/persisted.nvim",
@@ -27,7 +28,7 @@ M.opts = function()
 		type = "text",
 		val = vim.split(banner, "\n"),
 		opts = {
-			hl = "@alpha.header",
+			hl = "AlphaHeader",
 			position = "center",
 		},
 	}
@@ -40,8 +41,8 @@ M.opts = function()
 			cursor = 3,
 			width = 50,
 			align_shortcut = "right",
-			hl_shortcut = "@alpha.shortcut",
-			hl = "@alpha.text",
+			hl_shortcut = "AlphaShortcut",
+			hl = "AlphaButtons",
 		}
 		if keybind then
 			opts.keymap = { "n", sc, keybind, { noremap = true, silent = true, nowait = true } }
@@ -72,7 +73,11 @@ M.opts = function()
 			button("z", "󰒲  Lazy", ":Lazy<CR>"),
 			button("o", "󰄉  Recently used files", tb.oldfiles),
 			button("l", "󰊄  Find text", tb.live_grep),
-			button("c", "  Configuration", ":e $MYVIMRC<CR>"),
+			button("c", "  Configuration", function()
+				tb.find_files {
+					search_dirs = { vim.fn.stdpath "config" },
+				}
+			end),
 			button("u", "  Update", ":Lazy update<CR>"),
 			button("h", "󰘥  Help", tb.help_tags),
 			button("q", "  Quit", ":qa<CR>"),
@@ -93,7 +98,7 @@ M.opts = function()
 		type = "text",
 		val = " v" .. get_nvim_version(),
 		opts = {
-			hl = "@alpha.header",
+			hl = "AlphaHeader",
 			position = "center",
 		},
 	}
@@ -129,7 +134,7 @@ M.config = function(_, opts)
 				type = "text",
 				val = "󱐋 Neovim loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms .. "ms",
 				opts = {
-					hl = "@alpha.footer",
+					hl = "AlphaFooter",
 					position = "center",
 				},
 			}

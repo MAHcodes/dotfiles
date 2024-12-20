@@ -3,7 +3,10 @@ local M = {
 }
 
 M.dependencies = {
-	"nvim-neotest/nvim-nio",
+	{
+		"nvim-neotest/nvim-nio",
+    lazy = true,
+	},
 	{
 		"rcarriga/nvim-dap-ui",
 		keys = {
@@ -41,11 +44,14 @@ M.dependencies = {
 	},
 	{
 		"theHamsta/nvim-dap-virtual-text",
+    lazy = true,
 		opts = {},
 	},
 	{
 		"jay-babu/mason-nvim-dap.nvim",
-		dependencies = "mason.nvim",
+		dependencies = {
+			"williamboman/mason.nvim",
+		},
 		cmd = { "DapInstall", "DapUninstall" },
 		opts = {
 			automatic_installation = true,

@@ -11,10 +11,10 @@ return {
 				local palette = require "cold.palette"
 
 				-- alpha
-				h(0, "@alpha.header", { fg = palette.green_05 })
-				h(0, "@alpha.text", { fg = palette.light_01 })
-				h(0, "@alpha.shortcut", { fg = palette.grey_02, italic = true })
-				h(0, "@alpha.footer", { fg = palette.blue_03, bold = true })
+				h(0, "AlphaHeader", { fg = palette.green_05 })
+				h(0, "AlphaButtons", { fg = palette.light_01 })
+				h(0, "AlphaShortcut", { fg = palette.grey_02, italic = true })
+				h(0, "AlphaFooter", { fg = palette.blue_03, bold = true })
 			end,
 		})
 

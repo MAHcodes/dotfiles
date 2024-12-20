@@ -46,11 +46,10 @@ return {
 				NvimTreeNormal = { link = "Nvimtree" },
 
 				-- alpha
-				["@alpha.title"] = { fg = colors.yellow, style = { "bold" } },
-				["@alpha.text"] = { fg = colors.blue },
-				["@alpha.shortcut"] = { fg = colors.red, style = { "italic" } },
-				["@alpha.header"] = { fg = colors.green },
-				["@alpha.footer"] = { fg = colors.peach, style = { "bold" } },
+				["AlphaButtons"] = { fg = colors.blue },
+				["AlphaShortcut"] = { fg = colors.red, style = { "italic" } },
+				["AlphaHeader"] = { fg = colors.green },
+				["AlphaFooter"] = { fg = colors.peach, style = { "bold" } },
 
 				-- cmp
 				CmpItemMenu = { fg = colors.blue },

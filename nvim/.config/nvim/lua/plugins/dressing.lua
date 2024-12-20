@@ -1,6 +1,6 @@
 return {
 	"stevearc/dressing.nvim",
-	event = "UIEnter",
+  lazy = true,
 	dependencies = {
 		"nvim-telescope/telescope.nvim",
 	},

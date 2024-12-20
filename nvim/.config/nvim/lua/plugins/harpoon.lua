@@ -53,22 +53,31 @@ local toggle_ui = function()
 	harpoon.ui:toggle_quick_menu(harpoon:list(), M.opts)
 end
 
-M.keys = {
-	{ "<leader>ht", toggle_telescope, desc = "Telescope Toggle" },
-	{ "<leader>ha", add, desc = "Add File" },
-	{ "<leader>hu", toggle_ui, desc = "Toggle UI" },
-	{ "<leader>hp", prev, desc = "Prev" },
-	{ "<leader>hn", next, desc = "Next" },
-	{ "<leader>h1", select(1), desc = "Select 1" },
-	{ "<leader>h2", select(2), desc = "Select 2" },
-	{ "<leader>h3", select(3), desc = "Select 3" },
-	{ "<leader>h4", select(4), desc = "Select 4" },
-	{ "<leader>h5", select(5), desc = "Select 5" },
-}
+M.keys = function()
+	local keys = {
+		{ "<leader>ht", toggle_telescope, desc = "Telescope Toggle" },
+		{ "<leader>ha", add, desc = "Add File" },
+		{ "<leader>hu", toggle_ui, desc = "Toggle UI" },
+		{ "<leader>hp", prev, desc = "Prev" },
+		{ "<leader>hn", next, desc = "Next" },
+	}
+
+	for i = 1, 5 do
+		table.insert(keys, {
+			"<leader>h" .. i,
+			select(i),
+			desc = "Select " .. i,
+		})
+	end
+
+	return keys
+end
 
 M.opts = {
 	border = "rounded",
-	width = 30,
+	settings = {
+		save_on_toggle = true,
+	},
 }
 
 M.config = function()
