@@ -239,6 +239,7 @@ M.config = function()
 		"jq",
 		"rustywind",
 		"xmlformatter",
+    "cljfmt",
 	}
 
 	local capabilities = vim.tbl_deep_extend(

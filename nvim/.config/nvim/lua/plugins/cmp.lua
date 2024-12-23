@@ -1,20 +1,33 @@
 return {
-	"hrsh7th/nvim-cmp",
+	-- "hrsh7th/nvim-cmp",
+	"iguanacucumber/magazine.nvim",
+	name = "nvim-cmp",
 	event = "InsertEnter",
 	dependencies = {
-		"hrsh7th/cmp-buffer",
 		"FelipeLema/cmp-async-path",
-		"hrsh7th/cmp-cmdline",
 		"saadparwaiz1/cmp_luasnip",
 		"L3MON4D3/LuaSnip",
-		"hrsh7th/cmp-nvim-lsp",
-		"hrsh7th/cmp-nvim-lua",
 		"hrsh7th/cmp-emoji",
 		"hrsh7th/cmp-calc",
 		"hrsh7th/cmp-nvim-lsp-signature-help",
 		"chrisgrieser/cmp-nerdfont",
 		"roobert/tailwindcss-colorizer-cmp.nvim",
 		"rasulomaroff/cmp-bufname",
+		{
+			-- "hrsh7th/cmp-nvim-lsp",
+			"iguanacucumber/mag-nvim-lsp",
+			name = "cmp-nvim-lsp",
+		},
+		{
+			-- "hrsh7th/cmp-nvim-lua",
+			"iguanacucumber/mag-nvim-lua",
+			name = "cmp-nvim-lua",
+		},
+		{
+			-- "hrsh7th/cmp-buffer",
+			"iguanacucumber/mag-buffer",
+			name = "cmp-buffer",
+		},
 	},
 	config = function()
 		local cmp = require "cmp"

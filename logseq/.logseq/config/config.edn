@@ -9,28 +9,3 @@
 ;;  would result in the final config:
 ;;   {:shortcuts {:ui/toggle-theme "t z"
 ;;                :ui/toggle-brackets "t b"}}
-
-{:default-queries
-   {:journals
-      [{:collapsed? false,
-        :inputs [:today :-7d],
-        :query [:find (pull ?block [*]) :in $ ?end ?prev :where
-                (or [?block :block/scheduled ?d] [?block :block/deadline ?d])
-                [(< ?d ?end)] [(> ?d ?prev)]],
-        :title "prev 7 days' deadlines or schedules"}
-       {:collapsed? false,
-        :inputs [:today :+7d],
-        :query [:find (pull ?block [*]) :in $ ?start ?next :where
-                (or [?block :block/scheduled ?d] [?block :block/deadline ?d])
-                [(> ?d ?start)] [(< ?d ?next)]],
-        :title "next 7 days' deadline or schedule"}
-       {:title [:h2 "  Missed Yesterday"]
-        :query [:find (pull ?b [*])
-                :in $ ?start ?today
-                :where
-                (task ?b #{"NOW" "DOING" "TODO" "LATER"})
-                (between ?b ?start ?today)]
-        :inputs [:-1d :yesterday]
-        :group-by-page? false
-        :collapsed? false}
-       ]}}

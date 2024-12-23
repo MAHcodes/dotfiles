@@ -1,0 +1,3 @@
+{:logseq-journals-calendar {:version "v0.10.10", :repo "xyhp915/logseq-journals-calendar", :effect false, :theme false}
+ :logseq-url-title-tagger {:version "v1.1.3", :repo "imjn/logseq-url-title-tagger", :effect true, :theme false}
+ :logseq-bonofix-theme {:version "v3.10.4", :repo "sansui233/logseq-bonofix-theme", :effect false, :theme true}}

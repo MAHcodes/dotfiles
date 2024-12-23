@@ -18,6 +18,7 @@ return {
 		lsp_format = "prefer",
 		stop_after_first = true,
 		formatters_by_ft = {
+			clojure = { "cljfmt" },
 			lua = { "stylua" },
 			python = { "black" },
 			javascript = { "prettierd", "prettier" },
