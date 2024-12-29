@@ -7,26 +7,17 @@ local M = {
 	},
 }
 
-M.opts = function()
-	local banner = [[
-      .          .
-    ';;,.        ::'
-  ,:::;,,        :ccc,
- ,::c::,,,,.     :cccc,
- ,cccc:;;;;;.    cllll,
- ,cccc;.;;;;;,   cllll;
- :cccc; .;;;;;;. coooo;
- ;llll;   ,:::::'loooo;
- ;llll:    ':::::loooo:
- :oooo:     .::::llodd:
- .;ooo:       ;cclooo:.
-   .;oc        'coo;.
-     .'         .,.
-]]
+local select_banner = function()
+	local banners = require "user.banners"
+  local banner_width = 67 + 10
 
+	return vim.o.columns >= banner_width and banners.full or banners.logo
+end
+
+M.opts = function()
 	local header = {
 		type = "text",
-		val = vim.split(banner, "\n"),
+		val = vim.split(select_banner(), "\n"),
 		opts = {
 			hl = "AlphaHeader",
 			position = "center",
@@ -65,6 +56,13 @@ M.opts = function()
 		type = "group",
 		val = {
 			button("t", "  TODO", ":e ~/notes/TODO/index.md<CR>"),
+			button("j", "󱓧  Journal", function()
+				local logseq = require "user.logseq"
+				logseq.setup {
+					graph_dir = "$HOME/notes",
+				}
+				logseq.open_journal()
+			end),
 			button("f", "󰈞  Find file", tb.find_files),
 			button("e", "  New file", ":ene <BAR> startinsert<CR>"),
 			button("p", "  Find project", t.extensions.projects.projects),

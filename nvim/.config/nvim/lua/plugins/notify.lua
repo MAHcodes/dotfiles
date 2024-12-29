@@ -5,11 +5,11 @@ return {
 		"nvim-telescope/telescope.nvim",
 	},
 	opts = {
-		stages = "fade_in_slide_out",
+		stages = "slide",
 		on_open = nil,
 		on_close = nil,
 		render = "compact",
-		timeout = 175,
+		timeout = 200,
 		-- background_colour = "#000000",
 		minimum_width = 10,
 		top_down = true,
