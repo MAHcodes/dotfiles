@@ -56,7 +56,7 @@ M.opts = function()
 		type = "group",
 		val = {
 			button("t", "  TODO", ":e ~/notes/TODO/index.md<CR>"),
-			button("j", "󱓧  Journal", function()
+			button("J", "󱓧  Journal", function()
 				local logseq = require "user.logseq"
 				logseq.setup {
 					graph_dir = "$HOME/notes",
