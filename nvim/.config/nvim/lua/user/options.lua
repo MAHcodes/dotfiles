@@ -53,8 +53,6 @@ local options = {
 	fillchars = { diff = " " },
 }
 
--- vim.opt.shortmess:append "cos"
-
 for k, v in pairs(options) do
 	vim.opt[k] = v
 end

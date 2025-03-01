@@ -32,6 +32,7 @@ M.theme_opts = require("telescope.themes").get_ivy {
 	previewer = true,
 	results_title = false,
 	dynamic_preview_title = true,
+	file_ignore_patterns = { ".git" },
 	layout_config = {
 		prompt_position = "top",
 		height = vim.o.lines,

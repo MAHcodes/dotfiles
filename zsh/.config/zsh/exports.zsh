@@ -1,6 +1,14 @@
-# History in cache directory:
+# History
 HISTSIZE=1000000
 SAVEHIST=1000000
+HISTDUP=erase
+setopt appendhistory
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_ignore_all_dups
+setopt hist_find_no_dups
 
 # Default Apps
 export EDITOR="nvim"
@@ -31,15 +39,11 @@ export MANPAGER='nvim +Man!'
 # export nvim-bob path
 [ -d  "$HOME/.local/share/bob/nvim-bin" ] && PATH="$HOME/.local/share/bob/nvim-bin:$PATH"]
 
-# completions
-# [ -s "$HOME/.config/zsh/completions/_bun" ] && source "$HOME/.config/zsh/completions/_bun"
-# [ -s "$HOME/.config/zsh/completions/_when" ] && source "$HOME/.config/zsh/completions/_when"
-
 # atuin
 # eval "$(atuin init zsh)"
 
 # ruby
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 # pnpm
 export PNPM_HOME="/home/mhmdali102/.local/share/pnpm"

@@ -31,3 +31,6 @@ set-option -g status-position top
 
 # don't exit tmux when closing a session
 set -g detach-on-destroy off
+
+# passthrough
+set -g allow-passthrough on
