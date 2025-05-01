@@ -1,6 +1,9 @@
 return {
 	"numToStr/Comment.nvim",
-	event = { "BufRead", "BufWinEnter", "BufNewFile" },
+	keys = {
+		{ "gc", mode = { "n", "v" }, desc = "Comment toggle linewise" },
+		{ "gb", mode = { "n", "v" }, desc = "Comment toggle blockwise" },
+	},
 	opts = {
 		pre_hook = function(...)
 			local loaded, ts_comment = pcall(require, "ts_context_commentstring.integrations.comment_nvim")

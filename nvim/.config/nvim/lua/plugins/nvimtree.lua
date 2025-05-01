@@ -3,7 +3,7 @@ return {
 	dependencies = {
 		"kyazdani42/nvim-web-devicons",
 	},
-	cmd = { "NvimTreeToggle", "NvimTreeOpen" },
+	cmd = { "NvimTreeToggle", "NvimTreeOpen", "NvimTreeFocus" },
 	keys = {
 		{
 			"<leader>e",

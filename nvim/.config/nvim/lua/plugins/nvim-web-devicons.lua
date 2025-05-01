@@ -1,6 +1,6 @@
 return {
 	"kyazdani42/nvim-web-devicons",
-	event = "VeryLazy",
+  lazy = true,
 	dependencies = {
 		{
 			"rachartier/tiny-devicons-auto-colors.nvim",

@@ -1,6 +1,6 @@
 local M = { "neovim/nvim-lspconfig" }
 
-M.event = "VeryLazy"
+M.event = { "BufReadPre", "BufNewFile" }
 
 M.dependencies = {
 	"williamboman/mason.nvim",
@@ -239,7 +239,7 @@ M.config = function()
 		"jq",
 		"rustywind",
 		"xmlformatter",
-    "cljfmt",
+		"cljfmt",
 	}
 
 	local capabilities = vim.tbl_deep_extend(
