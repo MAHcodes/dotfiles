@@ -55,7 +55,7 @@ M.config = function()
 		map("[d", vim.diagnostic.goto_prev, "Goto Prev Diagnostic")
 		map("]d", vim.diagnostic.goto_next, "Goto Next Diagnostic")
 		map("gl", vim.diagnostic.open_float, "Goto Diagnostic Floating Window")
-		map("gf", vim.diagnostic.setloclist, "Goto Diagnostic Quickfix list")
+		map("gq", vim.diagnostic.setloclist, "Goto Diagnostic Quickfix list")
 
 		map("gD", vim.lsp.buf.declaration, "Goto Declaration")
 		-- map("K", vim.lsp.buf.hover, "Goto Hover Documentation")

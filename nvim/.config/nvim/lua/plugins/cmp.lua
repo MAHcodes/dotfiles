@@ -45,6 +45,13 @@ return {
 				["<C-p>"] = cmp.mapping.select_prev_item(),
 				["<C-n>"] = cmp.mapping.select_next_item(),
 				["<C-y>"] = cmp.mapping.confirm { select = true },
+				["<C-g>"] = function()
+					if cmp.visible_docs() then
+						cmp.close_docs()
+					else
+						cmp.open_docs()
+					end
+				end,
 				["<C-e>"] = cmp.mapping {
 					i = cmp.mapping.abort(),
 					c = cmp.mapping.close(),

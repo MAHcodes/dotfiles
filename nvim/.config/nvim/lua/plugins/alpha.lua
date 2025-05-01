@@ -55,7 +55,7 @@ M.opts = function()
 	local buttons = {
 		type = "group",
 		val = {
-			button("t", "  TODO", ":e ~/notes/TODO/index.md<CR>"),
+			button("t", "  TODO", ":e ~/notes/TODO.md<CR>"),
 			button("J", "󱓧  Journal", function()
 				local logseq = require "user.logseq"
 				logseq.setup {

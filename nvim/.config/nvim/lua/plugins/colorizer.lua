@@ -13,7 +13,7 @@ return {
 			hsl_fn = true,
 			css = true,
 			css_fn = true,
-			mode = "virtualtext", -- background | foreground | virtualtext
+			mode = "background", -- background | foreground | virtualtext
 			tailwind = true,
 			sass = { enable = true, parsers = { "css" } }, -- Enable sass colors
 			virtualtext = "■",

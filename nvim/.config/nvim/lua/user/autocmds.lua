@@ -1,9 +1,8 @@
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "*",
 	callback = function()
-		vim.opt.fo:append { "r", "c" }
-		vim.opt.fo:remove "o"
-		vim.opt.fo:remove "t"
+		vim.opt.fo:append { "r" }
+		vim.opt.fo:remove { "o", "t", "c" }
 	end,
 })
 

@@ -24,11 +24,11 @@ return {
     {
       family = 'DejaVu Sans Mono',
     },
-    --[[ {
-      family = 'GeistMono NF',
-    }, ]]
     {
       family = 'FantasqueSansM Nerd Font Mono',
+    },
+    {
+      family = 'Apple Color Emoji',
     },
   },
   font_rules = {
@@ -41,7 +41,7 @@ return {
     },
   },
   automatically_reload_config = true,
-  font_size = 12.0,
+  font_size = 15.0,
   line_height = 1.0,
   window_padding = {
     left = 0,

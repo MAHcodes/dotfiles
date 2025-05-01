@@ -2,6 +2,8 @@
 
 ID=$1
 
-TITLE=$(yt-dlp --no-warnings --get-title "$ID")
+AUDIO_URL=$(yt-dlp -f bestaudio --get-url "$ID")
 
-yt-dlp -f bestaudio -o - "$ID" 2>/dev/null | mpv --no-video --loop=yes --title="$TITLE" -
+mpc clear
+mpc add "$AUDIO_URL"
+mpc play
