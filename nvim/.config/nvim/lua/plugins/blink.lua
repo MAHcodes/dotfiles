@@ -49,6 +49,7 @@ return {
 									nerdfont = icons.menu.Glass,
 									ripgrep = icons.menu.TextSearch,
 									git = icons.menu.Git,
+									cmdline = icons.menu.Cmd,
 								}
 								local source_icon = source_icons[ctx.source_id] or ctx.source_id
 								return string.format("%s %s", source_icon, "")

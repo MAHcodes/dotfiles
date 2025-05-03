@@ -55,6 +55,7 @@ return {
 		Plug = "",
 		TextSearch = "󱩾",
 		Git = "",
+    Cmd = "",
 	},
 	git = {
 		LineAdded = "",

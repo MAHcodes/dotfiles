@@ -134,4 +134,13 @@ M.config = function(_, opts)
 	require("telescope").load_extension "fzf"
 end
 
+vim.api.nvim_create_autocmd("User", {
+	group = vim.api.nvim_create_augroup("telescope-line-number-preview", { clear = true }),
+	pattern = "TelescopePreviewerLoaded",
+	callback = function()
+		vim.opt_local.number = true
+	end,
+	desc = "Enable Line Number in Telescope Preview",
+})
+
 return M
