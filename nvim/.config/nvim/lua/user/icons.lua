@@ -53,6 +53,8 @@ return {
 		Lua = "",
 		Scissors = "",
 		Plug = "",
+		TextSearch = "󱩾",
+		Git = "",
 	},
 	git = {
 		LineAdded = "",

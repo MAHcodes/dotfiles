@@ -1,6 +1,6 @@
 local M = { "nvim-lualine/lualine.nvim" }
 
-M.event = "VeryLazy"
+M.event = "UIEnter"
 
 M.init = function()
 	vim.g.lualine_laststatus = vim.o.laststatus

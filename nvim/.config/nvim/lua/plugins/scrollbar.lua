@@ -1,5 +1,6 @@
 return {
 	"petertriho/nvim-scrollbar",
+  enabled = false,
 	event = "VeryLazy",
 	dependencies = {
 		"catppuccin/nvim",
@@ -26,9 +27,13 @@ return {
 				"cmp_docs",
 				"cmp_menu",
 				"noice",
+				"notify",
 				"prompt",
 				"TelescopePrompt",
-        "lazy",
+				"lazy",
+				"blink-cmp-menu",
+				"blink-cmp-documentation",
+				"blink-cmp-signature",
 			},
 		}
 	end,

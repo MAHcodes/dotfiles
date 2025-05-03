@@ -56,6 +56,14 @@ return {
 				CmpItemAbbrMatch = { fg = colors.blue, style = { "bold" } },
 				CmpItemAbbrMatchFuzzy = { link = "CmpItemAbbrMatch" },
 
+				-- blink.cmp
+				BlinkCmpMenu = { link = "BlinkCmpDoc" },
+				BlinkCmpMenuBorder = { fg = colors.blue },
+				BlinkCmpDocBorder = { fg = colors.blue },
+				BlinkCmpDocSeparator = { fg = colors.blue },
+				BlinkCmpSignatureHelpBorder = { fg = colors.blue },
+				BlinkCmpSource = { fg = colors.blue },
+
 				-- noice
 				NoiceCmdlinePopupBorder = { fg = colors.blue },
 				NoiceVirtualText = { fg = colors.yellow },
@@ -66,7 +74,7 @@ return {
 		end,
 		integrations = {
 			alpha = true,
-			cmp = true,
+			blink_cmp = true,
 			gitsigns = true,
 			nvimtree = true,
 			treesitter = true,

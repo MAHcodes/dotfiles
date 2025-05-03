@@ -3,8 +3,10 @@ return {
 	event = "BufEnter",
 	dependencies = {
 		"kevinhwang91/promise-async",
+		"folke/noice.nvim",
 		{
 			"luukvbaal/statuscol.nvim",
+			event = "BufEnter",
 			opts = function()
 				local builtin = require "statuscol.builtin"
 				return {
@@ -110,7 +112,8 @@ return {
 		local function peekOrHover()
 			local winid = ufo.peekFoldedLinesUnderCursor()
 			if not winid then
-				vim.lsp.buf.hover()
+				-- vim.lsp.buf.hover()
+				require("noice.lsp").hover()
 			end
 		end
 

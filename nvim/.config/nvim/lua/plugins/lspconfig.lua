@@ -14,30 +14,19 @@ M.dependencies = {
 }
 
 M.config = function()
-	vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-		border = "rounded",
-	})
-	vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" })
-	require("lspconfig.ui.windows").default_options.border = "rounded"
-
-	local signs = {
-		{ name = "DiagnosticSignError", text = "" },
-		{ name = "DiagnosticSignWarn", text = "" },
-		{ name = "DiagnosticSignInfo", text = "" },
-		{ name = "DiagnosticSignHint", text = "" },
-	}
-
-	for _, sign in ipairs(signs) do
-		vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = sign.name })
-	end
-
 	vim.diagnostic.config {
+		underline = false,
 		virtual_text = false,
+		virtual_lines = false,
 		signs = {
-			active = signs,
+			text = {
+				[vim.diagnostic.severity.ERROR] = "",
+				[vim.diagnostic.severity.WARN] = "",
+				[vim.diagnostic.severity.INFO] = "",
+				[vim.diagnostic.severity.HINT] = "",
+			},
 		},
 		update_in_insert = true,
-		underline = false,
 		severity_sort = true,
 		float = {
 			focusable = true,
@@ -245,7 +234,7 @@ M.config = function()
 	local capabilities = vim.tbl_deep_extend(
 		"force",
 		vim.lsp.protocol.make_client_capabilities(),
-		require("cmp_nvim_lsp").default_capabilities(),
+		-- require("cmp_nvim_lsp").default_capabilities(),
 		{
 			textDocument = {
 				foldingRange = {

@@ -6,12 +6,12 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "qf", "help", "notify" },
-	callback = function()
-		vim.keymap.set("n", "q", "<cmd>close<CR>")
-	end,
-})
+-- vim.api.nvim_create_autocmd("FileType", {
+-- 	pattern = { "qf", "help", "notify" },
+-- 	callback = function()
+-- 		vim.keymap.set("n", "q", "<cmd>close<CR>")
+-- 	end,
+-- })
 
 vim.api.nvim_create_autocmd("TextYankPost", {
 	pattern = "*",
@@ -52,3 +52,14 @@ vim.api.nvim_create_autocmd({ "BufEnter", "ColorScheme" }, {
 		vim.opt.guicursor = "n:block-NCursor,ci:block-NoiceCursor,v:block-VCursor,i-ve:block-ICursor,r-cr-o:block-RCursor"
 	end,
 })
+
+-- identify filetype
+-- vim.api.nvim_create_autocmd("FileType", {
+-- 	pattern = "*",
+-- 	callback = function()
+-- 		local ft = vim.bo.filetype
+-- 		if not string.match(ft, "notify") then
+-- 			vim.notify("window filetype: " .. ft, vim.log.levels.INFO)
+-- 		end
+-- 	end,
+-- })
