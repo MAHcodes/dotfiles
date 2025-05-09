@@ -109,6 +109,27 @@ autocmd({ "BufWritePre" }, {
 	end,
 })
 
+autocmd("FileType", {
+	group = augroup "toggletodo",
+	pattern = "markdown",
+	callback = function()
+		vim.keymap.set("n", "<leader>x", function()
+			local line = vim.api.nvim_get_current_line()
+			if line:match "^%s*[*+-]%s%[%s%]" then
+				line = line:gsub("^(%s*[*+-]%s)%[%s%]", "%1[x]")
+			elseif line:match "^%s*[*+-]%s%[x%]" then
+				line = line:gsub("^(%s*[*+-]%s)%[x%]", "%1[ ]")
+			end
+			vim.api.nvim_set_current_line(line)
+		end, {
+			buffer = true,
+			nowait = true,
+			silent = true,
+			desc = "Toggle Todo",
+		})
+	end,
+})
+
 --[[ autocmd("FileType", {
 	group = augroup("detect-ft"),
 	pattern = "*",
