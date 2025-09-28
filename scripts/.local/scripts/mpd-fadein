@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ -f $HOME/.mpd/volume ]; then
+    VOL=$(cat $HOME/.mpd/volume)
+else
+    VOL=50
+fi
+
+mpc volume 0
+mpc play
+
+for i in $(seq 0 1 "$VOL"); do
+    mpc volume $i > /dev/null
+    sleep 0.05
+done
+
+mpc volume "$VOL"

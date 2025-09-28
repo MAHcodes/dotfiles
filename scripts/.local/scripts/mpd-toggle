@@ -1,0 +1,12 @@
+#!/bin/bash
+
+FADEIN=mpd-fadein
+FADEOUT=mpd-fadeout
+
+STATE=$(mpc status | head -2 | tail -1 | awk '{print $1}' | tr -d '[]')
+
+if [ "$STATE" = "playing" ]; then
+  "$FADEOUT"
+else
+  "$FADEIN"
+fi

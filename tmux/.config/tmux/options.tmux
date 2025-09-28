@@ -8,10 +8,10 @@ set -g mouse off
 # enable vim mode
 set-window-option -g mode-keys vi
 
-# set prefix to ctrl+space
+# set prefix to ctrl+`
 unbind C-b
-set -g prefix C-a
-bind C-a send-prefix
+set -g prefix C-Space
+bind C-Space send-prefix
 
 # base index 1 instaed of 0
 set -g base-index 1

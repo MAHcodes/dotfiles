@@ -9,7 +9,7 @@ autocmd("FileType", {
 	pattern = "*",
 	callback = function()
 		vim.opt.fo:append { "r" }
-		vim.opt.fo:remove { "o", "t", "c" }
+		vim.opt.fo:remove { "o" }
 	end,
 })
 

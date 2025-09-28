@@ -31,8 +31,8 @@ if [ -d "$HOME/.local/scripts" ] ; then
     PATH="$HOME/.local/scripts:$PATH"
 fi
 
-if [ -d "$HOME/.cargo/env" ] ; then
-    PATH="$HOME/.cargo/env:$PATH"
+if [ -d "$HOME/.cargo/bin" ] ; then
+    PATH="$HOME/.cargo/bin:$PATH"
 fi
 
 mpd &

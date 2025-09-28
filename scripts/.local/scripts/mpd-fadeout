@@ -1,0 +1,14 @@
+#!/bin/bash
+
+VOL=$(mpc volume | grep -oE '[0-9]+')
+echo "$VOL" > $HOME/.mpd/volume
+
+# Fade down gradually
+for i in $(seq "$VOL" -1 0); do
+    mpc volume $i > /dev/null
+    sleep 0.05
+done
+
+mpc pause
+
+mpc volume "$VOL"

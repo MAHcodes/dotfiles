@@ -39,6 +39,9 @@ export MANPAGER='nvim +Man!'
 # export nvim-bob path
 [ -d  "$HOME/.local/share/bob/nvim-bin" ] && PATH="$HOME/.local/share/bob/nvim-bin:$PATH"]
 
+# export opencode path
+[ -d  "$HOME/.opencode/bin" ] && PATH="$HOME/.opencode/bin:$PATH"]
+
 # atuin
 # eval "$(atuin init zsh)"
 

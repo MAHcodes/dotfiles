@@ -3,6 +3,18 @@
     {
       "class": "floating",
       "floating": "true"
+    },
+    {
+      "class": "Windscribe2"
+    },
+    {
+      "class": "Protonvpn-app"
+    },
+    {
+      "class": "Codes.merritt.FeelingFinder"
+    },
+    {
+      "class": "Gnome-calculator"
     }
   ],
   "skiptaskbarhidden": [],

@@ -18,6 +18,9 @@ return {
   warn_about_missing_glyphs = false,
   font = wezterm.font_with_fallback {
     {
+      family = "Google Sans Code",
+    },
+    {
       family = 'MonaspiceNe Nerd Font',
       -- harfbuzz_features = { 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig' },
     },
@@ -31,17 +34,17 @@ return {
       family = 'Apple Color Emoji',
     },
   },
-  font_rules = {
-    {
-      intensity = 'Normal',
-      italic = true,
-      font = wezterm.font {
-        family = 'MonaspiceRn Nerd Font',
-      },
-    },
-  },
+  -- font_rules = {
+  --   {
+  --     intensity = 'Normal',
+  --     italic = true,
+  --     font = wezterm.font {
+  --       family = 'MonaspiceRn Nerd Font',
+  --     },
+  --   },
+  -- },
   automatically_reload_config = true,
-  font_size = 15.0,
+  font_size = 14.0,
   line_height = 1.0,
   window_padding = {
     left = 0,

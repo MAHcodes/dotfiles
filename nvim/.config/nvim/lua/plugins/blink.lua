@@ -6,7 +6,6 @@ return {
 		"rafamadriz/friendly-snippets",
 		"moyiz/blink-emoji.nvim",
 		"MahanRahmati/blink-nerdfont.nvim",
-		"mikavilpas/blink-ripgrep.nvim",
 		{
 			"Kaiser-Yang/blink-cmp-git",
 			dependencies = { "nvim-lua/plenary.nvim" },
@@ -19,6 +18,8 @@ return {
 	opts = {
 		keymap = {
 			preset = "default",
+			["<C-space>"] = {},
+			["<C-x>"] = { "show", "show_documentation", "hide_documentation" },
 		},
 		appearance = {
 			nerd_font_variant = "mono",
@@ -47,7 +48,6 @@ return {
 									buffer = icons.menu.Word,
 									emoji = icons.menu.Smiley,
 									nerdfont = icons.menu.Glass,
-									ripgrep = icons.menu.TextSearch,
 									git = icons.menu.Git,
 									cmdline = icons.menu.Cmd,
 								}
@@ -66,7 +66,7 @@ return {
 				},
 			},
 			ghost_text = {
-				enabled = true,
+				enabled = false,
 			},
 		},
 		signature = {
@@ -83,7 +83,6 @@ return {
 				"buffer",
 				"emoji",
 				"nerdfont",
-				"ripgrep",
 				"git",
 			},
 			providers = {
@@ -94,10 +93,6 @@ return {
 				nerdfont = {
 					module = "blink-nerdfont",
 					name = "Nerd Fonts",
-				},
-				ripgrep = {
-					module = "blink-ripgrep",
-					name = "Ripgrep",
 				},
 				git = {
 					module = "blink-cmp-git",
