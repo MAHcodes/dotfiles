@@ -16,7 +16,7 @@ return {
 	opts = {
 		on_config_done = nil,
 		ensure_installed = "all",
-		ignore_install = {},
+		ignore_install = { "ipkg" },
 		parser_install_dir = nil,
 		sync_install = false,
 		auto_install = true,

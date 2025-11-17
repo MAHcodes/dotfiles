@@ -1,0 +1,17 @@
+sw_volume: 50
+audio_device_state:1:mpd pulse
+audio_device_state:1:fifo_visualizer
+state: pause
+current: 0
+time: 37.648000
+random: 0
+repeat: 0
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+song_begin: https://rr6---sn-uibavc5a8pnpvo-cxte.googlevideo.com/videoplayback?expire=1763343554&ei=YigaabX7JeCA0u8P6vHP4Ac&ip=185.97.94.182&id=o-AAKEIFi0nF1NowPMCmGoslmOmu_5s6rtWu17uwpW4V8w&itag=251&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&cps=58&met=1763321954%2C&mh=od&mm=31%2C29&mn=sn-uibavc5a8pnpvo-cxte%2Csn-hgn7rnls&ms=au%2Crdu&mv=m&mvi=6&pl=24&rms=au%2Cau&initcwndbps=360000&bui=AdEuB5Rxsdsf-ou2OJs8EY_YLWF5LreTeq61axA_XoVVWsHy84JNNAWt21Pyd7aRKiiDGsjT6dJUfY59&vprv=1&svpuc=1&mime=audio%2Fwebm&ns=TD4vMsAwyaJ4A2nWnF9v0u8Q&rqh=1&gir=yes&clen=7261112&dur=456.201&lmt=1762202345538512&mt=1763321451&fvip=2&keepalive=yes&lmw=1&fexp=51557447%2C51565116%2C51565682%2C51580970&c=TVHTML5&sefc=1&txp=5532534&n=E-vIb89-Na551A&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=APaTxxMwRQIhAMO1B78ZxnjjzLMiG_8vg0NsSSFLhqZgYvYjchD-AfANAiBl24r2sHEQesk2KOMhbxc7U_ZW8CW6o46HvYDQGAG5tg%3D%3D&sig=AJfQdSswRQIgA4HfAJlIzTmn5jO1i6zecN1AbUMjh-80YR7zfpLUd5MCIQDsp0dzLrhISsCl1p0JfMxTaOcgsPrwgrSFJxFUCKw0Hg==
+song_end
+playlist_end

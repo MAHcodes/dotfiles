@@ -1,5 +1,5 @@
-bindkey '^[e' autosuggest-execute
-bindkey '^[a' autosuggest-accept
+bindkey -M viins '^[e' autosuggest-execute
+bindkey -M viins '^[a' autosuggest-accept
 
 zle -N history-substring-search-up
 zle -N history-substring-search-down
@@ -11,6 +11,6 @@ export VISUAL=nvim
 autoload edit-command-line; zle -N edit-command-line
 bindkey -M vicmd v edit-command-line
 
-bindkey -s '^f' 'lfcd\n'
-bindkey -s '^u' 'tmux-sessionizer\n'
-bindkey -s '^p' 'fzcdproj\n'
+bindkey -M viins -s '^f' 'lfcd\n'
+bindkey -M viins -s '^u' 'tmux-sessionizer\n'
+bindkey -M viins -s '^p' 'fzcdproj\n'

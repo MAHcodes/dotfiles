@@ -39,6 +39,19 @@ export MANPAGER='nvim +Man!'
 # export nvim-bob path
 [ -d  "$HOME/.local/share/bob/nvim-bin" ] && PATH="$HOME/.local/share/bob/nvim-bin:$PATH"]
 
+# Setup go environment location
+export GOROOT=${GOROOT:-"$HOME/.go"}
+export GOPATH=${GOPATH:-"$HOME/go"}
+
+# export go path
+[ -d  "$HOME/go/bin" ] && PATH="$HOME/go/bin/:$PATH"]
+
+# export cargo path
+[ -d  "$HOME/.cargo/bin" ] && PATH="$HOME/.cargo/bin/:$PATH"]
+
+# export scripts path
+[ -d  "$HOME/.local/scripts" ] && PATH="$HOME/.local/scripts/:$PATH"]
+
 # export opencode path
 [ -d  "$HOME/.opencode/bin" ] && PATH="$HOME/.opencode/bin:$PATH"]
 
@@ -54,9 +67,6 @@ case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
-
-# vivid generate theme
-export LS_COLORS="$(vivid generate catppuccin-mocha)"
 
 # fzf
 export FZF_DEFAULT_OPTS=" \

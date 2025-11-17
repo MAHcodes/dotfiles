@@ -1,0 +1,9 @@
+(
+    rules: "",
+    model: "",
+    layout: "us,ara",
+    variant: "dvorak,",
+    options: Some("compose:ralt,caps:swapescape"),
+    repeat_delay: 250,
+    repeat_rate: 50,
+)
