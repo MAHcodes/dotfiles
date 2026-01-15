@@ -36,8 +36,8 @@ bind F set-option status off
 bind T set-option status-position top
 bind B set-option status-position bottom
 
-bind-key -r u run-shell "tmux neww tmux-sessionizer"
-bind-key -r ` run-shell "tmux neww tmux-sessionizer ~"
+bind-key -r u run-shell "tmux neww ~/.local/scripts/tmux-sessionizer"
+bind-key -r ` run-shell "tmux neww ~/.local/scripts/tmux-sessionizer ~"
 
 # skip "kill-pane 1? (y/n)" prompt
 bind x kill-pane
