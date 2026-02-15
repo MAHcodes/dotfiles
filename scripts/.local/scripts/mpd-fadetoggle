@@ -1,7 +1,7 @@
 #!/bin/bash
 
-FADEIN=mpd-fadein
-FADEOUT=mpd-fadeout
+FADEIN="/home/ali/.local/scripts/mpd-fadein"
+FADEOUT="/home/ali/.local/scripts/mpd-fadeout"
 
 STATE=$(mpc status | head -2 | tail -1 | awk '{print $1}' | tr -d '[]')
 

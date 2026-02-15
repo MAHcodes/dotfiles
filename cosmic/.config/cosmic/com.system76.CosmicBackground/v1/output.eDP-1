@@ -1,7 +1,7 @@
 (
-    output: "all",
+    output: "eDP-1",
     source: Path("/home/ali/Pictures/thumb-1920-603651.jpg"),
-    filter_by_theme: true,
+    filter_by_theme: false,
     rotation_frequency: 300,
     filter_method: Lanczos,
     scaling_mode: Zoom,

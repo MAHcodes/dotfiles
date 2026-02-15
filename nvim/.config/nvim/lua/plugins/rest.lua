@@ -1,5 +1,7 @@
 local M = { "rest-nvim/rest.nvim" }
 
+M.enabled = false
+
 M.ft = "http"
 
 M.keys = {

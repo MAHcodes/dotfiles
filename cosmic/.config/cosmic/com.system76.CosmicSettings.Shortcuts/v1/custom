@@ -2,10 +2,25 @@
     (
         modifiers: [
             Super,
-            Ctrl,
         ],
-        key: "m",
-    ): System(Mute),
+        key: "Return",
+        description: Some("terminal"),
+    ): Spawn("wezterm start -- tmux"),
+    (
+        modifiers: [
+            Super,
+            Shift,
+        ],
+        key: "s",
+    ): ToggleSticky,
+    (
+        modifiers: [
+            Ctrl,
+            Alt,
+            Shift,
+        ],
+        key: "Left",
+    ): MoveToPreviousWorkspace,
     (
         modifiers: [
             Super,
@@ -22,6 +37,43 @@
     (
         modifiers: [
             Super,
+        ],
+        key: "p",
+        description: Some("mpd toggle"),
+    ): Spawn("/home/ali/.local/scripts//mpd-fadetoggle"),
+    (
+        modifiers: [
+            Alt,
+        ],
+        key: "F4",
+    ): Disable,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "t",
+    ): ToggleWindowFloating,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "Left",
+    ): Move(Left),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "Down",
+    ): Move(Down),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "F11",
+    ): Disable,
+    (
+        modifiers: [
+            Super,
             Shift,
         ],
         key: "Up",
@@ -30,29 +82,27 @@
         modifiers: [
             Super,
         ],
-        key: "Return",
-        description: Some("terminal"),
-    ): Spawn("wezterm start -- tmux"),
-    (
-        modifiers: [
-            Super,
-            Shift,
-        ],
-        key: "s",
-    ): ToggleSticky,
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "n",
-        description: Some("ncmpcpp"),
-    ): Spawn("wezterm start --class=floating -- ncmpcpp"),
-    (
-        modifiers: [
-            Super,
-        ],
         key: "Escape",
     ): Disable,
+    (
+        modifiers: [
+            Ctrl,
+            Alt,
+        ],
+        key: "Right",
+    ): NextWorkspace,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "Up",
+    ): Move(Up),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "Right",
+    ): Move(Right),
     (
         modifiers: [
             Super,
@@ -63,9 +113,50 @@
     (
         modifiers: [
             Super,
+            Alt,
         ],
-        key: "Right",
-    ): Move(Right),
+        key: "m",
+    ): System(MuteMic),
+    (
+        modifiers: [
+            Super,
+            Shift,
+        ],
+        key: "Left",
+    ): Focus(Left),
+    (
+        modifiers: [
+            Super,
+            Ctrl,
+        ],
+        key: "m",
+    ): System(Mute),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "f",
+    ): Maximize,
+    (
+        modifiers: [
+            Ctrl,
+            Alt,
+        ],
+        key: "Left",
+    ): PreviousWorkspace,
+    (
+        modifiers: [
+            Ctrl,
+        ],
+        key: "a",
+    ): Disable,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "n",
+        description: Some("ncmpcpp"),
+    ): Spawn("wezterm start --class=floating -- ncmpcpp"),
     (
         modifiers: [
             Ctrl,
@@ -74,20 +165,6 @@
         ],
         key: "Right",
     ): MoveToNextWorkspace,
-    (
-        modifiers: [
-            Super,
-            Alt,
-        ],
-        key: "m",
-    ): System(MuteMic),
-    (
-        modifiers: [
-            Ctrl,
-            Alt,
-        ],
-        key: "Left",
-    ): PreviousWorkspace,
     (
         modifiers: [
             Super,
@@ -100,83 +177,6 @@
             Super,
             Shift,
         ],
-        key: "Left",
-    ): Focus(Left),
-    (
-        modifiers: [
-            Ctrl,
-            Alt,
-        ],
-        key: "Right",
-    ): NextWorkspace,
-    (
-        modifiers: [
-            Alt,
-        ],
-        key: "F4",
-    ): Disable,
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "F11",
-    ): Disable,
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "f",
-    ): Maximize,
-    (
-        modifiers: [
-            Ctrl,
-            Alt,
-            Shift,
-        ],
-        key: "Left",
-    ): MoveToPreviousWorkspace,
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "Left",
-    ): Move(Left),
-    (
-        modifiers: [
-            Ctrl,
-        ],
-        key: "a",
-    ): Disable,
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "Up",
-    ): Move(Up),
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "Down",
-    ): Move(Down),
-    (
-        modifiers: [
-            Super,
-            Shift,
-        ],
         key: "Down",
     ): Focus(Down),
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "t",
-    ): ToggleWindowFloating,
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "p",
-        description: Some("mpd toggle"),
-    ): Spawn("mpc toggle"),
 }

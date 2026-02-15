@@ -3,8 +3,8 @@ Some(([
 ], [
     "dev.DBrox.CosmicPrivacyIndicator",
     "dev.dominiccgeh.CosmicAppletEmojiSelector",
-    "com.system76.CosmicAppletInputSources",
     "com.system76.CosmicAppletStatusArea",
+    "com.system76.CosmicAppletInputSources",
     "com.system76.CosmicAppletTiling",
     "com.system76.CosmicAppletAudio",
     "com.system76.CosmicAppletNetwork",
