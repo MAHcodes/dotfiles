@@ -1,10 +1,6 @@
 #!/bin/bash
 
-if [ -f $HOME/.mpd/volume ]; then
-    VOL=$(cat $HOME/.mpd/volume)
-else
-    VOL=50
-fi
+VOL=$(mpc volume | grep -oE '[0-9]+')
 
 mpc volume 0
 mpc play
