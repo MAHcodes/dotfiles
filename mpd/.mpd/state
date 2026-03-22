@@ -1,16 +1,27 @@
-sw_volume: 40
+sw_volume: 29
 audio_device_state:1:mpd pulse
 audio_device_state:1:fifo_visualizer
 state: play
 current: 0
-time: 23.663000
+time: 120.301000
 random: 0
 repeat: 1
-single: 0
+single: 1
 consume: 0
 crossfade: 0
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Buried Me Alive – Sad Betrayal Song About Lies & Heartbreak ｜ MiyaViAmore ｜ Lyric Video [tyiLP_96pSs].webm
+0:Psylosia - pay for you (Official Music Video) [1YX8Qcs13Vc].webm
+1:Obsidian Elegy｜Dark Cello in Refined Shadows [H6xAgjSxhI8].webm
+song_begin: https://sawtelghad.org/8888/stream
+song_end
+song_begin: https://stream-155.zeno.fm/snczwewpsg0uv?zs=D1WpUTPUQQ6RCGntxaK8TQ
+song_end
+song_begin: https://s5.radio.co/sb31373ca4/listen
+song_end
+song_begin: https://l3.itworkscdn.net/itwaudio/9066/stream
+Time: 0.000000
+Name: No Name
+song_end
 playlist_end

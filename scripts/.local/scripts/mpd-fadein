@@ -1,13 +1,19 @@
 #!/bin/bash
 
+STATE=$(mpc status | awk 'NR==2 {print $1}' | tr -d '[]')
+
+if [ "$STATE" != "paused" ]; then
+  exit 0
+fi
+
 VOL=$(mpc volume | grep -oE '[0-9]+')
 
 mpc volume 0
 mpc play
 
 for i in $(seq 0 1 "$VOL"); do
-    mpc volume $i > /dev/null
-    sleep 0.05
+  mpc volume $i >/dev/null
+  sleep 0.05
 done
 
 mpc volume "$VOL"

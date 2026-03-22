@@ -6,4 +6,10 @@
         scroll_button: None,
         scroll_factor: None,
     )),
+    tap_config: Some((
+        enabled: true,
+        button_map: Some(LeftRightMiddle),
+        drag: true,
+        drag_lock: false,
+    )),
 )
