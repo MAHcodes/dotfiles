@@ -1,0 +1,22 @@
+[
+    (
+        expression: "10/2",
+        outcome: "5",
+        decimal_comma: false,
+    ),
+    (
+        expression: "2*3",
+        outcome: "6",
+        decimal_comma: false,
+    ),
+    (
+        expression: "2^2",
+        outcome: "4",
+        decimal_comma: false,
+    ),
+    (
+        expression: "2^3",
+        outcome: "8",
+        decimal_comma: false,
+    ),
+]

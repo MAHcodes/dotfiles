@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Feishin
+GenericName=Music player
+Exec=/home/ali/Applications/Feishin-linux-x86_64.AppImage
+TryExec=/home/ali/Applications/Feishin-linux-x86_64.AppImage
+Terminal=false
+Type=Application
+Icon=/home/ali/.local/share/icons/applications/feishin.png
+StartupWMClass=feishin
+SingleMainWindow=true
+Categories=AudioVideo;Audio;Player;Music;
+Keywords=Navidrome;Jellyfin;Subsonic;OpenSubsonic
+Comment=A player for your self-hosted music server

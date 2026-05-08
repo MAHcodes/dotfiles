@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=GNU Image Manipulation Program
+GenericName=Image Editor
+Comment=Create images and edit photographs
+Keywords=GIMP;graphic;design;illustration;painting;
+Exec=/home/ali/Applications/GIMP-3.0.6-x86_64.AppImage %U
+Icon=/home/ali/.local/share/icons/applications/gimp.svg
+Terminal=false
+Categories=Graphics;2DGraphics;RasterGraphics;GTK;

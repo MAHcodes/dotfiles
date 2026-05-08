@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Figma
+Comment=Figma Desktop
+Exec=/home/ali/Applications/figma-linux_0.11.5_linux_x86_64.AppImage %U
+Icon=/home/ali/.local/share/icons/applications/figma.png
+Terminal=false
+Type=Application
+Categories=Graphics;Design;
+MimeType=x-scheme-handler/figma;x-scheme-handler/https;

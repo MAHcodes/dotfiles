@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Logseq
+Exec=/home/ali/Applications/Logseq-linux-x64-0.10.15.AppImage
+Terminal=false
+Type=Application
+Icon=/home/ali/.local/share/icons/applications/logseq.webp
+StartupWMClass=undefined
+Comment=A privacy-first, open-source platform for knowledge management and collaboration.
+Categories=Utility
+MimeType=x-scheme-handler/logseq;text/html;
