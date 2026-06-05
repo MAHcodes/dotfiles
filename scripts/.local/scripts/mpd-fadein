@@ -13,7 +13,7 @@ mpc play
 
 for i in $(seq 0 1 "$VOL"); do
   mpc volume $i >/dev/null
-  sleep 0.05
+  sleep 0.025
 done
 
 mpc volume "$VOL"

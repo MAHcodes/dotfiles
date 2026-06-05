@@ -4,7 +4,7 @@ VOL=$(mpc volume | grep -oE '[0-9]+')
 
 for i in $(seq "$VOL" -1 0); do
     mpc volume $i > /dev/null
-    sleep 0.05
+    sleep 0.025
 done
 
 mpc pause

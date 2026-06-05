@@ -1,6 +1,6 @@
 (
     output: "all",
-    source: Path("/home/ali/Pictures/roa100123fea-mustang-darkhorse-022-655c0b2392bad.jpg"),
+    source: Path("/home/ali/Downloads/Downpic.cc-image430168263.jpg"),
     filter_by_theme: true,
     rotation_frequency: 300,
     filter_method: Lanczos,
