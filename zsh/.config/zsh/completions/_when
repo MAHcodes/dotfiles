@@ -1,22 +1,4 @@
 #compdef when
 
-_when() {
-  local -a subcmds=(
-    "help"
-    "version"
-    "next"
-    "all"
-    "emsak"
-    "fajer"
-    "shorook"
-    "dohor"
-    "aser"
-    "moghreb"
-    "ishaa"
-    "midnight"
-  )
-
-  _describe 'when' subcmds
-}
-
-_when "$@"
+_arguments \
+  '1: :(help version next all alarm systemd complete imsak fajr shorouq dhuhr asr maghrib isha midnight)'

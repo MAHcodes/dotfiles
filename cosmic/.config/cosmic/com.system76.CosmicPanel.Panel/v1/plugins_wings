@@ -2,7 +2,7 @@ Some(([
     "com.system76.CosmicAppletWorkspaces",
 ], [
     "dev.DBrox.CosmicPrivacyIndicator",
-    "io.github.avomar.cosmic-ext-applet-bitrate",
+    "com.ali.WhenPrayerApplet",
     "io.github.petar030.cosmic-pomodoro",
     "dev.dominiccgeh.CosmicAppletEmojiSelector",
     "com.system76.CosmicAppletStatusArea",
