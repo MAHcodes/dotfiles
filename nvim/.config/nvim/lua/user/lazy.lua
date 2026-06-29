@@ -15,8 +15,6 @@ end
 
 ---@diagnostic disable-next-line: param-type-mismatch
 vim.opt.rtp:prepend(lazypath)
-
-vim.opt.confirm = true
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 

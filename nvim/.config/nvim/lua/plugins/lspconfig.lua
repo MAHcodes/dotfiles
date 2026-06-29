@@ -41,12 +41,11 @@ M.config = function()
 			vim.keymap.set("n", keys, func, { buffer = bufnr, desc = "LSP: " .. desc })
 		end
 
-		map("[d", vim.diagnostic.goto_prev, "Goto Prev Diagnostic")
-		map("]d", vim.diagnostic.goto_next, "Goto Next Diagnostic")
+		map("[d", function() vim.diagnostic.jump { count = -1 } end, "Goto Prev Diagnostic")
+		map("]d", function() vim.diagnostic.jump { count = 1 } end, "Goto Next Diagnostic")
 		map("gl", vim.diagnostic.open_float, "Goto Diagnostic Floating Window")
 		map("gq", vim.diagnostic.setloclist, "Goto Diagnostic Quickfix list")
 
-		map("gD", vim.lsp.buf.declaration, "Goto Declaration")
 		-- map("K", vim.lsp.buf.hover, "Goto Hover Documentation")
 		map("gh", vim.lsp.buf.signature_help, "Goto Signature Documentation")
 		map("gn", vim.lsp.buf.rename, "Rename")

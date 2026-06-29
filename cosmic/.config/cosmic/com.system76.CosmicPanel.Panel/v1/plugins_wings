@@ -3,7 +3,6 @@ Some(([
 ], [
     "dev.DBrox.CosmicPrivacyIndicator",
     "com.ali.WhenPrayerApplet",
-    "io.github.petar030.cosmic-pomodoro",
     "dev.dominiccgeh.CosmicAppletEmojiSelector",
     "com.system76.CosmicAppletStatusArea",
     "com.system76.CosmicAppletInputSources",

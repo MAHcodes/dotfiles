@@ -57,5 +57,3 @@ for k, v in pairs(options) do
 	vim.opt[k] = v
 end
 
-vim.api.nvim_set_var("t_ZH", "[3m")
-vim.api.nvim_set_var("t_ZR", "[23m")

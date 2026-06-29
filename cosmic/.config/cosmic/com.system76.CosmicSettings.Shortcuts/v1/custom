@@ -2,9 +2,70 @@
     (
         modifiers: [
             Super,
+            Shift,
+        ],
+        key: "p",
+        description: Some("mpc toggle"),
+    ): Spawn("mpc toggle"),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "Left",
+    ): Move(Left),
+    (
+        modifiers: [
+            Super,
         ],
         key: "m",
     ): Spawn("wezterm start --class=floating -- pulsemixer"),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "Down",
+    ): Move(Down),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "p",
+    ): System(PlayPause),
+    (
+        modifiers: [
+            Super,
+            Shift,
+        ],
+        key: "f",
+    ): Fullscreen,
+    (
+        modifiers: [
+            Super,
+            Shift,
+        ],
+        key: "Up",
+    ): Focus(Up),
+    (
+        modifiers: [
+            Ctrl,
+            Alt,
+            Shift,
+        ],
+        key: "Left",
+    ): MoveToPreviousWorkspace,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "f",
+    ): Maximize,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "Return",
+        description: Some("terminal"),
+    ): Spawn("wezterm start -- tmux"),
     (
         modifiers: [
             Super,
@@ -17,8 +78,21 @@
             Super,
             Shift,
         ],
-        key: "f",
-    ): Fullscreen,
+        key: "Left",
+    ): Focus(Left),
+    (
+        modifiers: [
+            Alt,
+        ],
+        key: "F4",
+    ): Disable,
+    (
+        modifiers: [
+            Ctrl,
+            Alt,
+        ],
+        key: "Left",
+    ): PreviousWorkspace,
     (
         modifiers: [
             Super,
@@ -35,57 +109,23 @@
     ): System(MuteMic),
     (
         modifiers: [
+            Super,
             Ctrl,
-            Alt,
         ],
-        key: "Left",
-    ): PreviousWorkspace,
+        key: "m",
+    ): System(Mute),
     (
         modifiers: [
             Super,
         ],
-        key: "Left",
-    ): Move(Left),
+        key: "Up",
+    ): Move(Up),
     (
         modifiers: [
-            Alt,
+            Ctrl,
         ],
-        key: "F4",
+        key: "a",
     ): Disable,
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "Down",
-    ): Move(Down),
-    (
-        modifiers: [
-            Ctrl,
-            Alt,
-            Shift,
-        ],
-        key: "Right",
-    ): MoveToNextWorkspace,
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "n",
-        description: Some("ncmpcpp"),
-    ): Spawn("wezterm start --class=floating -- ncmpcpp"),
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "p",
-    ): System(PlayPause),
-    (
-        modifiers: [
-            Ctrl,
-            Alt,
-        ],
-        key: "Right",
-    ): NextWorkspace,
     (
         modifiers: [
             Super,
@@ -101,9 +141,17 @@
     (
         modifiers: [
             Super,
+            Shift,
         ],
-        key: "Up",
-    ): Move(Up),
+        key: "Escape",
+    ): System(LockScreen),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "n",
+        description: Some("ncmpcpp"),
+    ): Spawn("wezterm start --class=floating -- ncmpcpp"),
     (
         modifiers: [
             Super,
@@ -112,10 +160,17 @@
     (
         modifiers: [
             Super,
+        ],
+        key: "F11",
+    ): Disable,
+    (
+        modifiers: [
+            Ctrl,
+            Alt,
             Shift,
         ],
-        key: "Escape",
-    ): System(LockScreen),
+        key: "Right",
+    ): MoveToNextWorkspace,
     (
         modifiers: [
             Super,
@@ -132,63 +187,8 @@
     (
         modifiers: [
             Ctrl,
-        ],
-        key: "a",
-    ): Disable,
-    (
-        modifiers: [
-            Super,
-            Shift,
-        ],
-        key: "p",
-        description: Some("mpc toggle"),
-    ): Spawn("mpc toggle"),
-    (
-        modifiers: [
-            Super,
-            Ctrl,
-        ],
-        key: "m",
-    ): System(Mute),
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "Return",
-        description: Some("terminal"),
-    ): Spawn("wezterm start -- tmux"),
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "f",
-    ): Maximize,
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "F11",
-    ): Disable,
-    (
-        modifiers: [
-            Super,
-            Shift,
-        ],
-        key: "Up",
-    ): Focus(Up),
-    (
-        modifiers: [
-            Super,
-            Shift,
-        ],
-        key: "Left",
-    ): Focus(Left),
-    (
-        modifiers: [
-            Ctrl,
             Alt,
-            Shift,
         ],
-        key: "Left",
-    ): MoveToPreviousWorkspace,
+        key: "Right",
+    ): NextWorkspace,
 }
