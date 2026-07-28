@@ -19,4 +19,9 @@
         outcome: "8",
         decimal_comma: false,
     ),
+    (
+        expression: "50*50",
+        outcome: "2500",
+        decimal_comma: false,
+    ),
 ]

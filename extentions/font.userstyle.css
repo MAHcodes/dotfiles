@@ -1,0 +1,61 @@
+/* ==UserStyle==
+@name         Multilingual Font Override (Bricolage Grotesque / IBM Plex Sans Arabic / Apple Color Emoji)
+@namespace    github.com/yourname
+@version      1.0.0
+@description  Forces Latin/English text to Bricolage Grotesque, Arabic text to IBM Plex Sans Arabic,
+              and emoji to Apple Color Emoji, on every page.
+@author       you
+==/UserStyle== */
+
+/*
+  HOW THIS WORKS
+  --------------
+  CSS resolves font-family lists per *character*, not per element: for each
+  glyph, the browser tries the first font in the stack, and if that font
+  doesn't contain that glyph, it moves to the next font, and so on. So a
+  single stack that lists Bricolage Grotesque, then IBM Plex Sans Arabic,
+  then Apple Color Emoji, then a generic fallback, naturally routes:
+    - Latin letters/numbers  -> Bricolage Grotesque (has those glyphs)
+    - Arabic script          -> falls through to IBM Plex Sans Arabic
+    - Emoji                  -> falls through to Apple Color Emoji
+  No JS or language-detection is required.
+
+  Apple Color Emoji is only present on Apple platforms (macOS/iOS/Safari).
+  On Windows/Linux/Android the browser will silently skip it and use the
+  next available emoji font instead — there's no way to "install" Apple's
+  emoji font on other OSes due to licensing.
+*/
+
+/* Userstyles can't use <link>/preconnect tags, so we pull the same
+   Google Fonts CSS2 API stylesheets in with @import instead. This gives
+   the full variable-font axis ranges (optical size + weight) rather than
+   a single static weight. @import must come before any other rules. */
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
+
+/* Global stack: order matters — do not reorder these three. */
+html, body,
+* {
+  font-family:
+    'Bricolage Grotesque',
+    'IBM Plex Sans Arabic',
+    'Apple Color Emoji',
+    sans-serif !important;
+  font-optical-sizing: auto !important;
+  font-variation-settings: 'wdth' 100 !important;
+}
+
+/* Per-weight helper classes, matching the variable-font pattern from
+   Google Fonts' embed snippet, in case you want to hand-pick a weight
+   on specific elements rather than relying on the page's own font-weight. */
+.bricolage-grotesque-200 { font-family: 'Bricolage Grotesque', sans-serif; font-optical-sizing: auto; font-weight: 200; font-style: normal; font-variation-settings: 'wdth' 100; }
+.bricolage-grotesque-400 { font-family: 'Bricolage Grotesque', sans-serif; font-optical-sizing: auto; font-weight: 400; font-style: normal; font-variation-settings: 'wdth' 100; }
+.bricolage-grotesque-600 { font-family: 'Bricolage Grotesque', sans-serif; font-optical-sizing: auto; font-weight: 600; font-style: normal; font-variation-settings: 'wdth' 100; }
+.bricolage-grotesque-800 { font-family: 'Bricolage Grotesque', sans-serif; font-optical-sizing: auto; font-weight: 800; font-style: normal; font-variation-settings: 'wdth' 100; }
+
+/* Keep genuinely code-y elements on a monospace stack instead of overriding them */
+code, kbd, pre, samp, textarea.code, .monospace {
+  font-family:
+    ui-monospace, 'SF Mono', Menlo, Consolas,
+    'Apple Color Emoji', monospace !important;
+}
