@@ -82,7 +82,7 @@ M.opts = {
 
 M.config = function()
 	local harpoon = require "harpoon"
-	harpoon:setup()
+	harpoon:setup(M.opts)
 end
 
 local icons = require "user.icons"

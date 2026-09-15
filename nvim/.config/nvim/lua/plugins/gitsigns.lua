@@ -1,6 +1,6 @@
 return {
 	"lewis6991/gitsigns.nvim",
-  event = { "BufReadPre", "BufNewFile" },
+	event = { "BufReadPre", "BufNewFile" },
 	cmd = "Gitsigns",
 	keys = {
 		{
@@ -72,7 +72,6 @@ return {
 		linehl = false,
 		word_diff = false,
 		watch_gitdir = {
-			interval = 1000,
 			follow_files = true,
 		},
 		attach_to_untracked = true,

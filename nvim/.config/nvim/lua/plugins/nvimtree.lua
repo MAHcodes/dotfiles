@@ -85,9 +85,9 @@ return {
 				prefix = "[FILTER]: ",
 				always_show_folders = false,
 			},
-			renderer = {
-				highlight_git = true,
-				indent_markers = {
+		renderer = {
+			highlight_git = "name",
+			indent_markers = {
 					enable = true,
 					inline_arrows = false,
 					icons = {
@@ -125,7 +125,9 @@ return {
 					modified_placement = "after",
 					diagnostics_placement = "before",
 					bookmarks_placement = "before",
-					padding = " ",
+					padding = {
+						icon = " ",
+					},
 					show = {
 						file = true,
 						folder = true,
@@ -137,15 +139,20 @@ return {
 					},
 				},
 			},
-			disable_netrw = false,
-			hijack_netrw = false,
-			open_on_tab = true,
-			hijack_cursor = false,
-			hijack_directories = {
-				enable = true,
-				auto_open = true,
+		disable_netrw = false,
+		hijack_netrw = false,
+		tab = {
+			sync = {
+				open = true,
+				close = true,
 			},
-			update_cwd = false,
+		},
+		hijack_cursor = false,
+		hijack_directories = {
+			enable = true,
+			auto_open = true,
+		},
+		sync_root_with_cwd = false,
 			diagnostics = {
 				enable = true,
 				icons = {
@@ -157,19 +164,16 @@ return {
 			},
 			update_focused_file = {
 				enable = true,
-				update_cwd = true,
-				ignore_list = {},
-			},
-			system_open = {
-				cmd = nil,
-				args = {},
+				update_root = {
+					enable = true,
+				},
 			},
 			filters = {
 				dotfiles = false,
+				git_ignored = false,
 			},
 			git = {
 				enable = true,
-				ignore = false,
 				timeout = 500,
 			},
 			modified = {
@@ -198,7 +202,11 @@ return {
 			},
 			trash = {
 				cmd = "trash",
-				require_confirm = true,
+			},
+			ui = {
+				confirm = {
+					trash = true,
+				},
 			},
 			actions = {
 				open_file = {

@@ -58,8 +58,7 @@ return {
 
 		return {
 			fold_virt_text_handler = handler,
-			close_fold_kinds = {},
-			-- close_fold_kinds = { "imports", "comment" },
+			-- close_fold_kinds_for_ft = { default = { "imports", "comment" } },
 			provider_selector = function(bufnr, filetype, buftype)
 				-- if you prefer treesitter provider rather than lsp,
 				-- return ftMap[filetype] or {'treesitter', 'indent'}

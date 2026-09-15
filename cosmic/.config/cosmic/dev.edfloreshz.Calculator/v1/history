@@ -24,4 +24,19 @@
         outcome: "2500",
         decimal_comma: false,
     ),
+    (
+        expression: "10-4+2",
+        outcome: "8",
+        decimal_comma: false,
+    ),
+    (
+        expression: "8-3+5",
+        outcome: "10",
+        decimal_comma: false,
+    ),
+    (
+        expression: "10-6+1",
+        outcome: "5",
+        decimal_comma: false,
+    ),
 ]

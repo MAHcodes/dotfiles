@@ -230,59 +230,33 @@ M.config = function()
 		"cljfmt",
 	}
 
-	local capabilities = vim.tbl_deep_extend(
-		"force",
-		vim.lsp.protocol.make_client_capabilities(),
-		-- require("cmp_nvim_lsp").default_capabilities(),
-		{
+	-- nvim 0.12+ native LSP: per-server settings are declared with vim.lsp.config()
+	-- and servers are enabled with vim.lsp.enable() (mason-lspconfig v2 does this
+	-- automatically). The old `handlers`/`automatic_installation` API is removed.
+	vim.lsp.config("*", {
+		capabilities = {
 			textDocument = {
 				foldingRange = {
 					dynamicRegistration = false,
 					lineFoldingOnly = true,
 				},
 			},
-		}
-	)
-
-	local function extend_server_capabilities(server)
-		return vim.tbl_deep_extend("force", {}, capabilities, server.capabilities or {})
-	end
-
-	local lspconfig = require "lspconfig"
-	local configs = require "lspconfig.configs"
-
-	local custom_servers = {
-		gleam = {
-			cmd = { "gleam", "lsp" },
-			-- cmd = { "glas", "--stdio" },
-			autostart = true,
-			filetypes = { "gleam" },
-			root_dir = lspconfig.util.root_pattern("gleam.toml", ".git"),
 		},
-	}
+	})
 
-	for server_name, server_config in pairs(custom_servers) do
-		if not configs[server_name] then
-			configs[server_name] = {
-				default_config = server_config,
-			}
-			server_config.capabilities = extend_server_capabilities(server_config)
-			lspconfig[server_name].setup(server_config)
+	for server_name, server_config in pairs(mason_servers) do
+		if next(server_config) then
+			vim.lsp.config(server_name, server_config)
 		end
 	end
 
-	local ensure_installed = vim.list_extend(vim.tbl_keys(mason_servers), other_servers)
-	require("mason-tool-installer").setup { ensure_installed = ensure_installed }
+	require("mason-tool-installer").setup { ensure_installed = other_servers }
 
 	require("mason-lspconfig").setup {
-		automatic_installation = true,
-		handlers = {
-			function(server_name)
-				local server_config = mason_servers[server_name] or {}
-				server_config.capabilities = extend_server_capabilities(server_config)
-				lspconfig[server_name].setup(server_config)
-			end,
-		},
+		ensure_installed = vim.tbl_keys(mason_servers),
+		-- only auto-enable the curated list (default `true` would also enable
+		-- every other mason-installed server, e.g. stylua/biome as LSP)
+		automatic_enable = vim.tbl_keys(mason_servers),
 	}
 end
 

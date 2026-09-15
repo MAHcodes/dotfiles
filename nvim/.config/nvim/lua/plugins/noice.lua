@@ -119,7 +119,7 @@ return {
 				},
 
 				format_done = {
-					{ " ✔  ", hl_group = "NoiceLspProgressSuccess" },
+					{ " ✔  ", hl_group = "NoiceLspProgressSpinner" },
 					{ "{data.progress.title} ", hl_group = "NoiceLspProgressTitle" },
 					{ "{data.progress.client} ", hl_group = "NoiceLspProgressClient" },
 				},
@@ -184,12 +184,6 @@ return {
 		},
 		health = {
 			checker = true, -- Disable if you don't want health checks to run
-		},
-		smart_move = {
-			-- noice tries to move out of the way of existing floating windows.
-			enabled = true, -- you can disable this behaviour here
-			-- add any filetypes here, that shouldn't trigger smart move.
-			excluded_filetypes = { "cmp_menu", "cmp_docs", "notify" },
 		},
 		presets = {
 			-- you can enable a preset by setting it to true, or a table that will override the preset config

@@ -121,10 +121,6 @@ return {
 		lazy = true,
 	},
 	{
-		"nyoom-engineering/oxocarbon.nvim",
-		lazy = true,
-	},
-	{
 		"ishan9299/nvim-solarized-lua",
 		lazy = true,
 	},

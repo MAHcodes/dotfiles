@@ -15,7 +15,6 @@ return {
 		},
 	},
 	opts = {
-		active = true,
 		detection_methods = { "pattern" },
 		exclude_dirs = { "*/node_modules/*" },
 		patterns = { ".git", "Makefile", "package.json", "gleam.toml", "go.mod" },

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=cliamp
+GenericName=Music Player
+Comment=A retro terminal music player inspired by Winamp 2.x
+Exec=/home/ali/.local/bin/cliamp
+Icon=cliamp
+Terminal=true
+Type=Application
+Categories=Audio;Music;Player;AudioVideo;ConsoleOnly;
+Keywords=music;audio;player;terminal;tui;winamp;radio;podcast;
+StartupNotify=false

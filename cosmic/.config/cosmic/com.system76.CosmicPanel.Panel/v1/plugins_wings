@@ -1,7 +1,6 @@
 Some(([
     "com.system76.CosmicAppletWorkspaces",
 ], [
-    "dev.DBrox.CosmicPrivacyIndicator",
     "com.ali.WhenPrayerApplet",
     "dev.dominiccgeh.CosmicAppletEmojiSelector",
     "com.system76.CosmicAppletStatusArea",

@@ -1,0 +1,17 @@
+[MIME Cache]
+application/pdf=helium.desktop;
+application/rdf+xml=helium.desktop;
+application/rss+xml=helium.desktop;
+application/xhtml+xml=helium.desktop;
+application/xhtml_xml=helium.desktop;
+application/xml=helium.desktop;
+image/gif=helium.desktop;
+image/jpeg=helium.desktop;
+image/png=helium.desktop;
+image/webp=helium.desktop;
+text/html=helium.desktop;logseq.desktop;
+text/xml=helium.desktop;
+x-scheme-handler/figma=figma.desktop;
+x-scheme-handler/http=helium.desktop;
+x-scheme-handler/https=figma.desktop;helium.desktop;
+x-scheme-handler/logseq=logseq.desktop;

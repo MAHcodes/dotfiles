@@ -2,9 +2,9 @@
     save_location: Pictures,
     choice: Rectangle,
     last_rectangle: Some((
-        left: 1075,
-        top: 185,
-        right: 1266,
-        bottom: 427,
+        left: 1235,
+        top: 295,
+        right: 1414,
+        bottom: 884,
     )),
 )

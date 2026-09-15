@@ -2,20 +2,13 @@ return {
 	"olimorris/persisted.nvim",
 	enabled = true,
 	cmd = {
-		"SessionToggle",
-		"SessionStart",
-		"SessionStop",
-		"SessionSave",
-		"SessionLoad",
-		"SessionLoadLast",
-		"SessionLoadFromFile",
-		"SessionDelete",
+		"Persisted",
 	},
 	dependencies = {
 		"nvim-telescope/telescope.nvim",
 	},
 	opts = {
-		should_autosave = function()
+		should_save = function()
 			if vim.bo.filetype == "alpha" then
 				return false
 			end

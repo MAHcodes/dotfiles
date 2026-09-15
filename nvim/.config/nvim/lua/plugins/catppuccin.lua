@@ -10,7 +10,6 @@ return {
 			dark = "mocha",
 		},
 		transparent_background = false,
-		show_end_of_buffer = false,
 		term_colors = false,
 		dim_inactive = {
 			enabled = false,
@@ -33,6 +32,23 @@ return {
 			properties = {},
 			types = {},
 			operators = {},
+		},
+		lsp_styles = {
+			virtual_text = {
+				errors = { "italic" },
+				hints = { "italic" },
+				warnings = { "italic" },
+				information = { "italic" },
+			},
+			underlines = {
+				errors = { "underline" },
+				hints = { "underline" },
+				warnings = { "underline" },
+				information = { "underline" },
+			},
+			inlay_hints = {
+				background = true,
+			},
 		},
 		color_overrides = {},
 		custom_highlights = function(colors)
@@ -77,7 +93,6 @@ return {
 			blink_cmp = true,
 			gitsigns = true,
 			nvimtree = true,
-			treesitter = true,
 			octo = true,
 			notify = true,
 			markdown = true,
@@ -109,24 +124,6 @@ return {
 			},
 			navic = {
 				enabled = true,
-			},
-			native_lsp = {
-				enabled = true,
-				virtual_text = {
-					errors = { "italic" },
-					hints = { "italic" },
-					warnings = { "italic" },
-					information = { "italic" },
-				},
-				underlines = {
-					errors = { "underline" },
-					hints = { "underline" },
-					warnings = { "underline" },
-					information = { "underline" },
-				},
-				inlay_hints = {
-					background = true,
-				},
 			},
 		},
 	},

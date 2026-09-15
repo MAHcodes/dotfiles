@@ -1,7 +1,7 @@
 return {
 	"utilyre/barbecue.nvim",
 	event = { "BufRead", "BufWinEnter", "BufNewFile" },
-	requires = {
+	dependencies = {
 		"SmiteshP/nvim-navic",
 		"nvim-tree/nvim-web-devicons",
 	},
