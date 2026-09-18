@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Factorio
+Comment=Build, automate, and expand your factory
+Exec=env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia "/home/ali/Games/factorio/bin/x64/factorio"
+Icon=/home/ali/Games/factorio/data/core/graphics/factorio-icon.png
+Terminal=false
+Categories=Game;StrategyGame;
+Keywords=game;strategy;factory;automation;

@@ -113,7 +113,6 @@ M.config = function()
 
 	local mason_servers = {
 		eslint = {},
-		djlint = {},
 		html = {},
 		jqls = {},
 		pyright = {},

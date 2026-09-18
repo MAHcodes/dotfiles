@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=Minecraft
+Icon=/home/ali/Games/Minecraft_1.20.4/support/icon.png
+Exec=env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia "/home/ali/Games/Minecraft_1.20.4/start.sh"
+Categories=Game;

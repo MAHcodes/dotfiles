@@ -1,9 +1,9 @@
-sw_volume: 40
+sw_volume: 20
 audio_device_state:1:mpd pulse
 audio_device_state:1:fifo_visualizer
 state: pause
 current: 0
-time: 156.078000
+time: 462.098000
 random: 1
 repeat: 1
 single: 0
@@ -12,5 +12,5 @@ crossfade: 10
 mixrampdb: 0.000000
 mixrampdelay: -1.000000
 playlist_begin
-0:Indila/Mini World/1 - Dernière danse.flac
+0:Khader Abbas ⧸ خضر عباس/NA/NA - هلي الغربة ⧸ حسينا ⧸ هلي ولابيدي حيلة ولاوسيله ⧸ شكد عثرنه ⧸ الرادود خضر عباس.m4a
 playlist_end

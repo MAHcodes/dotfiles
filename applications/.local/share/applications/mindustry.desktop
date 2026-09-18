@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Mindustry
+Comment=The automation tower defense RTS
+Exec=env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia "/home/ali/Games/Mindustry/Mindustry"
+Icon=/home/ali/Games/Mindustry/support/icon.png
+Terminal=false
+Categories=Game;StrategyGame;
