@@ -1,0 +1,69 @@
+[
+    (
+        name: "cosmic-office",
+        icon: "folder-symbolic",
+        filter: Categories(
+            categories: [
+                "Office",
+            ],
+            exclude: [],
+            include: [
+                "org.gnome.Totem",
+                "org.gnome.eog",
+                "simple-scan",
+                "thunderbird",
+            ],
+        ),
+    ),
+    (
+        name: "cosmic-system",
+        icon: "folder-symbolic",
+        filter: Categories(
+            categories: [
+                "System",
+            ],
+            exclude: [
+                "com.system76.CosmicStore",
+                "com.system76.CosmicTerm",
+            ],
+            include: [
+                "gnome-language-selector",
+                "im-config",
+                "org.freedesktop.IBus.Setup",
+                "system76-driver",
+            ],
+        ),
+    ),
+    (
+        name: "cosmic-utilities",
+        icon: "folder-symbolic",
+        filter: Categories(
+            categories: [
+                "Utility",
+            ],
+            exclude: [
+                "com.system76.CosmicEdit",
+                "com.system76.CosmicFiles",
+            ],
+            include: [
+                "nm-connection-editor",
+            ],
+        ),
+    ),
+    (
+        name: "Gaming",
+        icon: "folder-symbolic",
+        filter: AppIds([
+            "org.cataclysmdda.CataclysmDDA",
+            "factorio",
+            "mindustry",
+            "minecraft",
+            "gog_com-Terraria_1",
+            "gog_com-RimWorld_1",
+            "unreal-engine",
+            "gog_com-Project_Zomboid_1",
+            "DwarfFortress",
+            "gog_com-Songs_of_Syx_1",
+        ]),
+    ),
+]

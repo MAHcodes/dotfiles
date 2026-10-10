@@ -39,4 +39,19 @@
         outcome: "5",
         decimal_comma: false,
     ),
+    (
+        expression: "1600000/89500",
+        outcome: "17.87709497",
+        decimal_comma: false,
+    ),
+    (
+        expression: "17.87709497+33",
+        outcome: "50.87709497",
+        decimal_comma: false,
+    ),
+    (
+        expression: "78+555",
+        outcome: "633",
+        decimal_comma: false,
+    ),
 ]

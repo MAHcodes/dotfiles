@@ -13,5 +13,6 @@
         ),
         tiling_enabled: true,
         id: Some("152535f"),
+        name: None,
     ),
 ]

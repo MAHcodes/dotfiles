@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Unreal Engine 5.8.1
+Comment=Unreal Engine Editor
+Exec=env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia /home/ali/UnrealEngine/Engine/Binaries/Linux/UnrealEditor -vulkan -sm5
+Icon=/home/ali/.local/share/icons/Unreal_Engine_Logo.svg
+Terminal=false
+Categories=Development;IDE;

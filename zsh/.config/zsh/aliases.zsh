@@ -9,3 +9,7 @@ alias nvd="__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia"
 alias ip_wlp0s20f3="ip -brief addr | awk '/wlp0s20f3/{print \$3}'"
 alias twtui="taskwarrior-tui"
 alias :q="exit"
+
+# docker
+alias up="docker compose up"
+alias down="docker compose down"

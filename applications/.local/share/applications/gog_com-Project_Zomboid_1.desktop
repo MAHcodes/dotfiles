@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Value=1.0
+Type=Application
+Name=Project Zomboid
+GenericName=Project Zomboid
+Comment=Project Zomboid
+Icon=/home/ali/GOGGames/ProjectZomboid/support/icon.png
+Exec=env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia "/home/ali/GOGGames/ProjectZomboid/start.sh"
+Categories=Game;
+Path=/home/ali/GOGGames/ProjectZomboid

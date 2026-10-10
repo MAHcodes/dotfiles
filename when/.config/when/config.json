@@ -1,0 +1,12 @@
+{
+  "alarm": {
+    "prayers": [
+      "Fajr",
+      "Dhuhr",
+      "Maghrib"
+    ],
+    "azan": false,
+    "notify": true,
+    "imsakOffset": 0
+  }
+}

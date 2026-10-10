@@ -1,9 +1,11 @@
 Some(([
     "com.system76.CosmicAppletWorkspaces",
+    "com.system76.CosmicAppletMinimize",
 ], [
-    "com.ali.WhenPrayerApplet",
     "dev.dominiccgeh.CosmicAppletEmojiSelector",
+    "com.ali.WhenPrayerApplet",
     "com.system76.CosmicAppletStatusArea",
+    "dev.kbdtoggle.CosmicAppletKeyboard",
     "com.system76.CosmicAppletInputSources",
     "com.system76.CosmicAppletTiling",
     "com.system76.CosmicAppletAudio",

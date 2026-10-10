@@ -40,8 +40,8 @@ export MANPAGER='nvim +Man!'
 [ -d  "$HOME/.local/share/bob/nvim-bin" ] && PATH="$HOME/.local/share/bob/nvim-bin:$PATH"]
 
 # Setup go environment location
-export GOROOT=${GOROOT:-"$HOME/.go"}
-export GOPATH=${GOPATH:-"$HOME/go"}
+# export GOROOT=${GOROOT:-"$HOME/.go"}
+# export GOPATH=${GOPATH:-"$HOME/go"}
 
 # export go path
 [ -d  "$HOME/go/bin" ] && PATH="$HOME/go/bin/:$PATH"]
