@@ -2,6 +2,7 @@
 alias n="nvim"
 alias kvim="NVIM_APPNAME=kvim command nvim"
 alias lvim="NVIM_APPNAME=lvim command nvim"
+alias l="NVIM_APPNAME=lvim command nvim"
 
 # misc
 alias slmake="rm -rf config.h; sudo make clean install; make clean"

@@ -5,7 +5,7 @@ Type=Application
 Name=Songs of Syx
 GenericName=Songs of Syx
 Comment=Songs of Syx
-Icon=/home/ali/GOGGames/SongsofSyx/support/icon.png
+Icon=/home/ali/GOGGames/SongsofSyx/game/base/icons/Icon64.png
 Exec=env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia "/home/ali/GOGGames/SongsofSyx/start.sh"
 Categories=Game;
 Path=/home/ali/GOGGames/SongsofSyx

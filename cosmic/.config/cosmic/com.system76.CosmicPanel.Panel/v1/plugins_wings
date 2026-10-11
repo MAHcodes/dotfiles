@@ -1,17 +1,17 @@
 Some(([
-    "com.system76.CosmicAppletWorkspaces",
-    "com.system76.CosmicAppletMinimize",
+    "dev.daenu.CosmicExtAppletLowkeyWorkspaces",
 ], [
-    "dev.dominiccgeh.CosmicAppletEmojiSelector",
-    "com.ali.WhenPrayerApplet",
     "com.system76.CosmicAppletStatusArea",
-    "dev.kbdtoggle.CosmicAppletKeyboard",
+    "io.github.nwxnw.cosmic-ext-connected",
+    "com.ali.WhenPrayerApplet",
+    "dev.dominiccgeh.CosmicAppletEmojiSelector",
+    "dev.skylar.cosmic-ext-applet-cpufreq",
     "com.system76.CosmicAppletInputSources",
     "com.system76.CosmicAppletTiling",
     "com.system76.CosmicAppletAudio",
+    "com.system76.CosmicAppletBluetooth",
     "com.system76.CosmicAppletNetwork",
     "com.system76.CosmicAppletBattery",
     "com.system76.CosmicAppletNotifications",
-    "com.system76.CosmicAppletBluetooth",
     "com.system76.CosmicAppletPower",
 ]))

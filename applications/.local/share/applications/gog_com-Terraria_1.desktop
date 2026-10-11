@@ -5,7 +5,7 @@ Type=Application
 Name=Terraria
 GenericName=Terraria
 Comment=Terraria
-Icon=/home/ali/GOGGames/Terraria/support/icon.png
+Icon=/home/ali/GOGGames/Terraria/game/Terraria.png
 Exec=env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia "/home/ali/GOGGames/Terraria/start.sh"
 Categories=Game;
 Path=/home/ali/GOGGames/Terraria

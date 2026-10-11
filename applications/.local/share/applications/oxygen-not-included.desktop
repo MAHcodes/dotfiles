@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Oxygen Not Included
+Comment=Colonize an asteroid and survive in a space colony simulation
+Exec=env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia "/home/ali/Games/OxygenNotIncluded_U52/start.sh"
+Icon=/home/ali/Games/OxygenNotIncluded_U52/OxygenNotIncluded_Data/Resources/UnityPlayer.png
+Terminal=false
+Categories=Game;Simulation;
+Keywords=game;simulation;colony;survival;space;

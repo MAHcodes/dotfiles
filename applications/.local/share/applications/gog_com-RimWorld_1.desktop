@@ -5,7 +5,7 @@ Type=Application
 Name=RimWorld
 GenericName=RimWorld
 Comment=RimWorld
-Icon=/home/ali/GOGGames/RimWorld/support/icon.png
+Icon=/home/ali/GOGGames/RimWorld/game/RimWorldLinux_Data/Resources/UnityPlayer.png
 Exec=env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia "/home/ali/GOGGames/RimWorld/start.sh"
 Categories=Game;
 Path=/home/ali/GOGGames/RimWorld
