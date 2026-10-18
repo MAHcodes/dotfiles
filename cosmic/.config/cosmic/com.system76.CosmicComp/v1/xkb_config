@@ -3,7 +3,7 @@
     model: "",
     layout: "us,ara,us",
     variant: "dvorak,,",
-    options: Some("compose:ralt,caps:swapescape"),
+    options: Some("compose:ralt,caps:escape"),
     repeat_delay: 250,
     repeat_rate: 45,
 )

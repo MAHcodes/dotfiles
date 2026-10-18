@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Half-Life: Opposing Force
+Comment=Play through the Black Mesa incident as Adrian Shephard
+Exec=env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia "/home/ali/Games/HLCS/oforce.sh"
+Icon=/home/ali/Games/HLCS/game/gearbox/game.ico
+Terminal=false
+Categories=Game;
+Keywords=game;fps;half-life;

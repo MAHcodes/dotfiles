@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=RimStack
+GenericName=Mod manager
+Comment=Mod manager for RimWorld
+Exec=env RIMSTACK_GAME=~/GOGGames/RimWorld/game /home/ali/Applications/RimStack-1.0.1-x86_64.AppImage
+Icon=rimstack
+Categories=Game;Utility;
+StartupWMClass=rimstack
+Terminal=false

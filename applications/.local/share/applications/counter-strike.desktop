@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Counter-Strike
+Comment=Classic tactical first-person shooter
+Exec=env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia "/home/ali/Games/HLCS/cstrike.sh"
+Icon=/home/ali/Games/HLCS/game/cstrike/cstrike.ico
+Terminal=false
+Categories=Game;
+Keywords=game;fps;counter-strike;

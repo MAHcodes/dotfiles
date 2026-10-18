@@ -23,7 +23,7 @@
 
 [delta]
 	features = catppuccin-mocha
-	syntax-theme = CatppuccinMocha # Use bat theme
+	syntax-theme = Catppuccin Mocha # Use bat theme
   navigate = true  # use n and N to move between diff sections
   side-by-side = true
   line-numbers = true

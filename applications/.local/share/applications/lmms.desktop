@@ -1,0 +1,16 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=LMMS
+GenericName=Music production suite
+Comment=Music sequencer and synthesizer
+Exec=env QT_QPA_PLATFORM=xcb /home/ali/Applications/lmms-1.2.2-linux-x86_64.AppImage %F
+TryExec=/home/ali/Applications/lmms-1.2.2-linux-x86_64.AppImage
+Icon=lmms
+Terminal=false
+StartupNotify=true
+StartupWMClass=lmms.real
+SingleMainWindow=true
+Categories=Qt;AudioVideo;Audio;Midi;
+MimeType=application/x-lmms-project;
+Keywords=music;sequencer;synthesizer;tracker;DAW;midi;

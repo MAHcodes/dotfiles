@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Half-Life: Blue Shift
+Comment=Play through the Black Mesa incident as Barney Calhoun
+Exec=env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia "/home/ali/Games/HLCS/bshift.sh"
+Icon=/home/ali/Games/HLCS/game/bshift/game.ico
+Terminal=false
+Categories=Game;
+Keywords=game;fps;half-life;

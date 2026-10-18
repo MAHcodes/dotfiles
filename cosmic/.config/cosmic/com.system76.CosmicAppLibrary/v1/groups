@@ -6,7 +6,9 @@
             categories: [
                 "Office",
             ],
-            exclude: [],
+            exclude: [
+                "ai.storyteller.pdfcraft",
+            ],
             include: [
                 "org.gnome.Totem",
                 "org.gnome.eog",
@@ -44,6 +46,7 @@
             exclude: [
                 "com.system76.CosmicEdit",
                 "com.system76.CosmicFiles",
+                "ai.storyteller.artcraft-launcher",
             ],
             include: [
                 "nm-connection-editor",
@@ -66,6 +69,22 @@
             "gog_com-Songs_of_Syx_1",
             "oxygen-not-included",
             "gog_com-Caves_of_Qud_1",
+            "counter-strike",
+            "half-life-blue-shift",
+            "half-life-opposing-force",
+            "half-life",
+            "rimstack",
+        ]),
+    ),
+    (
+        name: "ArtCraft",
+        icon: "folder-symbolic",
+        filter: AppIds([
+            "ai.storyteller.figcraft",
+            "ai.storyteller.pdfcraft",
+            "ai.storyteller.artcraft-launcher",
+            "ai.storyteller.photocraft",
+            "ai.storyteller.soundcraft",
         ]),
     ),
 ]

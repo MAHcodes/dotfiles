@@ -2,70 +2,17 @@
     (
         modifiers: [
             Super,
-            Shift,
-        ],
-        key: "p",
-        description: Some("mpc toggle"),
-    ): Spawn("mpc toggle"),
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "Left",
-    ): Move(Left),
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "m",
-    ): Spawn("wezterm start --class=floating -- pulsemixer"),
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "Down",
-    ): Move(Down),
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "p",
-    ): System(PlayPause),
-    (
-        modifiers: [
-            Super,
-            Shift,
-        ],
-        key: "f",
-    ): Fullscreen,
-    (
-        modifiers: [
-            Super,
-            Shift,
-        ],
-        key: "Up",
-    ): Focus(Up),
-    (
-        modifiers: [
-            Ctrl,
-            Alt,
-            Shift,
-        ],
-        key: "Left",
-    ): MoveToPreviousWorkspace,
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "f",
-    ): Maximize,
-    (
-        modifiers: [
-            Super,
         ],
         key: "Return",
         description: Some("terminal"),
     ): Spawn("wezterm start -- tmux"),
+    (
+        modifiers: [
+            Ctrl,
+            Alt,
+        ],
+        key: "Right",
+    ): NextWorkspace,
     (
         modifiers: [
             Super,
@@ -78,99 +25,34 @@
             Super,
             Shift,
         ],
-        key: "Left",
-    ): Focus(Left),
-    (
-        modifiers: [
-            Alt,
-        ],
-        key: "F4",
-    ): Disable,
-    (
-        modifiers: [
-            Ctrl,
-            Alt,
-        ],
-        key: "Left",
-    ): PreviousWorkspace,
-    (
-        modifiers: [
-            Super,
-            Shift,
-        ],
-        key: "s",
-    ): ToggleSticky,
-    (
-        modifiers: [
-            Super,
-            Alt,
-        ],
-        key: "m",
-    ): System(MuteMic),
-    (
-        modifiers: [
-            Super,
-            Ctrl,
-        ],
-        key: "m",
-    ): System(Mute),
-    (
-        modifiers: [
-            Super,
-        ],
         key: "Up",
-    ): Move(Up),
-    (
-        modifiers: [
-            Ctrl,
-        ],
-        key: "a",
-    ): Disable,
+    ): Focus(Up),
     (
         modifiers: [
             Super,
         ],
-        key: "Right",
-    ): Move(Right),
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "t",
-    ): ToggleWindowFloating,
-    (
-        modifiers: [
-            Super,
-            Shift,
-        ],
-        key: "Escape",
-    ): System(LockScreen),
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "n",
-        description: Some("ncmpcpp"),
-    ): Spawn("wezterm start --class=floating -- ncmpcpp"),
-    (
-        modifiers: [
-            Super,
-        ],
-    ): System(Launcher),
-    (
-        modifiers: [
-            Super,
-        ],
-        key: "F11",
-    ): Disable,
+        key: "f",
+    ): Maximize,
     (
         modifiers: [
             Ctrl,
             Alt,
             Shift,
         ],
-        key: "Right",
-    ): MoveToNextWorkspace,
+        key: "Left",
+    ): MoveToPreviousWorkspace,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "m",
+    ): Spawn("wezterm start --class=floating -- pulsemixer"),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "p",
+    ): System(PlayPause),
     (
         modifiers: [
             Super,
@@ -182,13 +64,131 @@
         modifiers: [
             Super,
         ],
+        key: "F11",
+    ): Disable,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "Down",
+    ): Move(Down),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "Up",
+    ): Move(Up),
+    (
+        modifiers: [
+            Super,
+            Shift,
+        ],
+        key: "Escape",
+    ): System(LockScreen),
+    (
+        modifiers: [
+            Super,
+        ],
         key: "Escape",
     ): Disable,
+    (
+        modifiers: [
+            Super,
+            Shift,
+        ],
+        key: "f",
+    ): Fullscreen,
+    (
+        modifiers: [
+            Ctrl,
+        ],
+        key: "a",
+    ): Disable,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "t",
+    ): ToggleWindowFloating,
     (
         modifiers: [
             Ctrl,
             Alt,
         ],
+        key: "Left",
+    ): PreviousWorkspace,
+    (
+        modifiers: [
+            Ctrl,
+            Alt,
+            Shift,
+        ],
         key: "Right",
-    ): NextWorkspace,
+    ): MoveToNextWorkspace,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "Right",
+    ): Move(Right),
+    (
+        modifiers: [
+            Super,
+            Shift,
+        ],
+        key: "p",
+        description: Some("mpc toggle"),
+    ): Spawn("mpc toggle"),
+    (
+        modifiers: [
+            Super,
+        ],
+    ): System(Launcher),
+    (
+        modifiers: [
+            Super,
+            Shift,
+        ],
+        key: "Left",
+    ): Focus(Left),
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "Left",
+    ): Move(Left),
+    (
+        modifiers: [
+            Super,
+            Ctrl,
+        ],
+        key: "m",
+    ): System(Mute),
+    (
+        modifiers: [
+            Super,
+            Alt,
+        ],
+        key: "m",
+    ): System(MuteMic),
+    (
+        modifiers: [
+            Alt,
+        ],
+        key: "F4",
+    ): Disable,
+    (
+        modifiers: [
+            Super,
+        ],
+        key: "n",
+        description: Some("ncmpcpp"),
+    ): Spawn("wezterm start --class=floating -- ncmpcpp"),
+    (
+        modifiers: [
+            Super,
+            Shift,
+        ],
+        key: "s",
+    ): ToggleSticky,
 }

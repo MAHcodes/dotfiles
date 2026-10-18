@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=PdfCraft
+Comment=Reading, organizing and protecting PDFs
+Exec="/home/ali/Applications/pdfcraft-0.7.1-linux-x86_64.AppImage" %F
+Icon=ai.storyteller.pdfcraft
+Terminal=false
+Categories=Office;Viewer;
+StartupWMClass=pdfcraft
+X-ArtCraft-Launcher=true
