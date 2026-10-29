@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=LightCraft
+Comment=Photo library and raw development
+Exec="/home/ali/Applications/lightcraft-0.11.0-linux-x86_64.AppImage" %F
+Icon=ai.storyteller.lightcraft
+Terminal=false
+Categories=Graphics;2DGraphics;RasterGraphics;Photography;
+StartupWMClass=ai.storyteller.lightcraft
+X-ArtCraft-Launcher=true

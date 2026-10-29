@@ -5,7 +5,7 @@
       "Dhuhr",
       "Maghrib"
     ],
-    "azan": false,
+    "azan": true,
     "notify": true,
     "imsakOffset": 0
   }

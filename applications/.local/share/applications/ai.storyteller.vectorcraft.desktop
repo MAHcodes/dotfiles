@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=VectorCraft
+Comment=Vector illustration
+Exec="/home/ali/Applications/vectorcraft-0.14.0-linux-x86_64.AppImage" %F
+Icon=ai.storyteller.vectorcraft
+Terminal=false
+Categories=Graphics;2DGraphics;VectorGraphics;
+StartupWMClass=ai.storyteller.vectorcraft
+X-ArtCraft-Launcher=true

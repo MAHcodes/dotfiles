@@ -1,6 +1,6 @@
 Some(([
-    "dev.daenu.CosmicExtAppletLowkeyWorkspaces",
     "com.system76.CosmicAppletMinimize",
+    "dev.daenu.CosmicExtAppletLowkeyWorkspaces",
 ], [
     "dev.skylar.cosmic-ext-applet-cpufreq",
     "com.system76.CosmicAppletStatusArea",

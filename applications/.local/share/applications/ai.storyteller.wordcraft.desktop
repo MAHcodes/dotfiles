@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=WordCraft
+Comment=Writing and document design
+Exec="/home/ali/Applications/wordcraft-0.9.0-linux-x86_64.AppImage" %F
+Icon=ai.storyteller.wordcraft
+Terminal=false
+Categories=Office;WordProcessor;
+StartupWMClass=ai.storyteller.wordcraft
+X-ArtCraft-Launcher=true

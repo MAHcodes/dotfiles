@@ -2,7 +2,7 @@
 Type=Application
 Name=SoundCraft
 Comment=Recording, editing and mixing audio
-Exec="/home/ali/Applications/soundcraft-0.7.0-linux-x86_64.AppImage" %F
+Exec="/home/ali/Applications/soundcraft-0.11.0-linux-x86_64.AppImage" %F
 Icon=ai.storyteller.soundcraft
 Terminal=false
 Categories=AudioVideo;Audio;Midi;Mixer;Sequencer;Recorder;

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=GridCraft
+Comment=Spreadsheets and data
+Exec="/home/ali/Applications/gridcraft-0.10.0-linux-x86_64.AppImage" %F
+Icon=ai.storyteller.gridcraft
+Terminal=false
+Categories=Office;Spreadsheet;
+StartupWMClass=ai.storyteller.gridcraft
+X-ArtCraft-Launcher=true

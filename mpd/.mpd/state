@@ -1,4 +1,4 @@
-sw_volume: 50
+sw_volume: 30
 audio_device_state:1:mpd pulse
 audio_device_state:1:fifo_visualizer
 state: stop

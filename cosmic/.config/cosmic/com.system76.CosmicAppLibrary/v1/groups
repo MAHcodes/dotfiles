@@ -8,6 +8,9 @@
             ],
             exclude: [
                 "ai.storyteller.pdfcraft",
+                "ai.storyteller.wordcraft",
+                "ai.storyteller.deckcraft",
+                "ai.storyteller.gridcraft",
             ],
             include: [
                 "org.gnome.Totem",
@@ -85,6 +88,15 @@
             "ai.storyteller.artcraft-launcher",
             "ai.storyteller.photocraft",
             "ai.storyteller.soundcraft",
+            "ai.storyteller.wordcraft",
+            "ai.storyteller.deckcraft",
+            "ai.storyteller.gridcraft",
+            "ai.storyteller.effectcraft",
+            "ai.storyteller.designcraft",
+            "ai.storyteller.filmcraft",
+            "ai.storyteller.vectorcraft",
+            "ai.storyteller.lightcraft",
+            "ai.storyteller.cadcraft",
         ]),
     ),
 ]

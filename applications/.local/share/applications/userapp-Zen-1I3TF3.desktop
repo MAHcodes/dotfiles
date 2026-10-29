@@ -3,6 +3,6 @@ Encoding=UTF-8
 Version=1.0
 Type=Application
 NoDisplay=true
-Exec=env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia /opt/zen/zen %u
+Exec=/opt/zen/zen %u
 Name=Zen
 Comment=Custom definition for Zen

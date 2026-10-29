@@ -1,4 +1,4 @@
 #compdef when
 
 _arguments \
-  '1: :(help version next all alarm systemd complete imsak fajr shorouq dhuhr asr maghrib isha midnight)'
+  '1: :(help version next all refresh alarm systemd complete imsak fajr shorouq dhuhr asr maghrib isha midnight)'

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=FilmCraft
+Comment=Video editing, color and sound
+Exec="/home/ali/Applications/filmcraft-0.10.0-linux-x86_64.AppImage" %F
+Icon=ai.storyteller.filmcraft
+Terminal=false
+Categories=AudioVideo;Video;AudioVideoEditing;
+StartupWMClass=ai.storyteller.filmcraft
+X-ArtCraft-Launcher=true
