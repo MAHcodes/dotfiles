@@ -77,6 +77,8 @@
             "half-life-opposing-force",
             "half-life",
             "rimstack",
+            "gog_com-Hollow_Knight_1",
+            "gog_com-Hollow_Knight_Silksong_1",
         ]),
     ),
     (
@@ -97,6 +99,9 @@
             "ai.storyteller.vectorcraft",
             "ai.storyteller.lightcraft",
             "ai.storyteller.cadcraft",
+            "io.tangencylabs.solidcraft",
+            "ai.storyteller.craft-anything",
+            "ai.storyteller.texturecraft",
         ]),
     ),
 ]

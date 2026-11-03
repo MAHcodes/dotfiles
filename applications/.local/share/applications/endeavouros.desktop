@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=EndeavourOS
+Comment=EndeavourOS virtual machine (Quickemu)
+Exec=env WAYLAND_DISPLAY= quickemu --vm /home/ali/quickemu/endeavouros-titan-nova-2026.08.15/endeavouros.conf --display spice
+Path=/home/ali/quickemu/endeavouros-titan-nova-2026.08.15
+Icon=endeavouros-linux
+Terminal=false
+Categories=System;Emulator;
+Keywords=EndeavourOS;Arch;Linux;VirtualMachine;QEMU;Quickemu;

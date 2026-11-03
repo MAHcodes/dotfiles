@@ -2,7 +2,7 @@
 Type=Application
 Name=CADCraft
 Comment=Computer-aided design and drafting
-Exec="/home/ali/Applications/cadcraft-0.10.0-linux-x86_64.AppImage" %F
+Exec="/home/ali/Applications/cadcraft-0.15.1-linux-x86_64.AppImage" %F
 Icon=ai.storyteller.cadcraft
 Terminal=false
 Categories=Graphics;Engineering;VectorGraphics;

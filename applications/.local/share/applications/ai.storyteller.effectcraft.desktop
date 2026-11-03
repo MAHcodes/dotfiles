@@ -2,7 +2,7 @@
 Type=Application
 Name=EffectCraft
 Comment=Motion graphics and visual effects
-Exec="/home/ali/Applications/effectcraft-0.14.0-linux-x86_64.AppImage" %F
+Exec="/home/ali/Applications/effectcraft-0.19.0-linux-x86_64.AppImage" %F
 Icon=ai.storyteller.effectcraft
 Terminal=false
 Categories=AudioVideo;Video;Graphics;2DGraphics;
