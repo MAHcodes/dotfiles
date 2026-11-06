@@ -20,10 +20,11 @@
 [include]
   path = ~/.config/git/themes.gitconfig
 	path = ~/.config/git/catppuccin.gitconfig
+	# Generated from the current Dux Shell (DMS) theme.
+	path = ~/.local/state/dms/git-delta.gitconfig
 
 [delta]
-	features = catppuccin-mocha
-	syntax-theme = Catppuccin Mocha # Use bat theme
+	features = dank
   navigate = true  # use n and N to move between diff sections
   side-by-side = true
   line-numbers = true

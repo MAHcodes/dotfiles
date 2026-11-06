@@ -54,4 +54,9 @@
         outcome: "633",
         decimal_comma: false,
     ),
+    (
+        expression: "9*6",
+        outcome: "54",
+        decimal_comma: false,
+    ),
 ]

@@ -26,14 +26,7 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-# fzf
-export FZF_DEFAULT_OPTS=" \
---border=none --margin=0 --padding=0 --info=inline --prompt=' ' --ansi --no-mouse --reverse \
-  --color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
-  --color=fg:#cdd6f4,header:#f38ba8,info:#b4befe,pointer:#f5e0dc \
-  --color=marker:#f5e0dc,fg+:#cdd6f4,prompt:#b4befe,hl+:#f38ba8 \
---bind 'ctrl-d:change-prompt( )+reload(fd . --type d)' \
---bind 'ctrl-f:change-prompt( )+reload(fd . --type f)'"
+# fzf configuration now lives in ~/.config/zsh/exports.zsh
 
 # if ! pgrep -x "when" >/dev/null; then
 #     when alarm &

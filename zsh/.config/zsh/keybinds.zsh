@@ -14,3 +14,8 @@ bindkey -M vicmd v edit-command-line
 bindkey -M viins -s '^f' 'lfcd\n'
 bindkey -M viins -s '^u' 'tmux-sessionizer\n'
 bindkey -M viins -s '^p' 'fzcdproj\n'
+
+# fzf key bindings: ctrl-r (history), ctrl-t (files), alt-c (directories)
+if command -v fzf >/dev/null 2>&1; then
+  eval "$(fzf --zsh)"
+fi

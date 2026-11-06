@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Fedora Linux
+Comment=Fedora Linux virtual machine (Quickemu)
+Exec=env WAYLAND_DISPLAY= quickemu --vm /home/ali/quickemu/Fedora-Workstation-Live-45-1.4.x86_64/fedora.conf --display spice
+Path=/home/ali/quickemu/Fedora-Workstation-Live-45-1.4.x86_64/
+Icon=fedora
+Terminal=false
+Categories=System;Emulator;
+Keywords=Fedora;Linux;VirtualMachine;QEMU;Quickemu;

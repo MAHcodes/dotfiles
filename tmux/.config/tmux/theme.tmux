@@ -1,7 +1,7 @@
 # catppuccin plugin
 set -g @plugin "MAHcodes/tmux"
 
-set -g @catppuccin_flavour "mocha"
+set -g @catppuccin_flavour "dank"
 
 # catppuccin config
 set -g @catppuccin_window_left_separator "█"

@@ -1,0 +1,25 @@
+# User templates run by Dux Shell (DMS) on every theme change.
+# DMS merges this file into its own matugen run, so these templates are
+# regenerated whenever the system switches theme or light/dark mode.
+
+[config]
+
+# Delta (git diff pager) theme, active via `delta.features = dank`.
+[templates.git_delta]
+input_path = "~/.config/matugen/templates/git-delta.gitconfig"
+output_path = "~/.local/state/dms/git-delta.gitconfig"
+
+# fzf colours, read per invocation through FZF_DEFAULT_OPTS_FILE.
+[templates.fzf_theme]
+input_path = "~/.config/matugen/templates/fzf-theme.opts"
+output_path = "~/.local/state/dms/fzf-theme.opts"
+
+# Dynamic flavour for the catppuccin tmux plugin. The plugin reads
+# catppuccin-<flavour>.tmuxtheme from its own directory, hence this path.
+[templates.tmux_theme]
+input_path = "~/.config/matugen/templates/tmux-theme.tmuxtheme"
+output_path = "~/.config/tmux/plugins/tmux/catppuccin-dank.tmuxtheme"
+# matugen runs hooks with a minimal PATH that does not include the mise shims,
+# where tmux lives. Add them, make sure a running server uses the generated
+# flavour, then re-apply the theme.
+post_hook = 'export PATH="$HOME/.local/share/mise/shims:$PATH"; tmux set-option -g @catppuccin_flavour dank 2>/dev/null; tmux run-shell -b "$HOME/.config/tmux/plugins/tmux/catppuccin.tmux" >/dev/null 2>&1 || true'
