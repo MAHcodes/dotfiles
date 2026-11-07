@@ -74,3 +74,13 @@ function fzcdproj() {
   cd $dir
   return $ret
 }
+
+# Recompile zap plugins for faster startup. Run after `zap update`; zsh will
+# transparently use the compiled files while they are newer than their sources.
+function zcompile-plugins() {
+  local f count=0
+  for f in "$HOME"/.local/share/zap/plugins/**/*.zsh(N); do
+    zcompile "$f" 2>/dev/null && (( count++ ))
+  done
+  print -r -- "zcompiled $count plugin files"
+}
