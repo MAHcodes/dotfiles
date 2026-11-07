@@ -318,6 +318,11 @@ if [[ ! -z $session_cmd ]]; then
 elif [[ ! -z $user_selected ]]; then
     selected="$user_selected"
 else
+    # Load the shared fzf environment so tmux-launched fzf gets the same
+    # defaults and DMS-generated theme colours as an interactive shell.
+    if [ -r "$HOME/.local/scripts/fzf-env.sh" ]; then
+        . "$HOME/.local/scripts/fzf-env.sh"
+    fi
     selected=$(find_dirs | fzf)
 fi
 
