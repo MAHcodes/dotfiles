@@ -36,3 +36,9 @@ set -g @catppuccin_status_modules_right "session gitmux"
 set -g @catppuccin_gitmux_icon " "
 set -g @catppuccin_gitmux_color "blue"
 set -g @catppuccin_gitmux_text '#(gitmux -cfg $HOME/.config/gitmux/gitmux.yaml "#{pane_current_path}")'
+
+# Apply the theme synchronously so the status bar is already themed when the
+# client attaches. TPM re-sources the same plugin in the background, but the
+# values are identical, so this only costs ~0.1s and avoids a flash of tmux's
+# default theme.
+run-shell '[ -x ~/.config/tmux/plugins/tmux/catppuccin.tmux ] && ~/.config/tmux/plugins/tmux/catppuccin.tmux || true'
