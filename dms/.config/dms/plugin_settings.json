@@ -88,10 +88,10 @@
     "tempTab": true,
     "tempIcon": true,
     "usageBar": true,
-    "memBar": true,
-    "gpuBar": true,
+    "memBar": false,
+    "gpuBar": false,
     "fansBar": true,
-    "diskBar": true,
+    "diskBar": false,
     "tempColumns": "1",
     "gpuShowThermals": true,
     "gpuShowPower": true,
@@ -106,7 +106,7 @@
     "order_gpu": "util,mem,thermals,power,clocks,bus,procs",
     "order_mem": "memory,swap",
     "memTab": true,
-    "batBar": true,
+    "batBar": false,
     "tempShowUnit": true,
     "barSeparator": "none",
     "memDisplay": "percent",
@@ -131,7 +131,11 @@
     "tempCores": true,
     "cpuShowPerformance": true,
     "freqShowMax": true,
-    "usageCores": true
+    "usageCores": true,
+    "cpuBar": true,
+    "cpuBarShowAvg": true,
+    "cpuBarShowTemp": true,
+    "cpuBarShowUsage": true
   },
   "wallpaperCarousel": {
     "enabled": true

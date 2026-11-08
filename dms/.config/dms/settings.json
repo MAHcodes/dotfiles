@@ -81,6 +81,10 @@
           "enabled": true
         },
         {
+          "id": "cpuFreq",
+          "enabled": true
+        },
+        {
           "id": "dankKDEConnect",
           "enabled": true
         },
@@ -363,7 +367,7 @@
       "autoHideDelay": 250,
       "showOnWindowsOpen": false,
       "openOnOverview": false,
-      "visible": true,
+      "visible": false,
       "popupGapsAuto": true,
       "popupGapsManual": 4,
       "maximizeDetection": true,
@@ -558,7 +562,7 @@
   "desktopWidgetInstances": [],
   "cursorSettings": {
     "theme": "System Default",
-    "size": 24,
+    "size": 22,
     "niri": {
       "hideWhenTyping": false,
       "hideAfterInactiveMs": 0
