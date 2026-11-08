@@ -1,0 +1,50 @@
+{
+  "lockfileVersion": 1,
+  "plugins": {
+    "calculator": {
+      "repo": "https://github.com/rochacbruno/DankCalculator",
+      "commit": "a27b80ad8c3dd42da11af83461674fb362817515"
+    },
+    "dankKDEConnect": {
+      "repo": "https://github.com/duxlabs-dev/dux-plugins",
+      "path": "DankKDEConnect",
+      "commit": "70e926ea529c729c7e2368e096046295f0d90d48"
+    },
+    "emojiLauncher": {
+      "repo": "https://github.com/devnullvoid/dms-emoji-launcher",
+      "commit": "fc385900e6df292f0a7e5bdda4e3e37169897d7c"
+    },
+    "emojiPicker": {
+      "repo": "https://github.com/hthienloc/dms-plugins",
+      "path": "emojiPicker",
+      "commit": "47fd82f6046dc03bd5ca323a3d7f6fd00431ce1c"
+    },
+    "kbdBacklightOSD": {
+      "repo": "https://github.com/notsopreety/kbdBacklightOSD",
+      "commit": "621096924eef6b5521f6927bbe6fcb75c47ab94d"
+    },
+    "keyboardLayoutSearch": {
+      "repo": "https://github.com/korbash/dms-keyboard-layout-search",
+      "path": "plugin",
+      "commit": "577d3d441f2435934cd5a8399c78a30f8ba731a7"
+    },
+    "musicTheme": {
+      "repo": "https://github.com/felipeadeildo/dms-music-theme",
+      "commit": "70a916991118f2727c36c688478b990c1ea64d46"
+    },
+    "networkIndicator": {
+      "repo": "https://github.com/gemb0-0/Network-Indicator.git",
+      "commit": "7f5062350532495063e6c281e947d90cfecbeb37"
+    },
+    "quickCapture": {
+      "repo": "https://github.com/hthienloc/dms-plugins",
+      "path": "quickCapture",
+      "commit": "47fd82f6046dc03bd5ca323a3d7f6fd00431ce1c"
+    },
+    "systemMonitorPlus": {
+      "repo": "https://github.com/Dadangdut33/dms-plugins",
+      "path": "SystemMonitorPlus",
+      "commit": "63fe6b87c497f1f7c2ea61432716817db1c5c3a4"
+    }
+  }
+}

@@ -1,0 +1,256 @@
+{
+  "dankKDEConnect": {
+    "enabled": true,
+    "showDevicePlaceholder": true,
+    "selectedDeviceId": "a1ad33ff_3ee7_4666_b8ca_23631494f7ee",
+    "showOngoingMedia": true
+  },
+  "calculator": {
+    "enabled": true,
+    "trigger": "="
+  },
+  "quickCapture": {
+    "enabled": true
+  },
+  "keyboardLayoutSearch": {
+    "enabled": true,
+    "noTrigger": true,
+    "layouts": " "
+  },
+  "kbdBacklightOSD": {
+    "enabled": true
+  },
+  "dmsScreenshot": {
+    "enabled": true,
+    "quality": "90",
+    "format": "png",
+    "delaySeconds": "0",
+    "scrollInterval": "45",
+    "mode": "interactive"
+  },
+  "emojiLauncher": {
+    "enabled": false,
+    "trigger": ":"
+  },
+  "systemMonitorPlus": {
+    "enabled": false,
+    "cpuTempEnabled": true,
+    "ramUsageEnabled": true,
+    "gpuTempEnabled": true,
+    "diskPartitionUsageEnabled": true,
+    "networkSpeedEnabled": true,
+    "networkSpeedHideVerticalIcon": false,
+    "networkSpeedShowText": true,
+    "networkSpeedShowIcon": true,
+    "networkSpeedVisualStyle": "default"
+  },
+  "fullscreenPowerMenu": {
+    "enabled": false,
+    "menuOpacity": 100,
+    "dimOpacity": 75,
+    "animationSpeed": 100
+  },
+  "networkIndicator": {
+    "enabled": true,
+    "displayMode": "separate"
+  },
+  "emojiPicker": {
+    "enabled": true,
+    "defaultAction": "copy",
+    "pickerSize": "500",
+    "showHints": true,
+    "emojisPerRow": 8
+  },
+  "cpuFreq": {
+    "enabled": true,
+    "showIcon": true,
+    "showTemp": true,
+    "showUsage": false,
+    "separator": "space",
+    "showPerCore": false,
+    "compactBar": false,
+    "showStatIcons": true,
+    "showFreqUnit": true,
+    "showTempIcon": true,
+    "showTempUnit": true,
+    "showUsageIcon": true,
+    "showUsageUnit": true,
+    "showMinLimit": false,
+    "restoreOnLaunch": true,
+    "coreColumns": "3",
+    "freqBar": true,
+    "freqTab": true,
+    "freqIcon": true,
+    "freqShowUnit": true,
+    "freqShowMin": false,
+    "freqCores": false,
+    "tempBar": true,
+    "tempTab": true,
+    "tempIcon": true,
+    "usageBar": true,
+    "memBar": true,
+    "gpuBar": true,
+    "fansBar": true,
+    "diskBar": true,
+    "tempColumns": "1",
+    "gpuShowThermals": true,
+    "gpuShowPower": true,
+    "gpuShowClocks": true,
+    "gpuShowBus": true,
+    "gpuDisplay": "usage",
+    "gpuIndex": "0",
+    "freqColumns": "2",
+    "usageColumns": "2",
+    "diskMount": "/",
+    "order_freq": "performance,limits,cores",
+    "order_gpu": "util,mem,thermals,power,clocks,bus,procs",
+    "order_mem": "memory,swap",
+    "memTab": true,
+    "batBar": true,
+    "tempShowUnit": true,
+    "barSeparator": "none",
+    "memDisplay": "percent",
+    "diskDisplay": "percent",
+    "batBarShowTime": false,
+    "batBarShowPower": false,
+    "batBarShowEnergy": false,
+    "batPersist": false,
+    "diskBarShowUsed": false,
+    "diskBarShowFree": false,
+    "diskBarShowUsed_total": false,
+    "gpuBarShowTemp": true,
+    "memBarShowUsed": true,
+    "memBarShowAvailable": false,
+    "memBarShowFree": false,
+    "memBarShowUsed_total": false,
+    "gpuBarShowVram": false,
+    "gpuBarShowPower": false,
+    "gpuBarShowClock": false,
+    "memBarShowPercent": true,
+    "freqBarShowMax": false,
+    "tempCores": true,
+    "cpuShowPerformance": true,
+    "freqShowMax": true,
+    "usageCores": true
+  },
+  "wallpaperCarousel": {
+    "enabled": true
+  },
+  "enderPulse": {
+    "enabled": true,
+    "variants": [
+      {
+        "id": "builtin_output",
+        "name": "System output",
+        "audioTarget": "system",
+        "audioBackend": "auto",
+        "customAudioSource": "",
+        "icon": "volume_up",
+        "description": "EnderPulse audio source: System output"
+      },
+      {
+        "id": "builtin_microphone",
+        "name": "Microphone input",
+        "audioTarget": "microphone",
+        "audioBackend": "auto",
+        "customAudioSource": "",
+        "icon": "mic",
+        "description": "EnderPulse audio source: Microphone input"
+      }
+    ]
+  },
+  "musicTheme": {
+    "enabled": true,
+    "matugenScheme": "scheme-vibrant",
+    "holdMs": "-1",
+    "debounceMs": "250"
+  },
+  "dgpuStatus": {
+    "enabled": true
+  },
+  "worldClock": {
+    "enabled": true
+  },
+  "mediaControlPlus": {
+    "enabled": true
+  },
+  "batteryPlus": {
+    "enabled": true,
+    "timespanHours": 24
+  },
+  "tlpPowerProfile": {
+    "enabled": false,
+    "activeProfileId": "balanced",
+    "profiles": [
+      {
+        "id": "power_save",
+        "label": "Power Save",
+        "icon": " ",
+        "command": "tlp bat"
+      },
+      {
+        "id": "balanced",
+        "label": "Balanced",
+        "icon": " ",
+        "command": "tlp ac"
+      },
+      {
+        "id": "performance",
+        "label": "Performance",
+        "icon": "",
+        "command": "tlp-power-profile-helper performance"
+      }
+    ]
+  },
+  "tlpControl": {
+    "enabled": true
+  },
+  "volumeMixer": {
+    "enabled": true
+  },
+  "easyEffects": {
+    "enabled": false
+  },
+  "presentationHub": {
+    "enabled": true,
+    "presentationOutput": "eDP-1"
+  },
+  "nvidiaGpuDankbarMonitor": {
+    "enabled": false,
+    "variants": [
+      {
+        "gpuPci": "0000:01:00.0",
+        "gpuType": "",
+        "originalName": "Quadro P1000",
+        "description": "Monitor your Quadro P1000",
+        "icon": "memory",
+        "id": "variant_1794078643888",
+        "name": "Quadro P1000"
+      }
+    ],
+    "popoutStyle": "alt",
+    "processSort": "vram"
+  },
+  "dankSystemDoctor": {
+    "enabled": true
+  },
+  "cpuThermalIndicator": {
+    "enabled": true
+  },
+  "dmsDynamicCursor": {
+    "enabled": true
+  },
+  "customRunningApps": {
+    "enabled": false,
+    "resizePercentage": 100,
+    "itemPercentage": 60,
+    "resizeOnHover": false,
+    "iconBackgroundSize": 125,
+    "indicatorLocation": "top",
+    "showAdditionalIndicator": false,
+    "showBackgroundOnHover": false,
+    "showIndicatorOnHover": false,
+    "spaceBetweenItems": 4,
+    "overrideBackground": "false"
+  }
+}
