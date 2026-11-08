@@ -26,7 +26,7 @@ require("lazy").setup {
 		border = "rounded",
 	},
 	install = {
-		colorscheme = { "catppuccin", "default" },
+		colorscheme = { "base46-gruvchad", "default" },
 	},
 	checker = {
 		enabled = false,

@@ -1,17 +1,23 @@
 # Font Configuration
-font-size = 12
+font-family = Google Sans Code
+font-family = MonaspiceNe Nerd Font
+font-family = DejaVu Sans Mono
+font-family = FantasqueSansM Nerd Font Mono
+font-size = 14
 
 # Window Configuration
 window-theme = ghostty
 window-decoration = false
-window-padding-x = 12
-window-padding-y = 12
+window-padding-x = 0
+window-padding-y = 0
+window-height = 30
+window-width = 100
 background-opacity = 1.0
 background-blur-radius = 32
 
 # Cursor Configuration
 cursor-style = block
-cursor-style-blink = true
+cursor-style-blink = false
 
 # Scrollback
 scrollback-limit = 3023
@@ -39,6 +45,7 @@ unfocused-split-fill = #44464f
 
 # Tab configuration
 gtk-titlebar = false
+window-show-tab-bar = never
 
 # Shell integration
 shell-integration = detect
