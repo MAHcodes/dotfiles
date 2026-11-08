@@ -5,7 +5,7 @@ Type=Application
 Name=Hollow Knight
 GenericName=Hollow Knight
 Comment=Hollow Knight
-Icon=/home/ali/GOGGames/HollowKnight/game/Hollow Knight_Data/Resources/UnityPlayer.png
-Exec=env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia "/home/ali/GOGGames/HollowKnight/start.sh"
+Icon=/home/ali/Games/HollowKnight/game/Hollow Knight_Data/Resources/UnityPlayer.png
+Exec=env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia "/home/ali/Games/HollowKnight/start.sh"
 Categories=Game;
-Path=/home/ali/GOGGames/HollowKnight
+Path=/home/ali/Games/HollowKnight

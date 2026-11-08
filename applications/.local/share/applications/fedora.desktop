@@ -3,8 +3,8 @@ Version=1.0
 Type=Application
 Name=Fedora Linux
 Comment=Fedora Linux virtual machine (Quickemu)
-Exec=env WAYLAND_DISPLAY= quickemu --vm /home/ali/quickemu/Fedora-Workstation-Live-45-1.4.x86_64/fedora.conf --display spice
-Path=/home/ali/quickemu/Fedora-Workstation-Live-45-1.4.x86_64/
+Path=/home/ali/quickemu/Fedora-Everything-netinst-x86_64-45-1.4/
+Exec=quickemu --vm fedora.conf --display spice
 Icon=fedora
 Terminal=false
 Categories=System;Emulator;

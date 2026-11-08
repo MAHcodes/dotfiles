@@ -48,3 +48,6 @@ plug "zap-zsh/zap-prompt"
 # compinit is handled by supercharge. Running it a second time here only
 # re-scanned fpath and cost ~20ms. Run `compinit` manually after adding new
 # completion files if you need them registered immediately.
+
+# Hermes Agent command
+case ":$PATH:" in *":$HOME/.local/bin:"*) ;; *) export PATH="$HOME/.local/bin:$PATH" ;; esac
