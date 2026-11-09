@@ -92,7 +92,7 @@
     "gpuBar": false,
     "fansBar": true,
     "diskBar": false,
-    "tempColumns": "1",
+    "tempColumns": "3",
     "gpuShowThermals": true,
     "gpuShowPower": true,
     "gpuShowClocks": true,
@@ -100,7 +100,7 @@
     "gpuDisplay": "usage",
     "gpuIndex": "0",
     "freqColumns": "2",
-    "usageColumns": "2",
+    "usageColumns": "3",
     "diskMount": "/",
     "order_freq": "performance,limits,cores",
     "order_gpu": "util,mem,thermals,power,clocks,bus,procs",
@@ -128,10 +128,10 @@
     "gpuBarShowClock": false,
     "memBarShowPercent": true,
     "freqBarShowMax": false,
-    "tempCores": true,
+    "tempCores": false,
     "cpuShowPerformance": true,
     "freqShowMax": true,
-    "usageCores": true,
+    "usageCores": false,
     "cpuBar": true,
     "cpuBarShowAvg": true,
     "cpuBarShowTemp": true,
@@ -256,5 +256,33 @@
     "showIndicatorOnHover": false,
     "spaceBetweenItems": 4,
     "overrideBackground": "false"
+  },
+  "audioFx": {
+    "enabled": false,
+    "form": "wave",
+    "edge": "bottom",
+    "sideInset": 0,
+    "smoothing": 9,
+    "fgOpacity": 100,
+    "bgOpacity": 0,
+    "noiseReduction": 74
+  },
+  "prayerTimes": {
+    "enabled": false
+  },
+  "whenPrayer": {
+    "enabled": true,
+    "showName": false,
+    "showTime": true,
+    "showCountdown": false,
+    "showCurrentPeriod": false,
+    "use12H": false,
+    "iconOnly": true,
+    "showSeconds": false,
+    "showIcon": true,
+    "showProgressBar": false,
+    "showPopupCountdown": false,
+    "showProgressRing": true,
+    "notifyAtTime": false
   }
 }

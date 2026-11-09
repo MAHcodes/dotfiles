@@ -14,3 +14,11 @@ alias :q="exit"
 # docker
 alias up="docker compose up"
 alias down="docker compose down"
+
+# eza
+if (( $+commands[eza] )); then
+  alias ls='eza --group-directories-first --icons=auto'
+  alias ll='ls -lh --git'
+  alias la='ll -a'
+  alias tree='ll --tree --level=2'
+fi

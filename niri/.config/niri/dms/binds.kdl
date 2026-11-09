@@ -4,15 +4,13 @@ binds {
     Mod+Tab repeat=false { toggle-overview; }
 
     // --- DMS Core Shell UI Controls ---
-    Mod+T hotkey-overlay-title="Toggle Top Bar" {
+    Mod+Shift+B hotkey-overlay-title="Toggle Bar" {
       spawn-sh "dms ipc call bar toggle name 'Main Bar'";
-    }
-    Mod+B hotkey-overlay-title="Toggle Bottom Bar" { 
-      spawn-sh "dms ipc call bar toggle name 'Stats Bar'";
     }
 
     // === Application Launchers ===
-    Mod+Return hotkey-overlay-title="Open Terminal" { spawn "ghostty" "-e" "/home/ali/.local/share/mise/shims/tmux"; }
+    // Mod+Return hotkey-overlay-title="Open Terminal" { spawn "ghostty" "-e" "/home/ali/.local/share/mise/shims/tux"; }
+    Mod+Return { spawn "/home/ali/.local/scripts/ghostty-toggle"; }
     Mod+Space hotkey-overlay-title="Application Launcher" {
         spawn "dms" "ipc" "call" "spotlight" "toggle";
     }
@@ -28,6 +26,7 @@ binds {
 
     Mod+X hotkey-overlay-title="Power Menu: Toggle" { spawn "dms" "ipc" "call" "powermenu" "toggle"; }
     Mod+A hotkey-overlay-title="Control Center" { spawn "dms" "ipc" "call" "control-center" "toggle"; }
+    Mod+B hotkey-overlay-title="Open Browser" { spawn "xdg-open" "https://"; }
     Mod+Shift+D hotkey-overlay-title="Dash" { spawn "dms" "ipc" "call" "dash" "toggle" ""; }
     Mod+Shift+C hotkey-overlay-title="Color Picker" { spawn "dms" "ipc" "call" "color-picker" "toggle"; }
     Mod+Alt+N hotkey-overlay-title="Night Mode" { spawn "dms" "ipc" "call" "night" "toggle"; }
@@ -247,7 +246,7 @@ binds {
     Ctrl+Print hotkey-overlay-title="Screenshot: Full Screen" { spawn "dms" "screenshot" "full"; }
     Alt+Print hotkey-overlay-title="Screenshot: Window" { spawn "dms" "screenshot" "window"; }
     // === Display Profiles ===
-    Mod+P hotkey-overlay-title="Cycle Display Profile" {
+    Mod+E hotkey-overlay-title="Cycle Display Profile" {
         spawn "dms" "ipc" "outputs" "cycleProfile";
     }
 

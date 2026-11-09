@@ -8,7 +8,7 @@
     "dankKDEConnect": {
       "repo": "https://github.com/duxlabs-dev/dux-plugins",
       "path": "DankKDEConnect",
-      "commit": "70e926ea529c729c7e2368e096046295f0d90d48"
+      "commit": "00c43771d9fb3abdeda234a8196edea14d24f333"
     },
     "emojiLauncher": {
       "repo": "https://github.com/devnullvoid/dms-emoji-launcher",
@@ -40,11 +40,6 @@
       "repo": "https://github.com/hthienloc/dms-plugins",
       "path": "quickCapture",
       "commit": "47fd82f6046dc03bd5ca323a3d7f6fd00431ce1c"
-    },
-    "systemMonitorPlus": {
-      "repo": "https://github.com/Dadangdut33/dms-plugins",
-      "path": "SystemMonitorPlus",
-      "commit": "63fe6b87c497f1f7c2ea61432716817db1c5c3a4"
     }
   }
 }

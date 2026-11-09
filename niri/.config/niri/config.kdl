@@ -12,6 +12,9 @@ gestures {
     }
 }
 
+workspace "Browser"
+workspace "Terminal"
+
 // Input device configuration.
 // Find the full list of options on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Input
@@ -188,7 +191,15 @@ window-rule {
     default-column-width {}
 }
 window-rule {
-    open-maximized true
+  match app-id="zen"
+  match app-id="firefox"
+  open-maximized true
+  open-on-workspace "Browser"
+}
+window-rule {
+  match app-id="com.mitchellh.ghostty"
+  open-maximized true
+  open-on-workspace "Terminal"
 }
 window-rule {
     match app-id=r#"^org\.gnome\."#

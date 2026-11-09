@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+# Fetch window list in JSON and look for ghostty's app_id
+WINDOW_ID=$(niri msg -j windows | jq -r '.[] | select(.app_id == "com.mitchellh.ghostty" or .app_id == "ghostty") | .id' | head -n 1)
+
+if [ -n "$WINDOW_ID" ]; then
+    # Focus existing window
+    niri msg action focus-window --id "$WINDOW_ID"
+else
+    # Spawn new instance with tmux shim
+    ghostty -e /home/ali/.local/share/mise/shims/tmux &
+fi
