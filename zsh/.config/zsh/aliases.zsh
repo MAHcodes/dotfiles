@@ -12,7 +12,7 @@ alias twtui="taskwarrior-tui"
 alias :q="exit"
 
 # docker
-alias up="docker compose up"
+alias up="docker compose up -d"
 alias down="docker compose down"
 
 # eza

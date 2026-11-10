@@ -12,9 +12,6 @@ gestures {
     }
 }
 
-workspace "Browser"
-workspace "Terminal"
-
 // Input device configuration.
 // Find the full list of options on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Input
@@ -31,7 +28,7 @@ input {
             // If this section is empty, niri will fetch xkb settings
             // from org.freedesktop.locale1. You can control these using
             // localectl set-x11-keymap.
-	    options "caps:escape,grp:alt_shift_toggle"
+	    options "caps:escape,grp:shifts_toggle"
         }
 
         // Enable numlock on startup, omitting this setting disables it.
@@ -194,12 +191,10 @@ window-rule {
   match app-id="zen"
   match app-id="firefox"
   open-maximized true
-  open-on-workspace "Browser"
 }
 window-rule {
   match app-id="com.mitchellh.ghostty"
   open-maximized true
-  open-on-workspace "Terminal"
 }
 window-rule {
     match app-id=r#"^org\.gnome\."#

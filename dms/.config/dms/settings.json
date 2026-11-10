@@ -688,14 +688,6 @@
       "row": 3
     },
     {
-      "id": "builtin_display_profiles",
-      "enabled": true,
-      "w": 4,
-      "h": 1,
-      "col": 0,
-      "row": 5
-    },
-    {
       "id": "brightnessSlider",
       "enabled": true,
       "w": 4,
@@ -705,17 +697,25 @@
       "deviceName": "leds:tpacpi::kbd_backlight",
       "col": 4,
       "row": 4
+    },
+    {
+      "id": "colorPicker",
+      "enabled": true,
+      "w": 4,
+      "h": 1,
+      "col": 0,
+      "row": 5
     }
   ],
   "dankLauncherV2BorderEnabled": true,
   "spotlightBarShowModeChips": false,
   "displayProfileAutoSelect": false,
-  "interfaceStyle": "classic",
+  "interfaceStyle": "expressive",
   "blurLayerOutlineOpacity": 0.12,
   "blurBorderEnabled": true,
   "blurEnabled": false,
   "blurBorderSeeded": true,
-  "radiusMode": "fixed",
+  "radiusMode": "scale",
   "niriLayoutRadiusOverride": 16,
   "fontFamily": "Google Sans Flex",
   "enableRippleEffects": true,
@@ -730,5 +730,9 @@
   "notificationShowTimeoutBar": false,
   "barInsetPaddingSyncAll": true,
   "barInsetPaddingShared": 4,
-  "clockFormat": "24h"
+  "clockFormat": "24h",
+  "niriLayoutBorderSize": -1,
+  "fixedRadius": 16,
+  "niriLayoutGapsOverride": 10,
+  "avatarRing": "none"
 }

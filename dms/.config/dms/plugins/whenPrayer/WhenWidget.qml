@@ -94,6 +94,7 @@ PluginComponent {
     readonly property color cSurface1: Theme.surfaceContainer ?? Qt.rgba(Theme.surfaceText.r, Theme.surfaceText.g, Theme.surfaceText.b, 0.06)
     readonly property color cError: Theme.error ?? "#ba1a1a"
     readonly property color cErrorContainer: Theme.errorContainer ?? Qt.rgba(cError.r, cError.g, cError.b, 0.18)
+    readonly property color barFg: (errorText !== "" && !hasData) ? cError : (isUrgent ? cPrimary : Theme.surfaceText)
 
     readonly property string pillText: {
         if (!hasData)
@@ -586,7 +587,7 @@ PluginComponent {
                 visible: root.showIcon
                 name: "mosque"
                 size: Theme.iconSize - 10
-                color: root.errorText !== "" && !root.hasData ? root.cError : Theme.surfaceText
+                color: root.barFg
                 anchors.verticalCenter: parent.verticalCenter
             }
             StyledText {
@@ -594,7 +595,7 @@ PluginComponent {
                 text: root.pillText
                 font.pixelSize: Theme.fontSizeSmall
                 font.weight: root.isUrgent ? Font.Bold : Font.Normal
-                color: root.isUrgent ? root.cPrimary : Theme.surfaceText
+                color: root.barFg
                 anchors.verticalCenter: parent.verticalCenter
             }
         }
@@ -608,14 +609,14 @@ PluginComponent {
                 visible: root.showIcon
                 name: "mosque"
                 size: Theme.iconSize - 6
-                color: root.errorText !== "" && !root.hasData ? root.cError : root.cPrimary
+                color: root.barFg
                 anchors.horizontalCenter: parent.horizontalCenter
             }
             StyledText {
                 visible: root.verticalPillText !== ""
                 text: root.verticalPillText
                 font.pixelSize: Theme.fontSizeSmall - 2
-                color: root.isUrgent ? root.cPrimary : Theme.surfaceText
+                color: root.barFg
                 anchors.horizontalCenter: parent.horizontalCenter
             }
         }
