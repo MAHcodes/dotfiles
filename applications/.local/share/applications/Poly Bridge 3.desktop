@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Poly Bridge 3
+Exec=env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia "/home/ali/Games/Poly Bridge 3/start"
+Icon=/home/ali/Games/Poly Bridge 3/game/Poly Bridge 3_Data/Resources/UnityPlayer.png
+Type=Application
+Categories=Game;
+StartupNotify=true
+Comment=Start Poly Bridge 3
+Comment[ru_RU]=Запустить Poly Bridge 3

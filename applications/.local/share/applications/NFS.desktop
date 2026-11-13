@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=NFS: Most Wanted (SpeedBreaker engine)
+GenericName=NFS: Most Wanted (SpeedBreaker engine)
+Exec=env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia "/home/ali/Games/NFS/start.bash"
+Terminal=false
+Icon=/home/ali/Games/NFS/game/icon.png
+Type=Application
+Categories=Game;
+StartupNotify=true
+Comment=Start NFS: Most Wanted (SpeedBreaker engine)
+Path=/home/ali/Games/NFS

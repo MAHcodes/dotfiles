@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Poly Bridge
+GenericName=Poly Bridge
+Exec="/home/ali/Games/PolyBridge/start.sh"
+Terminal=false
+Icon=/home/ali/Games/PolyBridge/game/polybridge_Data/Resources/UnityPlayer.png
+Type=Application
+Categories=Game;
+StartupNotify=true
+Comment=Start Poly Bridge

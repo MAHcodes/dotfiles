@@ -5,7 +5,7 @@ Type=Application
 Name=Caves of Qud
 GenericName=Caves of Qud
 Comment=Caves of Qud
-Icon=/home/ali/GOGGames/CavesofQud/game/CoQ_Data/Resources/UnityPlayer.png
-Exec=env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia "/home/ali/GOGGames/CavesofQud/start.sh"
+Icon=/home/ali/Games/CavesofQud/game/CoQ_Data/Resources/UnityPlayer.png
+Exec=env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia "/home/ali/Games/CavesofQud/start.sh"
 Categories=Game;
-Path=/home/ali/GOGGames/CavesofQud
+Path=/home/ali/Games/CavesofQud

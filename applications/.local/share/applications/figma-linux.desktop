@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Figma
+Comment=Unofficial desktop application for Figma
+Exec="/home/ali/Applications/figma-linux_0.11.5_linux_x86_64.AppImage" %U
+Icon=figma-linux
+Terminal=false
+Categories=Graphics;
+StartupWMClass=figma-linux
+MimeType=x-scheme-handler/figma;

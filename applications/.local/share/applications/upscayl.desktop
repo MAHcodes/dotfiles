@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Upscayl
+Comment=Free and Open Source AI Image Upscaler
+Exec="/home/ali/Applications/upscayl-2.15.0-linux.AppImage" %U
+Icon=upscayl
+Terminal=false
+Categories=Graphics;2DGraphics;RasterGraphics;ImageProcessing;
+StartupWMClass=Upscayl

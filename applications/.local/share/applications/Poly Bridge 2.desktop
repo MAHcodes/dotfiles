@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Poly Bridge 2
+Exec=env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia "/home/ali/Games/Poly Bridge 2/start"
+Icon=/home/ali/Games/Poly Bridge 2/game/Poly Bridge 2_Data/Resources/UnityPlayer.png
+Type=Application
+Categories=Game;
+StartupNotify=true
+Comment=Start Poly Bridge 2
+Comment[ru_RU]=Запустить Poly Bridge 2

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Kdenlive
+GenericName=Video Editor
+Comment=Nonlinear video editor by KDE
+Exec="/home/ali/Applications/kdenlive-26.04.3-x86_64.AppImage" %F
+Icon=kdenlive
+Terminal=false
+Categories=Qt;KDE;AudioVideo;AudioVideoEditing;
+StartupWMClass=kdenlive
+MimeType=application/x-kdenlive;

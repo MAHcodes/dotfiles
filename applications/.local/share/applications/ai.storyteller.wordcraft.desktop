@@ -2,7 +2,7 @@
 Type=Application
 Name=WordCraft
 Comment=Writing and document design
-Exec="/home/ali/Applications/wordcraft-0.13.2-linux-x86_64.AppImage" %F
+Exec="/home/ali/Applications/wordcraft-0.17.0-linux-x86_64.AppImage" %F
 Icon=ai.storyteller.wordcraft
 Terminal=false
 Categories=Office;WordProcessor;

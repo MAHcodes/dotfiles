@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Value=1.0
+Type=Application
+Name=Factorio
+GenericName=Factorio
+Comment=Build, automate, and expand your factory
+Exec=env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia "/home/ali/Games/Factorio/game/bin/x64/factorio"
+Icon=/home/ali/Games/Factorio/game/data/core/graphics/factorio-icon.png
+Keywords=game;strategy;factory;automation;
+Path=/home/ali/Games/Factorio

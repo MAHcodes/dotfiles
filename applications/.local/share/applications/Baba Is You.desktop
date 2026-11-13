@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Baba Is You
+Exec="/home/ali/Games/Baba Is You/start"
+Icon=/home/ali/Games/Baba Is You/game/icon.bmp
+Type=Application
+Categories=Game;
+StartupNotify=true
+Comment=Start Baba Is You
+Comment[ru_RU]=Запустить Baba Is You

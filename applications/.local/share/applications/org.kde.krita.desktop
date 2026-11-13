@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=Krita
+GenericName=Digital Painting
+Comment=Sketching and painting program
+Exec="/home/ali/Applications/krita-5.3.2.1-x86_64.AppImage" %F
+Icon=krita
+Terminal=false
+Categories=Qt;KDE;Graphics;2DGraphics;RasterGraphics;
+StartupWMClass=krita
+MimeType=application/x-krita;image/openraster;application/x-krita-paintoppreset;
