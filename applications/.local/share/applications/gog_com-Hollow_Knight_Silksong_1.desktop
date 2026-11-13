@@ -5,7 +5,7 @@ Type=Application
 Name=Hollow Knight: Silksong
 GenericName=Hollow Knight: Silksong
 Comment=Hollow Knight: Silksong
-Icon=/home/ali/Games/HollowKnightSilksong/support/icon.png
+Icon=/home/ali/Games/HollowKnightSilksong/game/Hollow Knight Silksong_Data/Resources/UnityPlayer.png
 Exec=env __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia "/home/ali/Games/HollowKnightSilksong/start.sh"
 Categories=Game;
 Path=/home/ali/Games/HollowKnightSilksong
