@@ -31,6 +31,7 @@ binds {
     Mod+Shift+C hotkey-overlay-title="Color Picker" { spawn "dms" "ipc" "call" "color-picker" "toggle"; }
     Mod+Alt+N hotkey-overlay-title="Night Mode" { spawn "dms" "ipc" "call" "night" "toggle"; }
     Mod+Alt+I hotkey-overlay-title="Idle Inhibit" { spawn "dms" "ipc" "call" "inhibit" "toggle"; }
+    Mod+E hotkey-overlay-title="Toggle Emoji Picker" { spawn "dms" "ipc" "call" "emojiPicker" "toggle"; }
     Mod+Comma hotkey-overlay-title="Settings" {
         spawn "dms" "ipc" "call" "settings" "focusOrToggle";
     }
@@ -246,8 +247,8 @@ binds {
     Ctrl+Print hotkey-overlay-title="Screenshot: Full Screen" { spawn "dms" "screenshot" "full"; }
     Alt+Print hotkey-overlay-title="Screenshot: Window" { spawn "dms" "screenshot" "window"; }
     // === Display Profiles ===
-    Mod+E hotkey-overlay-title="Cycle Display Profile" {
-        spawn "dms" "ipc" "outputs" "cycleProfile";
+    Mod+P hotkey-overlay-title="Cycle Display Profile" {
+    spawn "dms" "ipc" "call" "niriDS" "toggle";
     }
 
     // === System Controls ===

@@ -10,14 +10,18 @@
       "path": "DankKDEConnect",
       "commit": "00c43771d9fb3abdeda234a8196edea14d24f333"
     },
-    "emojiLauncher": {
-      "repo": "https://github.com/devnullvoid/dms-emoji-launcher",
-      "commit": "fc385900e6df292f0a7e5bdda4e3e37169897d7c"
+    "deviceBatteries": {
+      "repo": "https://github.com/joshii-h/dms-device-batteries",
+      "commit": "0c5110eaecff56255b36a38bb6f1fb568cd66f14"
     },
     "emojiPicker": {
       "repo": "https://github.com/hthienloc/dms-plugins",
       "path": "emojiPicker",
-      "commit": "47fd82f6046dc03bd5ca323a3d7f6fd00431ce1c"
+      "commit": "b7d5dbff7b768b8500d8d57ca9bdb3cae8957159"
+    },
+    "gameControllerBattery": {
+      "repo": "https://github.com/Hujair/gameControllerBattery",
+      "commit": "8ab63f4274e505cbefc2432e9a2e1dd8a1809113"
     },
     "kbdBacklightOSD": {
       "repo": "https://github.com/notsopreety/kbdBacklightOSD",
@@ -36,10 +40,15 @@
       "repo": "https://github.com/gemb0-0/Network-Indicator.git",
       "commit": "7f5062350532495063e6c281e947d90cfecbeb37"
     },
+    "niriDS": {
+      "repo": "https://github.com/hthienloc/dms-plugins",
+      "path": "niriDS",
+      "commit": "b7d5dbff7b768b8500d8d57ca9bdb3cae8957159"
+    },
     "quickCapture": {
       "repo": "https://github.com/hthienloc/dms-plugins",
       "path": "quickCapture",
-      "commit": "47fd82f6046dc03bd5ca323a3d7f6fd00431ce1c"
+      "commit": "b7d5dbff7b768b8500d8d57ca9bdb3cae8957159"
     }
   }
 }

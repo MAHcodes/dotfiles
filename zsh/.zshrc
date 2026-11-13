@@ -22,6 +22,7 @@ plug "zap-zsh/vim"
 plug "paulirish/git-open"
 plug "MenkeTechnologies/zsh-expand"
 plug "zap-zsh/magic-enter"
+plug "MAHcodes/bgnotify.zsh"
 
 # prompts
 plug "zap-zsh/zap-prompt"

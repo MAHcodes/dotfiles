@@ -29,7 +29,7 @@
     "mode": "interactive"
   },
   "emojiLauncher": {
-    "enabled": false,
+    "enabled": true,
     "trigger": ":"
   },
   "systemMonitorPlus": {
@@ -135,7 +135,25 @@
     "cpuBar": true,
     "cpuBarShowAvg": true,
     "cpuBarShowTemp": true,
-    "cpuBarShowUsage": true
+    "cpuBarShowUsage": true,
+    "cpuRing": false,
+    "fansRing": false,
+    "gpuRing": false,
+    "batRing": false,
+    "cpuGraph": false,
+    "memProgress": false,
+    "memGraph": false,
+    "memRing": false,
+    "fansProgress": false,
+    "fansGraph": false,
+    "cpuProgress": false,
+    "gpuProgress": false,
+    "gpuGraph": false,
+    "diskRing": false,
+    "diskProgress": false,
+    "diskGraph": false,
+    "batProgress": false,
+    "batGraph": false
   },
   "wallpaperCarousel": {
     "enabled": true
@@ -284,5 +302,36 @@
     "showPopupCountdown": false,
     "showProgressRing": true,
     "notifyAtTime": false
+  },
+  "gameControllerBattery": {
+    "enabled": true,
+    "enableConnectionNotifications": false,
+    "hideWhenNoControllersConnected": true,
+    "controllerCustomNames": {},
+    "displayMode": true,
+    "settingsSessionToken": 1794384578365
+  },
+  "dankStopwatch": {
+    "enabled": false
+  },
+  "dockerManager": {
+    "enabled": false,
+    "groupByCompose": false,
+    "terminalApp": "ghostty"
+  },
+  "smartTimer": {
+    "enabled": false,
+    "noTrigger": true
+  },
+  "niriDS": {
+    "enabled": true,
+    "bgOpacity": 50,
+    "connectionAction": "none"
+  },
+  "materialPlayer": {
+    "enabled": false
+  },
+  "deviceBatteries": {
+    "enabled": true
   }
 }
