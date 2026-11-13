@@ -1,0 +1,6 @@
+[Unit]
+Description=Commit new .desktop entries added to the stow-linked applications folder
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/scripts/apps-sync

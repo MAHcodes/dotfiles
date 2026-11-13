@@ -1,0 +1,8 @@
+[Unit]
+Description=Watch ~/.local/share/applications for new or changed .desktop entries
+
+[Path]
+PathChanged=%h/.local/share/applications
+
+[Install]
+WantedBy=default.target
