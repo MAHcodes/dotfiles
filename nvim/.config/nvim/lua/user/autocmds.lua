@@ -8,8 +8,8 @@ autocmd("FileType", {
 	group = augroup "formatoptions",
 	pattern = "*",
 	callback = function()
-		vim.opt.fo:append { "r" }
-		vim.opt.fo:remove { "o" }
+		-- vim.opt.fo:append { "r" }
+		-- vim.opt.fo:remove { "o" }
 	end,
 })
 

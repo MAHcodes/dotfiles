@@ -19,7 +19,7 @@ plug "Aloxaf/fzf-tab" # must load after compinit
 plug "Freed-Wu/fzf-tab-source"
 plug "zsh-users/zsh-history-substring-search"
 plug "zap-zsh/vim"
-plug "paulirish/git-open"
+plug "MAHcodes/git-open"
 plug "MenkeTechnologies/zsh-expand"
 plug "zap-zsh/magic-enter"
 plug "MAHcodes/bgnotify.zsh"
