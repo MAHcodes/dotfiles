@@ -47,8 +47,7 @@ ansible-playbook playbook.yml -K                  # apply
 | `tasks/03-post-system.yml` | docker group + service, login shell |
 | `tasks/04-mise.yml` | install mise + `mise install` |
 | `tasks/05-stow.yml` | `stow` each package into `$HOME` |
-| `tasks/06-systemd-user.yml` | enable user units (guarded) |
-| `tasks/07-dconf.yml` | `dconf load` from `dconf/dconf-settings.ini` |
+| `tasks/06-dconf.yml` | `dconf load` from `dconf/dconf-settings.ini` |
 
 ## Day-to-day scenarios
 
@@ -66,32 +65,13 @@ Note: the playbook guarantees **presence** — it never removes packages, so a
 typo in the list can't delete anything. A package name missing from repos
 fails the run with a clear message; fix the list and re-run.
 
-## Migration TODO (not done yet, by design — nothing outside this dir changed)
+## Migration status
 
-These are configs living in `~/.config` but not yet tracked in the repo.
-Until migrated, they're **not** restored on a new machine:
+Configs that used to live untracked in `~/.config` are now tracked in the
+repo and stowed: **mise** (tool list), **nvim**, **applications** — plus the
+rest of `stow_packages`. `fish` is not used on this machine.
 
-1. **mise tool list** — `~/.config/mise` is a real dir, not tracked:
-   ```bash
-   mkdir -p ~/dotfiles/mise/.config
-   mv ~/.config/mise ~/dotfiles/mise/.config/mise
-   stow -d ~/dotfiles -t ~ mise
-   ```
-   Then uncomment `mise` in `stow_packages:`.
-2. **fish** — same pattern as above; uncomment `fish` in `stow_packages:`.
-3. **nvim** — `lua/` and `colors/` live outside the repo (drift risk):
-   ```bash
-   cp -r ~/.config/nvim/lua ~/dotfiles/nvim/.config/nvim/
-   cp -r ~/.config/nvim/colors ~/dotfiles/nvim/.config/nvim/
-   rm -rf ~/.config/nvim && stow -d ~/dotfiles -t ~ nvim
-   ```
-4. **applications** — `~/.local/share/applications` has real copies of the
-   synced `.desktop` files; stow would conflict. Fix with
-   `stow --adopt -d ~/dotfiles -t ~ applications` (adopts live files into the
-   repo, diff + commit them) and uncomment it.
-5. **`bin/`** — `hermes`, `when`, `pulsemixer` in `~/.local/bin` are not
-   tracked. Create a `bin/.local/bin/` package in the repo, move them in,
-   stow, uncomment `bin`.
-6. **`systemd/`** — `hermes-gateway.service` is not in the repo. Create
-   `systemd/.config/systemd/user/` in the repo, move it in, stow, uncomment.
-   (Task `06-systemd-user.yml` enables it automatically once present.)
+Intentionally **not** tracked (managed manually; a new machine won't get
+them from this playbook):
+- `~/.local/bin` tools (`hermes`, `when`, `pulsemixer`)
+- `~/.config/systemd/user` units (`hermes-gateway.service`)

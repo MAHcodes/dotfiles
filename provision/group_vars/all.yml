@@ -159,14 +159,13 @@ stow_packages:
   - lf
   - lvim
   - matugen
+  - mise
   - niri
+  - nvim
   - pulsemixer
   - tmux
   - tmux-sessionizer
   - zsh
-  # Uncomment after migrating (see README "Migration TODO"):
-  # - mise        # tool list — migrate FIRST, else `mise install` has nothing to install
-  # - fish
-  # - nvim
-  # - bin         # ~/.local/bin scripts
-  # - systemd     # hermes-gateway.service (06-systemd-user.yml picks it up automatically)
+  # Intentionally NOT tracked (managed manually, not restored on new machines):
+  # ~/.local/bin tools (hermes, when, pulsemixer) and systemd user units
+  # (hermes-gateway.service).

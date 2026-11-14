@@ -12,8 +12,8 @@
     executable: /usr/bin/bash
 
 - name: Install mise-managed tools
-  # Reads ~/.config/mise/config.toml (tracked once the `mise` stow package
-  # is migrated — see README).
+  # Reads ~/.config/mise/config.toml (tracked in the repo via the `mise`
+  # stow package).
   ansible.builtin.command:
     cmd: "{{ ansible_user_dir }}/.local/bin/mise install"
     chdir: "{{ ansible_user_dir }}"

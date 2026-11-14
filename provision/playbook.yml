@@ -19,5 +19,4 @@
   tasks:
     - ansible.builtin.import_tasks: tasks/04-mise.yml
     - ansible.builtin.import_tasks: tasks/05-stow.yml
-    - ansible.builtin.import_tasks: tasks/06-systemd-user.yml
-    - ansible.builtin.import_tasks: tasks/07-dconf.yml
+    - ansible.builtin.import_tasks: tasks/06-dconf.yml
