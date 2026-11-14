@@ -1,0 +1,23 @@
+---
+# Rebuild this machine from the dotfiles repo.
+#
+#   ansible-playbook playbook.yml -K                # apply
+#   ansible-playbook playbook.yml -K --check --diff # dry run
+#
+# All tunables live in group_vars/all.yml.
+- name: System-level setup
+  hosts: provision
+  become: true
+  tasks:
+    - ansible.builtin.import_tasks: tasks/01-repos.yml
+    - ansible.builtin.import_tasks: tasks/02-packages.yml
+    - ansible.builtin.import_tasks: tasks/03-post-system.yml
+
+- name: User-level setup
+  hosts: provision
+  become: false
+  tasks:
+    - ansible.builtin.import_tasks: tasks/04-mise.yml
+    - ansible.builtin.import_tasks: tasks/05-stow.yml
+    - ansible.builtin.import_tasks: tasks/06-systemd-user.yml
+    - ansible.builtin.import_tasks: tasks/07-dconf.yml

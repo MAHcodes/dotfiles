@@ -1,0 +1,11 @@
+---
+- name: Stow packages into $HOME
+  # Equivalent to the manual symlinks already present: stow no-ops on
+  # packages that are already stowed, and creates folded symlinks for the
+  # rest. A conflict (real file where stow wants a link) fails with a
+  # clear message — resolve it as described in the README.
+  ansible.builtin.command:
+    cmd: "stow -d {{ dotfiles_dir }} -t {{ ansible_user_dir }} {{ item }}"
+  loop: "{{ stow_packages }}"
+  register: stow_result
+  changed_when: stow_result.stdout != ''

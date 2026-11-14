@@ -1,0 +1,5 @@
+---
+- name: Restore dconf settings
+  # Uses the existing dconf/dconf-settings.ini backup in the repo.
+  ansible.builtin.shell: "dconf load / < {{ dotfiles_dir }}/dconf/dconf-settings.ini"
+  changed_when: false

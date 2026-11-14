@@ -188,13 +188,14 @@ window-rule {
     default-column-width {}
 }
 window-rule {
-  match app-id="zen"
-  match app-id="firefox"
   open-maximized true
 }
 window-rule {
+  match app-id="zen"
+  match app-id="firefox"
+}
+window-rule {
   match app-id="com.mitchellh.ghostty"
-  open-maximized true
 }
 window-rule {
     match app-id=r#"^org\.gnome\."#

@@ -1,0 +1,172 @@
+---
+# ============================================================
+#  THE ONLY FILE YOU NEED TO EDIT.
+#  One line per COPR, one word per package. Nothing else.
+# ============================================================
+
+dotfiles_dir: "{{ ansible_user_dir }}/dotfiles"
+login_shell: /usr/bin/zsh
+
+# --- Repositories -------------------------------------------
+
+rpmfusion:
+  - "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm"
+  - "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_major_version }}.noarch.rpm"
+
+docker_repo_url: "https://download.docker.com/linux/fedora/docker-ce.repo"
+
+coprs:
+  - duxlabs/dms
+  - duxlabs/dux-repo
+  - pennbauman/ports
+  - sneexy/zen-browser
+  - yalter/niri
+
+# --- Packages -----------------------------------------------
+# Seeded from: dnf repoquery --userinstalled --queryformat '%{name}\n' | sort -u
+# (kernel-version-locked kmod-nvidia-580xx-* entries removed: akmod rebuilds
+#  them automatically; rpmfusion release RPMs come from the repos task.)
+# NOTE: one package name per line, no duplicates. A name that no longer
+# exists in any enabled repo fails the run — remove/rename it and re-run.
+
+packages:
+  - accountsservice
+  - akmod-nvidia-580xx
+  - audit
+  - authselect
+  - bash
+  - bluez
+  - bluez-tools
+  - btop
+  - btrfs-progs
+  - chrony
+  - containerd.io
+  - coreutils
+  - curl
+  - dejavu-sans-fonts
+  - dms
+  - dnf-plugins-core
+  - dnf5-plugins
+  - docker-buildx-plugin
+  - docker-ce
+  - docker-ce-cli
+  - docker-compose-plugin
+  - dosfstools
+  - dracut-config-rescue
+  - duf
+  - dux-calendar
+  - dux-files
+  - dux-gop
+  - dux-greeter
+  - dux-search
+  - e2fsprogs
+  - easyeffects
+  - efibootmgr
+  - fastfetch
+  - filesystem
+  - firefox
+  - firewalld
+  - fwupd
+  - ghostty
+  - git
+  - glibc
+  - gnome-keyring
+  - golang-bin
+  - google-noto-emoji-fonts
+  - google-noto-fonts-all
+  - google-noto-sans-fonts
+  - grub2-efi-x64
+  - grub2-tools-extra
+  - grubby
+  - hostname
+  - iproute
+  - iputils
+  - iwlbluetooth-firmware
+  - iwlwifi-mvm-firmware
+  - kbd
+  - kde-connect
+  - kernel
+  - kmscon
+  - langpacks-en
+  - less
+  - lf
+  - libwayland-server
+  - make
+  - man-db
+  - matugen
+  - mpv
+  - ncurses
+  - neovim
+  - NetworkManager
+  - NetworkManager-wifi
+  - niri
+  - nvme-cli
+  - nvtop
+  - obs-studio
+  - openssh-clients
+  - openssh-server
+  - parted
+  - plymouth
+  - policycoreutils
+  - prefixdevname
+  - procps-ng
+  - progress
+  - quickemu
+  - quickshell
+  - rootfiles
+  - rpm
+  - SDL2_mixer
+  - SDL2_ttf
+  - selinux-policy-targeted
+  - setup
+  - shadow-utils
+  - shim-x64
+  - sssd-common
+  - sssd-kcm
+  - stow
+  - sudo
+  - systemd
+  - systemd-resolved
+  - tlp
+  - usbutils
+  - util-linux
+  - vazirmatn-vf-fonts
+  - vim-minimal
+  - wf-recorder
+  - wl-mirror
+  - wpa_supplicant
+  - xdg-desktop-portal-gnome
+  - xdg-desktop-portal-gtk
+  - xorg-x11-drv-nvidia-580xx
+  - xorg-x11-drv-nvidia-580xx-cuda
+  - xorg-x11-drv-nvidia-580xx-power
+  - xwayland-satellite
+  - zen-browser
+  - zram-generator-defaults
+  - zsh
+
+# --- Stow packages (dotfiles -> $HOME symlinks) -------------
+# Active = already symlinked on this machine; stow no-ops on them.
+
+stow_packages:
+  - applications
+  - dms
+  - fontconfig
+  - ghostty
+  - git
+  - gitmux
+  - kvim
+  - lf
+  - lvim
+  - matugen
+  - niri
+  - pulsemixer
+  - tmux
+  - tmux-sessionizer
+  - zsh
+  # Uncomment after migrating (see README "Migration TODO"):
+  # - mise        # tool list — migrate FIRST, else `mise install` has nothing to install
+  # - fish
+  # - nvim
+  # - bin         # ~/.local/bin scripts
+  # - systemd     # hermes-gateway.service (06-systemd-user.yml picks it up automatically)

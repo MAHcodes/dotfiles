@@ -828,6 +828,14 @@ PluginComponent {
                                         font.weight: Font.Bold
                                         color: root.cOnPrimaryContainer
                                     }
+                                    StyledText {
+                                        visible: root.showPopupCountdown
+                                        text: "in " + root.fmtHMS(root.remainingSec)
+                                        font.pixelSize: Theme.fontSizeMedium
+                                        font.weight: Font.Bold
+                                        color: root.cOnPrimaryContainer
+                                        opacity: 0.85
+                                    }
                                 }
                             }
 
@@ -847,14 +855,6 @@ PluginComponent {
                                     color: root.cOnPrimaryContainer
                                 }
                             }
-                        }
-
-                        StyledText {
-                            visible: root.showPopupCountdown
-                            text: root.fmtHMS(root.remainingSec)
-                            font.pixelSize: 44
-                            font.weight: Font.Bold
-                            color: root.cOnPrimaryContainer
                         }
 
                         // M3 linear progress indicator: elapsed share of the current period

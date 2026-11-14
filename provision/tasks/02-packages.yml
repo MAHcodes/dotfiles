@@ -1,0 +1,8 @@
+---
+- name: Install all tracked packages (single transaction)
+  # Installs everything in group_vars/all.yml. Never removes anything.
+  # A missing package name fails the whole task with a clear error —
+  # fix the list and re-run.
+  ansible.builtin.dnf:
+    name: "{{ packages }}"
+    state: present

@@ -299,7 +299,7 @@
     "showSeconds": false,
     "showIcon": true,
     "showProgressBar": false,
-    "showPopupCountdown": false,
+    "showPopupCountdown": true,
     "showProgressRing": true,
     "notifyAtTime": false
   },

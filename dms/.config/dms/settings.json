@@ -90,10 +90,6 @@
         {
           "id": "weather",
           "enabled": true
-        },
-        {
-          "id": "whenPrayer",
-          "enabled": true
         }
       ],
       "rightWidgets": [
@@ -103,6 +99,10 @@
         },
         {
           "id": "cpuFreq",
+          "enabled": true
+        },
+        {
+          "id": "whenPrayer",
           "enabled": true
         },
         {
@@ -431,7 +431,7 @@
   "dankLauncherV2Size": "compact",
   "appLauncherGridColumns": 4,
   "spotlightSectionViewModes": {
-    "apps": "grid"
+    "apps": "list"
   },
   "dashTabs": [
     {

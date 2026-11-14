@@ -1,0 +1,21 @@
+---
+- name: Enable RPM Fusion free and nonfree
+  ansible.builtin.dnf:
+    name: "{{ rpmfusion }}"
+    state: present
+    disable_gpg_check: true  # release RPMs are the trust anchor for the repo key
+
+- name: Install Docker CE repository definition
+  ansible.builtin.get_url:
+    url: "{{ docker_repo_url }}"
+    dest: /etc/yum.repos.d/docker-ce.repo
+    mode: "0644"
+
+- name: Enable COPR repositories
+  # Uses `dnf copr` (dnf5-plugins) directly instead of community.general.copr
+  # to avoid extra collection requirements. The `creates:` guard makes this
+  # idempotent — the repo file exists once enabled.
+  ansible.builtin.command:
+    cmd: "dnf copr enable -y {{ item }}"
+    creates: "/etc/yum.repos.d/_copr:copr.fedorainfracloud.org:{{ item | replace('/', ':') }}.repo"
+  loop: "{{ coprs }}"
