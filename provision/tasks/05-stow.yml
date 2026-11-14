@@ -5,7 +5,7 @@
   # rest. A conflict (real file where stow wants a link) fails with a
   # clear message — resolve it as described in the README.
   ansible.builtin.command:
-    cmd: "stow -d {{ dotfiles_dir }} -t {{ ansible_user_dir }} {{ item }}"
+    cmd: "stow -d {{ dotfiles_dir }} -t {{ ansible_facts.user_dir }} {{ item }}"
   loop: "{{ stow_packages }}"
   register: stow_result
   changed_when: stow_result.stdout != ''

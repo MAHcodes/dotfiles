@@ -1,7 +1,7 @@
 ---
 - name: Check for mise
   ansible.builtin.stat:
-    path: "{{ ansible_user_dir }}/.local/bin/mise"
+    path: "{{ ansible_facts.user_dir }}/.local/bin/mise"
   register: mise_bin
 
 - name: Install mise
@@ -15,7 +15,7 @@
   # Reads ~/.config/mise/config.toml (tracked in the repo via the `mise`
   # stow package).
   ansible.builtin.command:
-    cmd: "{{ ansible_user_dir }}/.local/bin/mise install"
-    chdir: "{{ ansible_user_dir }}"
+    cmd: "{{ ansible_facts.user_dir }}/.local/bin/mise install"
+    chdir: "{{ ansible_facts.user_dir }}"
   register: mise_install
   changed_when: mise_install.stdout != ''

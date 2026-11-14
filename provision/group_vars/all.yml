@@ -4,14 +4,14 @@
 #  One line per COPR, one word per package. Nothing else.
 # ============================================================
 
-dotfiles_dir: "{{ ansible_user_dir }}/dotfiles"
+dotfiles_dir: "{{ ansible_facts.user_dir }}/dotfiles"
 login_shell: /usr/bin/zsh
 
 # --- Repositories -------------------------------------------
 
 rpmfusion:
-  - "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_major_version }}.noarch.rpm"
-  - "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_major_version }}.noarch.rpm"
+  - "https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_facts.distribution_major_version }}.noarch.rpm"
+  - "https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_facts.distribution_major_version }}.noarch.rpm"
 
 docker_repo_url: "https://download.docker.com/linux/fedora/docker-ce.repo"
 
@@ -111,6 +111,9 @@ packages:
   - prefixdevname
   - procps-ng
   - progress
+  # Python bindings for dnf5 — required by the ansible dnf module
+  # (check mode cannot auto-install module deps, so list it explicitly)
+  - python3-libdnf5
   - quickemu
   - quickshell
   - rootfiles

@@ -1,13 +1,13 @@
 ---
 - name: Ensure user is in the docker group
   ansible.builtin.user:
-    name: "{{ ansible_user_id }}"
+    name: "{{ ansible_facts.user_id }}"
     groups: docker
     append: true
 
 - name: Ensure login shell
   ansible.builtin.user:
-    name: "{{ ansible_user_id }}"
+    name: "{{ ansible_facts.user_id }}"
     shell: "{{ login_shell }}"
 
 - name: Enable and start docker
