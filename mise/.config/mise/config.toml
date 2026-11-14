@@ -1,0 +1,16 @@
+[tools]
+bat = "latest"
+bun = "latest"
+delta = "latest"
+eza = "latest"
+fd = "latest"
+fzf = "latest"
+gh = "latest"
+go = "latest"
+just = "latest"
+lua = "latest"
+opencode = { version = "latest", allow_builds = ["@opencode/cli"] }
+rust = "latest"
+tmux = "latest"
+uv = "latest"
+yt-dlp = { version = "latest", rename_exe = "yt-dlp" }
