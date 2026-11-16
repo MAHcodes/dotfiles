@@ -34,3 +34,11 @@ set -g detach-on-destroy off
 
 # passthrough
 set -g allow-passthrough on
+
+# window title
+set-option -g set-titles on
+set-option -g set-titles-string '#{b:pane_current_path}'
+
+# extended keys
+set -g extended-keys on
+set -g extended-keys-format csi-u

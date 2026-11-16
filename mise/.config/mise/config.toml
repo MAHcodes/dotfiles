@@ -10,6 +10,7 @@ go = "latest"
 just = "latest"
 lua = "latest"
 opencode = { version = "latest", allow_builds = ["@opencode/cli"] }
+pi = "latest"
 rust = "latest"
 tmux = "latest"
 uv = "latest"

@@ -431,7 +431,7 @@
   "dankLauncherV2Size": "compact",
   "appLauncherGridColumns": 4,
   "spotlightSectionViewModes": {
-    "apps": "list"
+    "apps": "grid"
   },
   "dashTabs": [
     {
